@@ -1,0 +1,6748 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>mdl::tex &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Resources Definitions" href="../resources_definitions.html" />
+    <link rel="prev" title="mdl::std" href="mdl_std.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../resources_definitions.html" title="Resources Definitions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mdl_std.html" title="mdl::std"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" accesskey="U">Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mdl-tex">
+<h1>mdl::tex<a class="headerlink" href="#mdl-tex" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#definitions" id="id1">Definitions:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-tex-gamma-mode-tex-gamma-mode" id="id2">[1/85] ‘mdl::tex::gamma_mode(::tex::gamma_mode)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-int-tex-gamma-mode" id="id3">[2/85] ‘mdl::tex::int(::tex::gamma_mode)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-wrap-mode-tex-wrap-mode" id="id4">[3/85] ‘mdl::tex::wrap_mode(::tex::wrap_mode)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-int-tex-wrap-mode" id="id5">[4/85] ‘mdl::tex::int(::tex::wrap_mode)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-width-1-3-texture-2d" id="id6">[5/85] ‘mdl::tex::width$1.3(texture_2d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-width-1-6-texture-2d-int2" id="id7">[6/85] ‘mdl::tex::width$1.6(texture_2d,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-width-texture-2d-int2-float" id="id8">[7/85] ‘mdl::tex::width(texture_2d,int2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-height-1-3-texture-2d" id="id9">[8/85] ‘mdl::tex::height$1.3(texture_2d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-height-1-6-texture-2d-int2" id="id10">[9/85] ‘mdl::tex::height$1.6(texture_2d,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-height-texture-2d-int2-float" id="id11">[10/85] ‘mdl::tex::height(texture_2d,int2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-width-1-6-texture-3d" id="id12">[11/85] ‘mdl::tex::width$1.6(texture_3d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-width-texture-3d-float" id="id13">[12/85] ‘mdl::tex::width(texture_3d,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-height-1-6-texture-3d" id="id14">[13/85] ‘mdl::tex::height$1.6(texture_3d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-height-texture-3d-float" id="id15">[14/85] ‘mdl::tex::height(texture_3d,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-depth-1-6-texture-3d" id="id16">[15/85] ‘mdl::tex::depth$1.6(texture_3d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-depth-texture-3d-float" id="id17">[16/85] ‘mdl::tex::depth(texture_3d,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-width-texture-cube" id="id18">[17/85] ‘mdl::tex::width(texture_cube)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-height-texture-cube" id="id19">[18/85] ‘mdl::tex::height(texture_cube)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2" id="id20">[19/85] ‘mdl::tex::lookup_float$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float" id="id21">[20/85] ‘mdl::tex::lookup_float(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2" id="id22">[21/85] ‘mdl::tex::lookup_float$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float" id="id23">[22/85] ‘mdl::tex::lookup_float(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float-texture-cube-float3" id="id24">[23/85] ‘mdl::tex::lookup_float(texture_cube,float3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float-texture-ptex-int" id="id25">[24/85] ‘mdl::tex::lookup_float(texture_ptex,int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float2-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2" id="id26">[25/85] ‘mdl::tex::lookup_float2$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float2-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float" id="id27">[26/85] ‘mdl::tex::lookup_float2(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float2-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2" id="id28">[27/85] ‘mdl::tex::lookup_float2$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float2-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float" id="id29">[28/85] ‘mdl::tex::lookup_float2(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float2-texture-cube-float3" id="id30">[29/85] ‘mdl::tex::lookup_float2(texture_cube,float3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float2-texture-ptex-int" id="id31">[30/85] ‘mdl::tex::lookup_float2(texture_ptex,int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float3-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2" id="id32">[31/85] ‘mdl::tex::lookup_float3$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float3-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float" id="id33">[32/85] ‘mdl::tex::lookup_float3(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float3-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2" id="id34">[33/85] ‘mdl::tex::lookup_float3$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float3-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float" id="id35">[34/85] ‘mdl::tex::lookup_float3(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float3-texture-cube-float3" id="id36">[35/85] ‘mdl::tex::lookup_float3(texture_cube,float3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float3-texture-ptex-int" id="id37">[36/85] ‘mdl::tex::lookup_float3(texture_ptex,int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float4-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2" id="id38">[37/85] ‘mdl::tex::lookup_float4$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float4-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float" id="id39">[38/85] ‘mdl::tex::lookup_float4(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float4-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2" id="id40">[39/85] ‘mdl::tex::lookup_float4$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float4-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float" id="id41">[40/85] ‘mdl::tex::lookup_float4(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float4-texture-cube-float3" id="id42">[41/85] ‘mdl::tex::lookup_float4(texture_cube,float3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-float4-texture-ptex-int" id="id43">[42/85] ‘mdl::tex::lookup_float4(texture_ptex,int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-color-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2" id="id44">[43/85] ‘mdl::tex::lookup_color$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-color-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float" id="id45">[44/85] ‘mdl::tex::lookup_color(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-color-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2" id="id46">[45/85] ‘mdl::tex::lookup_color$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-color-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float" id="id47">[46/85] ‘mdl::tex::lookup_color(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-color-texture-cube-float3" id="id48">[47/85] ‘mdl::tex::lookup_color(texture_cube,float3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-lookup-color-texture-ptex-int" id="id49">[48/85] ‘mdl::tex::lookup_color(texture_ptex,int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float-1-3-texture-2d-int2" id="id50">[49/85] ‘mdl::tex::texel_float$1.3(texture_2d,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float-1-6-texture-2d-int2-int2" id="id51">[50/85] ‘mdl::tex::texel_float$1.6(texture_2d,int2,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float-texture-2d-int2-int2-float" id="id52">[51/85] ‘mdl::tex::texel_float(texture_2d,int2,int2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float2-1-3-texture-2d-int2" id="id53">[52/85] ‘mdl::tex::texel_float2$1.3(texture_2d,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float2-1-6-texture-2d-int2-int2" id="id54">[53/85] ‘mdl::tex::texel_float2$1.6(texture_2d,int2,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float2-texture-2d-int2-int2-float" id="id55">[54/85] ‘mdl::tex::texel_float2(texture_2d,int2,int2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float3-1-3-texture-2d-int2" id="id56">[55/85] ‘mdl::tex::texel_float3$1.3(texture_2d,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float3-1-6-texture-2d-int2-int2" id="id57">[56/85] ‘mdl::tex::texel_float3$1.6(texture_2d,int2,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float3-texture-2d-int2-int2-float" id="id58">[57/85] ‘mdl::tex::texel_float3(texture_2d,int2,int2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float4-1-3-texture-2d-int2" id="id59">[58/85] ‘mdl::tex::texel_float4$1.3(texture_2d,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float4-1-6-texture-2d-int2-int2" id="id60">[59/85] ‘mdl::tex::texel_float4$1.6(texture_2d,int2,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float4-texture-2d-int2-int2-float" id="id61">[60/85] ‘mdl::tex::texel_float4(texture_2d,int2,int2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-color-1-3-texture-2d-int2" id="id62">[61/85] ‘mdl::tex::texel_color$1.3(texture_2d,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-color-1-6-texture-2d-int2-int2" id="id63">[62/85] ‘mdl::tex::texel_color$1.6(texture_2d,int2,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-color-texture-2d-int2-int2-float" id="id64">[63/85] ‘mdl::tex::texel_color(texture_2d,int2,int2,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float-1-6-texture-3d-int3" id="id65">[64/85] ‘mdl::tex::texel_float$1.6(texture_3d,int3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float-texture-3d-int3-float" id="id66">[65/85] ‘mdl::tex::texel_float(texture_3d,int3,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float2-1-6-texture-3d-int3" id="id67">[66/85] ‘mdl::tex::texel_float2$1.6(texture_3d,int3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float2-texture-3d-int3-float" id="id68">[67/85] ‘mdl::tex::texel_float2(texture_3d,int3,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float3-1-6-texture-3d-int3" id="id69">[68/85] ‘mdl::tex::texel_float3$1.6(texture_3d,int3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float3-texture-3d-int3-float" id="id70">[69/85] ‘mdl::tex::texel_float3(texture_3d,int3,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float4-1-6-texture-3d-int3" id="id71">[70/85] ‘mdl::tex::texel_float4$1.6(texture_3d,int3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-float4-texture-3d-int3-float" id="id72">[71/85] ‘mdl::tex::texel_float4(texture_3d,int3,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-color-1-6-texture-3d-int3" id="id73">[72/85] ‘mdl::tex::texel_color$1.6(texture_3d,int3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texel-color-texture-3d-int3-float" id="id74">[73/85] ‘mdl::tex::texel_color(texture_3d,int3,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texture-isvalid-texture-2d" id="id75">[74/85] ‘mdl::tex::texture_isvalid(texture_2d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texture-isvalid-texture-3d" id="id76">[75/85] ‘mdl::tex::texture_isvalid(texture_3d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texture-isvalid-texture-cube" id="id77">[76/85] ‘mdl::tex::texture_isvalid(texture_cube)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-texture-isvalid-texture-ptex" id="id78">[77/85] ‘mdl::tex::texture_isvalid(texture_ptex)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-width-offset-texture-3d-float" id="id79">[78/85] ‘mdl::tex::width_offset(texture_3d,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-height-offset-texture-3d-float" id="id80">[79/85] ‘mdl::tex::height_offset(texture_3d,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-depth-offset-texture-3d-float" id="id81">[80/85] ‘mdl::tex::depth_offset(texture_3d,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-first-frame-texture-2d" id="id82">[81/85] ‘mdl::tex::first_frame(texture_2d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-last-frame-texture-2d" id="id83">[82/85] ‘mdl::tex::last_frame(texture_2d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-first-frame-texture-3d" id="id84">[83/85] ‘mdl::tex::first_frame(texture_3d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-last-frame-texture-3d" id="id85">[84/85] ‘mdl::tex::last_frame(texture_3d)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-grid-to-object-space-texture-3d-float" id="id86">[85/85] ‘mdl::tex::grid_to_object_space(texture_3d,float)’</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#types" id="id87">Types:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-tex-gamma-mode" id="id88">[1/2] ‘mdl::tex::gamma_mode’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-tex-wrap-mode" id="id89">[2/2] ‘mdl::tex::wrap_mode’</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="definitions">
+<h2><a class="toc-backref" href="#id1">Definitions:</a><a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-tex-gamma-mode-tex-gamma-mode">
+<h3><a class="toc-backref" href="#id2">[1/85] ‘mdl::tex::gamma_mode(::tex::gamma_mode)’</a><a class="headerlink" href="#mdl-tex-gamma-mode-tex-gamma-mode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘v’ = SDValueEnum(“mdl::tex::gamma_mode”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::gamma_mode’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::gamma_mode’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-int-tex-gamma-mode">
+<h3><a class="toc-backref" href="#id3">[2/85] ‘mdl::tex::int(::tex::gamma_mode)’</a><a class="headerlink" href="#mdl-tex-int-tex-gamma-mode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::gamma_mode’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-wrap-mode-tex-wrap-mode">
+<h3><a class="toc-backref" href="#id4">[3/85] ‘mdl::tex::wrap_mode(::tex::wrap_mode)’</a><a class="headerlink" href="#mdl-tex-wrap-mode-tex-wrap-mode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘v’ = SDValueEnum(“mdl::tex::wrap_mode”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-int-tex-wrap-mode">
+<h3><a class="toc-backref" href="#id5">[4/85] ‘mdl::tex::int(::tex::wrap_mode)’</a><a class="headerlink" href="#mdl-tex-int-tex-wrap-mode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-width-1-3-texture-2d">
+<h3><a class="toc-backref" href="#id6">[5/85] ‘mdl::tex::width$1.3(texture_2d)’</a><a class="headerlink" href="#mdl-tex-width-1-3-texture-2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-width-1-6-texture-2d-int2">
+<h3><a class="toc-backref" href="#id7">[6/85] ‘mdl::tex::width$1.6(texture_2d,int2)’</a><a class="headerlink" href="#mdl-tex-width-1-6-texture-2d-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-width-texture-2d-int2-float">
+<h3><a class="toc-backref" href="#id8">[7/85] ‘mdl::tex::width(texture_2d,int2,float)’</a><a class="headerlink" href="#mdl-tex-width-texture-2d-int2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-height-1-3-texture-2d">
+<h3><a class="toc-backref" href="#id9">[8/85] ‘mdl::tex::height$1.3(texture_2d)’</a><a class="headerlink" href="#mdl-tex-height-1-3-texture-2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-height-1-6-texture-2d-int2">
+<h3><a class="toc-backref" href="#id10">[9/85] ‘mdl::tex::height$1.6(texture_2d,int2)’</a><a class="headerlink" href="#mdl-tex-height-1-6-texture-2d-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-height-texture-2d-int2-float">
+<h3><a class="toc-backref" href="#id11">[10/85] ‘mdl::tex::height(texture_2d,int2,float)’</a><a class="headerlink" href="#mdl-tex-height-texture-2d-int2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-width-1-6-texture-3d">
+<h3><a class="toc-backref" href="#id12">[11/85] ‘mdl::tex::width$1.6(texture_3d)’</a><a class="headerlink" href="#mdl-tex-width-1-6-texture-3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-width-texture-3d-float">
+<h3><a class="toc-backref" href="#id13">[12/85] ‘mdl::tex::width(texture_3d,float)’</a><a class="headerlink" href="#mdl-tex-width-texture-3d-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-height-1-6-texture-3d">
+<h3><a class="toc-backref" href="#id14">[13/85] ‘mdl::tex::height$1.6(texture_3d)’</a><a class="headerlink" href="#mdl-tex-height-1-6-texture-3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-height-texture-3d-float">
+<h3><a class="toc-backref" href="#id15">[14/85] ‘mdl::tex::height(texture_3d,float)’</a><a class="headerlink" href="#mdl-tex-height-texture-3d-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-depth-1-6-texture-3d">
+<h3><a class="toc-backref" href="#id16">[15/85] ‘mdl::tex::depth$1.6(texture_3d)’</a><a class="headerlink" href="#mdl-tex-depth-1-6-texture-3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-depth-texture-3d-float">
+<h3><a class="toc-backref" href="#id17">[16/85] ‘mdl::tex::depth(texture_3d,float)’</a><a class="headerlink" href="#mdl-tex-depth-texture-3d-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-width-texture-cube">
+<h3><a class="toc-backref" href="#id18">[17/85] ‘mdl::tex::width(texture_cube)’</a><a class="headerlink" href="#mdl-tex-width-texture-cube" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_cube’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-height-texture-cube">
+<h3><a class="toc-backref" href="#id19">[18/85] ‘mdl::tex::height(texture_cube)’</a><a class="headerlink" href="#mdl-tex-height-texture-cube" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_cube’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2">
+<h3><a class="toc-backref" href="#id20">[19/85] ‘mdl::tex::lookup_float$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a><a class="headerlink" href="#mdl-tex-lookup-float-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float">
+<h3><a class="toc-backref" href="#id21">[20/85] ‘mdl::tex::lookup_float(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a><a class="headerlink" href="#mdl-tex-lookup-float-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2">
+<h3><a class="toc-backref" href="#id22">[21/85] ‘mdl::tex::lookup_float$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a><a class="headerlink" href="#mdl-tex-lookup-float-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_w’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_w’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float">
+<h3><a class="toc-backref" href="#id23">[22/85] ‘mdl::tex::lookup_float(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a><a class="headerlink" href="#mdl-tex-lookup-float-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_w’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_w’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float-texture-cube-float3">
+<h3><a class="toc-backref" href="#id24">[23/85] ‘mdl::tex::lookup_float(texture_cube,float3)’</a><a class="headerlink" href="#mdl-tex-lookup-float-texture-cube-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_cube’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float-texture-ptex-int">
+<h3><a class="toc-backref" href="#id25">[24/85] ‘mdl::tex::lookup_float(texture_ptex,int)’</a><a class="headerlink" href="#mdl-tex-lookup-float-texture-ptex-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_ptex’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘channel’ = SDValueInt(int(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float2-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2">
+<h3><a class="toc-backref" href="#id26">[25/85] ‘mdl::tex::lookup_float2$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a><a class="headerlink" href="#mdl-tex-lookup-float2-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float2-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float">
+<h3><a class="toc-backref" href="#id27">[26/85] ‘mdl::tex::lookup_float2(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a><a class="headerlink" href="#mdl-tex-lookup-float2-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float2-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2">
+<h3><a class="toc-backref" href="#id28">[27/85] ‘mdl::tex::lookup_float2$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a><a class="headerlink" href="#mdl-tex-lookup-float2-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_w’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_w’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float2-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float">
+<h3><a class="toc-backref" href="#id29">[28/85] ‘mdl::tex::lookup_float2(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a><a class="headerlink" href="#mdl-tex-lookup-float2-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_w’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_w’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float2-texture-cube-float3">
+<h3><a class="toc-backref" href="#id30">[29/85] ‘mdl::tex::lookup_float2(texture_cube,float3)’</a><a class="headerlink" href="#mdl-tex-lookup-float2-texture-cube-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_cube’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float2-texture-ptex-int">
+<h3><a class="toc-backref" href="#id31">[30/85] ‘mdl::tex::lookup_float2(texture_ptex,int)’</a><a class="headerlink" href="#mdl-tex-lookup-float2-texture-ptex-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_ptex’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘channel’ = SDValueInt(int(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float3-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2">
+<h3><a class="toc-backref" href="#id32">[31/85] ‘mdl::tex::lookup_float3$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a><a class="headerlink" href="#mdl-tex-lookup-float3-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float3-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float">
+<h3><a class="toc-backref" href="#id33">[32/85] ‘mdl::tex::lookup_float3(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a><a class="headerlink" href="#mdl-tex-lookup-float3-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float3-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2">
+<h3><a class="toc-backref" href="#id34">[33/85] ‘mdl::tex::lookup_float3$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a><a class="headerlink" href="#mdl-tex-lookup-float3-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_w’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_w’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float3-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float">
+<h3><a class="toc-backref" href="#id35">[34/85] ‘mdl::tex::lookup_float3(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a><a class="headerlink" href="#mdl-tex-lookup-float3-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_w’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_w’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float3-texture-cube-float3">
+<h3><a class="toc-backref" href="#id36">[35/85] ‘mdl::tex::lookup_float3(texture_cube,float3)’</a><a class="headerlink" href="#mdl-tex-lookup-float3-texture-cube-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_cube’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float3-texture-ptex-int">
+<h3><a class="toc-backref" href="#id37">[36/85] ‘mdl::tex::lookup_float3(texture_ptex,int)’</a><a class="headerlink" href="#mdl-tex-lookup-float3-texture-ptex-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_ptex’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘channel’ = SDValueInt(int(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float4-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2">
+<h3><a class="toc-backref" href="#id38">[37/85] ‘mdl::tex::lookup_float4$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a><a class="headerlink" href="#mdl-tex-lookup-float4-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float4-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float">
+<h3><a class="toc-backref" href="#id39">[38/85] ‘mdl::tex::lookup_float4(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a><a class="headerlink" href="#mdl-tex-lookup-float4-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float4-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2">
+<h3><a class="toc-backref" href="#id40">[39/85] ‘mdl::tex::lookup_float4$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a><a class="headerlink" href="#mdl-tex-lookup-float4-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_w’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_w’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float4-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float">
+<h3><a class="toc-backref" href="#id41">[40/85] ‘mdl::tex::lookup_float4(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a><a class="headerlink" href="#mdl-tex-lookup-float4-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_w’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_w’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float4-texture-cube-float3">
+<h3><a class="toc-backref" href="#id42">[41/85] ‘mdl::tex::lookup_float4(texture_cube,float3)’</a><a class="headerlink" href="#mdl-tex-lookup-float4-texture-cube-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_cube’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-float4-texture-ptex-int">
+<h3><a class="toc-backref" href="#id43">[42/85] ‘mdl::tex::lookup_float4(texture_ptex,int)’</a><a class="headerlink" href="#mdl-tex-lookup-float4-texture-ptex-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_ptex’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘channel’ = SDValueInt(int(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-color-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2">
+<h3><a class="toc-backref" href="#id44">[43/85] ‘mdl::tex::lookup_color$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a><a class="headerlink" href="#mdl-tex-lookup-color-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-color-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float">
+<h3><a class="toc-backref" href="#id45">[44/85] ‘mdl::tex::lookup_color(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a><a class="headerlink" href="#mdl-tex-lookup-color-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-color-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2">
+<h3><a class="toc-backref" href="#id46">[45/85] ‘mdl::tex::lookup_color$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a><a class="headerlink" href="#mdl-tex-lookup-color-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_w’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_w’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-color-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float">
+<h3><a class="toc-backref" href="#id47">[46/85] ‘mdl::tex::lookup_color(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a><a class="headerlink" href="#mdl-tex-lookup-color-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_w’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_w’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-color-texture-cube-float3">
+<h3><a class="toc-backref" href="#id48">[47/85] ‘mdl::tex::lookup_color(texture_cube,float3)’</a><a class="headerlink" href="#mdl-tex-lookup-color-texture-cube-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_cube’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-lookup-color-texture-ptex-int">
+<h3><a class="toc-backref" href="#id49">[48/85] ‘mdl::tex::lookup_color(texture_ptex,int)’</a><a class="headerlink" href="#mdl-tex-lookup-color-texture-ptex-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_ptex’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘channel’ = SDValueInt(int(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float-1-3-texture-2d-int2">
+<h3><a class="toc-backref" href="#id50">[49/85] ‘mdl::tex::texel_float$1.3(texture_2d,int2)’</a><a class="headerlink" href="#mdl-tex-texel-float-1-3-texture-2d-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float-1-6-texture-2d-int2-int2">
+<h3><a class="toc-backref" href="#id51">[50/85] ‘mdl::tex::texel_float$1.6(texture_2d,int2,int2)’</a><a class="headerlink" href="#mdl-tex-texel-float-1-6-texture-2d-int2-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float-texture-2d-int2-int2-float">
+<h3><a class="toc-backref" href="#id52">[51/85] ‘mdl::tex::texel_float(texture_2d,int2,int2,float)’</a><a class="headerlink" href="#mdl-tex-texel-float-texture-2d-int2-int2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float2-1-3-texture-2d-int2">
+<h3><a class="toc-backref" href="#id53">[52/85] ‘mdl::tex::texel_float2$1.3(texture_2d,int2)’</a><a class="headerlink" href="#mdl-tex-texel-float2-1-3-texture-2d-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float2-1-6-texture-2d-int2-int2">
+<h3><a class="toc-backref" href="#id54">[53/85] ‘mdl::tex::texel_float2$1.6(texture_2d,int2,int2)’</a><a class="headerlink" href="#mdl-tex-texel-float2-1-6-texture-2d-int2-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float2-texture-2d-int2-int2-float">
+<h3><a class="toc-backref" href="#id55">[54/85] ‘mdl::tex::texel_float2(texture_2d,int2,int2,float)’</a><a class="headerlink" href="#mdl-tex-texel-float2-texture-2d-int2-int2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float3-1-3-texture-2d-int2">
+<h3><a class="toc-backref" href="#id56">[55/85] ‘mdl::tex::texel_float3$1.3(texture_2d,int2)’</a><a class="headerlink" href="#mdl-tex-texel-float3-1-3-texture-2d-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float3-1-6-texture-2d-int2-int2">
+<h3><a class="toc-backref" href="#id57">[56/85] ‘mdl::tex::texel_float3$1.6(texture_2d,int2,int2)’</a><a class="headerlink" href="#mdl-tex-texel-float3-1-6-texture-2d-int2-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float3-texture-2d-int2-int2-float">
+<h3><a class="toc-backref" href="#id58">[57/85] ‘mdl::tex::texel_float3(texture_2d,int2,int2,float)’</a><a class="headerlink" href="#mdl-tex-texel-float3-texture-2d-int2-int2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float4-1-3-texture-2d-int2">
+<h3><a class="toc-backref" href="#id59">[58/85] ‘mdl::tex::texel_float4$1.3(texture_2d,int2)’</a><a class="headerlink" href="#mdl-tex-texel-float4-1-3-texture-2d-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float4-1-6-texture-2d-int2-int2">
+<h3><a class="toc-backref" href="#id60">[59/85] ‘mdl::tex::texel_float4$1.6(texture_2d,int2,int2)’</a><a class="headerlink" href="#mdl-tex-texel-float4-1-6-texture-2d-int2-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float4-texture-2d-int2-int2-float">
+<h3><a class="toc-backref" href="#id61">[60/85] ‘mdl::tex::texel_float4(texture_2d,int2,int2,float)’</a><a class="headerlink" href="#mdl-tex-texel-float4-texture-2d-int2-int2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-color-1-3-texture-2d-int2">
+<h3><a class="toc-backref" href="#id62">[61/85] ‘mdl::tex::texel_color$1.3(texture_2d,int2)’</a><a class="headerlink" href="#mdl-tex-texel-color-1-3-texture-2d-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-color-1-6-texture-2d-int2-int2">
+<h3><a class="toc-backref" href="#id63">[62/85] ‘mdl::tex::texel_color$1.6(texture_2d,int2,int2)’</a><a class="headerlink" href="#mdl-tex-texel-color-1-6-texture-2d-int2-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-color-texture-2d-int2-int2-float">
+<h3><a class="toc-backref" href="#id64">[63/85] ‘mdl::tex::texel_color(texture_2d,int2,int2,float)’</a><a class="headerlink" href="#mdl-tex-texel-color-texture-2d-int2-int2-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uv_tile’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float-1-6-texture-3d-int3">
+<h3><a class="toc-backref" href="#id65">[64/85] ‘mdl::tex::texel_float$1.6(texture_3d,int3)’</a><a class="headerlink" href="#mdl-tex-texel-float-1-6-texture-3d-int3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float-texture-3d-int3-float">
+<h3><a class="toc-backref" href="#id66">[65/85] ‘mdl::tex::texel_float(texture_3d,int3,float)’</a><a class="headerlink" href="#mdl-tex-texel-float-texture-3d-int3-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float2-1-6-texture-3d-int3">
+<h3><a class="toc-backref" href="#id67">[66/85] ‘mdl::tex::texel_float2$1.6(texture_3d,int3)’</a><a class="headerlink" href="#mdl-tex-texel-float2-1-6-texture-3d-int3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float2-texture-3d-int3-float">
+<h3><a class="toc-backref" href="#id68">[67/85] ‘mdl::tex::texel_float2(texture_3d,int3,float)’</a><a class="headerlink" href="#mdl-tex-texel-float2-texture-3d-int3-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float3-1-6-texture-3d-int3">
+<h3><a class="toc-backref" href="#id69">[68/85] ‘mdl::tex::texel_float3$1.6(texture_3d,int3)’</a><a class="headerlink" href="#mdl-tex-texel-float3-1-6-texture-3d-int3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float3-texture-3d-int3-float">
+<h3><a class="toc-backref" href="#id70">[69/85] ‘mdl::tex::texel_float3(texture_3d,int3,float)’</a><a class="headerlink" href="#mdl-tex-texel-float3-texture-3d-int3-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float4-1-6-texture-3d-int3">
+<h3><a class="toc-backref" href="#id71">[70/85] ‘mdl::tex::texel_float4$1.6(texture_3d,int3)’</a><a class="headerlink" href="#mdl-tex-texel-float4-1-6-texture-3d-int3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-float4-texture-3d-int3-float">
+<h3><a class="toc-backref" href="#id72">[71/85] ‘mdl::tex::texel_float4(texture_3d,int3,float)’</a><a class="headerlink" href="#mdl-tex-texel-float4-texture-3d-int3-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-color-1-6-texture-3d-int3">
+<h3><a class="toc-backref" href="#id73">[72/85] ‘mdl::tex::texel_color$1.6(texture_3d,int3)’</a><a class="headerlink" href="#mdl-tex-texel-color-1-6-texture-3d-int3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texel-color-texture-3d-int3-float">
+<h3><a class="toc-backref" href="#id74">[73/85] ‘mdl::tex::texel_color(texture_3d,int3,float)’</a><a class="headerlink" href="#mdl-tex-texel-color-texture-3d-int3-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coord’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texture-isvalid-texture-2d">
+<h3><a class="toc-backref" href="#id75">[74/85] ‘mdl::tex::texture_isvalid(texture_2d)’</a><a class="headerlink" href="#mdl-tex-texture-isvalid-texture-2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texture-isvalid-texture-3d">
+<h3><a class="toc-backref" href="#id76">[75/85] ‘mdl::tex::texture_isvalid(texture_3d)’</a><a class="headerlink" href="#mdl-tex-texture-isvalid-texture-3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texture-isvalid-texture-cube">
+<h3><a class="toc-backref" href="#id77">[76/85] ‘mdl::tex::texture_isvalid(texture_cube)’</a><a class="headerlink" href="#mdl-tex-texture-isvalid-texture-cube" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_cube’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-texture-isvalid-texture-ptex">
+<h3><a class="toc-backref" href="#id78">[77/85] ‘mdl::tex::texture_isvalid(texture_ptex)’</a><a class="headerlink" href="#mdl-tex-texture-isvalid-texture-ptex" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_ptex’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-width-offset-texture-3d-float">
+<h3><a class="toc-backref" href="#id79">[78/85] ‘mdl::tex::width_offset(texture_3d,float)’</a><a class="headerlink" href="#mdl-tex-width-offset-texture-3d-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-height-offset-texture-3d-float">
+<h3><a class="toc-backref" href="#id80">[79/85] ‘mdl::tex::height_offset(texture_3d,float)’</a><a class="headerlink" href="#mdl-tex-height-offset-texture-3d-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-depth-offset-texture-3d-float">
+<h3><a class="toc-backref" href="#id81">[80/85] ‘mdl::tex::depth_offset(texture_3d,float)’</a><a class="headerlink" href="#mdl-tex-depth-offset-texture-3d-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-first-frame-texture-2d">
+<h3><a class="toc-backref" href="#id82">[81/85] ‘mdl::tex::first_frame(texture_2d)’</a><a class="headerlink" href="#mdl-tex-first-frame-texture-2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-last-frame-texture-2d">
+<h3><a class="toc-backref" href="#id83">[82/85] ‘mdl::tex::last_frame(texture_2d)’</a><a class="headerlink" href="#mdl-tex-last-frame-texture-2d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-first-frame-texture-3d">
+<h3><a class="toc-backref" href="#id84">[83/85] ‘mdl::tex::first_frame(texture_3d)’</a><a class="headerlink" href="#mdl-tex-first-frame-texture-3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-last-frame-texture-3d">
+<h3><a class="toc-backref" href="#id85">[84/85] ‘mdl::tex::last_frame(texture_3d)’</a><a class="headerlink" href="#mdl-tex-last-frame-texture-3d" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-grid-to-object-space-texture-3d-float">
+<h3><a class="toc-backref" href="#id86">[85/85] ‘mdl::tex::grid_to_object_space(texture_3d,float)’</a><a class="headerlink" href="#mdl-tex-grid-to-object-space-texture-3d-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘tex’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_3d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frame’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘matrix&lt;float&gt;[4][4]’ (SDTypeMatrix)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="types">
+<h2><a class="toc-backref" href="#id87">Types:</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-tex-gamma-mode">
+<h3><a class="toc-backref" href="#id88">[1/2] ‘mdl::tex::gamma_mode’</a><a class="headerlink" href="#mdl-tex-gamma-mode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::tex::gamma_mode’ (SDTypeEnum)</dt><dd><ul>
+<li><p>int gamma_default = SDValueInt(int(0))</p></li>
+<li><p>int gamma_linear = SDValueInt(int(1))</p></li>
+<li><p>int gamma_srgb = SDValueInt(int(2))</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-tex-wrap-mode">
+<h3><a class="toc-backref" href="#id89">[2/2] ‘mdl::tex::wrap_mode’</a><a class="headerlink" href="#mdl-tex-wrap-mode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::tex::wrap_mode’ (SDTypeEnum)</dt><dd><ul>
+<li><p>int wrap_clamp = SDValueInt(int(0))</p></li>
+<li><p>int wrap_repeat = SDValueInt(int(1))</p></li>
+<li><p>int wrap_mirrored_repeat = SDValueInt(int(2))</p></li>
+<li><p>int wrap_clip = SDValueInt(int(3))</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">mdl::tex</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions:</a><ul>
+<li><a class="reference internal" href="#mdl-tex-gamma-mode-tex-gamma-mode">[1/85] ‘mdl::tex::gamma_mode(::tex::gamma_mode)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-int-tex-gamma-mode">[2/85] ‘mdl::tex::int(::tex::gamma_mode)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-wrap-mode-tex-wrap-mode">[3/85] ‘mdl::tex::wrap_mode(::tex::wrap_mode)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-int-tex-wrap-mode">[4/85] ‘mdl::tex::int(::tex::wrap_mode)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-width-1-3-texture-2d">[5/85] ‘mdl::tex::width$1.3(texture_2d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-width-1-6-texture-2d-int2">[6/85] ‘mdl::tex::width$1.6(texture_2d,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-width-texture-2d-int2-float">[7/85] ‘mdl::tex::width(texture_2d,int2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-height-1-3-texture-2d">[8/85] ‘mdl::tex::height$1.3(texture_2d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-height-1-6-texture-2d-int2">[9/85] ‘mdl::tex::height$1.6(texture_2d,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-height-texture-2d-int2-float">[10/85] ‘mdl::tex::height(texture_2d,int2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-width-1-6-texture-3d">[11/85] ‘mdl::tex::width$1.6(texture_3d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-width-texture-3d-float">[12/85] ‘mdl::tex::width(texture_3d,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-height-1-6-texture-3d">[13/85] ‘mdl::tex::height$1.6(texture_3d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-height-texture-3d-float">[14/85] ‘mdl::tex::height(texture_3d,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-depth-1-6-texture-3d">[15/85] ‘mdl::tex::depth$1.6(texture_3d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-depth-texture-3d-float">[16/85] ‘mdl::tex::depth(texture_3d,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-width-texture-cube">[17/85] ‘mdl::tex::width(texture_cube)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-height-texture-cube">[18/85] ‘mdl::tex::height(texture_cube)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2">[19/85] ‘mdl::tex::lookup_float$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float">[20/85] ‘mdl::tex::lookup_float(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2">[21/85] ‘mdl::tex::lookup_float$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float">[22/85] ‘mdl::tex::lookup_float(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float-texture-cube-float3">[23/85] ‘mdl::tex::lookup_float(texture_cube,float3)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float-texture-ptex-int">[24/85] ‘mdl::tex::lookup_float(texture_ptex,int)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float2-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2">[25/85] ‘mdl::tex::lookup_float2$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float2-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float">[26/85] ‘mdl::tex::lookup_float2(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float2-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2">[27/85] ‘mdl::tex::lookup_float2$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float2-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float">[28/85] ‘mdl::tex::lookup_float2(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float2-texture-cube-float3">[29/85] ‘mdl::tex::lookup_float2(texture_cube,float3)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float2-texture-ptex-int">[30/85] ‘mdl::tex::lookup_float2(texture_ptex,int)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float3-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2">[31/85] ‘mdl::tex::lookup_float3$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float3-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float">[32/85] ‘mdl::tex::lookup_float3(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float3-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2">[33/85] ‘mdl::tex::lookup_float3$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float3-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float">[34/85] ‘mdl::tex::lookup_float3(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float3-texture-cube-float3">[35/85] ‘mdl::tex::lookup_float3(texture_cube,float3)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float3-texture-ptex-int">[36/85] ‘mdl::tex::lookup_float3(texture_ptex,int)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float4-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2">[37/85] ‘mdl::tex::lookup_float4$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float4-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float">[38/85] ‘mdl::tex::lookup_float4(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float4-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2">[39/85] ‘mdl::tex::lookup_float4$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float4-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float">[40/85] ‘mdl::tex::lookup_float4(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float4-texture-cube-float3">[41/85] ‘mdl::tex::lookup_float4(texture_cube,float3)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-float4-texture-ptex-int">[42/85] ‘mdl::tex::lookup_float4(texture_ptex,int)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-color-1-6-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2">[43/85] ‘mdl::tex::lookup_color$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-color-texture-2d-float2-tex-wrap-mode-tex-wrap-mode-float2-float2-float">[44/85] ‘mdl::tex::lookup_color(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-color-1-6-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2">[45/85] ‘mdl::tex::lookup_color$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-color-texture-3d-float3-tex-wrap-mode-tex-wrap-mode-tex-wrap-mode-float2-float2-float2-float">[46/85] ‘mdl::tex::lookup_color(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-color-texture-cube-float3">[47/85] ‘mdl::tex::lookup_color(texture_cube,float3)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-lookup-color-texture-ptex-int">[48/85] ‘mdl::tex::lookup_color(texture_ptex,int)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float-1-3-texture-2d-int2">[49/85] ‘mdl::tex::texel_float$1.3(texture_2d,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float-1-6-texture-2d-int2-int2">[50/85] ‘mdl::tex::texel_float$1.6(texture_2d,int2,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float-texture-2d-int2-int2-float">[51/85] ‘mdl::tex::texel_float(texture_2d,int2,int2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float2-1-3-texture-2d-int2">[52/85] ‘mdl::tex::texel_float2$1.3(texture_2d,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float2-1-6-texture-2d-int2-int2">[53/85] ‘mdl::tex::texel_float2$1.6(texture_2d,int2,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float2-texture-2d-int2-int2-float">[54/85] ‘mdl::tex::texel_float2(texture_2d,int2,int2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float3-1-3-texture-2d-int2">[55/85] ‘mdl::tex::texel_float3$1.3(texture_2d,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float3-1-6-texture-2d-int2-int2">[56/85] ‘mdl::tex::texel_float3$1.6(texture_2d,int2,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float3-texture-2d-int2-int2-float">[57/85] ‘mdl::tex::texel_float3(texture_2d,int2,int2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float4-1-3-texture-2d-int2">[58/85] ‘mdl::tex::texel_float4$1.3(texture_2d,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float4-1-6-texture-2d-int2-int2">[59/85] ‘mdl::tex::texel_float4$1.6(texture_2d,int2,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float4-texture-2d-int2-int2-float">[60/85] ‘mdl::tex::texel_float4(texture_2d,int2,int2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-color-1-3-texture-2d-int2">[61/85] ‘mdl::tex::texel_color$1.3(texture_2d,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-color-1-6-texture-2d-int2-int2">[62/85] ‘mdl::tex::texel_color$1.6(texture_2d,int2,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-color-texture-2d-int2-int2-float">[63/85] ‘mdl::tex::texel_color(texture_2d,int2,int2,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float-1-6-texture-3d-int3">[64/85] ‘mdl::tex::texel_float$1.6(texture_3d,int3)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float-texture-3d-int3-float">[65/85] ‘mdl::tex::texel_float(texture_3d,int3,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float2-1-6-texture-3d-int3">[66/85] ‘mdl::tex::texel_float2$1.6(texture_3d,int3)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float2-texture-3d-int3-float">[67/85] ‘mdl::tex::texel_float2(texture_3d,int3,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float3-1-6-texture-3d-int3">[68/85] ‘mdl::tex::texel_float3$1.6(texture_3d,int3)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float3-texture-3d-int3-float">[69/85] ‘mdl::tex::texel_float3(texture_3d,int3,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float4-1-6-texture-3d-int3">[70/85] ‘mdl::tex::texel_float4$1.6(texture_3d,int3)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-float4-texture-3d-int3-float">[71/85] ‘mdl::tex::texel_float4(texture_3d,int3,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-color-1-6-texture-3d-int3">[72/85] ‘mdl::tex::texel_color$1.6(texture_3d,int3)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texel-color-texture-3d-int3-float">[73/85] ‘mdl::tex::texel_color(texture_3d,int3,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texture-isvalid-texture-2d">[74/85] ‘mdl::tex::texture_isvalid(texture_2d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texture-isvalid-texture-3d">[75/85] ‘mdl::tex::texture_isvalid(texture_3d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texture-isvalid-texture-cube">[76/85] ‘mdl::tex::texture_isvalid(texture_cube)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-texture-isvalid-texture-ptex">[77/85] ‘mdl::tex::texture_isvalid(texture_ptex)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-width-offset-texture-3d-float">[78/85] ‘mdl::tex::width_offset(texture_3d,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-height-offset-texture-3d-float">[79/85] ‘mdl::tex::height_offset(texture_3d,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-depth-offset-texture-3d-float">[80/85] ‘mdl::tex::depth_offset(texture_3d,float)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-first-frame-texture-2d">[81/85] ‘mdl::tex::first_frame(texture_2d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-last-frame-texture-2d">[82/85] ‘mdl::tex::last_frame(texture_2d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-first-frame-texture-3d">[83/85] ‘mdl::tex::first_frame(texture_3d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-last-frame-texture-3d">[84/85] ‘mdl::tex::last_frame(texture_3d)’</a></li>
+<li><a class="reference internal" href="#mdl-tex-grid-to-object-space-texture-3d-float">[85/85] ‘mdl::tex::grid_to_object_space(texture_3d,float)’</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#types">Types:</a><ul>
+<li><a class="reference internal" href="#mdl-tex-gamma-mode">[1/2] ‘mdl::tex::gamma_mode’</a></li>
+<li><a class="reference internal" href="#mdl-tex-wrap-mode">[2/2] ‘mdl::tex::wrap_mode’</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mdl_std.html"
+                        title="previous chapter">mdl::std</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../resources_definitions.html"
+                        title="next chapter">Resources Definitions</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pythonapi/modules/mdl_tex.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../resources_definitions.html" title="Resources Definitions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mdl_std.html" title="mdl::std"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" >Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>
