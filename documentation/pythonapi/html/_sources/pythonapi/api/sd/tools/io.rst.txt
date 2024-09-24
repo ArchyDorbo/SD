@@ -1,0 +1,8 @@
+io module
+=========
+
+.. automodule:: sd.tools.io
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:
