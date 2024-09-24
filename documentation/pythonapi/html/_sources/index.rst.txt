@@ -1,0 +1,34 @@
+.. Substance Designer Python API documentation master file, created by
+   sphinx-quickstart on Mon Jul 02 18:36:45 2018.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Substance Designer Python API's documentation
+=============================================
+
+The API provides high level tools that help users creating their own python script for Substance Designer.
+
+For beginners, we highly recommend to start reading the 'User Documentation' chapter.
+
+
+Table of Content
+----------------
+
+.. toctree::
+   :maxdepth: 1
+
+   pythonapi/user_documentation
+   pythonapi/samples
+   pythonapi/changelog
+   pythonapi/api_reference
+   pythonapi/modules_definitions
+   pythonapi/resources_definitions
+
+
+
+Indices and tables
+------------------
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
