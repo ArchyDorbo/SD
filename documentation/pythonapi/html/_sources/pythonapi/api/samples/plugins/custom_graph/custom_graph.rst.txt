@@ -1,0 +1,8 @@
+custom_graph module
+===================
+
+.. automodule:: samples.plugins.custom_graph.custom_graph
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:
