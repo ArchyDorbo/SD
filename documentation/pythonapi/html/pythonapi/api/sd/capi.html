@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>capi module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="context module" href="context.html" />
+    <link rel="prev" title="sdvaluevector module" href="api/sdvaluevector.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="context.html" title="context module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="api/sdvaluevector.html" title="sdvaluevector module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" accesskey="U">Python Package ‘sd’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.capi">
+<span id="capi-module"></span><h1>capi module<a class="headerlink" href="#module-sd.capi" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.capi.CAPI">
+<em class="property">class </em><code class="sig-prename descclassname">sd.capi.</code><code class="sig-name descname">CAPI</code><a class="headerlink" href="#sd.capi.CAPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class used to manage the C API
+It it based on CTypes and retrieve the binary from the runtime C++ application
+or the shared library specified in the SDAppInfo object</p>
+<dl class="method">
+<dt id="sd.capi.CAPI.getCTypesBinary">
+<code class="sig-name descname">getCTypesBinary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.CAPI.getCTypesBinary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.CAPI.getCTypesFct">
+<code class="sig-name descname">getCTypesFct</code><span class="sig-paren">(</span><em class="sig-param">aFctName</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.CAPI.getCTypesFct" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>aFctName</strong> – The CTypes function name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>return the CTypes function object that match the</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.CAPI.getLogger">
+<em class="property">static </em><code class="sig-name descname">getLogger</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.CAPI.getLogger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.CAPI.getSDAppInfo">
+<code class="sig-name descname">getSDAppInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.CAPI.getSDAppInfo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.CAPI.getVersion">
+<code class="sig-name descname">getVersion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.CAPI.getVersion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.CAPI.isRuntime">
+<code class="sig-name descname">isRuntime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.CAPI.isRuntime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sd.capi.CTypesFunctions">
+<em class="property">class </em><code class="sig-prename descclassname">sd.capi.</code><code class="sig-name descname">CTypesFunctions</code><span class="sig-paren">(</span><em class="sig-param">aCTypesBinary</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.CTypesFunctions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="sd.capi.CTypesFunctions.getFunction">
+<code class="sig-name descname">getFunction</code><span class="sig-paren">(</span><em class="sig-param">aFunctionName</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.CTypesFunctions.getFunction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sd.capi.OSBackend">
+<em class="property">class </em><code class="sig-prename descclassname">sd.capi.</code><code class="sig-name descname">OSBackend</code><span class="sig-paren">(</span><em class="sig-param">aDynamicLibraryFileExtension</em>, <em class="sig-param">aDynamicLibraryFilePrefix</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.OSBackend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="sd.capi.OSBackend.loadCTypesBinary">
+<code class="sig-name descname">loadCTypesBinary</code><span class="sig-paren">(</span><em class="sig-param">aBinaryFile</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.OSBackend.loadCTypesBinary" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sd.capi.SDAppInfo">
+<em class="property">class </em><code class="sig-prename descclassname">sd.capi.</code><code class="sig-name descname">SDAppInfo</code><a class="headerlink" href="#sd.capi.SDAppInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getPluginsDir">
+<code class="sig-name descname">getPluginsDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getPluginsDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getSD3DViewDir">
+<code class="sig-name descname">getSD3DViewDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getSD3DViewDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getSD3DViewIRayDir">
+<code class="sig-name descname">getSD3DViewIRayDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getSD3DViewIRayDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getSDApiBinaryDir">
+<code class="sig-name descname">getSDApiBinaryDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getSDApiBinaryDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getSDApiBinaryFile">
+<code class="sig-name descname">getSDApiBinaryFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getSDApiBinaryFile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getSDPackagesDir">
+<code class="sig-name descname">getSDPackagesDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getSDPackagesDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getSDPythonSDKDir">
+<code class="sig-name descname">getSDPythonSDKDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getSDPythonSDKDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getSDResourcesDir">
+<code class="sig-name descname">getSDResourcesDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getSDResourcesDir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the resources directory of SD or ‘’ if not found</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getSDRootDir">
+<code class="sig-name descname">getSDRootDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getSDRootDir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The SD installation root dir from the current file location: %INSTALLDIR%/resources/python/sd/CURRENT_FILE.py</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getSDTemplatesDir">
+<code class="sig-name descname">getSDTemplatesDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getSDTemplatesDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.getSubstanceEngineFileHint">
+<code class="sig-name descname">getSubstanceEngineFileHint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.getSubstanceEngineFileHint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.capi.SDAppInfo.registerPaths">
+<code class="sig-name descname">registerPaths</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.SDAppInfo.registerPaths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="sd.capi.getCAPI">
+<code class="sig-prename descclassname">sd.capi.</code><code class="sig-name descname">getCAPI</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.getCAPI" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#sd.capi.CAPI" title="sd.capi.CAPI">CAPI</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="sd.capi.getOSBackend">
+<code class="sig-prename descclassname">sd.capi.</code><code class="sig-name descname">getOSBackend</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.capi.getOSBackend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="api/sdvaluevector.html"
+                        title="previous chapter">sdvaluevector module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="context.html"
+                        title="next chapter">context module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/pythonapi/api/sd/capi.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="context.html" title="context module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="api/sdvaluevector.html" title="sdvaluevector module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >Python Package ‘sd’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>
