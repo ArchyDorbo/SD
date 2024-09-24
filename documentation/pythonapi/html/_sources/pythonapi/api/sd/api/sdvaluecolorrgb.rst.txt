@@ -1,0 +1,8 @@
+sdvaluecolorrgb module
+======================
+
+.. automodule:: sd.api.sdvaluecolorrgb
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:
