@@ -1,0 +1,257 @@
+mdl::debug
+==========
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/20] 'mdl::debug::breakpoint()'
+#################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[2/20] 'mdl::debug::assert(bool,string,string,string,int)'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 'condition' [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'reason' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'funcname' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'filename' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'line' = SDValueInt(int(0)) [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[3/20] 'mdl::debug::print(bool)'
+################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[4/20] 'mdl::debug::print(bool2)'
+#################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'bool2' (SDTypeBool2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[5/20] 'mdl::debug::print(bool3)'
+#################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'bool3' (SDTypeBool3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[6/20] 'mdl::debug::print(bool4)'
+#################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'bool4' (SDTypeBool4)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[7/20] 'mdl::debug::print(int)'
+###############################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[8/20] 'mdl::debug::print(int2)'
+################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[9/20] 'mdl::debug::print(int3)'
+################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[10/20] 'mdl::debug::print(int4)'
+#################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'int4' (SDTypeInt4)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[11/20] 'mdl::debug::print(float)'
+##################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[12/20] 'mdl::debug::print(float2)'
+###################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[13/20] 'mdl::debug::print(float3)'
+###################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[14/20] 'mdl::debug::print(float4)'
+###################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[15/20] 'mdl::debug::print(double)'
+###################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'double' (SDTypeDouble)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[16/20] 'mdl::debug::print(double2)'
+####################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'double2' (SDTypeDouble2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[17/20] 'mdl::debug::print(double3)'
+####################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'double3' (SDTypeDouble3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[18/20] 'mdl::debug::print(double4)'
+####################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'double4' (SDTypeDouble4)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[19/20] 'mdl::debug::print(color)'
+##################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[20/20] 'mdl::debug::print(string)'
+###################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
