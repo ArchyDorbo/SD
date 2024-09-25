@@ -1,0 +1,8 @@
+sdsbscompgraph module
+=====================
+
+.. automodule:: sd.api.sbs.sdsbscompgraph
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

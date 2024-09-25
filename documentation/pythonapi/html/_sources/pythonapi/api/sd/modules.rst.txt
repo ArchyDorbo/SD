@@ -1,0 +1,12 @@
+Python Package 'sd'
+===================
+
+.. toctree::
+   :maxdepth: 5
+
+   api<api/modules.rst>
+   capi<capi.rst>
+   context<context.rst>
+   logger<logger.rst>
+   tools<tools/modules.rst>
+   ui<ui/modules.rst>

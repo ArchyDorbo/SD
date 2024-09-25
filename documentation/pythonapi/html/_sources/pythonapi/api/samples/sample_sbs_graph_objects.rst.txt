@@ -1,0 +1,8 @@
+sample_sbs_graph_objects module
+===============================
+
+.. automodule:: samples.sample_sbs_graph_objects
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

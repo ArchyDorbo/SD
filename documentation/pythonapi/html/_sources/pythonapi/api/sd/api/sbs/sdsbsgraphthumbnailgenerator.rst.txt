@@ -1,0 +1,8 @@
+sdsbsgraphthumbnailgenerator module
+===================================
+
+.. automodule:: sd.api.sbs.sdsbsgraphthumbnailgenerator
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

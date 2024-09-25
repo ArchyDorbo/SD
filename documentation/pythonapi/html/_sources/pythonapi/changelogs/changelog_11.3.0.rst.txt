@@ -1,0 +1,11 @@
+Version 11.3.0
+--------------
+Details
+#######
+* [Changed] Class SDAppInteropMgr
+	* [Added] Method SDAppInteropMgr.isBridgeInstalled()
+	* [Added] Method SDAppInteropMgr.isStagerInstalled()
+	* [Added] Method SDAppInteropMgr.sendModelGraphToStager()
+	* [Added] Method SDAppInteropMgr.showPackageInBridge()
+	* [Added] Method SDAppInteropMgr.showResourceInBridge()
+* [Added] Class SDSBSModelGraph

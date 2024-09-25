@@ -1,0 +1,8 @@
+sample_sbs_graph_inputs module
+==============================
+
+.. automodule:: samples.sample_sbs_graph_inputs
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

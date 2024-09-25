@@ -1,0 +1,8 @@
+sdnode module
+=============
+
+.. automodule:: sd.api.sdnode
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

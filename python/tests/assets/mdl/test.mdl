@@ -1,0 +1,6 @@
+mdl 1.4;
+
+export float test_function()
+{
+    return 10.f;
+}

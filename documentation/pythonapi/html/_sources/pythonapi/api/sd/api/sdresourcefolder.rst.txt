@@ -1,0 +1,8 @@
+sdresourcefolder module
+=======================
+
+.. automodule:: sd.api.sdresourcefolder
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

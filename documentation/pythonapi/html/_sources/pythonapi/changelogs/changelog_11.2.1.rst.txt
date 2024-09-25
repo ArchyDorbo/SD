@@ -1,0 +1,8 @@
+Version 11.2.1
+--------------
+Details
+#######
+* [Changed] Class SDAppInteropMgr
+	* [Added] Method SDAppInteropMgr.publishSBSARWithProgressDialog()
+* [Changed] Class SDApplication
+	* [Added] Method SDApplication.getVersion()

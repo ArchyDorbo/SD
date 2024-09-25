@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdtexture module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="sdtype module" href="sdtype.html" />
+    <link rel="prev" title="sdspotcolorlibrary module" href="sdspotcolorlibrary.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdtype.html" title="sdtype module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdspotcolorlibrary.html" title="sdspotcolorlibrary module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" accesskey="U">Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.sdtexture">
+<span id="sdtexture-module"></span><h1>sdtexture module<a class="headerlink" href="#module-sd.api.sdtexture" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.sdtexture.SBSPixelFormat">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdtexture.</code><code class="sig-name descname">SBSPixelFormat</code><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.BGR8">
+<code class="sig-name descname">BGR8</code><em class="property"> = 4</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.BGR8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.BGRA8">
+<code class="sig-name descname">BGRA8</code><em class="property"> = 6</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.BGRA8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.LUM16">
+<code class="sig-name descname">LUM16</code><em class="property"> = 7</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.LUM16" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.LUM16F">
+<code class="sig-name descname">LUM16F</code><em class="property"> = 11</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.LUM16F" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.LUM32F">
+<code class="sig-name descname">LUM32F</code><em class="property"> = 15</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.LUM32F" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.LUM8">
+<code class="sig-name descname">LUM8</code><em class="property"> = 1</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.LUM8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.LUMALPHA16">
+<code class="sig-name descname">LUMALPHA16</code><em class="property"> = 8</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.LUMALPHA16" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.LUMALPHA16F">
+<code class="sig-name descname">LUMALPHA16F</code><em class="property"> = 12</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.LUMALPHA16F" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.LUMALPHA32F">
+<code class="sig-name descname">LUMALPHA32F</code><em class="property"> = 16</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.LUMALPHA32F" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.LUMALPHA8">
+<code class="sig-name descname">LUMALPHA8</code><em class="property"> = 2</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.LUMALPHA8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.RGB16">
+<code class="sig-name descname">RGB16</code><em class="property"> = 9</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.RGB16" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.RGB16F">
+<code class="sig-name descname">RGB16F</code><em class="property"> = 13</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.RGB16F" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.RGB32F">
+<code class="sig-name descname">RGB32F</code><em class="property"> = 17</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.RGB32F" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.RGB8">
+<code class="sig-name descname">RGB8</code><em class="property"> = 3</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.RGB8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.RGBA16">
+<code class="sig-name descname">RGBA16</code><em class="property"> = 10</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.RGBA16" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.RGBA16F">
+<code class="sig-name descname">RGBA16F</code><em class="property"> = 14</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.RGBA16F" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.RGBA32F">
+<code class="sig-name descname">RGBA32F</code><em class="property"> = 18</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.RGBA32F" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.RGBA8">
+<code class="sig-name descname">RGBA8</code><em class="property"> = 5</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.RGBA8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdtexture.SBSPixelFormat.Unknown">
+<code class="sig-name descname">Unknown</code><em class="property"> = 0</em><a class="headerlink" href="#sd.api.sdtexture.SBSPixelFormat.Unknown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sd.api.sdtexture.SDTexture">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdtexture.</code><code class="sig-name descname">SDTexture</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdtexture.SDTexture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sdapiobject.html#sd.api.sdapiobject.SDAPIObject" title="sd.api.sdapiobject.SDAPIObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdapiobject.SDAPIObject</span></code></a></p>
+<p>Common 2D texture object (i.e. a 2d array of pixels)</p>
+<dl class="method">
+<dt id="sd.api.sdtexture.SDTexture.getBytesPerPixel">
+<code class="sig-name descname">getBytesPerPixel</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.sdtexture.SDTexture.getBytesPerPixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the bytes count per pixel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdtexture.SDTexture.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdtexture.SDTexture.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdtexture.SDTexture.getPixelBufferAddress">
+<code class="sig-name descname">getPixelBufferAddress</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.sdtexture.SDTexture.getPixelBufferAddress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the address of the pixel buffer in memory. Take in account the Row pitch that can be negative. In this case the pixel values will be located before this address in memory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdtexture.SDTexture.getPixelFormat">
+<code class="sig-name descname">getPixelFormat</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdtexture.SBSPixelFormat<a class="headerlink" href="#sd.api.sdtexture.SDTexture.getPixelFormat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the pixel format of the texture (see SBSPixelFormat)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdtexture.SDTexture.getRowPitch">
+<code class="sig-name descname">getRowPitch</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.sdtexture.SDTexture.getRowPitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the offset between adjacent scanlines, in bytes. This Value can be negative. In this case, all the pixel values will be located before the pixel buffer address.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdtexture.SDTexture.getSize">
+<code class="sig-name descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdbasetypes.int2<a class="headerlink" href="#sd.api.sdtexture.SDTexture.getSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the size of the texture</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdtexture.SDTexture.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdtexture.SDTexture.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdtexture.SDTexture.sFromFile">
+<em class="property">static </em><code class="sig-name descname">sFromFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdtexture.SDTexture.sFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new texture from the specified file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> – The image absolute file path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdtexture.SDTexture.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">filename: str</em>, <em class="sig-param">outputColorSpace: str = ''</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdtexture.SDTexture.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the current texture to the specified file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – The absolute file path used to save the texture</p></li>
+<li><p><strong>outputColorSpace</strong> – The destination color space name. If empty, no color transform is applied</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdspotcolorlibrary.html"
+                        title="previous chapter">sdspotcolorlibrary module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdtype.html"
+                        title="next chapter">sdtype module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/pythonapi/api/sd/api/sdtexture.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdtype.html" title="sdtype module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdspotcolorlibrary.html" title="sdspotcolorlibrary module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" >Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

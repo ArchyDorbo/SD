@@ -1,0 +1,8 @@
+sdpackagedependency module
+==========================
+
+.. automodule:: sd.api.sdpackagedependency
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

@@ -1,0 +1,476 @@
+mdl::alg::base::core
+====================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/22] 'mdl::alg::base::core::volume_absorption(float,color)'
+#############################################################
+   * Label: 'Absorption'
+   * Description: 'Provides an absorption coefficient for the volume'
+   * SDPropertyCategory = 'Input'
+      * 'absorption' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Volume Absorption'
+         * Description: 'Controls how much light is absorbed through the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'absorptionColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Absorption Color'
+         * Description: 'Simulates shifts in color when light passes through the surface'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[2/22] 'mdl::alg::base::core::volume_scattering(float)'
+#######################################################
+   * Label: 'Scattering'
+   * Description: 'Provides a scattering coefficient for the volume'
+   * SDPropertyCategory = 'Input'
+      * 'scattering' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Volume Scattering'
+         * Description: 'Controls how much light is scattered through the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[3/22] 'mdl::alg::base::core::scattering_coeffs_from_rayleigh_redshift(float,float)'
+####################################################################################
+   * Description: 'Provides a scattering coefficient from rayleigh / red-shift coefficients'
+   * SDPropertyCategory = 'Input'
+      * 'rayleigh' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'red_shift' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[4/22] 'mdl::alg::base::core::displacement(float,float,float,float)'
+####################################################################
+   * Label: 'Displacement'
+   * Description: 'Provides significant physical detail to the surface by manipulating the vertices of the mesh'
+   * SDPropertyCategory = 'Input'
+      * 'height' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Height'
+         * Description: 'Height channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'heightScale' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scale'
+         * Description: 'scales the range of displacement'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scalarZeroValue' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Scalar Zero Value'
+         * Description: 'Determine the neutral height value'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'tiling' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Tiling value to keep displacement tiling independent'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[5/22] 'mdl::alg::base::core::tangent_space_plugin_mode(::alg::base::core::tangent_space_plugin_mode)'
+######################################################################################################
+   * Label: 'Tangent Space Plugin Mode'
+   * Description: 'Describes Tangent Space Plugin behavior to adopt when computing'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::alg::base::core::tangent_space_plugin_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::tangent_space_plugin_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::alg::base::core::tangent_space_plugin_mode' (SDTypeEnum)
+
+[6/22] 'mdl::alg::base::core::int(::alg::base::core::tangent_space_plugin_mode)'
+################################################################################
+   * Label: 'Tangent Space Plugin Mode'
+   * Description: 'Describes Tangent Space Plugin behavior to adopt when computing'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::tangent_space_plugin_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[7/22] 'mdl::alg::base::core::tangent_space_plugin_normal_texture(texture_2d,float,bool,bool,::base::texture_coordinate_info,float2,float2,::tex::wrap_mode,::tex::wrap_mode,float,float,::alg::base::core::tangent_space_plugin_mode,bool)'
+############################################################################################################################################################################################################################################
+   * Label: 'Tangent Space Plugin Normal Texture'
+   * Description: 'Reinterpretation of tangent_space_normal_texture to interpret correctly tangent/bitangent computed by popular tangent space computation plugin'
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Description: 'The input texture'
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Determines the degree of bumpiness'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'flip_tangent_u' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Can be used to fix mismatches between the object's tangent space and the normal map's tangent space'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'flip_tangent_v' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Description: 'Can be used to fix mismatches between the object's tangent space and the normal map's tangent space'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___166) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct) [Varying]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Description: 'Restricts the texture access to sub-domain of the texture in the u direction'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Description: 'Restricts the texture access to sub-domain of the texture in the v direction'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Wrapping mode in the u direction'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Wrapping mode in the v direction'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Scales the value red from the texture file. can be used to adapt to different normal map formats'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'offset' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Offset applied to the value red from the texture file. can be used to adapt to different normal map formats'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'mode' = SDValueEnum("mdl::alg::base::core::tangent_space_plugin_mode",0) [CONNECTABLE]
+         * Description: 'Tangent Space computation behavior'
+         * Types:
+            * 'mdl::alg::base::core::tangent_space_plugin_mode' (SDTypeEnum) [Uniform]
+
+      * 'force_compute_tangent_space' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Force re-computation of tangent space based on normal & tangent'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[8/22] 'mdl::alg::base::core::displacement_source_channel(::alg::base::core::displacement_source_channel)'
+##########################################################################################################
+   * Label: 'Displacement Source Channel'
+   * Description: 'Choose which channel will drives displacement'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::alg::base::core::displacement_source_channel",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::displacement_source_channel' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::alg::base::core::displacement_source_channel' (SDTypeEnum)
+
+[9/22] 'mdl::alg::base::core::int(::alg::base::core::displacement_source_channel)'
+##################################################################################
+   * Label: 'Displacement Source Channel'
+   * Description: 'Choose which channel will drives displacement'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::displacement_source_channel' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[10/22] 'mdl::alg::base::core::subsurface_scattering_type(::alg::base::core::subsurface_scattering_type)'
+#########################################################################################################
+   * Label: 'Subsurface Scattering Type'
+   * Description: 'Skin, Translucent/Generic or Red Shift & Rayleigh controls. It needs to be activated in the Display Settings and a Scattering channel needs to be present for these parameters to have an effect.'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::alg::base::core::subsurface_scattering_type",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::subsurface_scattering_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::alg::base::core::subsurface_scattering_type' (SDTypeEnum)
+
+[11/22] 'mdl::alg::base::core::int(::alg::base::core::subsurface_scattering_type)'
+##################################################################################
+   * Label: 'Subsurface Scattering Type'
+   * Description: 'Skin, Translucent/Generic or Red Shift & Rayleigh controls. It needs to be activated in the Display Settings and a Scattering channel needs to be present for these parameters to have an effect.'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::subsurface_scattering_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[12/22] 'mdl::alg::base::core::volume_return(::alg::base::core::volume_return)'
+###############################################################################
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::volume_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::alg::base::core::volume_return' (SDTypeStruct)
+
+[13/22] 'mdl::alg::base::core::volume_return(color,color)'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 'absorption_coefficient' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'scattering_coefficient' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::alg::base::core::volume_return' (SDTypeStruct)
+
+[14/22] 'mdl::alg::base::core::volume_return.absorption_coefficient(::alg::base::core::volume_return)'
+######################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::volume_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[15/22] 'mdl::alg::base::core::volume_return.scattering_coefficient(::alg::base::core::volume_return)'
+######################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::volume_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[16/22] 'mdl::alg::base::core::volume_conversion(float,color,float,bool,::alg::base::core::subsurface_scattering_type,color,float,float,float)'
+###############################################################################################################################################
+   * Description: 'Calculate volume properties from parameters'
+   * SDPropertyCategory = 'Input'
+      * 'absorption' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'absorptionColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'scattering' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'sssEnabled' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'sssType' = SDValueEnum("mdl::alg::base::core::subsurface_scattering_type",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::subsurface_scattering_type' (SDTypeEnum) [Uniform]
+
+      * 'sssColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'sssScale' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'sssRedShift' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'sssRayleigh' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::alg::base::core::volume_return' (SDTypeStruct)
+
+[17/22] 'mdl::alg::base::core::coat_behavior(::alg::base::core::coat_behavior)'
+###############################################################################
+   * Label: 'Coating Behavior'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::alg::base::core::coat_behavior",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::coat_behavior' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::alg::base::core::coat_behavior' (SDTypeEnum)
+
+[18/22] 'mdl::alg::base::core::int(::alg::base::core::coat_behavior)'
+#####################################################################
+   * Label: 'Coating Behavior'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::coat_behavior' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[19/22] 'mdl::alg::base::core::subsurface_scattering_source_channel(::alg::base::core::subsurface_scattering_source_channel)'
+#############################################################################################################################
+   * Label: 'Subsurface Scattering Source Channel'
+   * Description: 'Select which channel is used to define scattering color. It needs to be activated in the Display Settings and a Scattering channel needs to be present for these parameters to have an effect.'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::alg::base::core::subsurface_scattering_source_channel",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::subsurface_scattering_source_channel' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::alg::base::core::subsurface_scattering_source_channel' (SDTypeEnum)
+
+[20/22] 'mdl::alg::base::core::int(::alg::base::core::subsurface_scattering_source_channel)'
+############################################################################################
+   * Label: 'Subsurface Scattering Source Channel'
+   * Description: 'Select which channel is used to define scattering color. It needs to be activated in the Display Settings and a Scattering channel needs to be present for these parameters to have an effect.'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::alg::base::core::subsurface_scattering_source_channel' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[21/22] 'mdl::alg::base::core::default_emission_intensity(float,color)'
+#######################################################################
+   * Description: 'Compute Emission Intensity consistenly across Substance applications'
+   * SDPropertyCategory = 'Input'
+      * 'emission' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'emission_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+[22/22] 'mdl::alg::base::core::material_root'
+#############################################
+   * Label: 'Material'
+   * SDPropertyCategory = 'Input'
+      * 'materialRoot' = SDMDLValueCall(mdl::material(bool,material_surface,material_surface,color,material_volume,material_geometry,hair_bsdf)__default_call___173) [CONNECTABLE]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+Types:
+------
+[1/6] 'mdl::alg::base::core::tangent_space_plugin_mode'
+#######################################################
+   * 'mdl::alg::base::core::tangent_space_plugin_mode' (SDTypeEnum)
+      * int None = SDValueInt(int(0))
+      * int Mikk = SDValueInt(int(1))
+      * int Unreal = SDValueInt(int(2))
+      * int Unity = SDValueInt(int(3))
+
+[2/6] 'mdl::alg::base::core::displacement_source_channel'
+#########################################################
+   * 'mdl::alg::base::core::displacement_source_channel' (SDTypeEnum)
+      * int displacement_source_channel_height = SDValueInt(int(0))
+      * int displacement_source_channel_displacement = SDValueInt(int(1))
+
+[3/6] 'mdl::alg::base::core::subsurface_scattering_type'
+########################################################
+   * 'mdl::alg::base::core::subsurface_scattering_type' (SDTypeEnum)
+      * int subsurface_scattering_type_translucent = SDValueInt(int(0))
+      * int subsurface_scattering_type_skin = SDValueInt(int(1))
+      * int subsurface_scattering_type_rayleigh = SDValueInt(int(2))
+
+[4/6] 'mdl::alg::base::core::volume_return'
+###########################################
+   * 'mdl::alg::base::core::volume_return' (SDTypeStruct)
+      * ColorRGB absorption_coefficient
+      * ColorRGB scattering_coefficient
+
+[5/6] 'mdl::alg::base::core::coat_behavior'
+###########################################
+   * 'mdl::alg::base::core::coat_behavior' (SDTypeEnum)
+      * int coat_behavior_smooth_surface = SDValueInt(int(0))
+      * int coat_behavior_keep_details = SDValueInt(int(1))
+
+[6/6] 'mdl::alg::base::core::subsurface_scattering_source_channel'
+##################################################################
+   * 'mdl::alg::base::core::subsurface_scattering_source_channel' (SDTypeEnum)
+      * int subsurface_scattering_source_channel_albedo = SDValueInt(int(0))
+      * int subsurface_scattering_source_channel_scatteringcolor = SDValueInt(int(1))

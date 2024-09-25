@@ -1,0 +1,1835 @@
+mdl::tex
+========
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/85] 'mdl::tex::gamma_mode(::tex::gamma_mode)'
+################################################
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::tex::gamma_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::gamma_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::tex::gamma_mode' (SDTypeEnum)
+
+[2/85] 'mdl::tex::int(::tex::gamma_mode)'
+#########################################
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::gamma_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[3/85] 'mdl::tex::wrap_mode(::tex::wrap_mode)'
+##############################################
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::tex::wrap_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum)
+
+[4/85] 'mdl::tex::int(::tex::wrap_mode)'
+########################################
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[5/85] 'mdl::tex::width$1.3(texture_2d)'
+########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[6/85] 'mdl::tex::width$1.6(texture_2d,int2)'
+#############################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[7/85] 'mdl::tex::width(texture_2d,int2,float)'
+###############################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[8/85] 'mdl::tex::height$1.3(texture_2d)'
+#########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[9/85] 'mdl::tex::height$1.6(texture_2d,int2)'
+##############################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[10/85] 'mdl::tex::height(texture_2d,int2,float)'
+#################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[11/85] 'mdl::tex::width$1.6(texture_3d)'
+#########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[12/85] 'mdl::tex::width(texture_3d,float)'
+###########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[13/85] 'mdl::tex::height$1.6(texture_3d)'
+##########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[14/85] 'mdl::tex::height(texture_3d,float)'
+############################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[15/85] 'mdl::tex::depth$1.6(texture_3d)'
+#########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[16/85] 'mdl::tex::depth(texture_3d,float)'
+###########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[17/85] 'mdl::tex::width(texture_cube)'
+#######################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_cube' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[18/85] 'mdl::tex::height(texture_cube)'
+########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_cube' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[19/85] 'mdl::tex::lookup_float$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)'
+#######################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[20/85] 'mdl::tex::lookup_float(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)'
+#########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[21/85] 'mdl::tex::lookup_float$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)'
+###############################################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_w' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_w' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[22/85] 'mdl::tex::lookup_float(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)'
+#################################################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_w' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_w' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[23/85] 'mdl::tex::lookup_float(texture_cube,float3)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_cube' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[24/85] 'mdl::tex::lookup_float(texture_ptex,int)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_ptex' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'channel' = SDValueInt(int(0)) [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+[25/85] 'mdl::tex::lookup_float2$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)'
+########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+[26/85] 'mdl::tex::lookup_float2(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)'
+##########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+[27/85] 'mdl::tex::lookup_float2$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)'
+################################################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_w' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_w' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+[28/85] 'mdl::tex::lookup_float2(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)'
+##################################################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_w' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_w' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+[29/85] 'mdl::tex::lookup_float2(texture_cube,float3)'
+######################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_cube' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+[30/85] 'mdl::tex::lookup_float2(texture_ptex,int)'
+###################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_ptex' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'channel' = SDValueInt(int(0)) [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Varying]
+
+[31/85] 'mdl::tex::lookup_float3$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)'
+########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[32/85] 'mdl::tex::lookup_float3(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)'
+##########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[33/85] 'mdl::tex::lookup_float3$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)'
+################################################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_w' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_w' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[34/85] 'mdl::tex::lookup_float3(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)'
+##################################################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_w' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_w' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[35/85] 'mdl::tex::lookup_float3(texture_cube,float3)'
+######################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_cube' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[36/85] 'mdl::tex::lookup_float3(texture_ptex,int)'
+###################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_ptex' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'channel' = SDValueInt(int(0)) [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[37/85] 'mdl::tex::lookup_float4$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)'
+########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+[38/85] 'mdl::tex::lookup_float4(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)'
+##########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+[39/85] 'mdl::tex::lookup_float4$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)'
+################################################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_w' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_w' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+[40/85] 'mdl::tex::lookup_float4(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)'
+##################################################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_w' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_w' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+[41/85] 'mdl::tex::lookup_float4(texture_cube,float3)'
+######################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_cube' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+[42/85] 'mdl::tex::lookup_float4(texture_ptex,int)'
+###################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_ptex' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'channel' = SDValueInt(int(0)) [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4) [Varying]
+
+[43/85] 'mdl::tex::lookup_color$1.6(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2)'
+#######################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[44/85] 'mdl::tex::lookup_color(texture_2d,float2,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float)'
+#########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[45/85] 'mdl::tex::lookup_color$1.6(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2)'
+###############################################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_w' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_w' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[46/85] 'mdl::tex::lookup_color(texture_3d,float3,::tex::wrap_mode,::tex::wrap_mode,::tex::wrap_mode,float2,float2,float2,float)'
+#################################################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_w' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_w' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[47/85] 'mdl::tex::lookup_color(texture_cube,float3)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_cube' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[48/85] 'mdl::tex::lookup_color(texture_ptex,int)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_ptex' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'channel' = SDValueInt(int(0)) [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+[49/85] 'mdl::tex::texel_float$1.3(texture_2d,int2)'
+####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[50/85] 'mdl::tex::texel_float$1.6(texture_2d,int2,int2)'
+#########################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[51/85] 'mdl::tex::texel_float(texture_2d,int2,int2,float)'
+###########################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[52/85] 'mdl::tex::texel_float2$1.3(texture_2d,int2)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+[53/85] 'mdl::tex::texel_float2$1.6(texture_2d,int2,int2)'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+[54/85] 'mdl::tex::texel_float2(texture_2d,int2,int2,float)'
+############################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+[55/85] 'mdl::tex::texel_float3$1.3(texture_2d,int2)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[56/85] 'mdl::tex::texel_float3$1.6(texture_2d,int2,int2)'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[57/85] 'mdl::tex::texel_float3(texture_2d,int2,int2,float)'
+############################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[58/85] 'mdl::tex::texel_float4$1.3(texture_2d,int2)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+[59/85] 'mdl::tex::texel_float4$1.6(texture_2d,int2,int2)'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+[60/85] 'mdl::tex::texel_float4(texture_2d,int2,int2,float)'
+############################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+[61/85] 'mdl::tex::texel_color$1.3(texture_2d,int2)'
+####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[62/85] 'mdl::tex::texel_color$1.6(texture_2d,int2,int2)'
+#########################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[63/85] 'mdl::tex::texel_color(texture_2d,int2,int2,float)'
+###########################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'uv_tile' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[64/85] 'mdl::tex::texel_float$1.6(texture_3d,int3)'
+####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[65/85] 'mdl::tex::texel_float(texture_3d,int3,float)'
+######################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[66/85] 'mdl::tex::texel_float2$1.6(texture_3d,int3)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+[67/85] 'mdl::tex::texel_float2(texture_3d,int3,float)'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+[68/85] 'mdl::tex::texel_float3$1.6(texture_3d,int3)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[69/85] 'mdl::tex::texel_float3(texture_3d,int3,float)'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[70/85] 'mdl::tex::texel_float4$1.6(texture_3d,int3)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+[71/85] 'mdl::tex::texel_float4(texture_3d,int3,float)'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+[72/85] 'mdl::tex::texel_color$1.6(texture_3d,int3)'
+####################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[73/85] 'mdl::tex::texel_color(texture_3d,int3,float)'
+######################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coord' [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[74/85] 'mdl::tex::texture_isvalid(texture_2d)'
+###############################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[75/85] 'mdl::tex::texture_isvalid(texture_3d)'
+###############################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[76/85] 'mdl::tex::texture_isvalid(texture_cube)'
+#################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_cube' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[77/85] 'mdl::tex::texture_isvalid(texture_ptex)'
+#################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_ptex' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[78/85] 'mdl::tex::width_offset(texture_3d,float)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[79/85] 'mdl::tex::height_offset(texture_3d,float)'
+###################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[80/85] 'mdl::tex::depth_offset(texture_3d,float)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[81/85] 'mdl::tex::first_frame(texture_2d)'
+###########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[82/85] 'mdl::tex::last_frame(texture_2d)'
+##########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[83/85] 'mdl::tex::first_frame(texture_3d)'
+###########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[84/85] 'mdl::tex::last_frame(texture_3d)'
+##########################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[85/85] 'mdl::tex::grid_to_object_space(texture_3d,float)'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 'tex' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'frame' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'matrix<float>[4][4]' (SDTypeMatrix)
+
+Types:
+------
+[1/2] 'mdl::tex::gamma_mode'
+############################
+   * 'mdl::tex::gamma_mode' (SDTypeEnum)
+      * int gamma_default = SDValueInt(int(0))
+      * int gamma_linear = SDValueInt(int(1))
+      * int gamma_srgb = SDValueInt(int(2))
+
+[2/2] 'mdl::tex::wrap_mode'
+###########################
+   * 'mdl::tex::wrap_mode' (SDTypeEnum)
+      * int wrap_clamp = SDValueInt(int(0))
+      * int wrap_repeat = SDValueInt(int(1))
+      * int wrap_mirrored_repeat = SDValueInt(int(2))
+      * int wrap_clip = SDValueInt(int(3))

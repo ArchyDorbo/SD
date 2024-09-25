@@ -1,0 +1,7 @@
+Version 2018.3.1
+----------------
+Details
+#######
+* [Changed] Class SDConnection
+	* [Added] Method SDConnection.getOutputProperty()
+	* [Added] Method SDConnection.getOutputPropertyNode()

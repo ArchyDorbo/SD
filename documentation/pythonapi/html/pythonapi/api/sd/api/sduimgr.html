@@ -1,0 +1,430 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sduimgr module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="sdusage module" href="sdusage.html" />
+    <link rel="prev" title="sdtypevoid module" href="sdtypevoid.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdusage.html" title="sdusage module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdtypevoid.html" title="sdtypevoid module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" accesskey="U">Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.sduimgr">
+<span id="sduimgr-module"></span><h1>sduimgr module<a class="headerlink" href="#module-sd.api.sduimgr" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.sduimgr.SDUIMgr">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sduimgr.</code><code class="sig-name descname">SDUIMgr</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sdapiobject.html#sd.api.sdapiobject.SDAPIObject" title="sd.api.sdapiobject.SDAPIObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdapiobject.SDAPIObject</span></code></a></p>
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.addActionToExplorerToolbar">
+<code class="sig-name descname">addActionToExplorerToolbar</code><span class="sig-paren">(</span><em class="sig-param">explorerID: int</em>, <em class="sig-param">actionPtr: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.addActionToExplorerToolbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an action to an explorer toolbar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>explorerID</strong> – Explorer identifier</p></li>
+<li><p><strong>actionPtr</strong> – Pointer to an action</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.addActionToGraphViewToolbar">
+<code class="sig-name descname">addActionToGraphViewToolbar</code><span class="sig-paren">(</span><em class="sig-param">graphViewID: int</em>, <em class="sig-param">actionPtr: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.addActionToGraphViewToolbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an action to a graph view toolbar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>graphViewID</strong> – Graph view identifier</p></li>
+<li><p><strong>actionPtr</strong> – Pointer to the action to add to the toolbar</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.addToolbarToGraphView">
+<code class="sig-name descname">addToolbarToGraphView</code><span class="sig-paren">(</span><em class="sig-param">graphViewID: int</em>, <em class="sig-param">toolbarWidgetPtr: int</em>, <em class="sig-param">toggleActionPtr: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.addToolbarToGraphView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a toolbar to a graph view</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>graphViewID</strong> – Graph view identifier</p></li>
+<li><p><strong>toolbarWidgetPtr</strong> – Pointer to the toolbar</p></li>
+<li><p><strong>toggleActionPtr</strong> – Pointer to the toolbar toggle view action</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.convertSDTextureToQImage">
+<em class="property">static </em><code class="sig-name descname">convertSDTextureToQImage</code><span class="sig-paren">(</span><em class="sig-param">sdTexture: sd.api.sdtexture.SDTexture</em>, <em class="sig-param">qimagePtr: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.convertSDTextureToQImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a SDTexture into a QImage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdTexture</strong> – The texture that will be converted</p></li>
+<li><p><strong>qimagePtr</strong> – Shiboken pointer to the destination image</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.deleteMenu">
+<code class="sig-name descname">deleteMenu</code><span class="sig-paren">(</span><em class="sig-param">objectName: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.deleteMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a menu from the application menu bar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objectName</strong> – The internal object name of the menu</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.findMenuFromObjectName">
+<code class="sig-name descname">findMenuFromObjectName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.findMenuFromObjectName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a pointer to a currently existing menu in the application menu bar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objectName</strong> – The internal object name of the menu</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.focusGraphNode">
+<code class="sig-name descname">focusGraphNode</code><span class="sig-paren">(</span><em class="sig-param">graphViewID: int</em>, <em class="sig-param">sdNode: sd.api.sdnode.SDNode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.focusGraphNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Center the view on the specific SDNode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>graphViewID</strong> – The Graph View ID</p></li>
+<li><p><strong>sdNode</strong> – The node to focus the view on</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getCurrentGraph">
+<code class="sig-name descname">getCurrentGraph</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getCurrentGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current graph (can be None)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getCurrentGraphSelectedNodes">
+<code class="sig-name descname">getCurrentGraphSelectedNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getCurrentGraphSelectedNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the selected nodes in the current graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getCurrentGraphSelectedObjects">
+<code class="sig-name descname">getCurrentGraphSelectedObjects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getCurrentGraphSelectedObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the selected graph objects in the current graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getCurrentGraphSelection">
+<code class="sig-name descname">getCurrentGraphSelection</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getCurrentGraphSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getCurrentGraphSelectionFromGraphViewID">
+<code class="sig-name descname">getCurrentGraphSelectionFromGraphViewID</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getCurrentGraphSelectionFromGraphViewID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getExplorerSelection">
+<code class="sig-name descname">getExplorerSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getExplorerSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the currently selected items in the explorer panel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>explorerID</strong> – Explorer identifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getGraphFromGraphViewID">
+<code class="sig-name descname">getGraphFromGraphViewID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getGraphFromGraphViewID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the graph from a Graph View ID (can be None)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graphViewID</strong> – The Graph View ID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getGraphSelectedNodesFromGraphViewID">
+<code class="sig-name descname">getGraphSelectedNodesFromGraphViewID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getGraphSelectedNodesFromGraphViewID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the selected nodes in a graph from a Graph View ID (can be None)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graphViewID</strong> – The Graph View ID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getGraphSelectedObjectsFromGraphViewID">
+<code class="sig-name descname">getGraphSelectedObjectsFromGraphViewID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getGraphSelectedObjectsFromGraphViewID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the selected graph objects in the current graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graphViewID</strong> – The Graph View ID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getGraphViewIDAt">
+<code class="sig-name descname">getGraphViewIDAt</code><span class="sig-paren">(</span><em class="sig-param">graphViewIDIndex: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getGraphViewIDAt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the graph view ID at the specified index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graphViewIDIndex</strong> – The index of the graph view ID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getGraphViewIDCount">
+<code class="sig-name descname">getGraphViewIDCount</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getGraphViewIDCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of graph view IDs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.getMainWindowPtr">
+<code class="sig-name descname">getMainWindowPtr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.getMainWindowPtr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the main window pointer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.newDockWidget">
+<code class="sig-name descname">newDockWidget</code><span class="sig-paren">(</span><em class="sig-param">identifier: str</em>, <em class="sig-param">title: str</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.newDockWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new dock widget</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> – Dock internal identifier (must be unique)</p></li>
+<li><p><strong>title</strong> – Dock title</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.newMenu">
+<code class="sig-name descname">newMenu</code><span class="sig-paren">(</span><em class="sig-param">menuTitle: str</em>, <em class="sig-param">objectName: str</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.newMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new menu in the application menu bar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>menuTitle</strong> – The menu title</p></li>
+<li><p><strong>objectName</strong> – The internal object name of the menu</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.openResourceInEditor">
+<code class="sig-name descname">openResourceInEditor</code><span class="sig-paren">(</span><em class="sig-param">sdResource: sd.api.sdresource.SDResource</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.openResourceInEditor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the specified SDResource in the appropriate editor</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdResource</strong> – The SDResource to open</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.registerExplorerCreatedCallback">
+<code class="sig-name descname">registerExplorerCreatedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.registerExplorerCreatedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called when a new explorer is created
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> (<em>Python function</em>) – Function to call when a new explorer is created</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.registerExplorerSelectionChangedCallback">
+<code class="sig-name descname">registerExplorerSelectionChangedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.registerExplorerSelectionChangedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called when the explorer selection changed
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> (<em>Python function</em>) – Function to call when the explorer selection changed</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.registerGraphViewCreatedCallback">
+<code class="sig-name descname">registerGraphViewCreatedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.registerGraphViewCreatedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called when a new graph view is created
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> (<em>Python function</em>) – Function to call when a new graph view is created</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.setExplorerSelection">
+<code class="sig-name descname">setExplorerSelection</code><span class="sig-paren">(</span><em class="sig-param">selectedSDAPIObject: sd.api.sdapiobject.SDAPIObject</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.setExplorerSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the currently selected item in the explorer panel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>selectedSDAPIObject</strong> – The SDAPIObject to select</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sduimgr.SDUIMgr.unregisterCallback">
+<code class="sig-name descname">unregisterCallback</code><span class="sig-paren">(</span><em class="sig-param">callbackID</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sduimgr.SDUIMgr.unregisterCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unregister a callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callbackID</strong> (<em>int</em>) – The callback ID of the callback to unregister</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdtypevoid.html"
+                        title="previous chapter">sdtypevoid module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdusage.html"
+                        title="next chapter">sdusage module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/pythonapi/api/sd/api/sduimgr.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdusage.html" title="sdusage module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdtypevoid.html" title="sdtypevoid module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" >Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+sample_sbs_parameter_function module
+====================================
+
+.. automodule:: samples.sample_sbs_parameter_function
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

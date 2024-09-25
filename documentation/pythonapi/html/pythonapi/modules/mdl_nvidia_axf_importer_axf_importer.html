@@ -1,0 +1,1426 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>mdl::nvidia::axf_importer::axf_importer &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mdl::nvidia::core_definitions" href="mdl_nvidia_core_definitions.html" />
+    <link rel="prev" title="mdl::math" href="mdl_math.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_nvidia_core_definitions.html" title="mdl::nvidia::core_definitions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mdl_math.html" title="mdl::math"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" accesskey="U">Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mdl-nvidia-axf-importer-axf-importer">
+<h1>mdl::nvidia::axf_importer::axf_importer<a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#definitions" id="id1">Definitions:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-brdf-type-nvidia-axf-importer-axf-importer-brdf-type" id="id2">[1/7] ‘mdl::nvidia::axf_importer::axf_importer::brdf_type(::nvidia::axf_importer::axf_importer::brdf_type)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-int-nvidia-axf-importer-axf-importer-brdf-type" id="id3">[2/7] ‘mdl::nvidia::axf_importer::axf_importer::int(::nvidia::axf_importer::axf_importer::brdf_type)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-fresnel-type-nvidia-axf-importer-axf-importer-fresnel-type" id="id4">[3/7] ‘mdl::nvidia::axf_importer::axf_importer::fresnel_type(::nvidia::axf_importer::axf_importer::fresnel_type)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-int-nvidia-axf-importer-axf-importer-fresnel-type" id="id5">[4/7] ‘mdl::nvidia::axf_importer::axf_importer::int(::nvidia::axf_importer::axf_importer::fresnel_type)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-svbrdf" id="id6">[5/7] ‘mdl::nvidia::axf_importer::axf_importer::svbrdf’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-carpaint" id="id7">[6/7] ‘mdl::nvidia::axf_importer::axf_importer::carpaint’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-volumetric" id="id8">[7/7] ‘mdl::nvidia::axf_importer::axf_importer::volumetric’</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#types" id="id9">Types:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-brdf-type" id="id10">[1/4] ‘mdl::nvidia::axf_importer::axf_importer::brdf_type’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-fresnel-type" id="id11">[2/4] ‘mdl::nvidia::axf_importer::axf_importer::fresnel_type’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-flake-value" id="id12">[3/4] ‘mdl::nvidia::axf_importer::axf_importer::flake_value’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-flake-noise-value" id="id13">[4/4] ‘mdl::nvidia::axf_importer::axf_importer::flake_noise_value’</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="definitions">
+<h2><a class="toc-backref" href="#id1">Definitions:</a><a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-nvidia-axf-importer-axf-importer-brdf-type-nvidia-axf-importer-axf-importer-brdf-type">
+<h3><a class="toc-backref" href="#id2">[1/7] ‘mdl::nvidia::axf_importer::axf_importer::brdf_type(::nvidia::axf_importer::axf_importer::brdf_type)’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-brdf-type-nvidia-axf-importer-axf-importer-brdf-type" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Description: ‘BRDF types supported for AxF SVBRDFs’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘v’ = SDValueEnum(“mdl::nvidia::axf_importer::axf_importer::brdf_type”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::nvidia::axf_importer::axf_importer::brdf_type’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::nvidia::axf_importer::axf_importer::brdf_type’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-nvidia-axf-importer-axf-importer-int-nvidia-axf-importer-axf-importer-brdf-type">
+<h3><a class="toc-backref" href="#id3">[2/7] ‘mdl::nvidia::axf_importer::axf_importer::int(::nvidia::axf_importer::axf_importer::brdf_type)’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-int-nvidia-axf-importer-axf-importer-brdf-type" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Description: ‘BRDF types supported for AxF SVBRDFs’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::nvidia::axf_importer::axf_importer::brdf_type’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-nvidia-axf-importer-axf-importer-fresnel-type-nvidia-axf-importer-axf-importer-fresnel-type">
+<h3><a class="toc-backref" href="#id4">[3/7] ‘mdl::nvidia::axf_importer::axf_importer::fresnel_type(::nvidia::axf_importer::axf_importer::fresnel_type)’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-fresnel-type-nvidia-axf-importer-axf-importer-fresnel-type" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Description: ‘Fresnel types supported for AxF SVBRDFs’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘v’ = SDValueEnum(“mdl::nvidia::axf_importer::axf_importer::fresnel_type”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::nvidia::axf_importer::axf_importer::fresnel_type’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::nvidia::axf_importer::axf_importer::fresnel_type’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-nvidia-axf-importer-axf-importer-int-nvidia-axf-importer-axf-importer-fresnel-type">
+<h3><a class="toc-backref" href="#id5">[4/7] ‘mdl::nvidia::axf_importer::axf_importer::int(::nvidia::axf_importer::axf_importer::fresnel_type)’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-int-nvidia-axf-importer-axf-importer-fresnel-type" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Description: ‘Fresnel types supported for AxF SVBRDFs’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::nvidia::axf_importer::axf_importer::fresnel_type’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-nvidia-axf-importer-axf-importer-svbrdf">
+<h3><a class="toc-backref" href="#id6">[5/7] ‘mdl::nvidia::axf_importer::axf_importer::svbrdf’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-svbrdf" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘AxF SVBRDF material’</p></li>
+<li><p>Description: ‘MDL implementation of the SVBRDF model used in AxF files’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘diffuse_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘normal_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular_brdf_texture_u’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular_brdf_texture_v’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular_brdf_texture_rotation’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular_brdf_texture_f0’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘brdf_type’ = SDValueEnum(“mdl::nvidia::axf_importer::axf_importer::brdf_type”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::nvidia::axf_importer::axf_importer::brdf_type’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘isotropic’ = SDValueBool(bool(true)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘fresnel_type’ = SDValueEnum(“mdl::nvidia::axf_importer::axf_importer::fresnel_type”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::nvidia::axf_importer::axf_importer::fresnel_type’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular_brdf_texture_fresnel’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘has_clearcoat’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘clearcoat_normal_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘clearcoat_ior_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘clearcoat_color_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coordinate_override’ = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___276) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘By default, texturing is using object uv coordinates. Procedural coordinate generators like base::coordinate_projection can be attached here to override the default behavior’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::base::texture_coordinate_info’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘use_sample_size’ = SDValueBool(bool(true)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Use sample size’</p></li>
+<li><p>Description: ‘Set to true if the real world measurements of the measured sample are known’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sample_size_u’ = SDValueFloat(float(0.100000001)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Sample size U’</p></li>
+<li><p>Description: ‘The size of the measured sample in m, measured in the U direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sample_size_v’ = SDValueFloat(float(0.100000001)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Sample size V’</p></li>
+<li><p>Description: ‘The size of the measured sample in m, measured in the V direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scene_to_meter’ = SDMDLValueCall(mdl::state::meters_per_scene_unit()__default_call___277) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scene to m conversion factor’</p></li>
+<li><p>Description: ‘Conversion factor from modeling scale used in the scene and m. Only used if “Use real world size” is true and for displacement’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scale_u’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scale V’</p></li>
+<li><p>Description: ‘Scale factor in V direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scale_v’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scale U’</p></li>
+<li><p>Description: ‘Scale factor in U direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘rotate_uv’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Rotation angle’</p></li>
+<li><p>Description: ‘Changes the orientation of the textures on the object’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Texture wrapping behavior’</p></li>
+<li><p>Description: ‘Controls the wrapping behavior of the texture if it fits multiple times on an object’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘normal_texture_strength’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Normal texture strength’</p></li>
+<li><p>Description: ‘Can be used to tweak the bumpiness of the material. At 1.0 it will match the measured bumpiness’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘geometry_normal’ = SDMDLValueCall(mdl::state::normal()__default_call___278) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Geometry normal’</p></li>
+<li><p>Description: ‘Allows the use of an additional bump mapping effect’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scale_height’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scale height texture’</p></li>
+<li><p>Description: ‘Scale factor for the displacement mapping effect’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘height_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘alpha_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘transmission_color_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular_amount_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::material’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-nvidia-axf-importer-axf-importer-carpaint">
+<h3><a class="toc-backref" href="#id7">[6/7] ‘mdl::nvidia::axf_importer::axf_importer::carpaint’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-carpaint" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘AxF carpaint material’</p></li>
+<li><p>Description: ‘MDL approximation of the AxF carpaint material’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘brdf_colors’ = SDValueArray(SDValueColorRGB(ColorRGB(1,1,1))) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘SDTypeArray&lt;ColorRGB&gt;’ (SDTypeArray)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘clearcoat_scale’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘brdf_scale’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘ior’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘ct_diffuse’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘ct_coeffs’ = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘ct_f0s’ = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘ct_spreads’ = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘clearcoat_normal_texture’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coordinate_override’ = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___282) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘By default, texturing is using object uv coordinates. Procedural coordinate generators like base::coordinate_projection can be attached here to override the default behavior’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::base::texture_coordinate_info’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘use_sample_size’ = SDValueBool(bool(true)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Use sample size’</p></li>
+<li><p>Description: ‘Set to true if the real world measurements of the measured sample are known’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sample_size_u’ = SDValueFloat(float(0.100000001)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Sample size U’</p></li>
+<li><p>Description: ‘The size of the measured sample in m, measured in the U direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sample_size_v’ = SDValueFloat(float(0.100000001)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Sample size V’</p></li>
+<li><p>Description: ‘The size of the measured sample in m, measured in the V direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scene_to_meter’ = SDMDLValueCall(mdl::state::meters_per_scene_unit()__default_call___283) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scene to m conversion factor’</p></li>
+<li><p>Description: ‘Conversion factor from modeling scale used in the scene and m. Only used if “Use real world size” is true’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scale_u’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scale V’</p></li>
+<li><p>Description: ‘Scale factor in V direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scale_v’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scale U’</p></li>
+<li><p>Description: ‘Scale factor in U direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘rotate_uv’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Rotation angle’</p></li>
+<li><p>Description: ‘Changes the orientation of the textures on the object’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Texture wrapping behavior’</p></li>
+<li><p>Description: ‘Controls the wrapping behavior of the texture if it fits multiple times on an object’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘geometry_normal’ = SDMDLValueCall(mdl::state::normal()__default_call___284) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Geometry normal’</p></li>
+<li><p>Description: ‘Allows the use of an additional bump mapping effect’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘enable_flakes’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Enable flakes’</p></li>
+<li><p>Description: ‘Enables the additional flake component’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘flake_uvw_scale’ = SDValueFloat3(float3(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘flake_importance_data’ = SDValueArray() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘SDTypeArray&lt;int&gt;’ (SDTypeArray)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘flake_peak_intensity_scale’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘flake_size’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Flake size’</p></li>
+<li><p>Description: ‘Artistic control to modifiy flake size’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘flake_bsdf_roughness’ = SDValueFloat(float(0.00999999978)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Flake roughness’</p></li>
+<li><p>Description: ‘Artistic flake reflection roughness control’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘flake_intensity_scale’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Flake brightness’</p></li>
+<li><p>Description: ‘Artistic flake brightness control’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘precise_sub_clearcoat_component’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Measured sub-clearcoat BRDF’</p></li>
+<li><p>Description: ‘Use a measured BRDF for sub-clearcoat layer. Enables correct rendering for refracting clearcoats and color shifting paints.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sub_clearcoat_measurement’ = SDMDLValueBSDFMeasurementReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::bsdf_measurement’ (SDMDLTypeBSDFMeasurementReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘flake_orientation_falloff’ = SDValueArray() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘SDTypeArray&lt;float&gt;’ (SDTypeArray)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘brdf_colors_2d’ = SDMDLValueTextureReference() [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘brdf_colors_2d_included_in_measurement’ = SDValueBool(bool(true)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::material’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-nvidia-axf-importer-axf-importer-volumetric">
+<h3><a class="toc-backref" href="#id8">[7/7] ‘mdl::nvidia::axf_importer::axf_importer::volumetric’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-volumetric" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘AxF volumetric material’</p></li>
+<li><p>Description: ‘MDL version of the AxF volumetric material’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘sigma_a’ = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sigma_s’ = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘phasefunc_g’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘ior’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::material’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="types">
+<h2><a class="toc-backref" href="#id9">Types:</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-nvidia-axf-importer-axf-importer-brdf-type">
+<h3><a class="toc-backref" href="#id10">[1/4] ‘mdl::nvidia::axf_importer::axf_importer::brdf_type’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-brdf-type" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::nvidia::axf_importer::axf_importer::brdf_type’ (SDTypeEnum)</dt><dd><ul>
+<li><p>int brdf_ward_geislermoroder = SDValueInt(int(0))</p></li>
+<li><p>int brdf_cooktorrance = SDValueInt(int(1))</p></li>
+<li><p>int brdf_ggx = SDValueInt(int(2))</p></li>
+<li><p>int brdf_count = SDValueInt(int(3))</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-nvidia-axf-importer-axf-importer-fresnel-type">
+<h3><a class="toc-backref" href="#id11">[2/4] ‘mdl::nvidia::axf_importer::axf_importer::fresnel_type’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-fresnel-type" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::nvidia::axf_importer::axf_importer::fresnel_type’ (SDTypeEnum)</dt><dd><ul>
+<li><p>int fresnel_none = SDValueInt(int(0))</p></li>
+<li><p>int fresnel_schlick = SDValueInt(int(1))</p></li>
+<li><p>int fresnel_fresnel = SDValueInt(int(2))</p></li>
+<li><p>int fresnel_count = SDValueInt(int(3))</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-nvidia-axf-importer-axf-importer-flake-value">
+<h3><a class="toc-backref" href="#id12">[3/4] ‘mdl::nvidia::axf_importer::axf_importer::flake_value’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-flake-value" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::nvidia::axf_importer::axf_importer::flake_value’ (SDTypeStruct)</dt><dd><ul>
+<li><p>float weight</p></li>
+<li><p>float3 col</p></li>
+<li><p>float3 normal</p></li>
+<li><p>float f0</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-nvidia-axf-importer-axf-importer-flake-noise-value">
+<h3><a class="toc-backref" href="#id13">[4/4] ‘mdl::nvidia::axf_importer::axf_importer::flake_noise_value’</a><a class="headerlink" href="#mdl-nvidia-axf-importer-axf-importer-flake-noise-value" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::nvidia::axf_importer::axf_importer::flake_noise_value’ (SDTypeStruct)</dt><dd><ul>
+<li><p>float priority</p></li>
+<li><p>int rnd_seed</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">mdl::nvidia::axf_importer::axf_importer</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions:</a><ul>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-brdf-type-nvidia-axf-importer-axf-importer-brdf-type">[1/7] ‘mdl::nvidia::axf_importer::axf_importer::brdf_type(::nvidia::axf_importer::axf_importer::brdf_type)’</a></li>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-int-nvidia-axf-importer-axf-importer-brdf-type">[2/7] ‘mdl::nvidia::axf_importer::axf_importer::int(::nvidia::axf_importer::axf_importer::brdf_type)’</a></li>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-fresnel-type-nvidia-axf-importer-axf-importer-fresnel-type">[3/7] ‘mdl::nvidia::axf_importer::axf_importer::fresnel_type(::nvidia::axf_importer::axf_importer::fresnel_type)’</a></li>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-int-nvidia-axf-importer-axf-importer-fresnel-type">[4/7] ‘mdl::nvidia::axf_importer::axf_importer::int(::nvidia::axf_importer::axf_importer::fresnel_type)’</a></li>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-svbrdf">[5/7] ‘mdl::nvidia::axf_importer::axf_importer::svbrdf’</a></li>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-carpaint">[6/7] ‘mdl::nvidia::axf_importer::axf_importer::carpaint’</a></li>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-volumetric">[7/7] ‘mdl::nvidia::axf_importer::axf_importer::volumetric’</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#types">Types:</a><ul>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-brdf-type">[1/4] ‘mdl::nvidia::axf_importer::axf_importer::brdf_type’</a></li>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-fresnel-type">[2/4] ‘mdl::nvidia::axf_importer::axf_importer::fresnel_type’</a></li>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-flake-value">[3/4] ‘mdl::nvidia::axf_importer::axf_importer::flake_value’</a></li>
+<li><a class="reference internal" href="#mdl-nvidia-axf-importer-axf-importer-flake-noise-value">[4/4] ‘mdl::nvidia::axf_importer::axf_importer::flake_noise_value’</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mdl_math.html"
+                        title="previous chapter">mdl::math</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mdl_nvidia_core_definitions.html"
+                        title="next chapter">mdl::nvidia::core_definitions</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pythonapi/modules/mdl_nvidia_axf_importer_axf_importer.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_nvidia_core_definitions.html" title="mdl::nvidia::core_definitions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mdl_math.html" title="mdl::math"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" >Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

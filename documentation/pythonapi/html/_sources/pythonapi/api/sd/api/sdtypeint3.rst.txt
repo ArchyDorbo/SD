@@ -1,0 +1,8 @@
+sdtypeint3 module
+=================
+
+.. automodule:: sd.api.sdtypeint3
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

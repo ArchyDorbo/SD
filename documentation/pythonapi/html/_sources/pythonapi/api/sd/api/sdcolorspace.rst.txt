@@ -1,0 +1,8 @@
+sdcolorspace module
+===================
+
+.. automodule:: sd.api.sdcolorspace
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

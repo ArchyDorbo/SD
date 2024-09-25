@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdvaluearray module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="sdvaluebasetype module" href="sdvaluebasetype.html" />
+    <link rel="prev" title="sdvalue module" href="sdvalue.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdvaluebasetype.html" title="sdvaluebasetype module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdvalue.html" title="sdvalue module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" accesskey="U">Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.sdvaluearray">
+<span id="sdvaluearray-module"></span><h1>sdvaluearray module<a class="headerlink" href="#module-sd.api.sdvaluearray" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.sdvaluearray.SDValueArray">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdvaluearray.</code><code class="sig-name descname">SDValueArray</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdvaluearray.SDValueArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sdvalue.html#sd.api.sdvalue.SDValue" title="sd.api.sdvalue.SDValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdvalue.SDValue</span></code></a></p>
+<dl class="method">
+<dt id="sd.api.sdvaluearray.SDValueArray.get">
+<code class="sig-name descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdvaluearray.SDValueArray.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the whole array as a SDArray</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdvaluearray.SDValueArray.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdvaluearray.SDValueArray.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdvaluearray.SDValueArray.getItem">
+<code class="sig-name descname">getItem</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdvaluearray.SDValueArray.getItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the SDValue at the specified index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – The index of the item to retrieve. Must be lower than getSize().</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdvaluearray.SDValueArray.getSize">
+<code class="sig-name descname">getSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.sdvaluearray.SDValueArray.getSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the size of the array</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdvaluearray.SDValueArray.getType">
+<code class="sig-name descname">getType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdvaluearray.SDValueArray.getType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value type as string</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdvaluearray.SDValueArray.pushBack">
+<code class="sig-name descname">pushBack</code><span class="sig-paren">(</span><em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdvaluearray.SDValueArray.pushBack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append the given SDValue at the end of the array. The size of the array is increased by 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdValue</strong> – The new item to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdvaluearray.SDValueArray.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdvaluearray.SDValueArray.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdvaluearray.SDValueArray.sNew">
+<em class="property">static </em><code class="sig-name descname">sNew</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdvaluearray.SDValueArray.sNew" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new SDValueArray</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>itemType</strong> – The type of the item</p></li>
+<li><p><strong>size</strong> – The initial size of the array. Usually 0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdvaluearray.SDValueArray.setItem">
+<code class="sig-name descname">setItem</code><span class="sig-paren">(</span><em class="sig-param">index: int</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdvaluearray.SDValueArray.setItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the item value at the specified index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> – The index of the item to replace. Must be lower than getSize().</p></li>
+<li><p><strong>sdValue</strong> – The item that will replace the current one at the specified position</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdvalue.html"
+                        title="previous chapter">sdvalue module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdvaluebasetype.html"
+                        title="next chapter">sdvaluebasetype module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/pythonapi/api/sd/api/sdvaluearray.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdvaluebasetype.html" title="sdvaluebasetype module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdvalue.html" title="sdvalue module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" >Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

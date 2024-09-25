@@ -1,0 +1,430 @@
+mdl::alg::materials::designer::pbr
+==================================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/3] 'mdl::alg::materials::designer::pbr::physically_metallic_roughness'
+#########################################################################
+   * Label: 'Physically Metallic Roughness'
+   * SDPropertyCategory = 'Input'
+      * 'baseColor' = SDValueColorRGB(ColorRGB(0.214040995,0.214040995,0.214040995)) [CONNECTABLE]
+         * Label: 'Base Color/Diffuse'
+         * Description: 'Base Color channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___200) [CONNECTABLE]
+         * Label: 'Normal'
+         * Description: 'Normal channel'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'roughness' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Roughness channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'metallic' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Metallic'
+         * Description: 'Metallic channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'height' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Height'
+         * Description: 'Height channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'heightScale' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scale'
+         * Description: 'provides significant physical detail to the surface by manipulating the vertices of the mesh'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ambientOcclusion' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Ambient Occlusion'
+         * Description: 'Ambient Occlusion channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'anisotropyLevel' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy Level'
+         * Description: 'Anisotropy Level channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'anisotropyAngle' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy Angle'
+         * Description: 'Anisotropy Angle channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'emissiveColor' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Emissive'
+         * Description: 'Emissive channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'emissiveIntensity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Emissive Intensity'
+         * Description: 'Controls how much light is emitted from the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'specularLevel' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Specular Level'
+         * Description: 'Specular Level channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'opacity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Opacity'
+         * Description: 'Opacity channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'refraction' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Refraction'
+         * Description: 'Refraction channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'refractionIOR' = SDValueFloat(float(1.5)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Index of Refraction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scattering' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scattering'
+         * Description: 'controls how much light is scattered through the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'absorption' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Absorption'
+         * Description: 'controls how much light is absorbed through the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'absorptionColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Absorption Color'
+         * Description: 'simulates shifts in color when light passes through the surface'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'scalarZeroValue' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Scalar Zero Value'
+         * Description: 'Determine the neutral height value'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'tiling' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Tiling value to keep displacement tiling independent'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[2/3] 'mdl::alg::materials::designer::pbr::physically_metallic_roughness_coated'
+################################################################################
+   * Label: 'Physically Metallic Roughness - Coating'
+   * Description: 'The usual PBR shader, with a coated layer color'
+   * SDPropertyCategory = 'Input'
+      * 'baseColor' = SDValueColorRGB(ColorRGB(0.214040995,0.214040995,0.214040995)) [CONNECTABLE]
+         * Label: 'Base Color/Diffuse'
+         * Description: 'Base Color channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___201) [CONNECTABLE]
+         * Label: 'Normal'
+         * Description: 'Normal channel'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'roughness' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Roughness channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'metallic' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Metallic'
+         * Description: 'Metallic channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'height' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Height'
+         * Description: 'Height channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'heightScale' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scale'
+         * Description: 'provides significant physical detail to the surface by manipulating the vertices of the mesh'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ambientOcclusion' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Ambient Occlusion'
+         * Description: 'Ambient Occlusion channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'anisotropyLevel' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy Level'
+         * Description: 'Anisotropy Level channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'anisotropyAngle' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy Angle'
+         * Description: 'Anisotropy Angle channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'emissiveColor' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Emissive'
+         * Description: 'Emissive channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'emissiveIntensity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Emissive Intensity'
+         * Description: 'Controls how much light is emitted from the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'specularLevel' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Specular Level'
+         * Description: 'Specular Level channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'opacity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Opacity'
+         * Description: 'Opacity channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'refraction' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Refraction'
+         * Description: 'Refraction channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'refractionIOR' = SDValueFloat(float(1.5)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Index of Refraction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scattering' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scattering'
+         * Description: 'controls how much light is scattered through the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'absorption' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Absorption'
+         * Description: 'controls how much light is absorbed through the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'absorptionColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Absorption Color'
+         * Description: 'simulates shifts in color when light passes through the surface'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'coatWeight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Weight'
+         * Description: 'How much of the coating is present'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'coatSpecularLevel' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Specular Level'
+         * Description: 'Specular control for F0 : 0 -> 0%, 1 -> 8%'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'coatColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Tint color'
+         * Description: 'Coating color which affects transmitted light going to below layers'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'coatRoughness' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'How irregular are surface micro detail : 0 -> regular (i.e. polished) 		, 1 -> irregular (i.e. rough)'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'coatNormal' = SDMDLValueCall(mdl::state::normal()__default_call___202) [CONNECTABLE]
+         * Label: 'Normal'
+         * Description: 'Desribes surface relief details'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'coatInheritNormal' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Inherit normal'
+         * Description: 'Whether the coat surface inherit the same relief as below layer or if it has its own'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'scalarZeroValue' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Scalar Zero Value'
+         * Description: 'Determine the neutral height value'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'tiling' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Tiling value to keep displacement tiling independent'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[3/3] 'mdl::alg::materials::designer::pbr::physically_specular_glossiness'
+##########################################################################
+   * Label: 'Physically Specular Glossiness'
+   * SDPropertyCategory = 'Input'
+      * 'baseColor' = SDValueColorRGB(ColorRGB(0.214040995,0.214040995,0.214040995)) [CONNECTABLE]
+         * Label: 'Diffuse'
+         * Description: 'Diffuse channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___204) [CONNECTABLE]
+         * Label: 'Normal'
+         * Description: 'Normal channel'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'specular' = SDValueColorRGB(ColorRGB(0.214040995,0.214040995,0.214040995)) [CONNECTABLE]
+         * Label: 'Specular'
+         * Description: 'Specular channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'glossiness' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Glossiness'
+         * Description: 'Glossiness channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'height' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Height'
+         * Description: 'Height channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'heightScale' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scale'
+         * Description: 'provides significant physical detail to the surface by manipulating the vertices of the mesh'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ambientOcclusion' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Ambient Occlusion'
+         * Description: 'Ambient Occlusion channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'anisotropyLevel' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy Level'
+         * Description: 'Anisotropy Level channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'anisotropyAngle' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy Angle'
+         * Description: 'Anisotropy Angle channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'emissiveColor' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Emissive'
+         * Description: 'Emissive channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'emissiveIntensity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Emissive Intensity'
+         * Description: 'Controls how much light is emitted from the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'opacity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Opacity'
+         * Description: 'Opacity channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'refraction' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Refraction'
+         * Description: 'Refraction'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'refractionColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Refraction Color'
+         * Description: 'Refraction channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'refractionIOR' = SDValueFloat(float(1.5)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Index of Refraction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scattering' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scattering'
+         * Description: 'controls how much light is scattered through the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'absorption' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Absorption'
+         * Description: 'controls how much light is absorbed through the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'absorptionColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Absorption Color'
+         * Description: 'simulates shifts in color when light passes through the surface'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'scalarZeroValue' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Scalar Zero Value'
+         * Description: 'Determine the neutral height value'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'tiling' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Tiling value to keep displacement tiling independent'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)

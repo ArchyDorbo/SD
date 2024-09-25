@@ -1,0 +1,8 @@
+sdsbsfxmapnode module
+=====================
+
+.. automodule:: sd.api.sbs.sdsbsfxmapnode
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

@@ -1,0 +1,8 @@
+sdmdlgraphdefinition module
+===========================
+
+.. automodule:: sd.api.mdl.sdmdlgraphdefinition
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

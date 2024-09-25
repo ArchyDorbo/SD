@@ -1,0 +1,8 @@
+sample_mdl_graph_template_metallic module
+=========================================
+
+.. automodule:: samples.sample_mdl_graph_template_metallic
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

@@ -1,0 +1,8 @@
+sddefinition module
+===================
+
+.. automodule:: sd.api.sddefinition
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

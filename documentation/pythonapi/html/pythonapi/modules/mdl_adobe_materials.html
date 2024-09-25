@@ -1,0 +1,858 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>mdl::adobe::materials &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mdl::adobe::mtl" href="mdl_adobe_mtl.html" />
+    <link rel="prev" title="mdl::adobe::convert" href="mdl_adobe_convert.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_adobe_mtl.html" title="mdl::adobe::mtl"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mdl_adobe_convert.html" title="mdl::adobe::convert"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" accesskey="U">Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mdl-adobe-materials">
+<h1>mdl::adobe::materials<a class="headerlink" href="#mdl-adobe-materials" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#definitions" id="id1">Definitions:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-adobe-materials-standard" id="id2">[1/1] ‘mdl::adobe::materials::standard’</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="definitions">
+<h2><a class="toc-backref" href="#id1">Definitions:</a><a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-adobe-materials-standard">
+<h3><a class="toc-backref" href="#id2">[1/1] ‘mdl::adobe::materials::standard’</a><a class="headerlink" href="#mdl-adobe-materials-standard" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Adobe Standard Material Definition’</p></li>
+<li><p>Description: ‘Material definition for Adobe interchange.’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘base_color’ = SDValueColorRGB(ColorRGB(0.5,0.5,0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Base color’</p></li>
+<li><p>Description: ‘The color of the surface.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘roughness’ = SDValueFloat(float(0.300000012)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Roughness’</p></li>
+<li><p>Description: ‘How smooth or matte the surface is.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘metallic’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Metallic’</p></li>
+<li><p>Description: ‘The degree of metallic luster the surface has.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘opacity’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Opacity’</p></li>
+<li><p>Description: ‘The visibility of the surface.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘ambient_occlusion’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Ambient occlusion’</p></li>
+<li><p>Description: ‘Shadows from cavities and creases preventing light from hitting the surface.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular_level’ = SDValueFloat(float(0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Specular level’</p></li>
+<li><p>Description: ‘The strength of light reflections on the surface.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular_edge_color’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Specular edge color’</p></li>
+<li><p>Description: ‘The color of light reflections. Affects glancing angles for metallic materials.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘normal’ = SDMDLValueCall(mdl::state::normal()__default_call___174) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Normal’</p></li>
+<li><p>Description: ‘Simulate surface details like bumps and cracks.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘normal_scale’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Normal scale’</p></li>
+<li><p>Description: ‘The strength of the normal effect.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘combine_normal_and_height’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Combine normal and height’</p></li>
+<li><p>Description: ‘Applies the normal texture on top of the height texture.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘height’ = SDValueFloat(float(0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Height’</p></li>
+<li><p>Description: ‘Creates surface details using bump or geometry displacement.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘height_scale’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Height scale’</p></li>
+<li><p>Description: ‘The scale of height in scene units. Applies to both bump and displacement.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘height_level’ = SDValueFloat(float(0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Height level’</p></li>
+<li><p>Description: ‘The value of the height texture representing zero displacement.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘anisotropy’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Anisotropy level’</p></li>
+<li><p>Description: ‘The amount that reflections stretch in one direction along the surface.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘anisotropy_rotation’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Anisotropy angle’</p></li>
+<li><p>Description: ‘The counterclockwise rotation of the anisotropic effect.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘emission’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Emission intensity’</p></li>
+<li><p>Description: ‘The intensity of light emitted from the surface.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘emission_color’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Emission color’</p></li>
+<li><p>Description: ‘The color of emitted light.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sheen’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Sheen opacity’</p></li>
+<li><p>Description: ‘Simulates the effect microscopic fibers or fuzz on the surface.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sheen_color’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Sheen color’</p></li>
+<li><p>Description: ‘The color of the sheen effect.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sheen_roughness’ = SDValueFloat(float(0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Sheen roughness’</p></li>
+<li><p>Description: ‘Softness of the sheen effect.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘translucency’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Translucency’</p></li>
+<li><p>Description: ‘The amount of light able to transmit through the surface.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘thin_walled’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Thin-walled’</p></li>
+<li><p>Description: ‘Treats all surfaces as a thin shell. Disables refraction, absorption, and scattering.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘absorption_color’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Absorption color’</p></li>
+<li><p>Description: ‘The color light will converge to as it is absorbed.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘absorption_distance’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Absorption distance’</p></li>
+<li><p>Description: ‘Approximate distance in scene units that light will travel before reaching absorption color. If set to zero, thickness will not affect absorption color.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular_ior’ = SDValueFloat(float(1.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Index of refraction’</p></li>
+<li><p>Description: ‘The amount light bends as it passes through the object.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘dispersion’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Dispersion’</p></li>
+<li><p>Description: ‘The amount the color spectrum spreads out when refracted.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scatter’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Subsurface scattering’</p></li>
+<li><p>Description: ‘Scatters light below the surface, rather than passing straight through.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scatter_color’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scattering color’</p></li>
+<li><p>Description: ‘The color below the surface that scattered light will become.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scatter_distance’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scattering distance’</p></li>
+<li><p>Description: ‘Approximate distance light must travel before reaching full scattering.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scatter_distance_scale’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scattering distance scale’</p></li>
+<li><p>Description: ‘A multiplier of the scatter distance. May be different for each color channel.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scatter_red_shift’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Red shift’</p></li>
+<li><p>Description: ‘Sets red light to travel further than other light colors. Useful for skin.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scatter_rayleigh’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Rayleigh scattering’</p></li>
+<li><p>Description: ‘Sets orange light to travel further beneath the surface and blue light to travel less.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scatter_anisotropy’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scattering anisotropy’</p></li>
+<li><p>Description: ‘Directional bias of the scattering media.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘volume_thickness’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Volume thickness’</p></li>
+<li><p>Description: ‘       The thickness of the surface relative to the bounding box of the object. Used for interior effects when the real thickness is not known.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘volume_thickness_scale’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Volume thickness scale’</p></li>
+<li><p>Description: ‘Multiplier of the volume thickness.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coat’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Coat opacity’</p></li>
+<li><p>Description: ‘Simulates a layer on top of the material. Used to create clear coats, lacquers, and varnishes.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coat_color’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Coat color’</p></li>
+<li><p>Description: ‘The color of the coat.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coat_roughness’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Coat roughness’</p></li>
+<li><p>Description: ‘How smooth or matte the coat surface is.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coat_ior’ = SDValueFloat(float(1.60000002)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Coat index of refraction’</p></li>
+<li><p>Description: ‘The amount light bends as it passes through the coating.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coat_specular_level’ = SDValueFloat(float(0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Coat specular level’</p></li>
+<li><p>Description: ‘The strength of light reflections on the coat at glancing angles.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coat_normal’ = SDMDLValueCall(mdl::state::normal()__default_call___182) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Coat normal’</p></li>
+<li><p>Description: ‘Simulate surface details like bumps and cracks on the coat surface.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘coat_normal_scale’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Coat normal scale’</p></li>
+<li><p>Description: ‘The strength of the coat normal effect.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘thin_film_thickness’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Thin-film thickness’</p></li>
+<li><p>Description: ‘The simulated thickness of the thin film, as interpolated between thin_film_thickness_min and thin_film_thickness_max. (0 = no thin film)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘thin_film_thickness_min’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Thin-film thickness min’</p></li>
+<li><p>Description: ‘The simulated thickness of the thin film in nanometers when thin_film_thickness = 0.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘thin_film_thickness_max’ = SDValueFloat(float(1200)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Thin-film thickness max’</p></li>
+<li><p>Description: ‘The simulated thickness of the thin film in nanometers when thin_film_thickness = 1.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘thin_film_ior’ = SDValueFloat(float(1.29999995)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Thin-film index of refraction’</p></li>
+<li><p>Description: ‘Index of refraction of the thin film.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::material’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">mdl::adobe::materials</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions:</a><ul>
+<li><a class="reference internal" href="#mdl-adobe-materials-standard">[1/1] ‘mdl::adobe::materials::standard’</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mdl_adobe_convert.html"
+                        title="previous chapter">mdl::adobe::convert</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mdl_adobe_mtl.html"
+                        title="next chapter">mdl::adobe::mtl</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pythonapi/modules/mdl_adobe_materials.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_adobe_mtl.html" title="mdl::adobe::mtl"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mdl_adobe_convert.html" title="mdl::adobe::convert"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" >Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

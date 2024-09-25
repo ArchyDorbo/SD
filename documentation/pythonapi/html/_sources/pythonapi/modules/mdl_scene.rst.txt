@@ -1,0 +1,306 @@
+mdl::scene
+==========
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/19] 'mdl::scene::data_isvalid(string)'
+#########################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[2/19] 'mdl::scene::data_lookup_int(string,int)'
+################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueInt(int(0)) [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt) [Varying]
+
+[3/19] 'mdl::scene::data_lookup_uniform_int(string,int)'
+########################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueInt(int(0)) [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+[4/19] 'mdl::scene::data_lookup_int2(string,int2)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int2' (SDTypeInt2) [Varying]
+
+[5/19] 'mdl::scene::data_lookup_uniform_int2(string,int2)'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'int2' (SDTypeInt2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int2' (SDTypeInt2) [Uniform]
+
+[6/19] 'mdl::scene::data_lookup_int3(string,int3)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueInt3(int3(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int3' (SDTypeInt3) [Varying]
+
+[7/19] 'mdl::scene::data_lookup_uniform_int3(string,int3)'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueInt3(int3(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'int3' (SDTypeInt3) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int3' (SDTypeInt3) [Uniform]
+
+[8/19] 'mdl::scene::data_lookup_int4(string,int4)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueInt4(int4(0,0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'int4' (SDTypeInt4)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int4' (SDTypeInt4) [Varying]
+
+[9/19] 'mdl::scene::data_lookup_uniform_int4(string,int4)'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueInt4(int4(0,0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'int4' (SDTypeInt4) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int4' (SDTypeInt4) [Uniform]
+
+[10/19] 'mdl::scene::data_lookup_float(string,float)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+[11/19] 'mdl::scene::data_lookup_uniform_float(string,float)'
+#############################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+[12/19] 'mdl::scene::data_lookup_float2(string,float2)'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueFloat2(float2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Varying]
+
+[13/19] 'mdl::scene::data_lookup_uniform_float2(string,float2)'
+###############################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueFloat2(float2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+[14/19] 'mdl::scene::data_lookup_float3(string,float3)'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[15/19] 'mdl::scene::data_lookup_uniform_float3(string,float3)'
+###############################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+[16/19] 'mdl::scene::data_lookup_float4(string,float4)'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueFloat4(float4(0,0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4) [Varying]
+
+[17/19] 'mdl::scene::data_lookup_uniform_float4(string,float4)'
+###############################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueFloat4(float4(0,0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'float4' (SDTypeFloat4) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float4' (SDTypeFloat4) [Uniform]
+
+[18/19] 'mdl::scene::data_lookup_color(string,color)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+[19/19] 'mdl::scene::data_lookup_uniform_color(string,color)'
+#############################################################
+   * SDPropertyCategory = 'Input'
+      * 'name' [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+      * 'default_value' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]

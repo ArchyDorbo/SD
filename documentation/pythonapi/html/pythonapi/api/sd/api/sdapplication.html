@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdapplication module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="sdarray module" href="sdarray.html" />
+    <link rel="prev" title="sdappinteropmgr module" href="sdappinteropmgr.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdarray.html" title="sdarray module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdappinteropmgr.html" title="sdappinteropmgr module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" accesskey="U">Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.sdapplication">
+<span id="sdapplication-module"></span><h1>sdapplication module<a class="headerlink" href="#module-sd.api.sdapplication" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.sdapplication.SDApplication">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdapplication.</code><code class="sig-name descname">SDApplication</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sdapiobject.html#sd.api.sdapiobject.SDAPIObject" title="sd.api.sdapiobject.SDAPIObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdapiobject.SDAPIObject</span></code></a></p>
+<p>Root object of all objects managed by the API</p>
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getAppInteropMgr">
+<code class="sig-name descname">getAppInteropMgr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.getAppInteropMgr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdapplication.SDApplication.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getColorManagementEngine">
+<code class="sig-name descname">getColorManagementEngine</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.getColorManagementEngine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Color Management Engine</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getModuleMgr">
+<code class="sig-name descname">getModuleMgr</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdmodulemgr.SDModuleMgr<a class="headerlink" href="#sd.api.sdapplication.SDApplication.getModuleMgr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Module Manager</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getPackageMgr">
+<code class="sig-name descname">getPackageMgr</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdpackagemgr.SDPackageMgr<a class="headerlink" href="#sd.api.sdapplication.SDApplication.getPackageMgr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Package Manager</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getPath">
+<code class="sig-name descname">getPath</code><span class="sig-paren">(</span><em class="sig-param">sdApplicationPath: sd.api.sdapplication.SDApplicationPath</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdapplication.SDApplication.getPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path specified by the SDApplicationPath enum</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdApplicationPath</strong> – The enum representing the path to get</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getPluginMgr">
+<code class="sig-name descname">getPluginMgr</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdpluginmgr.SDPluginMgr<a class="headerlink" href="#sd.api.sdapplication.SDApplication.getPluginMgr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Plugin Manager</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getQtForPythonUIMgr">
+<code class="sig-name descname">getQtForPythonUIMgr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.getQtForPythonUIMgr" title="Permalink to this definition">¶</a></dt>
+<dd><p>return …</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getSDGraphDefinitionMgr">
+<code class="sig-name descname">getSDGraphDefinitionMgr</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdgraphdefinitionmgr.SDGraphDefinitionMgr<a class="headerlink" href="#sd.api.sdapplication.SDApplication.getSDGraphDefinitionMgr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Graph Definition Mgr</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getSpotColorLibrary">
+<code class="sig-name descname">getSpotColorLibrary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.getSpotColorLibrary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Spot Color Library</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getUIMgr">
+<code class="sig-name descname">getUIMgr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.getUIMgr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the UI Manager</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.getVersion">
+<code class="sig-name descname">getVersion</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdapplication.SDApplication.getVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the application version as “MAJOR.MINOR.PATCH”</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.registerAfterFileClosedCallback">
+<code class="sig-name descname">registerAfterFileClosedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.registerAfterFileClosedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called after a file is closed
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> (<em>Python function</em>) – Function to call after a file is closed</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.registerAfterFileLoadedCallback">
+<code class="sig-name descname">registerAfterFileLoadedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.registerAfterFileLoadedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called after a file is loaded
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> (<em>Python function</em>) – Function to call after a file is loaded</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.registerAfterFileSavedCallback">
+<code class="sig-name descname">registerAfterFileSavedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.registerAfterFileSavedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called after a file is saved
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> (<em>Python function</em>) – Function to call after a file is saved</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.registerBeforeFileClosedCallback">
+<code class="sig-name descname">registerBeforeFileClosedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.registerBeforeFileClosedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called before a file is closed
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> (<em>Python function</em>) – Function to call before a file is closed</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.registerBeforeFileLoadedCallback">
+<code class="sig-name descname">registerBeforeFileLoadedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.registerBeforeFileLoadedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called before a file is loaded
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> (<em>Python function</em>) – Function to call before a file is loaded</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.registerBeforeFileSavedCallback">
+<code class="sig-name descname">registerBeforeFileSavedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.registerBeforeFileSavedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called before a file is saved
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> (<em>Python function</em>) – Function to call before a file is saved</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdapplication.SDApplication.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdapplication.SDApplication.unregisterCallback">
+<code class="sig-name descname">unregisterCallback</code><span class="sig-paren">(</span><em class="sig-param">callbackID</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdapplication.SDApplication.unregisterCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unregister a callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callbackID</strong> (<em>int</em>) – The callback ID of the callback to unregister</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sd.api.sdapplication.SDApplicationPath">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdapplication.</code><code class="sig-name descname">SDApplicationPath</code><a class="headerlink" href="#sd.api.sdapplication.SDApplicationPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Enum representing predefined paths</p>
+<dl class="attribute">
+<dt id="sd.api.sdapplication.SDApplicationPath.DefaultResourcesDir">
+<code class="sig-name descname">DefaultResourcesDir</code><em class="property"> = 1</em><a class="headerlink" href="#sd.api.sdapplication.SDApplicationPath.DefaultResourcesDir" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default directory used for temporary files</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdapplication.SDApplicationPath.DefaultTemporaryDir">
+<code class="sig-name descname">DefaultTemporaryDir</code><em class="property"> = 2</em><a class="headerlink" href="#sd.api.sdapplication.SDApplicationPath.DefaultTemporaryDir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdapplication.SDApplicationPath.InstallationDir">
+<code class="sig-name descname">InstallationDir</code><em class="property"> = 0</em><a class="headerlink" href="#sd.api.sdapplication.SDApplicationPath.InstallationDir" title="Permalink to this definition">¶</a></dt>
+<dd><p>The directory where the default library is installed</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdappinteropmgr.html"
+                        title="previous chapter">sdappinteropmgr module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdarray.html"
+                        title="next chapter">sdarray module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/pythonapi/api/sd/api/sdapplication.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdarray.html" title="sdarray module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdappinteropmgr.html" title="sdappinteropmgr module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" >Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+sduimgr module
+==============
+
+.. automodule:: sd.api.sduimgr
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

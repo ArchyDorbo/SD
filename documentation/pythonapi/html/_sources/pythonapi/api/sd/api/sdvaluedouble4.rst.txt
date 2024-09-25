@@ -1,0 +1,8 @@
+sdvaluedouble4 module
+=====================
+
+.. automodule:: sd.api.sdvaluedouble4
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

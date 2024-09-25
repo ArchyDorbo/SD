@@ -1,0 +1,336 @@
+sbs::fxmap
+==========
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/4] 'sbs::fxmap::paramset'
+############################
+   * Label: 'Quadrant'
+   * Description: 'Takes input image(s), positions them, and, if defined, also renders the node's own pattern or image'
+   * SDPropertyCategory = 'Input'
+      * 'opacity' = SDValueFloat4(float4(1,1,1,1))
+         * Label: 'Color / Luminosity'
+         * Description: 'Pattern <B>Color / Luminosity</B> multiplier'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'branchoffset' = SDValueFloat2(float2(0,0))
+         * Label: 'Branch Offset'
+         * Description: '<b>Branch Offset</b>. This value will be applied to the entire branch, beginning with this Parameter Set'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'patterntype' = SDValueEnum("sbs::fxmap::patterntype",0)
+         * Label: 'Pattern'
+         * Description: 'Select pattern'
+         * Types:
+            * 'sbs::fxmap::patterntype' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'frameoffset' = SDValueFloat2(float2(0,0))
+         * Label: 'Pattern  Offset'
+         * Description: '<b>Pattern  Offset</b> in 2D space. This value will apply only to this Parameter Set'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'patternsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pattern Size'
+         * Description: 'Morphlet pattern size'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'patternrotation' = SDValueFloat(float(0))
+         * Label: 'Pattern Rotation'
+         * Description: 'Morphlet pattern rotation'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'patternsuppl' = SDValueFloat(float(0))
+         * Label: 'Pattern Variation'
+         * Description: '<b>Pattern Variation</b> parameter. Applies to: Brick, Gradation, Waves, Half Bell, Crescent, Capsule, Gradation w. Offset'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'blendingmode' = SDValueEnum("sbs::fxmap::blendingmode",0)
+         * Label: 'Blending Mode'
+         * Description: 'Blending mode'
+         * Types:
+            * 'sbs::fxmap::blendingmode' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'Random seed'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'randominherited' = SDValueBool(bool(true))
+         * Label: 'Inherit Random'
+         * Description: 'When set, the random seed value is relative to the parent graph's random seed'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'imageindex' = SDValueInt(int(0))
+         * Label: 'Input Image Index'
+         * Description: 'Input Image Pattern only: zero based index of the input plugged to FX-Map node.'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'imagepremul' = SDValueBool(bool(false))
+         * Label: 'Input Image Alpha'
+         * Description: 'Color Input Image Pattern only: alpha channel interpretation'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'imagefiltering' = SDValueEnum("sbs::fxmap::imagefiltering",0)
+         * Label: 'Input Image Filtering'
+         * Description: 'Input Image Pattern only: filtering mode'
+         * Types:
+            * 'sbs::fxmap::imagefiltering' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'output0' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output 0'
+         * Description: 'Output 0'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+      * 'output1' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output 1'
+         * Description: 'Output 1'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+      * 'output2' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output 2'
+         * Description: 'Output 2'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+      * 'output3' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output 3'
+         * Description: 'Output 3'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+[2/4] 'sbs::fxmap::markov2'
+###########################
+   * Label: 'Switch'
+   * Description: 'Switches between primary and secondary outputs'
+   * SDPropertyCategory = 'Input'
+      * 'switch' = SDValueBool(bool(false))
+         * Label: 'Selector'
+         * Description: 'Selector'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'Random seed'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'randominherited' = SDValueBool(bool(true))
+         * Label: 'Inherit Random'
+         * Description: 'When set, the random seed value is relative to the parent graph's random seed'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'output0' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output 0'
+         * Description: 'Output 0'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+      * 'output1' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output 1'
+         * Description: 'Output 1'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+[3/4] 'sbs::fxmap::addnode'
+###########################
+   * Label: 'Iterate'
+   * Description: 'Takes the secondary (right) output and duplicates it over the optional background (left), as many times as specified'
+   * SDPropertyCategory = 'Input'
+      * 'numberadded' = SDValueInt(int(1))
+         * Label: 'Iterations'
+         * Description: 'Number of times the input node is duplicated'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'Random seed'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'randominherited' = SDValueBool(bool(true))
+         * Label: 'Inherit Random'
+         * Description: 'When set, the random seed value is relative to the parent graph's random seed'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'output0' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output 0'
+         * Description: 'Output 0'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+      * 'output1' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output 1'
+         * Description: 'Output 1'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+[4/4] 'sbs::fxmap::passthrough'
+###############################
+   * Label: 'Dot'
+   * Description: 'The <b>Dot</b> node is not doing anything'
+   * SDPropertyCategory = 'Input'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'Undefined' (SDTypeCustom)
+
+Types:
+------
+[1/3] 'sbs::fxmap::imagefiltering'
+##################################
+   * 'sbs::fxmap::imagefiltering' (SDTypeEnum)
+      * int bilinearmipmaps = SDValueInt(int(0))
+         * Label: 'Bilinear + Mipmaps'
+         * Description: 'Bilinear + Mipmaps'
+
+      * int bilinear = SDValueInt(int(1))
+         * Label: 'Bilinear'
+         * Description: 'Bilinear'
+
+      * int nearest = SDValueInt(int(2))
+         * Label: 'Nearest'
+         * Description: 'Nearest'
+
+[2/3] 'sbs::fxmap::blendingmode'
+################################
+   * 'sbs::fxmap::blendingmode' (SDTypeEnum)
+      * int addsub = SDValueInt(int(0))
+         * Label: 'Add Sub'
+         * Description: 'Add Sub'
+
+      * int max = SDValueInt(int(1))
+         * Label: 'Max'
+         * Description: 'Max'
+
+      * int alphablend = SDValueInt(int(2))
+         * Label: 'Alpha Blend'
+         * Description: 'Alpha Blend'
+
+[3/3] 'sbs::fxmap::patterntype'
+###############################
+   * 'sbs::fxmap::patterntype' (SDTypeEnum)
+      * int null = SDValueInt(int(0))
+         * Label: 'No Pattern'
+         * Description: 'No Pattern'
+
+      * int image_entry = SDValueInt(int(1))
+         * Label: 'Input Image'
+         * Description: 'Input Image'
+
+      * int square = SDValueInt(int(2))
+         * Label: 'Square'
+         * Description: 'Square'
+
+      * int disc = SDValueInt(int(3))
+         * Label: 'Disc'
+         * Description: 'Disc'
+
+      * int paraboloid = SDValueInt(int(4))
+         * Label: 'Paraboloid'
+         * Description: 'Paraboloid'
+
+      * int bell = SDValueInt(int(5))
+         * Label: 'Bell'
+         * Description: 'Bell'
+
+      * int gaussian = SDValueInt(int(6))
+         * Label: 'Gaussian'
+         * Description: 'Gaussian'
+
+      * int thorn = SDValueInt(int(7))
+         * Label: 'Thorn'
+         * Description: 'Thorn'
+
+      * int pyramid = SDValueInt(int(8))
+         * Label: 'Pyramid'
+         * Description: 'Pyramid'
+
+      * int brick = SDValueInt(int(9))
+         * Label: 'Brick'
+         * Description: 'Brick'
+
+      * int gradation = SDValueInt(int(10))
+         * Label: 'Gradation'
+         * Description: 'Gradation'
+
+      * int waves = SDValueInt(int(11))
+         * Label: 'Waves'
+         * Description: 'Waves'
+
+      * int halfbell = SDValueInt(int(12))
+         * Label: 'Half Bell'
+         * Description: 'Half Bell'
+
+      * int ridgebell = SDValueInt(int(13))
+         * Label: 'Ridged Bell'
+         * Description: 'Ridged Bell'
+
+      * int crescent = SDValueInt(int(14))
+         * Label: 'Crescent'
+         * Description: 'Crescent'
+
+      * int capsule = SDValueInt(int(15))
+         * Label: 'Capsule'
+         * Description: 'Capsule'
+
+      * int cone = SDValueInt(int(16))
+         * Label: 'Cone'
+         * Description: 'Cone'
+
+      * int gradoffset = SDValueInt(int(17))
+         * Label: 'Gradation w. Offset'
+         * Description: 'Gradation w. Offset'
+
+      * int hemisphere = SDValueInt(int(18))
+         * Label: 'Hemisphere'
+         * Description: 'Hemisphere'

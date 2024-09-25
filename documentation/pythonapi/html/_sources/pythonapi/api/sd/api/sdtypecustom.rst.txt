@@ -1,0 +1,8 @@
+sdtypecustom module
+===================
+
+.. automodule:: sd.api.sdtypecustom
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

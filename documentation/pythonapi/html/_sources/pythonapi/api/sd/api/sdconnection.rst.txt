@@ -1,0 +1,8 @@
+sdconnection module
+===================
+
+.. automodule:: sd.api.sdconnection
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

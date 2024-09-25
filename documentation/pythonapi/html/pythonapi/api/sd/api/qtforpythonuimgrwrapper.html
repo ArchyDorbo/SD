@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>qtforpythonuimgrwrapper module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Python Package ‘sbs’" href="sbs/modules.html" />
+    <link rel="prev" title="sdmdlvaluevdf module" href="mdl/sdmdlvaluevdf.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sbs/modules.html" title="Python Package ‘sbs’"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mdl/sdmdlvaluevdf.html" title="sdmdlvaluevdf module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" accesskey="U">Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.qtforpythonuimgrwrapper">
+<span id="qtforpythonuimgrwrapper-module"></span><h1>qtforpythonuimgrwrapper module<a class="headerlink" href="#module-sd.api.qtforpythonuimgrwrapper" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.qtforpythonuimgrwrapper.</code><code class="sig-name descname">QtForPythonUIMgrWrapper</code><span class="sig-paren">(</span><em class="sig-param">uiMgr</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.addActionToExplorerToolbar">
+<code class="sig-name descname">addActionToExplorerToolbar</code><span class="sig-paren">(</span><em class="sig-param">explorerID: int</em>, <em class="sig-param">action: PySide6.QtGui.QAction</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.addActionToExplorerToolbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an action to an explorer toolbar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>explorerID</strong> – Explorer identifier</p></li>
+<li><p><strong>action</strong> – action</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.addActionToGraphViewToolbar">
+<code class="sig-name descname">addActionToGraphViewToolbar</code><span class="sig-paren">(</span><em class="sig-param">graphViewID: int</em>, <em class="sig-param">action: PySide6.QtGui.QAction</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.addActionToGraphViewToolbar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an action to a graph view toolbar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>graphViewID</strong> – Graph view identifier</p></li>
+<li><p><strong>action</strong> – QAction to add to the toolbar</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.addToolbarToGraphView">
+<code class="sig-name descname">addToolbarToGraphView</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.addToolbarToGraphView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a toolbar to a graph view</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>graphViewID</strong> – Graph view identifier</p></li>
+<li><p><strong>toolbar</strong> – Toolbar to add to the widget</p></li>
+<li><p><strong>toolbar</strong> – The toolbar icon</p></li>
+<li><p><strong>tooltip</strong> – The toolbar tooltip</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.convertSDTextureToQImage">
+<em class="property">static </em><code class="sig-name descname">convertSDTextureToQImage</code><span class="sig-paren">(</span><em class="sig-param">sdTexture: sd.api.sdtexture.SDTexture</em><span class="sig-paren">)</span> &#x2192; PySide6.QtGui.QImage<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.convertSDTextureToQImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a SDTexture into a QImage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdTexture</strong> – The texture that will be converted</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.deleteMenu">
+<code class="sig-name descname">deleteMenu</code><span class="sig-paren">(</span><em class="sig-param">objectName: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.deleteMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a menu from the application menu bar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objectName</strong> – The internal object name of the menu</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.findMenuFromObjectName">
+<code class="sig-name descname">findMenuFromObjectName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.findMenuFromObjectName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an existing menu in the application menu bar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objectName</strong> – The internal object name of the menu</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getCurrentGraph">
+<code class="sig-name descname">getCurrentGraph</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getCurrentGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current graph (can be null)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getCurrentGraphSelectedNodes">
+<code class="sig-name descname">getCurrentGraphSelectedNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getCurrentGraphSelectedNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the selected nodes in the current graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getCurrentGraphSelectedObjects">
+<code class="sig-name descname">getCurrentGraphSelectedObjects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getCurrentGraphSelectedObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the selected graph objects in the current graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getCurrentGraphSelection">
+<code class="sig-name descname">getCurrentGraphSelection</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getCurrentGraphSelection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getCurrentGraphSelectionFromGraphViewID">
+<code class="sig-name descname">getCurrentGraphSelectionFromGraphViewID</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getCurrentGraphSelectionFromGraphViewID" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getExplorerSelection">
+<code class="sig-name descname">getExplorerSelection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getExplorerSelection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the currently selected items in the explorer panel</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>explorerID</strong> – Explorer identifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getGraphFromGraphViewID">
+<code class="sig-name descname">getGraphFromGraphViewID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getGraphFromGraphViewID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the graph from a Graph View ID (can be null)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graphViewID</strong> – The Graph View ID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getGraphSelectedNodesFromGraphViewID">
+<code class="sig-name descname">getGraphSelectedNodesFromGraphViewID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getGraphSelectedNodesFromGraphViewID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the selected nodes in a graph from a Graph View ID (can be null)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graphViewID</strong> – The Graph View ID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getGraphSelectedObjectsFromGraphViewID">
+<code class="sig-name descname">getGraphSelectedObjectsFromGraphViewID</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getGraphSelectedObjectsFromGraphViewID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the selected graph objects in the current graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graphViewID</strong> – The Graph View ID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getGraphView">
+<code class="sig-name descname">getGraphView</code><span class="sig-paren">(</span><em class="sig-param">graphViewID: int</em><span class="sig-paren">)</span> &#x2192; PySide6.QtWidgets.QWidget<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getGraphView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Widget that match the specified graphViewID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graphViewID</strong> – Graph view identifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getMainWindow">
+<code class="sig-name descname">getMainWindow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.getMainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the main window</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.newDockWidget">
+<code class="sig-name descname">newDockWidget</code><span class="sig-paren">(</span><em class="sig-param">identifier: str</em>, <em class="sig-param">title: str</em><span class="sig-paren">)</span> &#x2192; PySide6.QtWidgets.QWidget<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.newDockWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new dock widget</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> – Dock internal identifier (must be unique)</p></li>
+<li><p><strong>title</strong> – Dock title</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.newMenu">
+<code class="sig-name descname">newMenu</code><span class="sig-paren">(</span><em class="sig-param">menuTitle: str</em>, <em class="sig-param">objectName: str</em><span class="sig-paren">)</span> &#x2192; PySide6.QtWidgets.QMenu<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.newMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new menu in the application menu bar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>menuTitle</strong> – The menu title</p></li>
+<li><p><strong>objectName</strong> – The internal object name of the menu</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.registerExplorerCreatedCallback">
+<code class="sig-name descname">registerExplorerCreatedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable: Callable[[int], None]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.registerExplorerCreatedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called when a new explorer is created
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> – Function to call when a new explorer is created</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.registerExplorerSelectionChangedCallback">
+<code class="sig-name descname">registerExplorerSelectionChangedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable: Callable[[int], None]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.registerExplorerSelectionChangedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called when the explorer selection changed
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> – Function to call when the explorer selection changed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.registerGraphViewCreatedCallback">
+<code class="sig-name descname">registerGraphViewCreatedCallback</code><span class="sig-paren">(</span><em class="sig-param">callable: Callable[[int], None]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.registerGraphViewCreatedCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback to be called when a new graph view is created
+Returns a callback ID that can be used later to unregister the callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callable</strong> – Function to call when a new graph view is created</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.unregisterCallback">
+<code class="sig-name descname">unregisterCallback</code><span class="sig-paren">(</span><em class="sig-param">callbackID: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.qtforpythonuimgrwrapper.QtForPythonUIMgrWrapper.unregisterCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unregister a callback</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>callbackID</strong> – The callback ID of the callback to unregister</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mdl/sdmdlvaluevdf.html"
+                        title="previous chapter">sdmdlvaluevdf module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sbs/modules.html"
+                        title="next chapter">Python Package ‘sbs’</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/pythonapi/api/sd/api/qtforpythonuimgrwrapper.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sbs/modules.html" title="Python Package ‘sbs’"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mdl/sdmdlvaluevdf.html" title="sdmdlvaluevdf module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" >Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

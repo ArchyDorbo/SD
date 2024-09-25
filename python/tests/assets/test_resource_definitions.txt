@@ -1,0 +1,566 @@
+Resource[0]
+	Resource Type: 'SDSBSCompGraph' (SDTypeCustom)
+	Resource Url = 'pkg:///Substance_graph?dependency=1474738459'
+	Resource Identifier = 'Substance_graph'
+	Resource File Path = ''
+	Resource Embed Method = 'Undefined'
+	Properties:
+		Category = Annotation
+			'outputs_computation' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+			'identifier' = 'SDValueString(string(Substance_graph))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'category' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'label' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author_url' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'tags' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'description' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'userdata' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'icon' = 'SDValueTexture(SDTexture(SDTexture))'
+				Property Type: 'SDTypeTexture' (SDTypeTexture)
+				Value Type: 'SDTexture' (SDTypeCustom)
+				Has label
+			'show_in_library' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+			'physical_size' = 'SDValueFloat3(float3(0,0,0))'
+				Property Type: 'float3' (SDTypeFloat3)
+				Value Type: 'float3' (SDTypeFloat3)
+				Has label
+		Category = Input
+			'$outputsize' = 'SDValueInt2(int2(0,0))'
+				Property Type: 'int2' (SDTypeInt2)
+				Value Type: 'int2' (SDTypeInt2)
+				Has label
+			'$format' = 'SDValueEnum("sbs::compositing::format",0)'
+				Property Type: 'sbs::compositing::format' (SDTypeEnum)
+				Property Type: 'int' (SDTypeInt)
+				Value Type: 'sbs::compositing::format' (SDTypeEnum)
+				Has label
+			'$pixelsize' = 'SDValueFloat2(float2(1,1))'
+				Property Type: 'float2' (SDTypeFloat2)
+				Value Type: 'float2' (SDTypeFloat2)
+				Has label
+			'$pixelratio' = 'SDValueEnum("sbs::compositing::pixelratio",1)'
+				Property Type: 'sbs::compositing::pixelratio' (SDTypeEnum)
+				Property Type: 'int' (SDTypeInt)
+				Value Type: 'sbs::compositing::pixelratio' (SDTypeEnum)
+				Has label
+			'$tiling' = 'SDValueEnum("sbs::compositing::tiling",3)'
+				Property Type: 'sbs::compositing::tiling' (SDTypeEnum)
+				Property Type: 'int' (SDTypeInt)
+				Value Type: 'sbs::compositing::tiling' (SDTypeEnum)
+				Has label
+			'$randomseed' = 'SDValueInt(int(0))'
+				Property Type: 'int' (SDTypeInt)
+				Value Type: 'int' (SDTypeInt)
+				Has label
+	Nodes:
+	Output Nodes:
+Resource[1]
+	Resource Type: 'SDSBSFunctionGraph' (SDTypeCustom)
+	Resource Url = 'pkg:///Substance_Function_graph?dependency=1474738459'
+	Resource Identifier = 'Substance_Function_graph'
+	Resource File Path = ''
+	Resource Embed Method = 'Undefined'
+	Properties:
+		Category = Annotation
+			'identifier' = 'SDValueString(string(Substance_Function_graph))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'category' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'label' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author_url' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'tags' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'description' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'userdata' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'icon' = 'SDValueTexture(SDTexture(SDTexture))'
+				Property Type: 'SDTypeTexture' (SDTypeTexture)
+				Value Type: 'SDTexture' (SDTypeCustom)
+				Has label
+			'show_in_library' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+	Nodes:
+	Output Nodes:
+Resource[2]
+	Resource Type: 'SDMDLGraph' (SDTypeCustom)
+	Resource Url = 'pkg:///MDL_graph?dependency=1474738459'
+	Resource Identifier = 'MDL_graph'
+	Resource File Path = ''
+	Resource Embed Method = 'Undefined'
+	Properties:
+		Category = Annotation
+			'identifier' = 'SDValueString(string(MDL_graph))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'category' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'show_in_library' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+			'icon' = 'SDValueTexture(SDTexture(SDTexture))'
+				Property Type: 'SDTypeTexture' (SDTypeTexture)
+				Value Type: 'SDTexture' (SDTypeCustom)
+				Has label
+			'description' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'in_group' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'display_name' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'contributors' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'keywords' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'hidden' = 'SDValueBool(bool(false))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+			'copyright_notice' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+	Nodes:
+		Node[0]:
+			Node Type: 'mdl::material(bool,material_surface,material_surface,color,material_volume,material_geometry,hair_bsdf)' (SDDefinition)
+			Identifier = '1474738463'
+			Position = (0.000000, 0.000000)
+			Properties:
+				Category = Input
+					'thin_walled' (Connectable) = 'SDValueBool(bool(false))'
+						Property Type: 'bool' (SDTypeBool) [Uniform]
+						Value Type: 'bool' (SDTypeBool)
+					'surface' (Connectable) = 'SDValueStruct("mdl::material_surface",scattering=SDMDLValueBSDF(),emission=SDValueStruct("mdl::material_emission",emission=SDMDLValueEDF(),intensity=SDValueColorRGB(ColorRGB(0,0,0)),mode=SDValueEnum("mdl::intensity_mode",0)))'
+						Property Type: 'mdl::material_surface' (SDTypeStruct)
+						Value Type: 'mdl::material_surface' (SDTypeStruct)
+					'backface' (Connectable) = 'SDValueStruct("mdl::material_surface",scattering=SDMDLValueBSDF(),emission=SDValueStruct("mdl::material_emission",emission=SDMDLValueEDF(),intensity=SDValueColorRGB(ColorRGB(0,0,0)),mode=SDValueEnum("mdl::intensity_mode",0)))'
+						Property Type: 'mdl::material_surface' (SDTypeStruct)
+						Value Type: 'mdl::material_surface' (SDTypeStruct)
+					'ior' (Connectable) = 'SDValueColorRGB(ColorRGB(1,1,1))'
+						Property Type: 'ColorRGB' (SDTypeColorRGB) [Uniform]
+						Value Type: 'ColorRGB' (SDTypeColorRGB)
+					'volume' (Connectable) = 'SDValueStruct("mdl::material_volume",scattering=SDMDLValueVDF(),absorption_coefficient=SDValueColorRGB(ColorRGB(0,0,0)),scattering_coefficient=SDValueColorRGB(ColorRGB(0,0,0)),emission_intensity=SDValueColorRGB(ColorRGB(0,0,0)))'
+						Property Type: 'mdl::material_volume' (SDTypeStruct)
+						Value Type: 'mdl::material_volume' (SDTypeStruct)
+					'geometry' (Connectable) = 'SDMDLValueCall(mdl::material_geometry_500)'
+						Property Type: 'mdl::material_geometry' (SDTypeStruct)
+						Value Type: 'mdl::call' (SDMDLTypeCall)
+					'hair' (Connectable) = 'SDMDLValueHairBSDF()'
+						Property Type: 'mdl::hair_bsdf' (SDMDLTypeHairBSDF)
+						Value Type: 'mdl::hair_bsdf' (SDMDLTypeHairBSDF)
+				Category = Output
+					'output' (Connectable, ReadOnly) =
+						Property Type: 'mdl::material' (SDTypeStruct)
+	Output Nodes:
+		Node[0]:
+			Node Type: 'mdl::material(bool,material_surface,material_surface,color,material_volume,material_geometry,hair_bsdf)' (SDDefinition)
+			Identifier = '1474738463'
+			Position = (0.000000, 0.000000)
+			Properties:
+				Category = Input
+					'thin_walled' (Connectable) = 'SDValueBool(bool(false))'
+						Property Type: 'bool' (SDTypeBool) [Uniform]
+						Value Type: 'bool' (SDTypeBool)
+					'surface' (Connectable) = 'SDValueStruct("mdl::material_surface",scattering=SDMDLValueBSDF(),emission=SDValueStruct("mdl::material_emission",emission=SDMDLValueEDF(),intensity=SDValueColorRGB(ColorRGB(0,0,0)),mode=SDValueEnum("mdl::intensity_mode",0)))'
+						Property Type: 'mdl::material_surface' (SDTypeStruct)
+						Value Type: 'mdl::material_surface' (SDTypeStruct)
+					'backface' (Connectable) = 'SDValueStruct("mdl::material_surface",scattering=SDMDLValueBSDF(),emission=SDValueStruct("mdl::material_emission",emission=SDMDLValueEDF(),intensity=SDValueColorRGB(ColorRGB(0,0,0)),mode=SDValueEnum("mdl::intensity_mode",0)))'
+						Property Type: 'mdl::material_surface' (SDTypeStruct)
+						Value Type: 'mdl::material_surface' (SDTypeStruct)
+					'ior' (Connectable) = 'SDValueColorRGB(ColorRGB(1,1,1))'
+						Property Type: 'ColorRGB' (SDTypeColorRGB) [Uniform]
+						Value Type: 'ColorRGB' (SDTypeColorRGB)
+					'volume' (Connectable) = 'SDValueStruct("mdl::material_volume",scattering=SDMDLValueVDF(),absorption_coefficient=SDValueColorRGB(ColorRGB(0,0,0)),scattering_coefficient=SDValueColorRGB(ColorRGB(0,0,0)),emission_intensity=SDValueColorRGB(ColorRGB(0,0,0)))'
+						Property Type: 'mdl::material_volume' (SDTypeStruct)
+						Value Type: 'mdl::material_volume' (SDTypeStruct)
+					'geometry' (Connectable) = 'SDMDLValueCall(mdl::material_geometry_500)'
+						Property Type: 'mdl::material_geometry' (SDTypeStruct)
+						Value Type: 'mdl::call' (SDMDLTypeCall)
+					'hair' (Connectable) = 'SDMDLValueHairBSDF()'
+						Property Type: 'mdl::hair_bsdf' (SDMDLTypeHairBSDF)
+						Value Type: 'mdl::hair_bsdf' (SDMDLTypeHairBSDF)
+				Category = Output
+					'output' (Connectable, ReadOnly) =
+						Property Type: 'mdl::material' (SDTypeStruct)
+Resource[3]
+	Resource Type: 'SDResourceBitmap' (SDTypeCustom)
+	Resource Url = 'pkg:///substance-128x128?dependency=1474738459'
+	Resource Identifier = 'substance-128x128'
+	Resource File Path = 'tests/assets/substance-128x128.png'
+	Resource Embed Method = 'Linked'
+	Properties:
+		Category = Annotation
+			'file_path' (ReadOnly) = 'SDValueString(string(tests/assets/substance-128x128.png))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'identifier' = 'SDValueString(string(substance-128x128))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'category' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'label' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author_url' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'tags' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'description' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'userdata' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'show_in_library' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+			'bitmap_format' = 'SDValueInt(int(0))'
+				Property Type: 'int' (SDTypeInt)
+				Value Type: 'int' (SDTypeInt)
+				Has label
+			'bitmap_compression_quality' = 'SDValueFloat(float(0))'
+				Property Type: 'float' (SDTypeFloat)
+				Value Type: 'float' (SDTypeFloat)
+				Has label
+			'bitmap_color_space' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'bitmap_premultiplied_alpha' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+Resource[4]
+	Resource Type: 'SDResourceSVG' (SDTypeCustom)
+	Resource Url = 'pkg:///sbs?dependency=1474738459'
+	Resource Identifier = 'sbs'
+	Resource File Path = 'tests/assets/sbs.svg'
+	Resource Embed Method = 'Linked'
+	Properties:
+		Category = Annotation
+			'file_path' (ReadOnly) = 'SDValueString(string(tests/assets/sbs.svg))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'identifier' = 'SDValueString(string(sbs))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'category' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'label' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author_url' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'tags' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'description' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'userdata' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'show_in_library' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+			'bitmap_compression_quality' = 'SDValueFloat(float(0))'
+				Property Type: 'float' (SDTypeFloat)
+				Value Type: 'float' (SDTypeFloat)
+				Has label
+Resource[5]
+	Resource Type: 'SDResourceFont' (SDTypeCustom)
+	Resource Url = 'pkg:///AdobeClean-Regular?dependency=1474738459'
+	Resource Identifier = 'AdobeClean-Regular'
+	Resource File Path = 'tests/assets/AdobeClean-Regular.ttf'
+	Resource Embed Method = 'Linked'
+	Properties:
+		Category = Annotation
+			'file_path' (ReadOnly) = 'SDValueString(string(tests/assets/AdobeClean-Regular.ttf))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'identifier' = 'SDValueString(string(AdobeClean-Regular))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'category' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'label' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author_url' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'tags' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'description' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'userdata' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'show_in_library' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+Resource[6]
+	Resource Type: 'SDResourceScene' (SDTypeCustom)
+	Resource Url = 'pkg:///Rounded_Cylinder?dependency=1474738459'
+	Resource Identifier = 'Rounded_Cylinder'
+	Resource File Path = 'tests/assets/Rounded Cylinder.fbx'
+	Resource Embed Method = 'Linked'
+	Properties:
+		Category = Annotation
+			'file_path' (ReadOnly) = 'SDValueString(string(tests/assets/Rounded Cylinder.fbx))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'identifier' = 'SDValueString(string(Rounded_Cylinder))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'category' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'label' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author_url' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'tags' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'description' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'userdata' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'show_in_library' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+			'is_udim' = 'SDValueBool(bool(false))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+Resource[7]
+	Resource Type: 'SDResourceLightProfile' (SDTypeCustom)
+	Resource Url = 'pkg:///example_modules?dependency=1474738459'
+	Resource Identifier = 'example_modules'
+	Resource File Path = 'tests/assets/example_modules.ies'
+	Resource Embed Method = 'Linked'
+	Properties:
+		Category = Annotation
+			'file_path' (ReadOnly) = 'SDValueString(string(tests/assets/example_modules.ies))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'identifier' = 'SDValueString(string(example_modules))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'category' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'label' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author_url' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'tags' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'description' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'userdata' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'show_in_library' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label
+Resource[8]
+	Resource Type: 'SDResourceBSDFMeasurement' (SDTypeCustom)
+	Resource Url = 'pkg:///carpaint_blue?dependency=1474738459'
+	Resource Identifier = 'carpaint_blue'
+	Resource File Path = 'tests/assets/carpaint_blue.mbsdf'
+	Resource Embed Method = 'Linked'
+	Properties:
+		Category = Annotation
+			'file_path' (ReadOnly) = 'SDValueString(string(tests/assets/carpaint_blue.mbsdf))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'identifier' = 'SDValueString(string(carpaint_blue))'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'category' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'label' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'author_url' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'tags' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'description' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'userdata' = 'SDValueString(string())'
+				Property Type: 'string' (SDTypeString)
+				Value Type: 'string' (SDTypeString)
+				Has label
+			'show_in_library' = 'SDValueBool(bool(true))'
+				Property Type: 'bool' (SDTypeBool)
+				Value Type: 'bool' (SDTypeBool)
+				Has label

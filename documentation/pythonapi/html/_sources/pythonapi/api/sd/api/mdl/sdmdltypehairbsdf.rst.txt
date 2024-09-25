@@ -1,0 +1,8 @@
+sdmdltypehairbsdf module
+========================
+
+.. automodule:: sd.api.mdl.sdmdltypehairbsdf
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

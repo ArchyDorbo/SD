@@ -1,0 +1,8 @@
+sdvaluedouble2 module
+=====================
+
+.. automodule:: sd.api.sdvaluedouble2
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

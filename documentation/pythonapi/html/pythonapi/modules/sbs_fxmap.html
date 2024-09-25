@@ -1,0 +1,962 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sbs::fxmap &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mdl::&lt;builtins&gt;" href="mdl__builtins_.html" />
+    <link rel="prev" title="sbs::function" href="sbs_function.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl__builtins_.html" title="mdl::&lt;builtins&gt;"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sbs_function.html" title="sbs::function"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" accesskey="U">Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="sbs-fxmap">
+<h1>sbs::fxmap<a class="headerlink" href="#sbs-fxmap" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#definitions" id="id1">Definitions:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sbs-fxmap-paramset" id="id2">[1/4] ‘sbs::fxmap::paramset’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-fxmap-markov2" id="id3">[2/4] ‘sbs::fxmap::markov2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-fxmap-addnode" id="id4">[3/4] ‘sbs::fxmap::addnode’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-fxmap-passthrough" id="id5">[4/4] ‘sbs::fxmap::passthrough’</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#types" id="id6">Types:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sbs-fxmap-imagefiltering" id="id7">[1/3] ‘sbs::fxmap::imagefiltering’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-fxmap-blendingmode" id="id8">[2/3] ‘sbs::fxmap::blendingmode’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-fxmap-patterntype" id="id9">[3/3] ‘sbs::fxmap::patterntype’</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="definitions">
+<h2><a class="toc-backref" href="#id1">Definitions:</a><a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<section id="sbs-fxmap-paramset">
+<h3><a class="toc-backref" href="#id2">[1/4] ‘sbs::fxmap::paramset’</a><a class="headerlink" href="#sbs-fxmap-paramset" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Quadrant’</p></li>
+<li><p>Description: ‘Takes input image(s), positions them, and, if defined, also renders the node’s own pattern or image’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘opacity’ = SDValueFloat4(float4(1,1,1,1))</dt><dd><ul>
+<li><p>Label: ‘Color / Luminosity’</p></li>
+<li><p>Description: ‘Pattern &lt;B&gt;Color / Luminosity&lt;/B&gt; multiplier’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘branchoffset’ = SDValueFloat2(float2(0,0))</dt><dd><ul>
+<li><p>Label: ‘Branch Offset’</p></li>
+<li><p>Description: ‘&lt;b&gt;Branch Offset&lt;/b&gt;. This value will be applied to the entire branch, beginning with this Parameter Set’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘patterntype’ = SDValueEnum(“sbs::fxmap::patterntype”,0)</dt><dd><ul>
+<li><p>Label: ‘Pattern’</p></li>
+<li><p>Description: ‘Select pattern’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘sbs::fxmap::patterntype’ (SDTypeEnum)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘frameoffset’ = SDValueFloat2(float2(0,0))</dt><dd><ul>
+<li><p>Label: ‘Pattern  Offset’</p></li>
+<li><p>Description: ‘&lt;b&gt;Pattern  Offset&lt;/b&gt; in 2D space. This value will apply only to this Parameter Set’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘patternsize’ = SDValueFloat2(float2(1,1))</dt><dd><ul>
+<li><p>Label: ‘Pattern Size’</p></li>
+<li><p>Description: ‘Morphlet pattern size’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘patternrotation’ = SDValueFloat(float(0))</dt><dd><ul>
+<li><p>Label: ‘Pattern Rotation’</p></li>
+<li><p>Description: ‘Morphlet pattern rotation’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘patternsuppl’ = SDValueFloat(float(0))</dt><dd><ul>
+<li><p>Label: ‘Pattern Variation’</p></li>
+<li><p>Description: ‘&lt;b&gt;Pattern Variation&lt;/b&gt; parameter. Applies to: Brick, Gradation, Waves, Half Bell, Crescent, Capsule, Gradation w. Offset’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘blendingmode’ = SDValueEnum(“sbs::fxmap::blendingmode”,0)</dt><dd><ul>
+<li><p>Label: ‘Blending Mode’</p></li>
+<li><p>Description: ‘Blending mode’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘sbs::fxmap::blendingmode’ (SDTypeEnum)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘randomseed’ = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘Random Seed’</p></li>
+<li><p>Description: ‘Random seed’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘randominherited’ = SDValueBool(bool(true))</dt><dd><ul>
+<li><p>Label: ‘Inherit Random’</p></li>
+<li><p>Description: ‘When set, the random seed value is relative to the parent graph’s random seed’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘imageindex’ = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘Input Image Index’</p></li>
+<li><p>Description: ‘Input Image Pattern only: zero based index of the input plugged to FX-Map node.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘imagepremul’ = SDValueBool(bool(false))</dt><dd><ul>
+<li><p>Label: ‘Input Image Alpha’</p></li>
+<li><p>Description: ‘Color Input Image Pattern only: alpha channel interpretation’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘imagefiltering’ = SDValueEnum(“sbs::fxmap::imagefiltering”,0)</dt><dd><ul>
+<li><p>Label: ‘Input Image Filtering’</p></li>
+<li><p>Description: ‘Input Image Pattern only: filtering mode’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘sbs::fxmap::imagefiltering’ (SDTypeEnum)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘output0’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output 0’</p></li>
+<li><p>Description: ‘Output 0’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘output1’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output 1’</p></li>
+<li><p>Description: ‘Output 1’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘output2’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output 2’</p></li>
+<li><p>Description: ‘Output 2’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘output3’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output 3’</p></li>
+<li><p>Description: ‘Output 3’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output’</p></li>
+<li><p>Description: ‘Output Connector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-fxmap-markov2">
+<h3><a class="toc-backref" href="#id3">[2/4] ‘sbs::fxmap::markov2’</a><a class="headerlink" href="#sbs-fxmap-markov2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Switch’</p></li>
+<li><p>Description: ‘Switches between primary and secondary outputs’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘switch’ = SDValueBool(bool(false))</dt><dd><ul>
+<li><p>Label: ‘Selector’</p></li>
+<li><p>Description: ‘Selector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘randomseed’ = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘Random Seed’</p></li>
+<li><p>Description: ‘Random seed’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘randominherited’ = SDValueBool(bool(true))</dt><dd><ul>
+<li><p>Label: ‘Inherit Random’</p></li>
+<li><p>Description: ‘When set, the random seed value is relative to the parent graph’s random seed’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘output0’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output 0’</p></li>
+<li><p>Description: ‘Output 0’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘output1’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output 1’</p></li>
+<li><p>Description: ‘Output 1’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output’</p></li>
+<li><p>Description: ‘Output Connector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-fxmap-addnode">
+<h3><a class="toc-backref" href="#id4">[3/4] ‘sbs::fxmap::addnode’</a><a class="headerlink" href="#sbs-fxmap-addnode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Iterate’</p></li>
+<li><p>Description: ‘Takes the secondary (right) output and duplicates it over the optional background (left), as many times as specified’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘numberadded’ = SDValueInt(int(1))</dt><dd><ul>
+<li><p>Label: ‘Iterations’</p></li>
+<li><p>Description: ‘Number of times the input node is duplicated’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘randomseed’ = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘Random Seed’</p></li>
+<li><p>Description: ‘Random seed’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘randominherited’ = SDValueBool(bool(true))</dt><dd><ul>
+<li><p>Label: ‘Inherit Random’</p></li>
+<li><p>Description: ‘When set, the random seed value is relative to the parent graph’s random seed’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘output0’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output 0’</p></li>
+<li><p>Description: ‘Output 0’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘output1’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output 1’</p></li>
+<li><p>Description: ‘Output 1’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output’</p></li>
+<li><p>Description: ‘Output Connector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-fxmap-passthrough">
+<h3><a class="toc-backref" href="#id5">[4/4] ‘sbs::fxmap::passthrough’</a><a class="headerlink" href="#sbs-fxmap-passthrough" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Dot’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Dot&lt;/b&gt; node is not doing anything’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output’</p></li>
+<li><p>Description: ‘Output’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Output’</p></li>
+<li><p>Description: ‘Output Connector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘Undefined’ (SDTypeCustom)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="types">
+<h2><a class="toc-backref" href="#id6">Types:</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<section id="sbs-fxmap-imagefiltering">
+<h3><a class="toc-backref" href="#id7">[1/3] ‘sbs::fxmap::imagefiltering’</a><a class="headerlink" href="#sbs-fxmap-imagefiltering" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘sbs::fxmap::imagefiltering’ (SDTypeEnum)</dt><dd><ul>
+<li><dl class="simple">
+<dt>int bilinearmipmaps = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘Bilinear + Mipmaps’</p></li>
+<li><p>Description: ‘Bilinear + Mipmaps’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int bilinear = SDValueInt(int(1))</dt><dd><ul>
+<li><p>Label: ‘Bilinear’</p></li>
+<li><p>Description: ‘Bilinear’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int nearest = SDValueInt(int(2))</dt><dd><ul>
+<li><p>Label: ‘Nearest’</p></li>
+<li><p>Description: ‘Nearest’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-fxmap-blendingmode">
+<h3><a class="toc-backref" href="#id8">[2/3] ‘sbs::fxmap::blendingmode’</a><a class="headerlink" href="#sbs-fxmap-blendingmode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘sbs::fxmap::blendingmode’ (SDTypeEnum)</dt><dd><ul>
+<li><dl class="simple">
+<dt>int addsub = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘Add Sub’</p></li>
+<li><p>Description: ‘Add Sub’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int max = SDValueInt(int(1))</dt><dd><ul>
+<li><p>Label: ‘Max’</p></li>
+<li><p>Description: ‘Max’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int alphablend = SDValueInt(int(2))</dt><dd><ul>
+<li><p>Label: ‘Alpha Blend’</p></li>
+<li><p>Description: ‘Alpha Blend’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-fxmap-patterntype">
+<h3><a class="toc-backref" href="#id9">[3/3] ‘sbs::fxmap::patterntype’</a><a class="headerlink" href="#sbs-fxmap-patterntype" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘sbs::fxmap::patterntype’ (SDTypeEnum)</dt><dd><ul>
+<li><dl class="simple">
+<dt>int null = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘No Pattern’</p></li>
+<li><p>Description: ‘No Pattern’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int image_entry = SDValueInt(int(1))</dt><dd><ul>
+<li><p>Label: ‘Input Image’</p></li>
+<li><p>Description: ‘Input Image’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int square = SDValueInt(int(2))</dt><dd><ul>
+<li><p>Label: ‘Square’</p></li>
+<li><p>Description: ‘Square’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int disc = SDValueInt(int(3))</dt><dd><ul>
+<li><p>Label: ‘Disc’</p></li>
+<li><p>Description: ‘Disc’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int paraboloid = SDValueInt(int(4))</dt><dd><ul>
+<li><p>Label: ‘Paraboloid’</p></li>
+<li><p>Description: ‘Paraboloid’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int bell = SDValueInt(int(5))</dt><dd><ul>
+<li><p>Label: ‘Bell’</p></li>
+<li><p>Description: ‘Bell’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int gaussian = SDValueInt(int(6))</dt><dd><ul>
+<li><p>Label: ‘Gaussian’</p></li>
+<li><p>Description: ‘Gaussian’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int thorn = SDValueInt(int(7))</dt><dd><ul>
+<li><p>Label: ‘Thorn’</p></li>
+<li><p>Description: ‘Thorn’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int pyramid = SDValueInt(int(8))</dt><dd><ul>
+<li><p>Label: ‘Pyramid’</p></li>
+<li><p>Description: ‘Pyramid’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int brick = SDValueInt(int(9))</dt><dd><ul>
+<li><p>Label: ‘Brick’</p></li>
+<li><p>Description: ‘Brick’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int gradation = SDValueInt(int(10))</dt><dd><ul>
+<li><p>Label: ‘Gradation’</p></li>
+<li><p>Description: ‘Gradation’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int waves = SDValueInt(int(11))</dt><dd><ul>
+<li><p>Label: ‘Waves’</p></li>
+<li><p>Description: ‘Waves’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int halfbell = SDValueInt(int(12))</dt><dd><ul>
+<li><p>Label: ‘Half Bell’</p></li>
+<li><p>Description: ‘Half Bell’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int ridgebell = SDValueInt(int(13))</dt><dd><ul>
+<li><p>Label: ‘Ridged Bell’</p></li>
+<li><p>Description: ‘Ridged Bell’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int crescent = SDValueInt(int(14))</dt><dd><ul>
+<li><p>Label: ‘Crescent’</p></li>
+<li><p>Description: ‘Crescent’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int capsule = SDValueInt(int(15))</dt><dd><ul>
+<li><p>Label: ‘Capsule’</p></li>
+<li><p>Description: ‘Capsule’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int cone = SDValueInt(int(16))</dt><dd><ul>
+<li><p>Label: ‘Cone’</p></li>
+<li><p>Description: ‘Cone’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int gradoffset = SDValueInt(int(17))</dt><dd><ul>
+<li><p>Label: ‘Gradation w. Offset’</p></li>
+<li><p>Description: ‘Gradation w. Offset’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>int hemisphere = SDValueInt(int(18))</dt><dd><ul>
+<li><p>Label: ‘Hemisphere’</p></li>
+<li><p>Description: ‘Hemisphere’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">sbs::fxmap</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions:</a><ul>
+<li><a class="reference internal" href="#sbs-fxmap-paramset">[1/4] ‘sbs::fxmap::paramset’</a></li>
+<li><a class="reference internal" href="#sbs-fxmap-markov2">[2/4] ‘sbs::fxmap::markov2’</a></li>
+<li><a class="reference internal" href="#sbs-fxmap-addnode">[3/4] ‘sbs::fxmap::addnode’</a></li>
+<li><a class="reference internal" href="#sbs-fxmap-passthrough">[4/4] ‘sbs::fxmap::passthrough’</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#types">Types:</a><ul>
+<li><a class="reference internal" href="#sbs-fxmap-imagefiltering">[1/3] ‘sbs::fxmap::imagefiltering’</a></li>
+<li><a class="reference internal" href="#sbs-fxmap-blendingmode">[2/3] ‘sbs::fxmap::blendingmode’</a></li>
+<li><a class="reference internal" href="#sbs-fxmap-patterntype">[3/3] ‘sbs::fxmap::patterntype’</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sbs_function.html"
+                        title="previous chapter">sbs::function</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mdl__builtins_.html"
+                        title="next chapter">mdl::&lt;builtins&gt;</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pythonapi/modules/sbs_fxmap.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl__builtins_.html" title="mdl::&lt;builtins&gt;"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sbs_function.html" title="sbs::function"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" >Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

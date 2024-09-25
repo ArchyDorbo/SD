@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <title>align_vertical</title>
+  <polyline points="15 9 15 11 8 11 8 4 15 4 15 6 13 6 13 9 15 9" style="fill: #ccc"/>
+  <path d="M15,7V8H14V7h1m1-1H13V9h3V6Z" style="fill: #ccc"/>
+  <polyline points="15 18 15 20 8 20 8 13 15 13 15 15 13 15 13 18 15 18" style="fill: #ccc"/>
+  <path d="M15,16v1H14V16h1m1-1H13v3h3V15Z" style="fill: #ccc"/>
+  <rect x="11" y="2" width="1" height="20" style="fill: #ccc"/>
+</svg>

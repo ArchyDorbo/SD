@@ -1,0 +1,8 @@
+sdappinteropmgr module
+======================
+
+.. automodule:: sd.api.sdappinteropmgr
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

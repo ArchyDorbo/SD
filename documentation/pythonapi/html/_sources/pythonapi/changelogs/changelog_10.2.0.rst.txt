@@ -1,0 +1,10 @@
+Version 10.2.0
+--------------
+Details
+#######
+* [Changed] Class SDResource
+	* [Added] Method SDResource.getMetadataDict()
+	* [Added] Method SDResource.getPropertyMetadataDictFromId()
+* [Changed] Class SDUIMgr
+	* [Added] Method SDUIMgr.addActionToExplorerToolbar()
+	* [Added] Method SDUIMgr.getExplorerSelection()

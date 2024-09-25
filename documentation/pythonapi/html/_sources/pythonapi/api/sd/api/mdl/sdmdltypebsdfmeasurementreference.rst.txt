@@ -1,0 +1,8 @@
+sdmdltypebsdfmeasurementreference module
+========================================
+
+.. automodule:: sd.api.mdl.sdmdltypebsdfmeasurementreference
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

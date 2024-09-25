@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdconnection module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="sddefinition module" href="sddefinition.html" />
+    <link rel="prev" title="sdcolorspace module" href="sdcolorspace.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sddefinition.html" title="sddefinition module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdcolorspace.html" title="sdcolorspace module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" accesskey="U">Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.sdconnection">
+<span id="sdconnection-module"></span><h1>sdconnection module<a class="headerlink" href="#module-sd.api.sdconnection" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.sdconnection.SDConnection">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdconnection.</code><code class="sig-name descname">SDConnection</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdconnection.SDConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sdapiobject.html#sd.api.sdapiobject.SDAPIObject" title="sd.api.sdapiobject.SDAPIObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdapiobject.SDAPIObject</span></code></a></p>
+<p>The class that contains information about a connection between an output property of a node to an input property of another node</p>
+<dl class="method">
+<dt id="sd.api.sdconnection.SDConnection.disconnect">
+<code class="sig-name descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdconnection.SDConnection.disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnect the current connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdconnection.SDConnection.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdconnection.SDConnection.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdconnection.SDConnection.getInputProperty">
+<code class="sig-name descname">getInputProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdconnection.SDConnection.getInputProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the input property of the connected node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdconnection.SDConnection.getInputPropertyNode">
+<code class="sig-name descname">getInputPropertyNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional[SDNode]<a class="headerlink" href="#sd.api.sdconnection.SDConnection.getInputPropertyNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node that own the input property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdconnection.SDConnection.getOutputProperty">
+<code class="sig-name descname">getOutputProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdconnection.SDConnection.getOutputProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the output property of the node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdconnection.SDConnection.getOutputPropertyNode">
+<code class="sig-name descname">getOutputPropertyNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional[SDNode]<a class="headerlink" href="#sd.api.sdconnection.SDConnection.getOutputPropertyNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node that own the output property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdconnection.SDConnection.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdconnection.SDConnection.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdcolorspace.html"
+                        title="previous chapter">sdcolorspace module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sddefinition.html"
+                        title="next chapter">sddefinition module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/pythonapi/api/sd/api/sdconnection.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sddefinition.html" title="sddefinition module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdcolorspace.html" title="sdcolorspace module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" >Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

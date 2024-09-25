@@ -1,0 +1,1385 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>mdl::state &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mdl::std" href="mdl_std.html" />
+    <link rel="prev" title="mdl::scene" href="mdl_scene.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_std.html" title="mdl::std"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mdl_scene.html" title="mdl::scene"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" accesskey="U">Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mdl-state">
+<h1>mdl::state<a class="headerlink" href="#mdl-state" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#definitions" id="id1">Definitions:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-state-position" id="id2">[1/28] ‘mdl::state::position()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-normal" id="id3">[2/28] ‘mdl::state::normal()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-geometry-normal" id="id4">[3/28] ‘mdl::state::geometry_normal()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-motion" id="id5">[4/28] ‘mdl::state::motion()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-texture-space-max" id="id6">[5/28] ‘mdl::state::texture_space_max()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-texture-coordinate-int" id="id7">[6/28] ‘mdl::state::texture_coordinate(int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-texture-tangent-u-int" id="id8">[7/28] ‘mdl::state::texture_tangent_u(int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-texture-tangent-v-int" id="id9">[8/28] ‘mdl::state::texture_tangent_v(int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-tangent-space-int" id="id10">[9/28] ‘mdl::state::tangent_space(int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-geometry-tangent-u-int" id="id11">[10/28] ‘mdl::state::geometry_tangent_u(int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-geometry-tangent-v-int" id="id12">[11/28] ‘mdl::state::geometry_tangent_v(int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-direction" id="id13">[12/28] ‘mdl::state::direction()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-animation-time" id="id14">[13/28] ‘mdl::state::animation_time()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-wavelength-base" id="id15">[14/28] ‘mdl::state::wavelength_base()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-coordinate-space-state-coordinate-space" id="id16">[15/28] ‘mdl::state::coordinate_space(::state::coordinate_space)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-int-state-coordinate-space" id="id17">[16/28] ‘mdl::state::int(::state::coordinate_space)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-transform-state-coordinate-space-state-coordinate-space" id="id18">[17/28] ‘mdl::state::transform(::state::coordinate_space,::state::coordinate_space)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-transform-point-state-coordinate-space-state-coordinate-space-float3" id="id19">[18/28] ‘mdl::state::transform_point(::state::coordinate_space,::state::coordinate_space,float3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-transform-vector-state-coordinate-space-state-coordinate-space-float3" id="id20">[19/28] ‘mdl::state::transform_vector(::state::coordinate_space,::state::coordinate_space,float3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-transform-normal-state-coordinate-space-state-coordinate-space-float3" id="id21">[20/28] ‘mdl::state::transform_normal(::state::coordinate_space,::state::coordinate_space,float3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-transform-scale-state-coordinate-space-state-coordinate-space-float" id="id22">[21/28] ‘mdl::state::transform_scale(::state::coordinate_space,::state::coordinate_space,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-rounded-corner-normal-1-2-float-bool" id="id23">[22/28] ‘mdl::state::rounded_corner_normal$1.2(float,bool)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-rounded-corner-normal-float-bool-float" id="id24">[23/28] ‘mdl::state::rounded_corner_normal(float,bool,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-meters-per-scene-unit" id="id25">[24/28] ‘mdl::state::meters_per_scene_unit()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-scene-units-per-meter" id="id26">[25/28] ‘mdl::state::scene_units_per_meter()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-object-id" id="id27">[26/28] ‘mdl::state::object_id()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-wavelength-min" id="id28">[27/28] ‘mdl::state::wavelength_min()’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-state-wavelength-max" id="id29">[28/28] ‘mdl::state::wavelength_max()’</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#types" id="id30">Types:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-state-coordinate-space" id="id31">[1/1] ‘mdl::state::coordinate_space’</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="definitions">
+<h2><a class="toc-backref" href="#id1">Definitions:</a><a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-state-position">
+<h3><a class="toc-backref" href="#id2">[1/28] ‘mdl::state::position()’</a><a class="headerlink" href="#mdl-state-position" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-normal">
+<h3><a class="toc-backref" href="#id3">[2/28] ‘mdl::state::normal()’</a><a class="headerlink" href="#mdl-state-normal" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-geometry-normal">
+<h3><a class="toc-backref" href="#id4">[3/28] ‘mdl::state::geometry_normal()’</a><a class="headerlink" href="#mdl-state-geometry-normal" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-motion">
+<h3><a class="toc-backref" href="#id5">[4/28] ‘mdl::state::motion()’</a><a class="headerlink" href="#mdl-state-motion" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-texture-space-max">
+<h3><a class="toc-backref" href="#id6">[5/28] ‘mdl::state::texture_space_max()’</a><a class="headerlink" href="#mdl-state-texture-space-max" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-texture-coordinate-int">
+<h3><a class="toc-backref" href="#id7">[6/28] ‘mdl::state::texture_coordinate(int)’</a><a class="headerlink" href="#mdl-state-texture-coordinate-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘index’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-texture-tangent-u-int">
+<h3><a class="toc-backref" href="#id8">[7/28] ‘mdl::state::texture_tangent_u(int)’</a><a class="headerlink" href="#mdl-state-texture-tangent-u-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘index’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-texture-tangent-v-int">
+<h3><a class="toc-backref" href="#id9">[8/28] ‘mdl::state::texture_tangent_v(int)’</a><a class="headerlink" href="#mdl-state-texture-tangent-v-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘index’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-tangent-space-int">
+<h3><a class="toc-backref" href="#id10">[9/28] ‘mdl::state::tangent_space(int)’</a><a class="headerlink" href="#mdl-state-tangent-space-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘index’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘matrix&lt;float&gt;[3][3]’ (SDTypeMatrix) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-geometry-tangent-u-int">
+<h3><a class="toc-backref" href="#id11">[10/28] ‘mdl::state::geometry_tangent_u(int)’</a><a class="headerlink" href="#mdl-state-geometry-tangent-u-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘index’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-geometry-tangent-v-int">
+<h3><a class="toc-backref" href="#id12">[11/28] ‘mdl::state::geometry_tangent_v(int)’</a><a class="headerlink" href="#mdl-state-geometry-tangent-v-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘index’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-direction">
+<h3><a class="toc-backref" href="#id13">[12/28] ‘mdl::state::direction()’</a><a class="headerlink" href="#mdl-state-direction" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-animation-time">
+<h3><a class="toc-backref" href="#id14">[13/28] ‘mdl::state::animation_time()’</a><a class="headerlink" href="#mdl-state-animation-time" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-wavelength-base">
+<h3><a class="toc-backref" href="#id15">[14/28] ‘mdl::state::wavelength_base()’</a><a class="headerlink" href="#mdl-state-wavelength-base" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘SDTypeArray&lt;float&gt;’ (SDTypeArray)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-coordinate-space-state-coordinate-space">
+<h3><a class="toc-backref" href="#id16">[15/28] ‘mdl::state::coordinate_space(::state::coordinate_space)’</a><a class="headerlink" href="#mdl-state-coordinate-space-state-coordinate-space" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘v’ = SDValueEnum(“mdl::state::coordinate_space”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-int-state-coordinate-space">
+<h3><a class="toc-backref" href="#id17">[16/28] ‘mdl::state::int(::state::coordinate_space)’</a><a class="headerlink" href="#mdl-state-int-state-coordinate-space" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-transform-state-coordinate-space-state-coordinate-space">
+<h3><a class="toc-backref" href="#id18">[17/28] ‘mdl::state::transform(::state::coordinate_space,::state::coordinate_space)’</a><a class="headerlink" href="#mdl-state-transform-state-coordinate-space-state-coordinate-space" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘from’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘to’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘matrix&lt;float&gt;[4][4]’ (SDTypeMatrix)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-transform-point-state-coordinate-space-state-coordinate-space-float3">
+<h3><a class="toc-backref" href="#id19">[18/28] ‘mdl::state::transform_point(::state::coordinate_space,::state::coordinate_space,float3)’</a><a class="headerlink" href="#mdl-state-transform-point-state-coordinate-space-state-coordinate-space-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘from’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘to’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘point’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-transform-vector-state-coordinate-space-state-coordinate-space-float3">
+<h3><a class="toc-backref" href="#id20">[19/28] ‘mdl::state::transform_vector(::state::coordinate_space,::state::coordinate_space,float3)’</a><a class="headerlink" href="#mdl-state-transform-vector-state-coordinate-space-state-coordinate-space-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘from’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘to’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘vector’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-transform-normal-state-coordinate-space-state-coordinate-space-float3">
+<h3><a class="toc-backref" href="#id21">[20/28] ‘mdl::state::transform_normal(::state::coordinate_space,::state::coordinate_space,float3)’</a><a class="headerlink" href="#mdl-state-transform-normal-state-coordinate-space-state-coordinate-space-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘from’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘to’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘normal’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-transform-scale-state-coordinate-space-state-coordinate-space-float">
+<h3><a class="toc-backref" href="#id22">[21/28] ‘mdl::state::transform_scale(::state::coordinate_space,::state::coordinate_space,float)’</a><a class="headerlink" href="#mdl-state-transform-scale-state-coordinate-space-state-coordinate-space-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘from’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘to’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::state::coordinate_space’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scale’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-rounded-corner-normal-1-2-float-bool">
+<h3><a class="toc-backref" href="#id23">[22/28] ‘mdl::state::rounded_corner_normal$1.2(float,bool)’</a><a class="headerlink" href="#mdl-state-rounded-corner-normal-1-2-float-bool" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘radius’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘across_materials’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-rounded-corner-normal-float-bool-float">
+<h3><a class="toc-backref" href="#id24">[23/28] ‘mdl::state::rounded_corner_normal(float,bool,float)’</a><a class="headerlink" href="#mdl-state-rounded-corner-normal-float-bool-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘radius’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘across_materials’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘roundness’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-meters-per-scene-unit">
+<h3><a class="toc-backref" href="#id25">[24/28] ‘mdl::state::meters_per_scene_unit()’</a><a class="headerlink" href="#mdl-state-meters-per-scene-unit" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-scene-units-per-meter">
+<h3><a class="toc-backref" href="#id26">[25/28] ‘mdl::state::scene_units_per_meter()’</a><a class="headerlink" href="#mdl-state-scene-units-per-meter" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-object-id">
+<h3><a class="toc-backref" href="#id27">[26/28] ‘mdl::state::object_id()’</a><a class="headerlink" href="#mdl-state-object-id" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-wavelength-min">
+<h3><a class="toc-backref" href="#id28">[27/28] ‘mdl::state::wavelength_min()’</a><a class="headerlink" href="#mdl-state-wavelength-min" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-state-wavelength-max">
+<h3><a class="toc-backref" href="#id29">[28/28] ‘mdl::state::wavelength_max()’</a><a class="headerlink" href="#mdl-state-wavelength-max" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="types">
+<h2><a class="toc-backref" href="#id30">Types:</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-state-coordinate-space">
+<h3><a class="toc-backref" href="#id31">[1/1] ‘mdl::state::coordinate_space’</a><a class="headerlink" href="#mdl-state-coordinate-space" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::state::coordinate_space’ (SDTypeEnum)</dt><dd><ul>
+<li><p>int coordinate_internal = SDValueInt(int(0))</p></li>
+<li><p>int coordinate_object = SDValueInt(int(1))</p></li>
+<li><p>int coordinate_world = SDValueInt(int(2))</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">mdl::state</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions:</a><ul>
+<li><a class="reference internal" href="#mdl-state-position">[1/28] ‘mdl::state::position()’</a></li>
+<li><a class="reference internal" href="#mdl-state-normal">[2/28] ‘mdl::state::normal()’</a></li>
+<li><a class="reference internal" href="#mdl-state-geometry-normal">[3/28] ‘mdl::state::geometry_normal()’</a></li>
+<li><a class="reference internal" href="#mdl-state-motion">[4/28] ‘mdl::state::motion()’</a></li>
+<li><a class="reference internal" href="#mdl-state-texture-space-max">[5/28] ‘mdl::state::texture_space_max()’</a></li>
+<li><a class="reference internal" href="#mdl-state-texture-coordinate-int">[6/28] ‘mdl::state::texture_coordinate(int)’</a></li>
+<li><a class="reference internal" href="#mdl-state-texture-tangent-u-int">[7/28] ‘mdl::state::texture_tangent_u(int)’</a></li>
+<li><a class="reference internal" href="#mdl-state-texture-tangent-v-int">[8/28] ‘mdl::state::texture_tangent_v(int)’</a></li>
+<li><a class="reference internal" href="#mdl-state-tangent-space-int">[9/28] ‘mdl::state::tangent_space(int)’</a></li>
+<li><a class="reference internal" href="#mdl-state-geometry-tangent-u-int">[10/28] ‘mdl::state::geometry_tangent_u(int)’</a></li>
+<li><a class="reference internal" href="#mdl-state-geometry-tangent-v-int">[11/28] ‘mdl::state::geometry_tangent_v(int)’</a></li>
+<li><a class="reference internal" href="#mdl-state-direction">[12/28] ‘mdl::state::direction()’</a></li>
+<li><a class="reference internal" href="#mdl-state-animation-time">[13/28] ‘mdl::state::animation_time()’</a></li>
+<li><a class="reference internal" href="#mdl-state-wavelength-base">[14/28] ‘mdl::state::wavelength_base()’</a></li>
+<li><a class="reference internal" href="#mdl-state-coordinate-space-state-coordinate-space">[15/28] ‘mdl::state::coordinate_space(::state::coordinate_space)’</a></li>
+<li><a class="reference internal" href="#mdl-state-int-state-coordinate-space">[16/28] ‘mdl::state::int(::state::coordinate_space)’</a></li>
+<li><a class="reference internal" href="#mdl-state-transform-state-coordinate-space-state-coordinate-space">[17/28] ‘mdl::state::transform(::state::coordinate_space,::state::coordinate_space)’</a></li>
+<li><a class="reference internal" href="#mdl-state-transform-point-state-coordinate-space-state-coordinate-space-float3">[18/28] ‘mdl::state::transform_point(::state::coordinate_space,::state::coordinate_space,float3)’</a></li>
+<li><a class="reference internal" href="#mdl-state-transform-vector-state-coordinate-space-state-coordinate-space-float3">[19/28] ‘mdl::state::transform_vector(::state::coordinate_space,::state::coordinate_space,float3)’</a></li>
+<li><a class="reference internal" href="#mdl-state-transform-normal-state-coordinate-space-state-coordinate-space-float3">[20/28] ‘mdl::state::transform_normal(::state::coordinate_space,::state::coordinate_space,float3)’</a></li>
+<li><a class="reference internal" href="#mdl-state-transform-scale-state-coordinate-space-state-coordinate-space-float">[21/28] ‘mdl::state::transform_scale(::state::coordinate_space,::state::coordinate_space,float)’</a></li>
+<li><a class="reference internal" href="#mdl-state-rounded-corner-normal-1-2-float-bool">[22/28] ‘mdl::state::rounded_corner_normal$1.2(float,bool)’</a></li>
+<li><a class="reference internal" href="#mdl-state-rounded-corner-normal-float-bool-float">[23/28] ‘mdl::state::rounded_corner_normal(float,bool,float)’</a></li>
+<li><a class="reference internal" href="#mdl-state-meters-per-scene-unit">[24/28] ‘mdl::state::meters_per_scene_unit()’</a></li>
+<li><a class="reference internal" href="#mdl-state-scene-units-per-meter">[25/28] ‘mdl::state::scene_units_per_meter()’</a></li>
+<li><a class="reference internal" href="#mdl-state-object-id">[26/28] ‘mdl::state::object_id()’</a></li>
+<li><a class="reference internal" href="#mdl-state-wavelength-min">[27/28] ‘mdl::state::wavelength_min()’</a></li>
+<li><a class="reference internal" href="#mdl-state-wavelength-max">[28/28] ‘mdl::state::wavelength_max()’</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#types">Types:</a><ul>
+<li><a class="reference internal" href="#mdl-state-coordinate-space">[1/1] ‘mdl::state::coordinate_space’</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mdl_scene.html"
+                        title="previous chapter">mdl::scene</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mdl_std.html"
+                        title="next chapter">mdl::std</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pythonapi/modules/mdl_state.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_std.html" title="mdl::std"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mdl_scene.html" title="mdl::scene"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" >Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

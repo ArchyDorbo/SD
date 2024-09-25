@@ -1,0 +1,8 @@
+logger module
+=============
+
+.. automodule:: sd.logger
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

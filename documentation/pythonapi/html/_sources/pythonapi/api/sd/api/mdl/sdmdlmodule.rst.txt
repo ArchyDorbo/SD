@@ -1,0 +1,8 @@
+sdmdlmodule module
+==================
+
+.. automodule:: sd.api.mdl.sdmdlmodule
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

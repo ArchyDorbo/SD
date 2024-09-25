@@ -1,0 +1,8 @@
+sdsbsfunctionnode module
+========================
+
+.. automodule:: sd.api.sbs.sdsbsfunctionnode
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

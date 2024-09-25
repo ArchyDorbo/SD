@@ -1,0 +1,8 @@
+sdvaluefloat4 module
+====================
+
+.. automodule:: sd.api.sdvaluefloat4
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

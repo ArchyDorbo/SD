@@ -1,0 +1,8 @@
+sdmdltypetexturereference module
+================================
+
+.. automodule:: sd.api.mdl.sdmdltypetexturereference
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

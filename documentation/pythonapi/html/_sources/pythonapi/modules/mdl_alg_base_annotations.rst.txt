@@ -1,0 +1,5 @@
+mdl::alg::base::annotations
+===========================
+
+.. contents:: :local:
+

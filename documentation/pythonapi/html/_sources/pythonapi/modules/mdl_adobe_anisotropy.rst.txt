@@ -1,0 +1,38 @@
+mdl::adobe::anisotropy
+======================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/1] 'mdl::adobe::anisotropy::anisotropy_conversion(float,float,float,float3)'
+###############################################################################
+   * Description: 'Convert scalar anisotropy controls into vectorized ones'
+   * SDPropertyCategory = 'Input'
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Roughness of the surface reflections.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Specular Anisotropy Level'
+         * Description: 'Anisotropy of surface specular layer reflections. (0 = isotropic)'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy_rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Specular Anisotropy Angle'
+         * Description: 'Rotation of anisotropy of surface specular layer, normalized from [0,360°] counterclockwise to [0,1].'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___160) [CONNECTABLE]
+         * Description: 'Tangent to align the anisotropy with. "coordinate_source" or "coordinate_projection" are possible sources'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::anisotropy_return' (SDTypeStruct) [Varying]

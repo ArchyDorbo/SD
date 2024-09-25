@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdresourcefont module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="sdresourcelightprofile module" href="sdresourcelightprofile.html" />
+    <link rel="prev" title="sdresourcefolder module" href="sdresourcefolder.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdresourcelightprofile.html" title="sdresourcelightprofile module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdresourcefolder.html" title="sdresourcefolder module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" accesskey="U">Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.sdresourcefont">
+<span id="sdresourcefont-module"></span><h1>sdresourcefont module<a class="headerlink" href="#module-sd.api.sdresourcefont" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.sdresourcefont.SDResourceFont">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdresourcefont.</code><code class="sig-name descname">SDResourceFont</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sdresource.html#sd.api.sdresource.SDResource" title="sd.api.sdresource.SDResource"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdresource.SDResource</span></code></a></p>
+<p>A font resource as it can be found in a SDPackage</p>
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the SDResource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.deleteProperty">
+<code class="sig-name descname">deleteProperty</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.deleteProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified SDProperty</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The property to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getAnnotationPropertyValueFromId">
+<code class="sig-name descname">getAnnotationPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getAnnotationPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the annotation property that matches the specified identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyId</strong> – The identifier of the annotation property we want to retrieve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getEmbedMethod">
+<code class="sig-name descname">getEmbedMethod</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdresource.EmbedMethod<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getEmbedMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the method used by this resource to reference its content or file (See EmbedMethod enum)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getFilePath">
+<code class="sig-name descname">getFilePath</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getFilePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path of the file used by this resource</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getIdentifier">
+<code class="sig-name descname">getIdentifier</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the resource identifier as string</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getInputPropertyValueFromId">
+<code class="sig-name descname">getInputPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getInputPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the input property that matches the specified identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyId</strong> – The identifier of the input property we want to retrieve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getMetadataDict">
+<code class="sig-name descname">getMetadataDict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getMetadataDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the metadata of this resource as a SDMetadataDict.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getPackage">
+<code class="sig-name descname">getPackage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; SDPackage<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getPackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the SDPackage the current SDResource belongs to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getProperties">
+<code class="sig-name descname">getProperties</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all properties of the specified category (Input, Output or Annotation)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyCategory</strong> – The enum value the indicate which type of properties to get</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getPropertyAnnotationValueFromId">
+<code class="sig-name descname">getPropertyAnnotationValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getPropertyAnnotationValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the property annotation value of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property we want to retrieve the annotation value from</p></li>
+<li><p><strong>sdPropertyAnnotationId</strong> – The identifier of the annotation to retrieve</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getPropertyAnnotations">
+<code class="sig-name descname">getPropertyAnnotations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getPropertyAnnotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the annotation properties of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The SDProperty to retrieve the annotations from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getPropertyFromId">
+<code class="sig-name descname">getPropertyFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getPropertyFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get property that match the specified identifier in the specified category</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getPropertyMetadataDictFromId">
+<code class="sig-name descname">getPropertyMetadataDictFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getPropertyMetadataDictFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the metadata of the property that matches the specified identifier in the specified category as a SDMetadataDict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getPropertyValue">
+<code class="sig-name descname">getPropertyValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getPropertyValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of a property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The property we want to retrieve the value from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getPropertyValueFromId">
+<code class="sig-name descname">getPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the property that matches the specified identifier in the specified category</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getType">
+<code class="sig-name descname">getType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the resource type as SDType</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.getUrl">
+<code class="sig-name descname">getUrl</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.getUrl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the resource URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.newProperty">
+<code class="sig-name descname">newProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.newProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new SDProperty of the specified type and in the specified SDPropertyCategory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the new property</p></li>
+<li><p><strong>sdPropertyType</strong> – The type of the new property</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The SDPropertyCategory of the new property to create</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.sNewFromFile">
+<em class="property">static </em><code class="sig-name descname">sNewFromFile</code><span class="sig-paren">(</span><em class="sig-param">parent: sd.api.sdapiobject.SDAPIObject</em>, <em class="sig-param">filePath: str</em>, <em class="sig-param">embedMethod: sd.api.sdresource.EmbedMethod</em><span class="sig-paren">)</span> &#x2192; sd.api.sdresourcefont.SDResourceFont<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.sNewFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new SDResourceSVG from the specified file. The resource may reference or copy the file content depending on the EmbedMethod</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent</strong> – The parent data that will contains the newly created resource. Can be SDPackage or SDResourceFolder</p></li>
+<li><p><strong>filePath</strong> – The font file path</p></li>
+<li><p><strong>embedMethod</strong> – The embed method</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.setAnnotationPropertyValueFromId">
+<code class="sig-name descname">setAnnotationPropertyValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdAnnotationPropertyId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.setAnnotationPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified annotation property retrieved by his identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdAnnotationPropertyId</strong> – The identifier of the annotation property</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.setIdentifier">
+<code class="sig-name descname">setIdentifier</code><span class="sig-paren">(</span><em class="sig-param">identifier: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.setIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the resource identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> – The new resource identifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.setInputPropertyValueFromId">
+<code class="sig-name descname">setInputPropertyValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdInputPropertyId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.setInputPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified input property retrieved by his identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdInputPropertyId</strong> – The identifier of the input property</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.setPropertyAnnotationValueFromId">
+<code class="sig-name descname">setPropertyAnnotationValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em>, <em class="sig-param">sdPropertyAnnotationId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.setPropertyAnnotationValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the property annotation value of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property whose we want to change the annotation value</p></li>
+<li><p><strong>sdPropertyAnnotationId</strong> – The identifier of the annotation to set</p></li>
+<li><p><strong>sdValue</strong> – The SDValue to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresourcefont.SDResourceFont.setPropertyValue">
+<code class="sig-name descname">setPropertyValue</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresourcefont.SDResourceFont.setPropertyValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property we want to retrieve the value from</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdresourcefolder.html"
+                        title="previous chapter">sdresourcefolder module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdresourcelightprofile.html"
+                        title="next chapter">sdresourcelightprofile module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/pythonapi/api/sd/api/sdresourcefont.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdresourcelightprofile.html" title="sdresourcelightprofile module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdresourcefolder.html" title="sdresourcefolder module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" >Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

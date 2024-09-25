@@ -1,0 +1,262 @@
+mdl::alg::materials::designer
+=============================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/1] 'mdl::alg::materials::designer::adobe_standard_material'
+##############################################################
+   * Label: 'Adobe Standard Material Definition'
+   * Description: 'Material definition for Adobe interchange.'
+   * SDPropertyCategory = 'Input'
+      * 'base_color' = SDValueColorRGB(ColorRGB(0.5,0.5,0.5)) [CONNECTABLE]
+         * Label: 'Base color'
+         * Description: 'The color of the surface.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'roughness' = SDValueFloat(float(0.300000012)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'How smooth or matte the surface is.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'metallic' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Metallic'
+         * Description: 'The degree of metallic luster the surface has.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'opacity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Opacity'
+         * Description: 'The visibility of the surface.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'ambient_occlusion' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Ambient occlusion'
+         * Description: 'Shadows from cavities and creases preventing light from hitting the surface.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'specular_level' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Specular level'
+         * Description: 'The strength of light reflections on the surface.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'specular_edge_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Specular edge color'
+         * Description: 'The color of light reflections. Affects glancing angles for metallic materials.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___186) [CONNECTABLE]
+         * Label: 'Normal'
+         * Description: 'Simulate surface details like bumps and cracks.'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'normal_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Normal scale'
+         * Description: 'The strength of the normal effect.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'combine_normal_and_height' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Combine normal and height'
+         * Description: 'Applies the normal texture on top of the height texture.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'height' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Height'
+         * Description: 'Creates surface details using bump or geometry displacement.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'height_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Height scale'
+         * Description: 'The scale of height in scene units. Applies to both bump and displacement.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'height_level' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Height level'
+         * Description: 'The value of the height texture representing zero displacement.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy level'
+         * Description: 'The amount that reflections stretch in one direction along the surface.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'anisotropy_rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy angle'
+         * Description: 'The counterclockwise rotation of the anisotropic effect.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'emission' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Emission intensity'
+         * Description: 'The intensity of light emitted from the surface.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'emission_color' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Emission color'
+         * Description: 'The color of emitted light.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'sheen' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Sheen opacity'
+         * Description: 'Simulates the effect microscopic fibers or fuzz on the surface.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'sheen_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Sheen color'
+         * Description: 'The color of the sheen effect.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'sheen_roughness' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Sheen roughness'
+         * Description: 'Softness of the sheen effect.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'translucency' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Translucency'
+         * Description: 'The amount of light able to transmit through the surface.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'thin_walled' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Thin-walled'
+         * Description: 'Treats all surfaces as a thin shell. Disables refraction, absorption, and scattering.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'absorption_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Absorption color'
+         * Description: 'The color light will converge to as it is absorbed.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'absorption_distance' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Absorption distance'
+         * Description: 'Approximate distance in scene units that light will travel before reaching absorption color. If set to zero, thickness will not affect absorption color.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'specular_ior' = SDValueFloat(float(1.5)) [CONNECTABLE]
+         * Label: 'Index of refraction'
+         * Description: 'The amount light bends as it passes through the object.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'dispersion' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Dispersion'
+         * Description: 'The amount the color spectrum spreads out when refracted.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scatter' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Subsurface scattering'
+         * Description: 'Scatters light below the surface, rather than passing straight through.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'scatter_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Scattering color'
+         * Description: 'The color below the surface that scattered light will become.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'scatter_distance' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Scattering distance'
+         * Description: 'Approximate distance light must travel before reaching full scattering.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scatter_distance_scale' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Scattering distance scale'
+         * Description: 'A multiplier of the scatter distance. May be different for each color channel.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'scatter_red_shift' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Red shift'
+         * Description: 'Sets red light to travel further than other light colors. Useful for skin.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scatter_rayleigh' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Rayleigh scattering'
+         * Description: 'Sets orange light to travel further beneath the surface and blue light to travel less.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'volume_thickness' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Volume thickness'
+         * Description: '	The thickness of the surface relative to the bounding box of the object. Used for interior effects when the real thickness is not known.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'volume_thickness_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Volume thickness scale'
+         * Description: 'Multiplier of the volume thickness.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'coat' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Coat opacity'
+         * Description: 'Simulates a layer on top of the material. Used to create clear coats, lacquers, and varnishes.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'coat_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Coat color'
+         * Description: 'The color of the coat.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'coat_roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Coat roughness'
+         * Description: 'How smooth or matte the coat surface is.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'coat_ior' = SDValueFloat(float(1.60000002)) [CONNECTABLE]
+         * Label: 'Coat index of refraction'
+         * Description: 'The amount light bends as it passes through the coating.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'coat_specular_level' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Coat specular level'
+         * Description: 'The strength of light reflections on the coat at glancing angles.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'coat_normal' = SDMDLValueCall(mdl::state::normal()__default_call___193) [CONNECTABLE]
+         * Label: 'Coat normal'
+         * Description: 'Simulate surface details like bumps and cracks on the coat surface.'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'coat_normal_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Coat normal scale'
+         * Description: 'The strength of the coat normal effect.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)

@@ -1,0 +1,8 @@
+sdspotcolorlibrary module
+=========================
+
+.. automodule:: sd.api.sdspotcolorlibrary
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

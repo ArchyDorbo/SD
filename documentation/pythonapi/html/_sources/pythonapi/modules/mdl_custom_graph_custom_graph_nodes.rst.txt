@@ -1,0 +1,38 @@
+mdl::custom_graph::custom_graph_nodes
+=====================================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/2] 'mdl::custom_graph::custom_graph_nodes::sampleNodeAdd(float,float)'
+#########################################################################
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'y' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[2/2] 'mdl::custom_graph::custom_graph_nodes::sampleNodeMult(float,float)'
+##########################################################################
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'y' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)

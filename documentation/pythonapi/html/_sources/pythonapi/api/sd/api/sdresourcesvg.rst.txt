@@ -1,0 +1,8 @@
+sdresourcesvg module
+====================
+
+.. automodule:: sd.api.sdresourcesvg
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

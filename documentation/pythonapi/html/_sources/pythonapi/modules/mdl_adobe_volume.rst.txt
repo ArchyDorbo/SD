@@ -1,0 +1,117 @@
+mdl::adobe::volume
+==================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/5] 'mdl::adobe::volume::volume_return(::adobe::volume::volume_return)'
+#########################################################################
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::adobe::volume::volume_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::adobe::volume::volume_return' (SDTypeStruct)
+
+[2/5] 'mdl::adobe::volume::volume_return(color,color)'
+######################################################
+   * SDPropertyCategory = 'Input'
+      * 'absorption_coefficient' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'scattering_coefficient' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::adobe::volume::volume_return' (SDTypeStruct)
+
+[3/5] 'mdl::adobe::volume::volume_return.absorption_coefficient(::adobe::volume::volume_return)'
+################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::adobe::volume::volume_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[4/5] 'mdl::adobe::volume::volume_return.scattering_coefficient(::adobe::volume::volume_return)'
+################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::adobe::volume::volume_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[5/5] 'mdl::adobe::volume::volume_conversion(color,float,bool,color,color,float,float)'
+#######################################################################################
+   * Description: 'Calculate volume properties from parameters'
+   * SDPropertyCategory = 'Input'
+      * 'absorption_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Absorption Color'
+         * Description: 'Color of light after absorption in volume. (Value-normalized, white = no absorption)'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'absorption_distance' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Absorption Distance'
+         * Description: 'Approximate distance to full absorption in volume, in scene units.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scattering' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Label: 'Scattering'
+         * Description: 'Enables scattering of light within a volume.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'scatter_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Scatter Color'
+         * Description: 'Color of scattered media in volume.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'scatter_distance' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Scatter Distance'
+         * Description: 'Approximate distance to full scattering in volume per wavelength, in scene units.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'scatter_red_shift' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Red Shift'
+         * Description: 'Degree to which red light travels farther through a volume than other colors. Useful for skin.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scatter_rayleigh' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Rayleigh Scattering'
+         * Description: 'Degree to which the blue end of the light spectrum scatters more than orange and red light.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::adobe::volume::volume_return' (SDTypeStruct) [Varying]
+
+Types:
+------
+[1/1] 'mdl::adobe::volume::volume_return'
+#########################################
+   * 'mdl::adobe::volume::volume_return' (SDTypeStruct)
+      * ColorRGB absorption_coefficient
+      * ColorRGB scattering_coefficient

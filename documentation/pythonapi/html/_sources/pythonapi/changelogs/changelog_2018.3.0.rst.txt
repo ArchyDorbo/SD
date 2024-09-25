@@ -1,0 +1,291 @@
+Version 2018.3.0
+----------------
+Introduction
+############
+The API now supports the possibility to create and edit runtime data.
+
+Many big changes have been done in these version to offer more possibilities to the user and also to make the API more understandable and more generic.
+
+For scripts that have been generated with the previous version, the modifications to do are limited to make them compatible with this new API version.
+
+Here is a list of the main features of this new version:
+
+* To make the API simpler to understand, all the classes located in the sd.api.generated have been removed.
+    * It means that the content of the 'Stub' classes have been merged with the public class itself:
+    * Example:
+        * ``sd.api.generated.SDGraphStub`` has been merged in ``sd.api.SDGraph``
+    * **IMPORTANT**: You will have to edit your code to support this modification
+
+* All the base types (``int2``, ``ColorRGB``, ...) have been moved from ``SDValue`` to ``sd.api.sdbasetypes``
+* Specific ``SDValue`` classes have been added for each base types.
+    * All conversion methods of ``SDValue`` that was used to get the base type value (``int2``, ``ColorRGB``, ...) have been removed.
+    * Example:
+
+        * ``SDValue.toInt2()->int2``, is now available through ``SDValueInt2.get()``
+        * ``myInt2 = myNode.getPropertyValueFromIdentifier('position', SDPropertyCategory.Input)``.get()
+    * **IMPORTANT**: In the existing code, replace the method of ``SDValue`` ``".to####()"`` to ``".get()"``
+
+* Accessing to all the node definitions is now possible through the ``SDModuleMgr`` class
+    * The ``SDModuleMgr`` contains a list of ``SDModule`` and can be retrieved through the  ``SDApplication.getModuleMgr()`` method
+    * Each ``SDModule`` contains:
+        * a list of ``SDDefinition``:
+            * A ``SDDefinition`` contains all the properties of a node.
+        * a list of types: structs and enums
+    * It means that many of the nodes and types used at runtime can now be retrieved without having to instantiate them.
+
+* Properties values and types of MDL objects are now compatible with other ``SDType`` and ``SDValue``.
+    * the property value of an MDL object now return ``SDValue`` like other Substance objects
+
+* Add support of new ``SDType`` and ``SDValue`` for: enum, struct, matrix
+
+
+Details
+#######
+* [Changed] Class SDAPIObject
+	* [Changed] Enum SDApiError
+		* [Added] InvalidHandle = 9
+		* [Added] InvalidType = 10
+		* [Added] InvalidValue = 11
+		* [Added] NotImplemented = 12
+		* [Added] NotSupported = 13
+		* [Added] ItemNotFound = 14
+		* [Added] DataIsReadOnly = 15
+		* [Added] IrayNotInitialized = 16
+* [Changed] Class SDApplication
+	* [Added] Enum SDApplicationPath
+	* [Added] Method SDApplication.getModuleMgr()
+	* [Added] Method SDApplication.getPath()
+* [Changed] Class SDArray
+	* [Added] Method SDArray.pushBack()
+	* [Added] Method SDArray.sNew()
+* [Added] Class SDBaseTypes
+* [Added] Class SDColorSpace
+* [Changed] Class SDConnection
+	* [Added] Method SDConnection.getInputProperty()
+	* [Added] Method SDConnection.getInputPropertyNode()
+	* [Removed] Method SDConnection.getTargetNode()
+	* [Removed] Method SDConnection.getTargetProperty()
+* [Added] Class SDDefinition
+* [Changed] Class SDGraph
+	* [Added] Method SDGraph.deleteNode()
+	* [Added] Method SDGraph.getGraphObjects()
+	* [Added] Method SDGraph.getNodeDefinitions()
+	* [Added] Method SDGraph.getNodeFromId()
+	* [Added] Method SDGraph.newInstanceNode()
+	* [Added] Method SDGraph.newNode()
+	* [Added] Method SDGraph.setOutputNode()
+	* [Removed] Method SDGraph.getNodeFromIdentifier()
+	* [Removed] Method SDGraph.getProperties()
+	* [Removed] Method SDGraph.getPropertyFromIdentifier()
+	* [Removed] Method SDGraph.getPropertyValue()
+	* [Removed] Method SDGraph.getPropertyValueFromIdentifier()
+* [Added] Class SDGraphObject
+* [Added] Class SDGraphObjectComment
+* [Added] Class SDGraphObjectFrame
+* [Added] Class SDGraphObjectPin
+* [Added] Class SDMDLConstantNode
+* [Added] Class SDMDLExporter
+* [Changed] Class SDMDLGraph
+	* [Added] Method SDMDLGraph.sNew()
+* [Added] Class SDMDLModule
+* [Added] Class SDMDLType
+* [Added] Class SDMDLTypeAlias
+* [Added] Class SDMDLTypeBSDF
+* [Added] Class SDMDLTypeBSDFMeasurementReference
+* [Added] Class SDMDLTypeCall
+* [Added] Class SDMDLTypeDF
+* [Added] Class SDMDLTypeEDF
+* [Added] Class SDMDLTypeLightProfileReference
+* [Added] Class SDMDLTypeParameterReference
+* [Added] Class SDMDLTypeReference
+* [Added] Class SDMDLTypeResourceReference
+* [Added] Class SDMDLTypeTextureReference
+* [Added] Class SDMDLTypeVDF
+* [Added] Class SDMDLValue
+* [Added] Class SDMDLValueAlias
+* [Added] Class SDMDLValueBSDF
+* [Added] Class SDMDLValueBSDFMeasurementReference
+* [Added] Class SDMDLValueCall
+* [Added] Class SDMDLValueDF
+* [Added] Class SDMDLValueEDF
+* [Added] Class SDMDLValueLightProfileReference
+* [Added] Class SDMDLValueParameterReference
+* [Added] Class SDMDLValueReference
+* [Added] Class SDMDLValueResourceReference
+* [Added] Class SDMDLValueTextureReference
+* [Added] Class SDMDLValueVDF
+* [Added] Class SDModule
+* [Added] Class SDModuleMgr
+* [Changed] Class SDNode
+	* [Added] Method SDNode.deletePropertyConnections()
+	* [Added] Method SDNode.deletePropertyGraph()
+	* [Added] Method SDNode.getAnnotationPropertyValueFromId()
+	* [Added] Method SDNode.getDefinition()
+	* [Added] Method SDNode.getInputPropertyValueFromId()
+	* [Added] Method SDNode.getPropertyFromId()
+	* [Added] Method SDNode.getPropertyValueFromId()
+	* [Added] Method SDNode.getReferencedResource()
+	* [Added] Method SDNode.newPropertyConnection()
+	* [Added] Method SDNode.newPropertyConnectionFromId()
+	* [Added] Method SDNode.newPropertyGraph()
+	* [Added] Method SDNode.setAnnotationPropertyValueFromId()
+	* [Added] Method SDNode.setInputPropertyValueFromId()
+	* [Added] Method SDNode.setPropertyValue()
+	* [Removed] Method SDNode.getPropertyFromIdentifier()
+	* [Removed] Method SDNode.getPropertyValueFromIdentifier()
+	* [Removed] Method SDNode.getReferencedGraph()
+	* [Removed] Method SDNode.getType()
+* [Changed] Class SDPackageMgr
+	* [Added] Method SDPackageMgr.newUserPackage()
+	* [Added] Method SDPackageMgr.savePackageAs()
+	* [Removed] Method SDPackageMgr.saveAsPackage()
+* [Changed] Class SDProperty
+	* [Added] Enum SDPropertyInheritanceMethod
+	* [Added] Method SDProperty.getDefaultValue()
+	* [Added] Method SDProperty.getDescription()
+	* [Added] Method SDProperty.getId()
+	* [Added] Method SDProperty.getTypes()
+	* [Added] Method SDProperty.isPrimary()
+	* [Added] Method SDProperty.isReadOnly()
+	* [Added] Method SDProperty.isVariadic()
+	* [Removed] Method SDProperty.getIdentifier()
+* [Changed] Class SDResource
+	* [Added] Method SDResource.deleteProperty()
+	* [Added] Method SDResource.getAnnotationPropertyValueFromId()
+	* [Added] Method SDResource.getInputPropertyValueFromId()
+	* [Added] Method SDResource.getProperties()
+	* [Added] Method SDResource.getPropertyAnnotationValueFromId()
+	* [Added] Method SDResource.getPropertyAnnotations()
+	* [Added] Method SDResource.getPropertyFromId()
+	* [Added] Method SDResource.getPropertyValue()
+	* [Added] Method SDResource.getPropertyValueFromId()
+	* [Added] Method SDResource.newProperty()
+	* [Added] Method SDResource.setAnnotationPropertyValueFromId()
+	* [Added] Method SDResource.setIdentifier()
+	* [Added] Method SDResource.setInputPropertyValueFromId()
+	* [Added] Method SDResource.setPropertyAnnotationValueFromId()
+	* [Added] Method SDResource.setPropertyValue()
+* [Added] Class SDResourceBSDFMeasurement
+* [Changed] Class SDResourceBitmap
+	* [Added] Method SDResourceBitmap.sNew()
+	* [Added] Method SDResourceBitmap.sNewFromFile()
+* [Changed] Class SDResourceFolder
+	* [Added] Method SDResourceFolder.sNew()
+* [Changed] Class SDResourceFont
+	* [Added] Method SDResourceFont.sNewFromFile()
+* [Added] Class SDResourceLightProfile
+* [Changed] Class SDResourceSVG
+	* [Added] Method SDResourceSVG.sNew()
+	* [Added] Method SDResourceSVG.sNewFromFile()
+* [Changed] Class SDResourceScene
+	* [Added] Method SDResourceScene.sGetAvailablePrimitiveDefinitions()
+	* [Added] Method SDResourceScene.sNewFromFile()
+	* [Added] Method SDResourceScene.sNewFromPrimitiveId()
+* [Changed] Class SDSBSCompGraph
+	* [Added] Method SDSBSCompGraph.getPropertyInheritanceMethod()
+	* [Added] Method SDSBSCompGraph.sNew()
+	* [Added] Method SDSBSCompGraph.setIcon()
+	* [Added] Method SDSBSCompGraph.setPropertyInheritanceMethod()
+* [Changed] Class SDSBSCompNode
+	* [Added] Method SDSBSCompNode.getInputPropertyInheritanceMethodFromId()
+	* [Added] Method SDSBSCompNode.getPropertyInheritanceMethod()
+	* [Added] Method SDSBSCompNode.setInputPropertyInheritanceMethodFromId()
+	* [Added] Method SDSBSCompNode.setPropertyInheritanceMethod()
+* [Changed] Class SDSBSFunctionGraph
+	* [Added] Method SDSBSFunctionGraph.sNew()
+* [Changed] Class SDTexture
+	* [Added] Method SDTexture.sFromFile()
+	* [Removed] Struct SDSize
+	* [Changed] Method SDTexture.getSize()
+		* [Changed] Return type changed from 'SDSize' to 'int2'
+* [Changed] Class SDType
+	* [Added] Enum SDTypeModifier
+	* [Added] Method SDType.getId()
+	* [Added] Method SDType.getModifier()
+	* [Removed] Method SDType.getMembers()
+	* [Removed] Method SDType.getName()
+* [Added] Class SDTypeArray
+* [Added] Class SDTypeBaseType
+* [Added] Class SDTypeBool
+* [Added] Class SDTypeBool2
+* [Added] Class SDTypeBool3
+* [Added] Class SDTypeBool4
+* [Added] Class SDTypeColorRGB
+* [Added] Class SDTypeColorRGBA
+* [Added] Class SDTypeCustom
+* [Added] Class SDTypeDouble
+* [Added] Class SDTypeDouble2
+* [Added] Class SDTypeDouble3
+* [Added] Class SDTypeDouble4
+* [Added] Class SDTypeEnum
+* [Added] Class SDTypeFloat
+* [Added] Class SDTypeFloat2
+* [Added] Class SDTypeFloat3
+* [Added] Class SDTypeFloat4
+* [Added] Class SDTypeInt
+* [Added] Class SDTypeInt2
+* [Added] Class SDTypeInt3
+* [Added] Class SDTypeInt4
+* [Added] Class SDTypeMatrix
+* [Removed] Class SDTypeMember
+* [Added] Class SDTypeString
+* [Added] Class SDTypeStruct
+* [Added] Class SDTypeTexture
+* [Added] Class SDTypeUsage
+* [Added] Class SDTypeVector
+* [Added] Class SDTypeVoid
+* [Changed] Class SDUsage
+	* [Added] Method SDUsage.sNew()
+* [Changed] Class SDValue
+	* [Removed] Struct int2
+	* [Removed] Struct int3
+	* [Removed] Struct int4
+	* [Removed] Struct float2
+	* [Removed] Struct float3
+	* [Removed] Struct float4
+	* [Removed] Struct ColorRGB
+	* [Removed] Struct ColorRGBA
+	* [Removed] Method SDValue.getMemberValueFromName()
+	* [Removed] Method SDValue.toBool()
+	* [Removed] Method SDValue.toColorRGB()
+	* [Removed] Method SDValue.toColorRGBA()
+	* [Removed] Method SDValue.toFloat()
+	* [Removed] Method SDValue.toFloat2()
+	* [Removed] Method SDValue.toFloat3()
+	* [Removed] Method SDValue.toFloat4()
+	* [Removed] Method SDValue.toInt()
+	* [Removed] Method SDValue.toInt2()
+	* [Removed] Method SDValue.toInt3()
+	* [Removed] Method SDValue.toInt4()
+	* [Removed] Method SDValue.toSDArray()
+	* [Removed] Method SDValue.toSDTexture()
+	* [Removed] Method SDValue.toString()
+* [Added] Class SDValueArray
+* [Added] Class SDValueBaseType
+* [Added] Class SDValueBool
+* [Added] Class SDValueBool2
+* [Added] Class SDValueBool3
+* [Added] Class SDValueBool4
+* [Added] Class SDValueColorRGB
+* [Added] Class SDValueColorRGBA
+* [Added] Class SDValueCustom
+* [Added] Class SDValueDouble
+* [Added] Class SDValueDouble2
+* [Added] Class SDValueDouble3
+* [Added] Class SDValueDouble4
+* [Added] Class SDValueEnum
+* [Added] Class SDValueFloat
+* [Added] Class SDValueFloat2
+* [Added] Class SDValueFloat3
+* [Added] Class SDValueFloat4
+* [Added] Class SDValueInt
+* [Added] Class SDValueInt2
+* [Added] Class SDValueInt3
+* [Added] Class SDValueInt4
+* [Added] Class SDValueMatrix
+* [Added] Class SDValueSerializer
+* [Added] Class SDValueString
+* [Added] Class SDValueStruct
+* [Added] Class SDValueTexture
+* [Added] Class SDValueUsage
+* [Added] Class SDValueVector

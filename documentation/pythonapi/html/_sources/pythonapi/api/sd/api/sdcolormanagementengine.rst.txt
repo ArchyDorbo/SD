@@ -1,0 +1,8 @@
+sdcolormanagementengine module
+==============================
+
+.. automodule:: sd.api.sdcolormanagementengine
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

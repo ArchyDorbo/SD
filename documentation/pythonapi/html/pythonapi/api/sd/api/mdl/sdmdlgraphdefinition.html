@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdmdlgraphdefinition module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="sdmdlmodule module" href="sdmdlmodule.html" />
+    <link rel="prev" title="sdmdlgraph module" href="sdmdlgraph.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdmdlmodule.html" title="sdmdlmodule module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdmdlgraph.html" title="sdmdlgraph module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../modules.html" >Python Package ‘api’</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="modules.html" accesskey="U">Python Package ‘mdl’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.mdl.sdmdlgraphdefinition">
+<span id="sdmdlgraphdefinition-module"></span><h1>sdmdlgraphdefinition module<a class="headerlink" href="#module-sd.api.mdl.sdmdlgraphdefinition" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.mdl.sdmdlgraphdefinition.</code><code class="sig-name descname">SDMDLGraphDefinition</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../sdgraphdefinition.html#sd.api.sdgraphdefinition.SDGraphDefinition" title="sd.api.sdgraphdefinition.SDGraphDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdgraphdefinition.SDGraphDefinition</span></code></a></p>
+<p>A graph definition based on MDL backend</p>
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.addDefinition">
+<code class="sig-name descname">addDefinition</code><span class="sig-paren">(</span><em class="sig-param">sdDefinition: sd.api.sddefinition.SDDefinition</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.addDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the definition the graph definition will support</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdDefinition</strong> – The node definition to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.addType">
+<code class="sig-name descname">addType</code><span class="sig-paren">(</span><em class="sig-param">sdType: sd.api.sdtype.SDType</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.addType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the type the graph definition will support</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdType</strong> – The type to add</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.getDefinitionFromId">
+<code class="sig-name descname">getDefinitionFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.getDefinitionFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the SDDefinition that match the specified Id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – The id of the SDDefinition to retrieve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.getId">
+<code class="sig-name descname">getId</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.getId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the identifier of the graph definition</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.removeDefinition">
+<code class="sig-name descname">removeDefinition</code><span class="sig-paren">(</span><em class="sig-param">sdDefinition: sd.api.sddefinition.SDDefinition</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.removeDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the specified definition from the graph definition</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdDefinition</strong> – The node definition to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.sNew">
+<em class="property">static </em><code class="sig-name descname">sNew</code><span class="sig-paren">(</span><em class="sig-param">id: str</em><span class="sig-paren">)</span> &#x2192; sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition<a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.sNew" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create new SDTypeVoid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> – The id of the outSDMDLGraphDefinition. It has to be unique in the application.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.setIconFile">
+<code class="sig-name descname">setIconFile</code><span class="sig-paren">(</span><em class="sig-param">iconFilePath: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.setIconFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the icon of the graph definition from the specified file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>iconFilePath</strong> – The file of the icon</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.setLabel">
+<code class="sig-name descname">setLabel</code><span class="sig-paren">(</span><em class="sig-param">label: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraphdefinition.SDMDLGraphDefinition.setLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the label of the graph definition</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>label</strong> – The label of the graph definition</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdmdlgraph.html"
+                        title="previous chapter">sdmdlgraph module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdmdlmodule.html"
+                        title="next chapter">sdmdlmodule module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../../_sources/pythonapi/api/sd/api/mdl/sdmdlgraphdefinition.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdmdlmodule.html" title="sdmdlmodule module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdmdlgraph.html" title="sdmdlgraph module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../modules.html" >Python Package ‘api’</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="modules.html" >Python Package ‘mdl’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

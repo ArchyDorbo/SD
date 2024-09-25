@@ -1,0 +1,8 @@
+sdmdlvaluelightprofilereference module
+======================================
+
+.. automodule:: sd.api.mdl.sdmdlvaluelightprofilereference
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

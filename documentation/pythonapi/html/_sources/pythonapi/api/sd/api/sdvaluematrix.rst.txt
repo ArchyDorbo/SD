@@ -1,0 +1,8 @@
+sdvaluematrix module
+====================
+
+.. automodule:: sd.api.sdvaluematrix
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

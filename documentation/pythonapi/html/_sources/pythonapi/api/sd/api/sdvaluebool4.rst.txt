@@ -1,0 +1,8 @@
+sdvaluebool4 module
+===================
+
+.. automodule:: sd.api.sdvaluebool4
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

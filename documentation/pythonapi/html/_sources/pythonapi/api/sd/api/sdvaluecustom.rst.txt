@@ -1,0 +1,8 @@
+sdvaluecustom module
+====================
+
+.. automodule:: sd.api.sdvaluecustom
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

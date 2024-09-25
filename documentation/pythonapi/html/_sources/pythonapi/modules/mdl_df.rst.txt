@@ -1,0 +1,2075 @@
+mdl::df
+=======
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/97] 'mdl::df::scatter_mode(::df::scatter_mode)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum)
+
+[2/97] 'mdl::df::int(::df::scatter_mode)'
+#########################################
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[3/97] 'mdl::df::diffuse_reflection_bsdf(color,float,string)'
+#############################################################
+   * SDPropertyCategory = 'Input'
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[4/97] 'mdl::df::diffuse_transmission_bsdf(color,string)'
+#########################################################
+   * SDPropertyCategory = 'Input'
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[5/97] 'mdl::df::specular_bsdf(color,::df::scatter_mode,string)'
+################################################################
+   * SDPropertyCategory = 'Input'
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[6/97] 'mdl::df::simple_glossy_bsdf$1.5(float,float,color,float3,::df::scatter_mode,string)'
+############################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___0) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[7/97] 'mdl::df::simple_glossy_bsdf(float,float,color,color,float3,::df::scatter_mode,string)'
+##############################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'multiscatter_tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___1) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[8/97] 'mdl::df::backscattering_glossy_reflection_bsdf$1.5(float,float,color,float3,string)'
+############################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___2) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[9/97] 'mdl::df::backscattering_glossy_reflection_bsdf(float,float,color,color,float3,string)'
+##############################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'multiscatter_tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___3) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[10/97] 'mdl::df::measured_bsdf(bsdf_measurement,float,::df::scatter_mode,string)'
+##################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'measurement' [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf_measurement' (SDMDLTypeBSDFMeasurementReference) [Uniform]
+
+      * 'multiplier' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[11/97] 'mdl::df::microfacet_beckmann_smith_bsdf$1.5(float,float,color,float3,::df::scatter_mode,string)'
+#########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___4) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[12/97] 'mdl::df::microfacet_beckmann_smith_bsdf(float,float,color,color,float3,::df::scatter_mode,string)'
+###########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'multiscatter_tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___5) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[13/97] 'mdl::df::microfacet_ggx_smith_bsdf$1.5(float,float,color,float3,::df::scatter_mode,string)'
+####################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___6) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[14/97] 'mdl::df::microfacet_ggx_smith_bsdf(float,float,color,color,float3,::df::scatter_mode,string)'
+######################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'multiscatter_tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___7) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[15/97] 'mdl::df::microfacet_beckmann_vcavities_bsdf$1.5(float,float,color,float3,::df::scatter_mode,string)'
+#############################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___8) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[16/97] 'mdl::df::microfacet_beckmann_vcavities_bsdf(float,float,color,color,float3,::df::scatter_mode,string)'
+###############################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'multiscatter_tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___9) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[17/97] 'mdl::df::microfacet_ggx_vcavities_bsdf$1.5(float,float,color,float3,::df::scatter_mode,string)'
+########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___10) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[18/97] 'mdl::df::microfacet_ggx_vcavities_bsdf(float,float,color,color,float3,::df::scatter_mode,string)'
+##########################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'multiscatter_tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___11) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mode' = SDValueEnum("mdl::df::scatter_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::df::scatter_mode' (SDTypeEnum) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[19/97] 'mdl::df::ward_geisler_moroder_bsdf$1.5(float,float,color,float3,string)'
+#################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___12) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[20/97] 'mdl::df::ward_geisler_moroder_bsdf(float,float,color,color,float3,string)'
+###################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'multiscatter_tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___13) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[21/97] 'mdl::df::sheen_bsdf$1.6(float,color,color,string)'
+###########################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'multiscatter_tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[22/97] 'mdl::df::sheen_bsdf(float,color,color,bsdf,string)'
+############################################################
+   * SDPropertyCategory = 'Input'
+      * 'roughness' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'multiscatter_tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'multiscatter' = SDMDLValueCall(mdl::df::diffuse_reflection_bsdf(color,float,string)__default_call___14) [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[23/97] 'mdl::df::diffuse_edf(string)'
+######################################
+   * SDPropertyCategory = 'Input'
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[24/97] 'mdl::df::spot_edf$1.0(float,bool,float3x3,string)'
+###########################################################
+   * SDPropertyCategory = 'Input'
+      * 'exponent' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'global_distribution' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'global_frame' = SDValueMatrix(matrix<float>[3][3](float(1),float(0),float(0),float(0),float(1),float(0),float(0),float(0),float(1))) [CONNECTABLE]
+         * Types:
+            * 'matrix<float>[3][3]' (SDTypeMatrix) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[25/97] 'mdl::df::spot_edf(float,float,bool,float3x3,string)'
+#############################################################
+   * SDPropertyCategory = 'Input'
+      * 'exponent' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'spread' = SDValueFloat(float(3.14159274)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'global_distribution' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'global_frame' = SDValueMatrix(matrix<float>[3][3](float(1),float(0),float(0),float(0),float(1),float(0),float(0),float(0),float(1))) [CONNECTABLE]
+         * Types:
+            * 'matrix<float>[3][3]' (SDTypeMatrix) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[26/97] 'mdl::df::measured_edf$1.0(light_profile,bool,float3x3,string)'
+#######################################################################
+   * SDPropertyCategory = 'Input'
+      * 'profile' [CONNECTABLE]
+         * Types:
+            * 'mdl::light_profile' (SDMDLTypeLightProfileReference) [Uniform]
+
+      * 'global_distribution' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'global_frame' = SDValueMatrix(matrix<float>[3][3](float(1),float(0),float(0),float(0),float(1),float(0),float(0),float(0),float(1))) [CONNECTABLE]
+         * Types:
+            * 'matrix<float>[3][3]' (SDTypeMatrix) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[27/97] 'mdl::df::measured_edf$1.1(light_profile,float,bool,float3x3,string)'
+#############################################################################
+   * SDPropertyCategory = 'Input'
+      * 'profile' [CONNECTABLE]
+         * Types:
+            * 'mdl::light_profile' (SDMDLTypeLightProfileReference) [Uniform]
+
+      * 'multiplier' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'global_distribution' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'global_frame' = SDValueMatrix(matrix<float>[3][3](float(1),float(0),float(0),float(0),float(1),float(0),float(0),float(0),float(1))) [CONNECTABLE]
+         * Types:
+            * 'matrix<float>[3][3]' (SDTypeMatrix) [Uniform]
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[28/97] 'mdl::df::measured_edf(light_profile,float,bool,float3x3,float3,string)'
+################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'profile' [CONNECTABLE]
+         * Types:
+            * 'mdl::light_profile' (SDMDLTypeLightProfileReference) [Uniform]
+
+      * 'multiplier' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'global_distribution' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'global_frame' = SDValueMatrix(matrix<float>[3][3](float(1),float(0),float(0),float(0),float(1),float(0),float(0),float(0),float(1))) [CONNECTABLE]
+         * Types:
+            * 'matrix<float>[3][3]' (SDTypeMatrix) [Uniform]
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___15) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[29/97] 'mdl::df::anisotropic_vdf(float,string)'
+################################################
+   * SDPropertyCategory = 'Input'
+      * 'directional_bias' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+[30/97] 'mdl::df::tint(color,bsdf)'
+###################################
+   * SDPropertyCategory = 'Input'
+      * 'tint' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'base' [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[31/97] 'mdl::df::tint(color,color,bsdf)'
+#########################################
+   * SDPropertyCategory = 'Input'
+      * 'reflection_tint' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'transmission_tint' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'base' [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[32/97] 'mdl::df::tint$1.6(color,edf)'
+######################################
+   * SDPropertyCategory = 'Input'
+      * 'tint' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'base' [CONNECTABLE]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[33/97] 'mdl::df::tint(color,edf)'
+##################################
+   * SDPropertyCategory = 'Input'
+      * 'tint' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'base' [CONNECTABLE]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[34/97] 'mdl::df::tint(color,vdf)'
+##################################
+   * SDPropertyCategory = 'Input'
+      * 'tint' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'base' [CONNECTABLE]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+[35/97] 'mdl::df::tint(color,hair_bsdf)'
+########################################
+   * SDPropertyCategory = 'Input'
+      * 'tint' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'base' [CONNECTABLE]
+         * Types:
+            * 'mdl::hair_bsdf' (SDMDLTypeHairBSDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::hair_bsdf' (SDMDLTypeHairBSDF)
+
+[36/97] 'mdl::df::thin_film(float,color,bsdf)'
+##############################################
+   * SDPropertyCategory = 'Input'
+      * 'thickness' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'base' [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[37/97] 'mdl::df::directional_factor(color,color,float,bsdf)'
+#############################################################
+   * SDPropertyCategory = 'Input'
+      * 'normal_tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'grazing_tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'exponent' = SDValueFloat(float(5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[38/97] 'mdl::df::directional_factor(color,color,float,edf)'
+############################################################
+   * SDPropertyCategory = 'Input'
+      * 'normal_tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'grazing_tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'exponent' = SDValueFloat(float(5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'base' = SDMDLValueEDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[39/97] 'mdl::df::bsdf_component(::df::bsdf_component)'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::bsdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::bsdf_component' (SDTypeStruct)
+
+[40/97] 'mdl::df::bsdf_component(float,bsdf)'
+#############################################
+   * SDPropertyCategory = 'Input'
+      * 'weight' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'component' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::bsdf_component' (SDTypeStruct)
+
+[41/97] 'mdl::df::bsdf_component.weight(::df::bsdf_component)'
+##############################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::bsdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[42/97] 'mdl::df::bsdf_component.component(::df::bsdf_component)'
+#################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::bsdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[43/97] 'mdl::df::edf_component(::df::edf_component)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::edf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::edf_component' (SDTypeStruct)
+
+[44/97] 'mdl::df::edf_component(float,edf)'
+###########################################
+   * SDPropertyCategory = 'Input'
+      * 'weight' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'component' = SDMDLValueEDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::edf_component' (SDTypeStruct)
+
+[45/97] 'mdl::df::edf_component.weight(::df::edf_component)'
+############################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::edf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[46/97] 'mdl::df::edf_component.component(::df::edf_component)'
+###############################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::edf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[47/97] 'mdl::df::vdf_component(::df::vdf_component)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::vdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::vdf_component' (SDTypeStruct)
+
+[48/97] 'mdl::df::vdf_component(float,vdf)'
+###########################################
+   * SDPropertyCategory = 'Input'
+      * 'weight' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'component' = SDMDLValueVDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::vdf_component' (SDTypeStruct)
+
+[49/97] 'mdl::df::vdf_component.weight(::df::vdf_component)'
+############################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::vdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[50/97] 'mdl::df::vdf_component.component(::df::vdf_component)'
+###############################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::vdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+[51/97] 'mdl::df::normalized_mix(::df::bsdf_component[N])'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::bsdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[52/97] 'mdl::df::normalized_mix(::df::edf_component[N])'
+#########################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::edf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[53/97] 'mdl::df::normalized_mix(::df::vdf_component[N])'
+#########################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::vdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+[54/97] 'mdl::df::clamped_mix(::df::bsdf_component[N])'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::bsdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[55/97] 'mdl::df::clamped_mix(::df::edf_component[N])'
+######################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::edf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[56/97] 'mdl::df::clamped_mix(::df::vdf_component[N])'
+######################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::vdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+[57/97] 'mdl::df::weighted_layer(float,bsdf,bsdf,float3)'
+#########################################################
+   * SDPropertyCategory = 'Input'
+      * 'weight' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'layer' [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___16) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[58/97] 'mdl::df::fresnel_layer$1.3(color,float,bsdf,bsdf,float3)'
+##################################################################
+   * SDPropertyCategory = 'Input'
+      * 'ior' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'layer' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___17) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[59/97] 'mdl::df::custom_curve_layer(float,float,float,float,bsdf,bsdf,float3)'
+###############################################################################
+   * SDPropertyCategory = 'Input'
+      * 'normal_reflectivity' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'grazing_reflectivity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'exponent' = SDValueFloat(float(5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'layer' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___18) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[60/97] 'mdl::df::measured_curve_layer(color[N],float,bsdf,bsdf,float3)'
+########################################################################
+   * SDPropertyCategory = 'Input'
+      * 'curve_values' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<ColorRGB>' (SDTypeArray)
+
+      * 'weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'layer' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___19) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[61/97] 'mdl::df::measured_curve_factor(color[N],bsdf)'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'curve_values' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<ColorRGB>' (SDTypeArray)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[62/97] 'mdl::df::light_profile_power(light_profile)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'profile' [CONNECTABLE]
+         * Types:
+            * 'mdl::light_profile' (SDMDLTypeLightProfileReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[63/97] 'mdl::df::light_profile_maximum(light_profile)'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'profile' [CONNECTABLE]
+         * Types:
+            * 'mdl::light_profile' (SDMDLTypeLightProfileReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[64/97] 'mdl::df::light_profile_isvalid(light_profile)'
+#######################################################
+   * SDPropertyCategory = 'Input'
+      * 'profile' [CONNECTABLE]
+         * Types:
+            * 'mdl::light_profile' (SDMDLTypeLightProfileReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[65/97] 'mdl::df::bsdf_measurement_isvalid(bsdf_measurement)'
+#############################################################
+   * SDPropertyCategory = 'Input'
+      * 'measurement' [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf_measurement' (SDMDLTypeBSDFMeasurementReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool)
+
+[66/97] 'mdl::df::color_bsdf_component(::df::color_bsdf_component)'
+###################################################################
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::color_bsdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::color_bsdf_component' (SDTypeStruct)
+
+[67/97] 'mdl::df::color_bsdf_component(color,bsdf)'
+###################################################
+   * SDPropertyCategory = 'Input'
+      * 'weight' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'component' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::color_bsdf_component' (SDTypeStruct)
+
+[68/97] 'mdl::df::color_bsdf_component.weight(::df::color_bsdf_component)'
+##########################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::color_bsdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[69/97] 'mdl::df::color_bsdf_component.component(::df::color_bsdf_component)'
+#############################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::color_bsdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[70/97] 'mdl::df::color_edf_component(::df::color_edf_component)'
+#################################################################
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::color_edf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::color_edf_component' (SDTypeStruct)
+
+[71/97] 'mdl::df::color_edf_component(color,edf)'
+#################################################
+   * SDPropertyCategory = 'Input'
+      * 'weight' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'component' = SDMDLValueEDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::color_edf_component' (SDTypeStruct)
+
+[72/97] 'mdl::df::color_edf_component.weight(::df::color_edf_component)'
+########################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::color_edf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[73/97] 'mdl::df::color_edf_component.component(::df::color_edf_component)'
+###########################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::color_edf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[74/97] 'mdl::df::color_vdf_component(::df::color_vdf_component)'
+#################################################################
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::color_vdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::color_vdf_component' (SDTypeStruct)
+
+[75/97] 'mdl::df::color_vdf_component(color,vdf)'
+#################################################
+   * SDPropertyCategory = 'Input'
+      * 'weight' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'component' = SDMDLValueVDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::df::color_vdf_component' (SDTypeStruct)
+
+[76/97] 'mdl::df::color_vdf_component.weight(::df::color_vdf_component)'
+########################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::color_vdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+[77/97] 'mdl::df::color_vdf_component.component(::df::color_vdf_component)'
+###########################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::df::color_vdf_component' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+[78/97] 'mdl::df::color_normalized_mix(::df::color_bsdf_component[N])'
+######################################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::color_bsdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[79/97] 'mdl::df::color_normalized_mix(::df::color_edf_component[N])'
+#####################################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::color_edf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[80/97] 'mdl::df::color_normalized_mix(::df::color_vdf_component[N])'
+#####################################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::color_vdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+[81/97] 'mdl::df::color_clamped_mix(::df::color_bsdf_component[N])'
+###################################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::color_bsdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[82/97] 'mdl::df::color_clamped_mix(::df::color_edf_component[N])'
+##################################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::color_edf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[83/97] 'mdl::df::color_clamped_mix(::df::color_vdf_component[N])'
+##################################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::color_vdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+[84/97] 'mdl::df::color_weighted_layer(color,bsdf,bsdf,float3)'
+###############################################################
+   * SDPropertyCategory = 'Input'
+      * 'weight' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'layer' [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___20) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[85/97] 'mdl::df::fresnel_layer(float,float,bsdf,bsdf,float3)'
+##############################################################
+   * SDPropertyCategory = 'Input'
+      * 'ior' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'layer' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___21) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[86/97] 'mdl::df::color_fresnel_layer(color,color,bsdf,bsdf,float3)'
+####################################################################
+   * SDPropertyCategory = 'Input'
+      * 'ior' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'weight' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'layer' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___22) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[87/97] 'mdl::df::color_custom_curve_layer(color,color,float,color,bsdf,bsdf,float3)'
+#####################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'normal_reflectivity' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'grazing_reflectivity' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'exponent' = SDValueFloat(float(5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'weight' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'layer' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___23) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[88/97] 'mdl::df::color_measured_curve_layer(color[N],color,bsdf,bsdf,float3)'
+##############################################################################
+   * SDPropertyCategory = 'Input'
+      * 'curve_values' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<ColorRGB>' (SDTypeArray)
+
+      * 'weight' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'layer' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___24) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[89/97] 'mdl::df::fresnel_factor(color,color,bsdf)'
+###################################################
+   * SDPropertyCategory = 'Input'
+      * 'ior' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'extinction_coefficient' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[90/97] 'mdl::df::measured_factor(texture_2d,bsdf)'
+###################################################
+   * SDPropertyCategory = 'Input'
+      * 'values' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'base' = SDMDLValueBSDF() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[91/97] 'mdl::df::chiang_hair_bsdf(float,color,float2,float2,float2,float,color,float,string)'
+##############################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'diffuse_reflection_weight' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'diffuse_reflection_tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness_R' = SDValueFloat2(float2(0,0)) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'roughness_TT' = SDMDLValueParameterReference(2) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'roughness_TRT' = SDMDLValueParameterReference(3) [CONNECTABLE]
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'cuticle_angle' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'absorption_coefficient' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'ior' = SDValueFloat(float(1.54999995)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'handle' = SDValueString(string()) [CONNECTABLE]
+         * Types:
+            * 'string' (SDTypeString) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::hair_bsdf' (SDMDLTypeHairBSDF)
+
+[92/97] 'mdl::df::unbounded_mix(::df::bsdf_component[N])'
+#########################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::bsdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[93/97] 'mdl::df::unbounded_mix(::df::edf_component[N])'
+########################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::edf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[94/97] 'mdl::df::unbounded_mix(::df::vdf_component[N])'
+########################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::vdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+[95/97] 'mdl::df::color_unbounded_mix(::df::color_bsdf_component[N])'
+#####################################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::color_bsdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::bsdf' (SDMDLTypeBSDF)
+
+[96/97] 'mdl::df::color_unbounded_mix(::df::color_edf_component[N])'
+####################################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::color_edf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::edf' (SDMDLTypeEDF)
+
+[97/97] 'mdl::df::color_unbounded_mix(::df::color_vdf_component[N])'
+####################################################################
+   * SDPropertyCategory = 'Input'
+      * 'components' [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<mdl::df::color_vdf_component>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::vdf' (SDMDLTypeVDF)
+
+Types:
+------
+[1/25] 'mdl::df::scatter_mode'
+##############################
+   * 'mdl::df::scatter_mode' (SDTypeEnum)
+      * int scatter_reflect = SDValueInt(int(0))
+      * int scatter_transmit = SDValueInt(int(1))
+      * int scatter_reflect_transmit = SDValueInt(int(2))
+
+[2/25] 'mdl::df::bsdf_component'
+################################
+   * 'mdl::df::bsdf_component' (SDTypeStruct)
+      * float weight
+      * mdl::bsdf component
+
+[3/25] 'mdl::df::edf_component'
+###############################
+   * 'mdl::df::edf_component' (SDTypeStruct)
+      * float weight
+      * mdl::edf component
+
+[4/25] 'mdl::df::vdf_component'
+###############################
+   * 'mdl::df::vdf_component' (SDTypeStruct)
+      * float weight
+      * mdl::vdf component
+
+[5/25] 'SDTypeArray<mdl::df::bsdf_component>'
+#############################################
+   * 'SDTypeArray<mdl::df::bsdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::bsdf_component' (SDTypeStruct)
+            * float weight
+            * mdl::bsdf component
+
+[6/25] 'SDTypeArray<mdl::df::edf_component>'
+############################################
+   * 'SDTypeArray<mdl::df::edf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::edf_component' (SDTypeStruct)
+            * float weight
+            * mdl::edf component
+
+[7/25] 'SDTypeArray<mdl::df::vdf_component>'
+############################################
+   * 'SDTypeArray<mdl::df::vdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::vdf_component' (SDTypeStruct)
+            * float weight
+            * mdl::vdf component
+
+[8/25] 'SDTypeArray<mdl::df::bsdf_component>'
+#############################################
+   * 'SDTypeArray<mdl::df::bsdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::bsdf_component' (SDTypeStruct)
+            * float weight
+            * mdl::bsdf component
+
+[9/25] 'SDTypeArray<mdl::df::edf_component>'
+############################################
+   * 'SDTypeArray<mdl::df::edf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::edf_component' (SDTypeStruct)
+            * float weight
+            * mdl::edf component
+
+[10/25] 'SDTypeArray<mdl::df::vdf_component>'
+#############################################
+   * 'SDTypeArray<mdl::df::vdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::vdf_component' (SDTypeStruct)
+            * float weight
+            * mdl::vdf component
+
+[11/25] 'mdl::df::color_bsdf_component'
+#######################################
+   * 'mdl::df::color_bsdf_component' (SDTypeStruct)
+      * ColorRGB weight
+      * mdl::bsdf component
+
+[12/25] 'mdl::df::color_edf_component'
+######################################
+   * 'mdl::df::color_edf_component' (SDTypeStruct)
+      * ColorRGB weight
+      * mdl::edf component
+
+[13/25] 'mdl::df::color_vdf_component'
+######################################
+   * 'mdl::df::color_vdf_component' (SDTypeStruct)
+      * ColorRGB weight
+      * mdl::vdf component
+
+[14/25] 'SDTypeArray<mdl::df::color_bsdf_component>'
+####################################################
+   * 'SDTypeArray<mdl::df::color_bsdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::color_bsdf_component' (SDTypeStruct)
+            * ColorRGB weight
+            * mdl::bsdf component
+
+[15/25] 'SDTypeArray<mdl::df::color_edf_component>'
+###################################################
+   * 'SDTypeArray<mdl::df::color_edf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::color_edf_component' (SDTypeStruct)
+            * ColorRGB weight
+            * mdl::edf component
+
+[16/25] 'SDTypeArray<mdl::df::color_vdf_component>'
+###################################################
+   * 'SDTypeArray<mdl::df::color_vdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::color_vdf_component' (SDTypeStruct)
+            * ColorRGB weight
+            * mdl::vdf component
+
+[17/25] 'SDTypeArray<mdl::df::color_bsdf_component>'
+####################################################
+   * 'SDTypeArray<mdl::df::color_bsdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::color_bsdf_component' (SDTypeStruct)
+            * ColorRGB weight
+            * mdl::bsdf component
+
+[18/25] 'SDTypeArray<mdl::df::color_edf_component>'
+###################################################
+   * 'SDTypeArray<mdl::df::color_edf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::color_edf_component' (SDTypeStruct)
+            * ColorRGB weight
+            * mdl::edf component
+
+[19/25] 'SDTypeArray<mdl::df::color_vdf_component>'
+###################################################
+   * 'SDTypeArray<mdl::df::color_vdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::color_vdf_component' (SDTypeStruct)
+            * ColorRGB weight
+            * mdl::vdf component
+
+[20/25] 'SDTypeArray<mdl::df::bsdf_component>'
+##############################################
+   * 'SDTypeArray<mdl::df::bsdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::bsdf_component' (SDTypeStruct)
+            * float weight
+            * mdl::bsdf component
+
+[21/25] 'SDTypeArray<mdl::df::edf_component>'
+#############################################
+   * 'SDTypeArray<mdl::df::edf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::edf_component' (SDTypeStruct)
+            * float weight
+            * mdl::edf component
+
+[22/25] 'SDTypeArray<mdl::df::vdf_component>'
+#############################################
+   * 'SDTypeArray<mdl::df::vdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::vdf_component' (SDTypeStruct)
+            * float weight
+            * mdl::vdf component
+
+[23/25] 'SDTypeArray<mdl::df::color_bsdf_component>'
+####################################################
+   * 'SDTypeArray<mdl::df::color_bsdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::color_bsdf_component' (SDTypeStruct)
+            * ColorRGB weight
+            * mdl::bsdf component
+
+[24/25] 'SDTypeArray<mdl::df::color_edf_component>'
+###################################################
+   * 'SDTypeArray<mdl::df::color_edf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::color_edf_component' (SDTypeStruct)
+            * ColorRGB weight
+            * mdl::edf component
+
+[25/25] 'SDTypeArray<mdl::df::color_vdf_component>'
+###################################################
+   * 'SDTypeArray<mdl::df::color_vdf_component>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::df::color_vdf_component' (SDTypeStruct)
+            * ColorRGB weight
+            * mdl::vdf component

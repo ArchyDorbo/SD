@@ -1,0 +1,43 @@
+mdl::adobe::annotations
+=======================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/2] 'mdl::adobe::annotations::height_implementation(::adobe::annotations::height_implementation)'
+###################################################################################################
+   * Label: 'Preferred Height Implementation'
+   * Description: 'Describes which implementation should be preferred when consuming height information'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::adobe::annotations::height_implementation",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::adobe::annotations::height_implementation' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::adobe::annotations::height_implementation' (SDTypeEnum)
+
+[2/2] 'mdl::adobe::annotations::int(::adobe::annotations::height_implementation)'
+#################################################################################
+   * Label: 'Preferred Height Implementation'
+   * Description: 'Describes which implementation should be preferred when consuming height information'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::adobe::annotations::height_implementation' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+Types:
+------
+[1/1] 'mdl::adobe::annotations::height_implementation'
+######################################################
+   * 'mdl::adobe::annotations::height_implementation' (SDTypeEnum)
+      * int height_auto = SDValueInt(int(0))
+      * int height_bump = SDValueInt(int(1))
+      * int height_displacement = SDValueInt(int(2))

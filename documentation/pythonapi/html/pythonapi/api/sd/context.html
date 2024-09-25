@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>context module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="logger module" href="logger.html" />
+    <link rel="prev" title="capi module" href="capi.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="logger.html" title="logger module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="capi.html" title="capi module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" accesskey="U">Python Package ‘sd’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.context">
+<span id="context-module"></span><h1>context module<a class="headerlink" href="#module-sd.context" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.context.Context">
+<em class="property">class </em><code class="sig-prename descclassname">sd.context.</code><code class="sig-name descname">Context</code><a class="headerlink" href="#sd.context.Context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="api/apicontext.html#sd.api.apicontext.APIContext" title="sd.api.apicontext.APIContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.apicontext.APIContext</span></code></a></p>
+<dl class="method">
+<dt id="sd.context.Context.createRuntimeLogHandler">
+<code class="sig-name descname">createRuntimeLogHandler</code><span class="sig-paren">(</span><em class="sig-param">channelName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.context.Context.createRuntimeLogHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a log handler that redirects logs to Designer’s console.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="logger.html#sd.logger.SDRuntimeLogHandler" title="sd.logger.SDRuntimeLogHandler">logger.SDRuntimeLogHandler</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.context.Context.getCTypesBinary">
+<code class="sig-name descname">getCTypesBinary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.context.Context.getCTypesBinary" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>ctypes.CDLL</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.context.Context.getCTypesFct">
+<code class="sig-name descname">getCTypesFct</code><span class="sig-paren">(</span><em class="sig-param">aFctName</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.context.Context.getCTypesFct" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.context.Context.getLogger">
+<code class="sig-name descname">getLogger</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.context.Context.getLogger" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>logging.Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.context.Context.getSDApplication">
+<code class="sig-name descname">getSDApplication</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.context.Context.getSDApplication" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="api/sdapplication.html#sd.api.sdapplication.SDApplication" title="sd.api.sdapplication.SDApplication">sd.api.sdapplication.SDApplication</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.context.Context.getTempDir">
+<code class="sig-name descname">getTempDir</code><span class="sig-paren">(</span><em class="sig-param">aSubDirName=''</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.context.Context.getTempDir" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.context.Context.isVerbose">
+<code class="sig-name descname">isVerbose</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.context.Context.isVerbose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="capi.html"
+                        title="previous chapter">capi module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="logger.html"
+                        title="next chapter">logger module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/pythonapi/api/sd/context.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="logger.html" title="logger module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="capi.html" title="capi module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >Python Package ‘sd’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

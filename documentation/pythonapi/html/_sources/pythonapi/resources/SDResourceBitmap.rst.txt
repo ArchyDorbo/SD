@@ -1,0 +1,76 @@
+SDResourceBitmap
+================
+
+.. contents:: :local:
+
+Category = Annotation
+#####################
+   * 'file_path' (ReadOnly) = 'SDValueString(string(tests/assets/substance-128x128.png))'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'identifier' = 'SDValueString(string(substance-128x128))'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'category' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'label' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'author' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'author_url' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'tags' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'description' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'userdata' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'show_in_library' = 'SDValueBool(bool(true))'
+      * Property Type: 'bool' (SDTypeBool)
+      * Value Type: 'bool' (SDTypeBool)
+      * Has label
+
+   * 'bitmap_format' = 'SDValueInt(int(0))'
+      * Property Type: 'int' (SDTypeInt)
+      * Value Type: 'int' (SDTypeInt)
+      * Has label
+
+   * 'bitmap_compression_quality' = 'SDValueFloat(float(0))'
+      * Property Type: 'float' (SDTypeFloat)
+      * Value Type: 'float' (SDTypeFloat)
+      * Has label
+
+   * 'bitmap_color_space' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'bitmap_premultiplied_alpha' = 'SDValueBool(bool(true))'
+      * Property Type: 'bool' (SDTypeBool)
+      * Value Type: 'bool' (SDTypeBool)
+      * Has label

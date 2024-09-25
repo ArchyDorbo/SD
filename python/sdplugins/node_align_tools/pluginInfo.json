@@ -1,0 +1,9 @@
+{
+    "metadata_format_version": "1",
+    "name": "node_align_tools",
+    "version": "1.0.0",
+    "author": "Allegorithmic",
+    "email": "",
+    "min_designer_version": "2019.1",
+    "platform": "any"
+}

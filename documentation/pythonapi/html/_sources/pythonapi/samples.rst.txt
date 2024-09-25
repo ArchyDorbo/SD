@@ -1,0 +1,16 @@
+Samples
+=======
+
+Many samples are available in the following directory:
+
+* ``%INSTALL_DIR%/resources/python/scripts/samples``
+
+
+Samples Python Modules
+----------------------
+
+.. toctree::
+   :maxdepth: 4
+   :glob:
+
+   api/samples/sample_*

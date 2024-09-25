@@ -1,0 +1,8 @@
+sdvaluevector module
+====================
+
+.. automodule:: sd.api.sdvaluevector
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

@@ -1,0 +1,191 @@
+mdl::alg::materials::asm::standard_scatter
+==========================================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/1] 'mdl::alg::materials::asm::standard_scatter::standard'
+############################################################
+   * Description: 'Material definition for Adobe interchange. Modified to match Substance Pt/Ds SSS.'
+   * SDPropertyCategory = 'Input'
+      * 'base_color' = SDValueColorRGB(ColorRGB(0.5,0.5,0.5)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'roughness' = SDValueFloat(float(0.300000012)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'metallic' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'opacity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'specular_level' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'specular_edge_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___184) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'normal_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'height' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'height_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'height_level' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'anisotropy_rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'emission' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'emission_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'sheen' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'sheen_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'sheen_roughness' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'translucency' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'thin_walled' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'absorption_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'absorption_distance' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'specular_ior' = SDValueFloat(float(1.5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'dispersion' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scatter' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'sssRefractionRoughness' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scatter_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'scatter_distance' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scatter_distance_scale' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'sssColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'scatter_red_shift' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scatter_rayleigh' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scatter_anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'coat' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'coat_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'coat_roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'coat_ior' = SDValueFloat(float(1.60000002)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'coat_specular_level' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'coat_normal' = SDMDLValueCall(mdl::state::normal()__default_call___185) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'coat_normal_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'thin_film_thickness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'thin_film_thickness_min' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'thin_film_thickness_max' = SDValueFloat(float(1200)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'thin_film_ior' = SDValueFloat(float(1.29999995)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)

@@ -1,0 +1,28 @@
+Version 11.2.0
+--------------
+Details
+#######
+* [Added] Class SDAppInteropMgr
+* [Changed] Class SDApplication
+	* [Changed] Enum SDApplicationPath
+		* [Added] DefaultTemporaryDir = 2
+	* [Added] Method SDApplication.getAppInteropMgr()
+* [Changed] Class SDPackage
+	* [Added] Method SDPackage.getUID()
+	* [Added] Method SDPackage.isModified()
+* [Changed] Class SDPackageMgr
+	* [Added] Method SDPackageMgr.saveCopyOfPackageAs()
+* [Changed] Class SDSBSARExporter
+	* [Added] Method SDSBSARExporter.exportSBSFileToSBSAR()
+* [Changed] Class SDSBSCompGraph
+	* [Added] Method SDSBSCompGraph.getExposedInSBSAR()
+	* [Added] Method SDSBSCompGraph.getGraphType()
+	* [Added] Method SDSBSCompGraph.getIcon()
+	* [Added] Method SDSBSCompGraph.getUID()
+* [Added] Class SDSBSGraphThumbnailGenerator
+* [Changed] Class SDUIMgr
+	* [Added] Method SDUIMgr.convertSDTextureToQImage()
+	* [Added] Method SDUIMgr.getCurrentGraphSelectedNodes()
+	* [Added] Method SDUIMgr.getCurrentGraphSelectedObjects()
+	* [Added] Method SDUIMgr.getGraphSelectedNodesFromGraphViewID()
+	* [Added] Method SDUIMgr.getGraphSelectedObjectsFromGraphViewID()

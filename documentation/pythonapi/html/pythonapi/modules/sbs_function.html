@@ -1,0 +1,5523 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sbs::function &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="sbs::fxmap" href="sbs_fxmap.html" />
+    <link rel="prev" title="sbs::compositing" href="sbs_compositing.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sbs_fxmap.html" title="sbs::fxmap"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sbs_compositing.html" title="sbs::compositing"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" accesskey="U">Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="sbs-function">
+<h1>sbs::function<a class="headerlink" href="#sbs-function" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#definitions" id="id1">Definitions:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sbs-function-const-float1" id="id2">[1/84] ‘sbs::function::const_float1’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-const-float2" id="id3">[2/84] ‘sbs::function::const_float2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-const-float3" id="id4">[3/84] ‘sbs::function::const_float3’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-const-float4" id="id5">[4/84] ‘sbs::function::const_float4’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-const-int1" id="id6">[5/84] ‘sbs::function::const_int1’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-const-int2" id="id7">[6/84] ‘sbs::function::const_int2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-const-int3" id="id8">[7/84] ‘sbs::function::const_int3’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-const-int4" id="id9">[8/84] ‘sbs::function::const_int4’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-const-bool" id="id10">[9/84] ‘sbs::function::const_bool’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-const-string" id="id11">[10/84] ‘sbs::function::const_string’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-vector2" id="id12">[11/84] ‘sbs::function::vector2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-vector3" id="id13">[12/84] ‘sbs::function::vector3’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-vector4" id="id14">[13/84] ‘sbs::function::vector4’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-swizzle1" id="id15">[14/84] ‘sbs::function::swizzle1’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-swizzle2" id="id16">[15/84] ‘sbs::function::swizzle2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-swizzle3" id="id17">[16/84] ‘sbs::function::swizzle3’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-swizzle4" id="id18">[17/84] ‘sbs::function::swizzle4’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-ivector2" id="id19">[18/84] ‘sbs::function::ivector2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-ivector3" id="id20">[19/84] ‘sbs::function::ivector3’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-ivector4" id="id21">[20/84] ‘sbs::function::ivector4’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-iswizzle1" id="id22">[21/84] ‘sbs::function::iswizzle1’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-iswizzle2" id="id23">[22/84] ‘sbs::function::iswizzle2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-iswizzle3" id="id24">[23/84] ‘sbs::function::iswizzle3’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-iswizzle4" id="id25">[24/84] ‘sbs::function::iswizzle4’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-set" id="id26">[25/84] ‘sbs::function::set’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-get-float1" id="id27">[26/84] ‘sbs::function::get_float1’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-get-float2" id="id28">[27/84] ‘sbs::function::get_float2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-get-float3" id="id29">[28/84] ‘sbs::function::get_float3’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-get-float4" id="id30">[29/84] ‘sbs::function::get_float4’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-get-integer1" id="id31">[30/84] ‘sbs::function::get_integer1’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-get-integer2" id="id32">[31/84] ‘sbs::function::get_integer2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-get-integer3" id="id33">[32/84] ‘sbs::function::get_integer3’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-get-integer4" id="id34">[33/84] ‘sbs::function::get_integer4’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-get-bool" id="id35">[34/84] ‘sbs::function::get_bool’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-get-string" id="id36">[35/84] ‘sbs::function::get_string’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-samplelum" id="id37">[36/84] ‘sbs::function::samplelum’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-samplecol" id="id38">[37/84] ‘sbs::function::samplecol’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-tofloat" id="id39">[38/84] ‘sbs::function::tofloat’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-tofloat2" id="id40">[39/84] ‘sbs::function::tofloat2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-tofloat3" id="id41">[40/84] ‘sbs::function::tofloat3’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-tofloat4" id="id42">[41/84] ‘sbs::function::tofloat4’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-toint1" id="id43">[42/84] ‘sbs::function::toint1’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-toint2" id="id44">[43/84] ‘sbs::function::toint2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-toint3" id="id45">[44/84] ‘sbs::function::toint3’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-toint4" id="id46">[45/84] ‘sbs::function::toint4’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-add" id="id47">[46/84] ‘sbs::function::add’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-sub" id="id48">[47/84] ‘sbs::function::sub’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-mul" id="id49">[48/84] ‘sbs::function::mul’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-mulscalar" id="id50">[49/84] ‘sbs::function::mulscalar’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-div" id="id51">[50/84] ‘sbs::function::div’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-neg" id="id52">[51/84] ‘sbs::function::neg’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-mod" id="id53">[52/84] ‘sbs::function::mod’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-dot" id="id54">[53/84] ‘sbs::function::dot’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-and" id="id55">[54/84] ‘sbs::function::and’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-or" id="id56">[55/84] ‘sbs::function::or’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-not" id="id57">[56/84] ‘sbs::function::not’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-eq" id="id58">[57/84] ‘sbs::function::eq’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-noteq" id="id59">[58/84] ‘sbs::function::noteq’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-gt" id="id60">[59/84] ‘sbs::function::gt’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-gteq" id="id61">[60/84] ‘sbs::function::gteq’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-lr" id="id62">[61/84] ‘sbs::function::lr’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-lreq" id="id63">[62/84] ‘sbs::function::lreq’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-abs" id="id64">[63/84] ‘sbs::function::abs’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-floor" id="id65">[64/84] ‘sbs::function::floor’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-ceil" id="id66">[65/84] ‘sbs::function::ceil’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-cos" id="id67">[66/84] ‘sbs::function::cos’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-sin" id="id68">[67/84] ‘sbs::function::sin’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-tan" id="id69">[68/84] ‘sbs::function::tan’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-atan2" id="id70">[69/84] ‘sbs::function::atan2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-cartesian" id="id71">[70/84] ‘sbs::function::cartesian’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-sqrt" id="id72">[71/84] ‘sbs::function::sqrt’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-log" id="id73">[72/84] ‘sbs::function::log’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-exp" id="id74">[73/84] ‘sbs::function::exp’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-log2" id="id75">[74/84] ‘sbs::function::log2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-pow2" id="id76">[75/84] ‘sbs::function::pow2’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-pow" id="id77">[76/84] ‘sbs::function::pow’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-lerp" id="id78">[77/84] ‘sbs::function::lerp’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-min" id="id79">[78/84] ‘sbs::function::min’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-max" id="id80">[79/84] ‘sbs::function::max’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-rand" id="id81">[80/84] ‘sbs::function::rand’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-sequence" id="id82">[81/84] ‘sbs::function::sequence’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-ifelse" id="id83">[82/84] ‘sbs::function::ifelse’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-while" id="id84">[83/84] ‘sbs::function::while’</a></p></li>
+<li><p><a class="reference internal" href="#sbs-function-passthrough" id="id85">[84/84] ‘sbs::function::passthrough’</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="definitions">
+<h2><a class="toc-backref" href="#id1">Definitions:</a><a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<section id="sbs-function-const-float1">
+<h3><a class="toc-backref" href="#id2">[1/84] ‘sbs::function::const_float1’</a><a class="headerlink" href="#sbs-function-const-float1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Float’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Float&lt;/b&gt; function defines a constant floating value’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueFloat(float(0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Float’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Float&lt;/b&gt; function defines a constant floating value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-const-float2">
+<h3><a class="toc-backref" href="#id3">[2/84] ‘sbs::function::const_float2’</a><a class="headerlink" href="#sbs-function-const-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Float2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Float2&lt;/b&gt; function defines a constant two floating values vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueFloat2(float2(0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Float2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Float2&lt;/b&gt; function defines a constant two floating values vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-const-float3">
+<h3><a class="toc-backref" href="#id4">[3/84] ‘sbs::function::const_float3’</a><a class="headerlink" href="#sbs-function-const-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Float3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Float3&lt;/b&gt; function defines a constant three floating values vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueFloat3(float3(0,0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Float3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Float3&lt;/b&gt; function defines a constant three floating values vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-const-float4">
+<h3><a class="toc-backref" href="#id5">[4/84] ‘sbs::function::const_float4’</a><a class="headerlink" href="#sbs-function-const-float4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Float4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Float4&lt;/b&gt; function defines a constant four floating values vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueFloat4(float4(0,0,0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Float4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Float4&lt;/b&gt; function defines a constant four floating values vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-const-int1">
+<h3><a class="toc-backref" href="#id6">[5/84] ‘sbs::function::const_int1’</a><a class="headerlink" href="#sbs-function-const-int1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Integer’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Integer&lt;/b&gt; function defines a constant integer’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Integer’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Integer&lt;/b&gt; function defines a constant integer’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-const-int2">
+<h3><a class="toc-backref" href="#id7">[6/84] ‘sbs::function::const_int2’</a><a class="headerlink" href="#sbs-function-const-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Integer2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Integer2&lt;/b&gt; function defines a constant two integers vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt2(int2(0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Integer2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Integer2&lt;/b&gt; function defines a constant two integers vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-const-int3">
+<h3><a class="toc-backref" href="#id8">[7/84] ‘sbs::function::const_int3’</a><a class="headerlink" href="#sbs-function-const-int3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Integer3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Integer3&lt;/b&gt; function defines a constant three integers vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt3(int3(0,0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Integer3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Integer3&lt;/b&gt; function defines a constant three integers vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-const-int4">
+<h3><a class="toc-backref" href="#id9">[8/84] ‘sbs::function::const_int4’</a><a class="headerlink" href="#sbs-function-const-int4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Integer4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Integer4&lt;/b&gt; function defines a constant four integers vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt4(int4(0,0,0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Integer4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Integer4&lt;/b&gt; function defines a constant four integers vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-const-bool">
+<h3><a class="toc-backref" href="#id10">[9/84] ‘sbs::function::const_bool’</a><a class="headerlink" href="#sbs-function-const-bool" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Boolean’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Boolean&lt;/b&gt; function defines a constant boolean’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueBool(bool(false))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Boolean’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Boolean&lt;/b&gt; function defines a constant boolean’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-const-string">
+<h3><a class="toc-backref" href="#id11">[10/84] ‘sbs::function::const_string’</a><a class="headerlink" href="#sbs-function-const-string" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘String’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Path&lt;/b&gt; function defines a constant string’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘String’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Path&lt;/b&gt; function defines a constant string’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-vector2">
+<h3><a class="toc-backref" href="#id12">[11/84] ‘sbs::function::vector2’</a><a class="headerlink" href="#sbs-function-vector2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Vector Float2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Float2&lt;/b&gt; function casts two floating values in a vector with two coordinates’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘componentsin’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘In’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘componentslast’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Last’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector Float2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Float2&lt;/b&gt; function casts two floating values in a vector with two coordinates’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-vector3">
+<h3><a class="toc-backref" href="#id13">[12/84] ‘sbs::function::vector3’</a><a class="headerlink" href="#sbs-function-vector3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Vector Float3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Float3&lt;/b&gt; function casts two floating values into a vector with three coordinates’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘componentsin’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘In’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘componentslast’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Last’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector Float3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Float3&lt;/b&gt; function casts two floating values into a vector with three coordinates’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-vector4">
+<h3><a class="toc-backref" href="#id14">[13/84] ‘sbs::function::vector4’</a><a class="headerlink" href="#sbs-function-vector4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Vector Float4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Float4&lt;/b&gt; function casts two floating values into a vector with four coordinates’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘componentsin’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘In’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘componentslast’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Last’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector Float4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Float4&lt;/b&gt; function casts two floating values into a vector with four coordinates’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-swizzle1">
+<h3><a class="toc-backref" href="#id15">[14/84] ‘sbs::function::swizzle1’</a><a class="headerlink" href="#sbs-function-swizzle1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Swizzle Float1’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Float1&lt;/b&gt; function extracts a single specified coordinate from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘vector’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Swizzle Float1’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Float1&lt;/b&gt; function extracts a single specified coordinate from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-swizzle2">
+<h3><a class="toc-backref" href="#id16">[15/84] ‘sbs::function::swizzle2’</a><a class="headerlink" href="#sbs-function-swizzle2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Swizzle Float2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Float2&lt;/b&gt; function extracts two specified coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘vector’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt2(int2(0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Swizzle Float2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Float2&lt;/b&gt; function extracts two specified coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-swizzle3">
+<h3><a class="toc-backref" href="#id17">[16/84] ‘sbs::function::swizzle3’</a><a class="headerlink" href="#sbs-function-swizzle3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Swizzle Float3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Float3&lt;/b&gt; function extracts three specified coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘vector’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt3(int3(0,0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Swizzle Float3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Float3&lt;/b&gt; function extracts three specified coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-swizzle4">
+<h3><a class="toc-backref" href="#id18">[17/84] ‘sbs::function::swizzle4’</a><a class="headerlink" href="#sbs-function-swizzle4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Swizzle Float4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Float4&lt;/b&gt; function extracts four specified coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘vector’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt4(int4(0,0,0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Swizzle Float4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Float4&lt;/b&gt; function extracts four specified coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-ivector2">
+<h3><a class="toc-backref" href="#id19">[18/84] ‘sbs::function::ivector2’</a><a class="headerlink" href="#sbs-function-ivector2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Vector Integer2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Integer2&lt;/b&gt; function casts two integer values in a vector with two coordinates’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘componentsin’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘In’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘componentslast’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Last’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector Integer2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Integer2&lt;/b&gt; function casts two integer values in a vector with two coordinates’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-ivector3">
+<h3><a class="toc-backref" href="#id20">[19/84] ‘sbs::function::ivector3’</a><a class="headerlink" href="#sbs-function-ivector3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Vector Integer3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Integer3&lt;/b&gt; function casts two integer values in a vector with three coordinates’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘componentsin’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘In’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘componentslast’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Last’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector Integer3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Integer3&lt;/b&gt; function casts two integer values in a vector with three coordinates’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-ivector4">
+<h3><a class="toc-backref" href="#id21">[20/84] ‘sbs::function::ivector4’</a><a class="headerlink" href="#sbs-function-ivector4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Vector Integer4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Integer4&lt;/b&gt; function casts two integer values in a vector with four coordinates’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘componentsin’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘In’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘componentslast’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Last’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector Integer4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Vector Integer4&lt;/b&gt; function casts two integer values in a vector with four coordinates’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-iswizzle1">
+<h3><a class="toc-backref" href="#id22">[21/84] ‘sbs::function::iswizzle1’</a><a class="headerlink" href="#sbs-function-iswizzle1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Swizzle Integer1’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Integer1&lt;/b&gt; function extracts a single specified integer coordinate from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘vector’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Swizzle Integer1’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Integer1&lt;/b&gt; function extracts a single specified integer coordinate from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-iswizzle2">
+<h3><a class="toc-backref" href="#id23">[22/84] ‘sbs::function::iswizzle2’</a><a class="headerlink" href="#sbs-function-iswizzle2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Swizzle Integer2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Integer2&lt;/b&gt; function extracts two specified integer coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘vector’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt2(int2(0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Swizzle Integer2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Integer2&lt;/b&gt; function extracts two specified integer coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-iswizzle3">
+<h3><a class="toc-backref" href="#id24">[23/84] ‘sbs::function::iswizzle3’</a><a class="headerlink" href="#sbs-function-iswizzle3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Swizzle Integer3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Integer3&lt;/b&gt; function extracts three specified integer coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘vector’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt3(int3(0,0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Swizzle Integer3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Integer3&lt;/b&gt; function extracts three specified integer coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-iswizzle4">
+<h3><a class="toc-backref" href="#id25">[24/84] ‘sbs::function::iswizzle4’</a><a class="headerlink" href="#sbs-function-iswizzle4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Swizzle Integer4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Integer4&lt;/b&gt; function extracts four specified integer coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘vector’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt4(int4(0,0,0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Swizzle Integer4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Swizzle Integer4&lt;/b&gt; function extracts four specified integer coordinates from the input Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-set">
+<h3><a class="toc-backref" href="#id26">[25/84] ‘sbs::function::set’</a><a class="headerlink" href="#sbs-function-set" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Set’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Set&lt;/b&gt; node lets you assign a value to a &lt;i&gt;variable&lt;/i&gt; with a custom name, and outputs the same value. If the variable does not exist, it is initialised. If it does, its value is updated.’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘value’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Set’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Set&lt;/b&gt; node lets you assign a value to a &lt;i&gt;variable&lt;/i&gt; with a custom name, and outputs the same value. If the variable does not exist, it is initialised. If it does, its value is updated.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-get-float1">
+<h3><a class="toc-backref" href="#id27">[26/84] ‘sbs::function::get_float1’</a><a class="headerlink" href="#sbs-function-get-float1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Get Float’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Float&lt;/b&gt; function accesses a function’s or graph’s  floating value input(s)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Get Float’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Float&lt;/b&gt; function accesses a function’s or graph’s  floating value input(s)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-get-float2">
+<h3><a class="toc-backref" href="#id28">[27/84] ‘sbs::function::get_float2’</a><a class="headerlink" href="#sbs-function-get-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Get Float2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Float2&lt;/b&gt; function accesses a function’s or graph’s two floating values vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Get Float2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Float2&lt;/b&gt; function accesses a function’s or graph’s two floating values vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-get-float3">
+<h3><a class="toc-backref" href="#id29">[28/84] ‘sbs::function::get_float3’</a><a class="headerlink" href="#sbs-function-get-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Get Float3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Float3&lt;/b&gt; function accesses a function’s or graph’s three floating values vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Get Float3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Float3&lt;/b&gt; function accesses a function’s or graph’s three floating values vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-get-float4">
+<h3><a class="toc-backref" href="#id30">[29/84] ‘sbs::function::get_float4’</a><a class="headerlink" href="#sbs-function-get-float4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Get Float4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Float4&lt;/b&gt; function accesses a function’s or graph’s four floating values vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Get Float4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Float4&lt;/b&gt; function accesses a function’s or graph’s four floating values vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-get-integer1">
+<h3><a class="toc-backref" href="#id31">[30/84] ‘sbs::function::get_integer1’</a><a class="headerlink" href="#sbs-function-get-integer1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Get Integer’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Integer&lt;/b&gt; function accesses a function’s or graph’s integer input(s)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Get Integer’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Integer&lt;/b&gt; function accesses a function’s or graph’s integer input(s)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-get-integer2">
+<h3><a class="toc-backref" href="#id32">[31/84] ‘sbs::function::get_integer2’</a><a class="headerlink" href="#sbs-function-get-integer2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Get Integer2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Integer2&lt;/b&gt; function accesses a function’s or graph’s two integers vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Get Integer2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Integer2&lt;/b&gt; function accesses a function’s or graph’s two integers vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-get-integer3">
+<h3><a class="toc-backref" href="#id33">[32/84] ‘sbs::function::get_integer3’</a><a class="headerlink" href="#sbs-function-get-integer3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Get Integer3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Integer3&lt;/b&gt; function accesses a function’s or graph’s three integers vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Get Integer3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Integer3&lt;/b&gt; function accesses a function’s or graph’s three integers vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-get-integer4">
+<h3><a class="toc-backref" href="#id34">[33/84] ‘sbs::function::get_integer4’</a><a class="headerlink" href="#sbs-function-get-integer4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Get Integer4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Integer4&lt;/b&gt; function accesses a function’s or graph’s four integers vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Get Integer4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Integer4&lt;/b&gt; function accesses a function’s or graph’s four integers vector input(s)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-get-bool">
+<h3><a class="toc-backref" href="#id35">[34/84] ‘sbs::function::get_bool’</a><a class="headerlink" href="#sbs-function-get-bool" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Get Boolean’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Boolean&lt;/b&gt; function accesses a function’s or graph’s boolean input(s)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Get Boolean’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get Boolean&lt;/b&gt; function accesses a function’s or graph’s boolean input(s)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-get-string">
+<h3><a class="toc-backref" href="#id36">[35/84] ‘sbs::function::get_string’</a><a class="headerlink" href="#sbs-function-get-string" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Get String’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get String&lt;/b&gt; function accesses a function’s or graph’s string input(s)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueString(string())</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Get String’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Get String&lt;/b&gt; function accesses a function’s or graph’s string input(s)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-samplelum">
+<h3><a class="toc-backref" href="#id37">[36/84] ‘sbs::function::samplelum’</a><a class="headerlink" href="#sbs-function-samplelum" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Sample Gray’</p></li>
+<li><p>Description: ‘Returns the grayscale pixel value of input image.’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘pos’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Position’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt2(int2(0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Sample Gray’</p></li>
+<li><p>Description: ‘Returns the grayscale pixel value of input image.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-samplecol">
+<h3><a class="toc-backref" href="#id38">[37/84] ‘sbs::function::samplecol’</a><a class="headerlink" href="#sbs-function-samplecol" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Sample Color’</p></li>
+<li><p>Description: ‘Returns the color pixel value of input image.’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘pos’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Position’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt2(int2(0,0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Sample Color’</p></li>
+<li><p>Description: ‘Returns the color pixel value of input image.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-tofloat">
+<h3><a class="toc-backref" href="#id39">[38/84] ‘sbs::function::tofloat’</a><a class="headerlink" href="#sbs-function-tofloat" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘To Float’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Float&lt;/b&gt; function converts integer to floating value’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘value’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘To Float’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Float&lt;/b&gt; function converts integer to floating value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-tofloat2">
+<h3><a class="toc-backref" href="#id40">[39/84] ‘sbs::function::tofloat2’</a><a class="headerlink" href="#sbs-function-tofloat2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘To Float2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Float2&lt;/b&gt; function converts two integer values to floating point values’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘value’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘To Float2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Float2&lt;/b&gt; function converts two integer values to floating point values’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-tofloat3">
+<h3><a class="toc-backref" href="#id41">[40/84] ‘sbs::function::tofloat3’</a><a class="headerlink" href="#sbs-function-tofloat3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘To Float3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Float3&lt;/b&gt; function converts three integer values to floating point values’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘value’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘To Float3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Float3&lt;/b&gt; function converts three integer values to floating point values’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-tofloat4">
+<h3><a class="toc-backref" href="#id42">[41/84] ‘sbs::function::tofloat4’</a><a class="headerlink" href="#sbs-function-tofloat4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘To Float4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Float4&lt;/b&gt; function converts four integer values to floating point values’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘value’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘To Float4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Float4&lt;/b&gt; function converts four integer values to floating point values’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-toint1">
+<h3><a class="toc-backref" href="#id43">[42/84] ‘sbs::function::toint1’</a><a class="headerlink" href="#sbs-function-toint1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘To Integer’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Integer&lt;/b&gt; function converts floating value to integer’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘value’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘To Integer’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Integer&lt;/b&gt; function converts floating value to integer’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-toint2">
+<h3><a class="toc-backref" href="#id44">[43/84] ‘sbs::function::toint2’</a><a class="headerlink" href="#sbs-function-toint2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘To Integer2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Integer2&lt;/b&gt; function converts two floating values to integers ‘</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘value’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘To Integer2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Integer2&lt;/b&gt; function converts two floating values to integers ‘</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-toint3">
+<h3><a class="toc-backref" href="#id45">[44/84] ‘sbs::function::toint3’</a><a class="headerlink" href="#sbs-function-toint3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘To Integer3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Integer3&lt;/b&gt; function converts three floating values to integers ‘</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘value’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘To Integer3’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Integer3&lt;/b&gt; function converts three floating values to integers ‘</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-toint4">
+<h3><a class="toc-backref" href="#id46">[45/84] ‘sbs::function::toint4’</a><a class="headerlink" href="#sbs-function-toint4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘To Integer4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Integer4&lt;/b&gt; function converts four floating values to integers ‘</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘value’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘To Integer4’</p></li>
+<li><p>Description: ‘The &lt;b&gt;To Integer4&lt;/b&gt; function converts four floating values to integers ‘</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-add">
+<h3><a class="toc-backref" href="#id47">[46/84] ‘sbs::function::add’</a><a class="headerlink" href="#sbs-function-add" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Add’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Add&lt;/b&gt; function adds two same type values: a+b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Add’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Add&lt;/b&gt; function adds two same type values: a+b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-sub">
+<h3><a class="toc-backref" href="#id48">[47/84] ‘sbs::function::sub’</a><a class="headerlink" href="#sbs-function-sub" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Subtraction’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Subtraction&lt;/b&gt; function substracts two same type values: a-b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Subtraction’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Subtraction&lt;/b&gt; function substracts two same type values: a-b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-mul">
+<h3><a class="toc-backref" href="#id49">[48/84] ‘sbs::function::mul’</a><a class="headerlink" href="#sbs-function-mul" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Multiplication’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Multiplication&lt;/b&gt; function multiplies two same type values: a × b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Multiplication’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Multiplication&lt;/b&gt; function multiplies two same type values: a × b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-mulscalar">
+<h3><a class="toc-backref" href="#id50">[49/84] ‘sbs::function::mulscalar’</a><a class="headerlink" href="#sbs-function-mulscalar" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Scalar Multiplication’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Scalar Multiplication&lt;/b&gt; function multiplies each component of the input &lt;b&gt;Vector&lt;/b&gt; by the same scalar value &lt;b&gt;Scale&lt;/b&gt;’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scalar’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Scale’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Scalar Multiplication’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Scalar Multiplication&lt;/b&gt; function multiplies each component of the input &lt;b&gt;Vector&lt;/b&gt; by the same scalar value &lt;b&gt;Scale&lt;/b&gt;’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-div">
+<h3><a class="toc-backref" href="#id51">[50/84] ‘sbs::function::div’</a><a class="headerlink" href="#sbs-function-div" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Division’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Division&lt;/b&gt; function divides two same type values: a/b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Division’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Division&lt;/b&gt; function divides two same type values: a/b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-neg">
+<h3><a class="toc-backref" href="#id52">[51/84] ‘sbs::function::neg’</a><a class="headerlink" href="#sbs-function-neg" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Negation’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Negation&lt;/b&gt; function returns the opposite value of its input: -X’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Negation’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Negation&lt;/b&gt; function returns the opposite value of its input: -X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-mod">
+<h3><a class="toc-backref" href="#id53">[52/84] ‘sbs::function::mod’</a><a class="headerlink" href="#sbs-function-mod" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Modulo’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Modulo&lt;/b&gt; function returns modulo of entry value: mod(a,divisor)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Divisor’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Modulo’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Modulo&lt;/b&gt; function returns modulo of entry value: mod(a,divisor)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-dot">
+<h3><a class="toc-backref" href="#id54">[53/84] ‘sbs::function::dot’</a><a class="headerlink" href="#sbs-function-dot" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Dot Product’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Dot product&lt;/b&gt; function returns dot product between two same type values: dot(a,b)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Dot Product’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Dot product&lt;/b&gt; function returns dot product between two same type values: dot(a,b)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-and">
+<h3><a class="toc-backref" href="#id55">[54/84] ‘sbs::function::and’</a><a class="headerlink" href="#sbs-function-and" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘And’</p></li>
+<li><p>Description: ‘The &lt;b&gt;And&lt;/b&gt; function returns true if the two boolean entries values are true: a&amp;b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘And’</p></li>
+<li><p>Description: ‘The &lt;b&gt;And&lt;/b&gt; function returns true if the two boolean entries values are true: a&amp;b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-or">
+<h3><a class="toc-backref" href="#id56">[55/84] ‘sbs::function::or’</a><a class="headerlink" href="#sbs-function-or" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Or’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Or&lt;/b&gt; function returns true if one of the two boolean entries values are true: a|b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Or’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Or&lt;/b&gt; function returns true if one of the two boolean entries values are true: a|b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-not">
+<h3><a class="toc-backref" href="#id57">[56/84] ‘sbs::function::not’</a><a class="headerlink" href="#sbs-function-not" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Not’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Not&lt;/b&gt; function returns the negation boolean of entry: !x’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Not’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Not&lt;/b&gt; function returns the negation boolean of entry: !x’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-eq">
+<h3><a class="toc-backref" href="#id58">[57/84] ‘sbs::function::eq’</a><a class="headerlink" href="#sbs-function-eq" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Equal’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Equal&lt;/b&gt; function returns true if entries values are equal: a=b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Equal’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Equal&lt;/b&gt; function returns true if entries values are equal: a=b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-noteq">
+<h3><a class="toc-backref" href="#id59">[58/84] ‘sbs::function::noteq’</a><a class="headerlink" href="#sbs-function-noteq" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Not Equal’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Not Equal&lt;/b&gt; function returns true if entries values are different: a ≠ b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Not Equal’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Not Equal&lt;/b&gt; function returns true if entries values are different: a ≠ b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-gt">
+<h3><a class="toc-backref" href="#id60">[59/84] ‘sbs::function::gt’</a><a class="headerlink" href="#sbs-function-gt" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Greater’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Greater&lt;/b&gt; function returns true if first entry is greater than second entry: a&gt;b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Greater’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Greater&lt;/b&gt; function returns true if first entry is greater than second entry: a&gt;b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-gteq">
+<h3><a class="toc-backref" href="#id61">[60/84] ‘sbs::function::gteq’</a><a class="headerlink" href="#sbs-function-gteq" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Greater or Equal’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Greater or Equal&lt;/b&gt; function returns true if first entry is greater than second entry or equal: a ≥ b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Greater or Equal’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Greater or Equal&lt;/b&gt; function returns true if first entry is greater than second entry or equal: a ≥ b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-lr">
+<h3><a class="toc-backref" href="#id62">[61/84] ‘sbs::function::lr’</a><a class="headerlink" href="#sbs-function-lr" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Lower’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Lower&lt;/b&gt; function returns true if first entry is lower than second entry: a &amp;lt b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Lower’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Lower&lt;/b&gt; function returns true if first entry is lower than second entry: a &amp;lt b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-lreq">
+<h3><a class="toc-backref" href="#id63">[62/84] ‘sbs::function::lreq’</a><a class="headerlink" href="#sbs-function-lreq" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Lower or Equal’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Lower or Equal&lt;/b&gt; function returns true if first entry is lower than second entry or equal: a ≤ b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Lower or Equal’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Lower or Equal&lt;/b&gt; function returns true if first entry is lower than second entry or equal: a ≤ b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-abs">
+<h3><a class="toc-backref" href="#id64">[63/84] ‘sbs::function::abs’</a><a class="headerlink" href="#sbs-function-abs" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Absolute’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Absolute&lt;/b&gt; function returns the absolute value of its input: abs(X)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Absolute’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Absolute&lt;/b&gt; function returns the absolute value of its input: abs(X)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-floor">
+<h3><a class="toc-backref" href="#id65">[64/84] ‘sbs::function::floor’</a><a class="headerlink" href="#sbs-function-floor" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Floor’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Floor&lt;/b&gt; function rounds its input value down. It returns the largest integer value not greater than X: floor(X)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Floor’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Floor&lt;/b&gt; function rounds its input value down. It returns the largest integer value not greater than X: floor(X)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-ceil">
+<h3><a class="toc-backref" href="#id66">[65/84] ‘sbs::function::ceil’</a><a class="headerlink" href="#sbs-function-ceil" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Ceil’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Ceil&lt;/b&gt; function rounds its input value up. It returns the smallest integer value not less than X: ceil(X)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Ceil’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Ceil&lt;/b&gt; function rounds its input value up. It returns the smallest integer value not less than X: ceil(X)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-cos">
+<h3><a class="toc-backref" href="#id67">[66/84] ‘sbs::function::cos’</a><a class="headerlink" href="#sbs-function-cos" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Cosine’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Cosine&lt;/b&gt; function returns the cosine value of its input value in radians: cos(X)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Cosine’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Cosine&lt;/b&gt; function returns the cosine value of its input value in radians: cos(X)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-sin">
+<h3><a class="toc-backref" href="#id68">[67/84] ‘sbs::function::sin’</a><a class="headerlink" href="#sbs-function-sin" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Sine’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Sine&lt;/b&gt; function returns the sine value of its input value in radians: sin(X)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Sine’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Sine&lt;/b&gt; function returns the sine value of its input value in radians: sin(X)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-tan">
+<h3><a class="toc-backref" href="#id69">[68/84] ‘sbs::function::tan’</a><a class="headerlink" href="#sbs-function-tan" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Tangent’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Tangent&lt;/b&gt; function returns the tangent value of its input value in radians: tan(X)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Tangent’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Tangent&lt;/b&gt; function returns the tangent value of its input value in radians: tan(X)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-atan2">
+<h3><a class="toc-backref" href="#id70">[69/84] ‘sbs::function::atan2’</a><a class="headerlink" href="#sbs-function-atan2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Arc Tangent 2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Arc Tangent 2&lt;/b&gt; function returns the angle in radians between the 2D vector &lt;b&gt;Vector&lt;/b&gt; and the horizontal. (No need to switch x and y as in the usual atan2 function.)&lt;br/&gt;It is the reciprocal of the &lt;b&gt;Cartesian&lt;/b&gt; function’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Vector’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Arc Tangent 2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Arc Tangent 2&lt;/b&gt; function returns the angle in radians between the 2D vector &lt;b&gt;Vector&lt;/b&gt; and the horizontal. (No need to switch x and y as in the usual atan2 function.)&lt;br/&gt;It is the reciprocal of the &lt;b&gt;Cartesian&lt;/b&gt; function’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-cartesian">
+<h3><a class="toc-backref" href="#id71">[70/84] ‘sbs::function::cartesian’</a><a class="headerlink" href="#sbs-function-cartesian" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Cartesian’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Cartesian&lt;/b&gt; function converts polar coordinates to cartesian coordinates. (Polar coordinates are a distance from the origin and an angle in radians from the horizontal.)&lt;br/&gt;It is the reciprocal of the &lt;b&gt;Arc Tangent 2&lt;/b&gt; function: &lt;nobr&gt;Length × Float2(cos(Angle), sin(Angle))&lt;/nobr&gt;’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘rho’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Length’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘theta’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Angle’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Cartesian’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Cartesian&lt;/b&gt; function converts polar coordinates to cartesian coordinates. (Polar coordinates are a distance from the origin and an angle in radians from the horizontal.)&lt;br/&gt;It is the reciprocal of the &lt;b&gt;Arc Tangent 2&lt;/b&gt; function: &lt;nobr&gt;Length × Float2(cos(Angle), sin(Angle))&lt;/nobr&gt;’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-sqrt">
+<h3><a class="toc-backref" href="#id72">[71/84] ‘sbs::function::sqrt’</a><a class="headerlink" href="#sbs-function-sqrt" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Square Root’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Square Root&lt;/b&gt; function returns the square root of its input value: √X’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Square Root’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Square Root&lt;/b&gt; function returns the square root of its input value: √X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-log">
+<h3><a class="toc-backref" href="#id73">[72/84] ‘sbs::function::log’</a><a class="headerlink" href="#sbs-function-log" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Logarithm’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Logarithm&lt;/b&gt; function returns the natural logarithm of its input value: ln(X)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Logarithm’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Logarithm&lt;/b&gt; function returns the natural logarithm of its input value: ln(X)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-exp">
+<h3><a class="toc-backref" href="#id74">[73/84] ‘sbs::function::exp’</a><a class="headerlink" href="#sbs-function-exp" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Exponential’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Exponential&lt;/b&gt; function returns the exponential value of its input value: &lt;i&gt;e&lt;/i&gt;&lt;sup&gt;X&lt;/sup&gt; (with &lt;i&gt;e&lt;/i&gt; ≈ 2.7182818)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Exponential’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Exponential&lt;/b&gt; function returns the exponential value of its input value: &lt;i&gt;e&lt;/i&gt;&lt;sup&gt;X&lt;/sup&gt; (with &lt;i&gt;e&lt;/i&gt; ≈ 2.7182818)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-log2">
+<h3><a class="toc-backref" href="#id75">[74/84] ‘sbs::function::log2’</a><a class="headerlink" href="#sbs-function-log2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Logarithm base 2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Log2&lt;/b&gt; function returns the &lt;nobr&gt;base 2&lt;/nobr&gt; logarithm of its input value: log2(X)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Logarithm base 2’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Log2&lt;/b&gt; function returns the &lt;nobr&gt;base 2&lt;/nobr&gt; logarithm of its input value: log2(X)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-pow2">
+<h3><a class="toc-backref" href="#id76">[75/84] ‘sbs::function::pow2’</a><a class="headerlink" href="#sbs-function-pow2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘2Pow’</p></li>
+<li><p>Description: ‘The &lt;b&gt;2Pow&lt;/b&gt; function returns 2 to the power of its input value: 2&lt;sup&gt;X&lt;/sup&gt;’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘2Pow’</p></li>
+<li><p>Description: ‘The &lt;b&gt;2Pow&lt;/b&gt; function returns 2 to the power of its input value: 2&lt;sup&gt;X&lt;/sup&gt;’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-pow">
+<h3><a class="toc-backref" href="#id77">[76/84] ‘sbs::function::pow’</a><a class="headerlink" href="#sbs-function-pow" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Pow’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Pow&lt;/b&gt; function returns the first input raised to the power of the second input: X&lt;sup&gt;Y&lt;/sup&gt;’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Y’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Pow’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Pow&lt;/b&gt; function returns the first input raised to the power of the second input: X&lt;sup&gt;Y&lt;/sup&gt;’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-lerp">
+<h3><a class="toc-backref" href="#id78">[77/84] ‘sbs::function::lerp’</a><a class="headerlink" href="#sbs-function-lerp" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Linear Interpolation’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Linear Interpolation&lt;/b&gt; function returns the linear interpolation between two values in function of a floating value: (1-x)a+x × b’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Linear Interpolation’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Linear Interpolation&lt;/b&gt; function returns the linear interpolation between two values in function of a floating value: (1-x)a+x × b’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-min">
+<h3><a class="toc-backref" href="#id79">[78/84] ‘sbs::function::min’</a><a class="headerlink" href="#sbs-function-min" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Minimum’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Minimum&lt;/b&gt; function returns minimum value of entries values: min(a,b)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Minimum’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Minimum&lt;/b&gt; function returns minimum value of entries values: min(a,b)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-max">
+<h3><a class="toc-backref" href="#id80">[79/84] ‘sbs::function::max’</a><a class="headerlink" href="#sbs-function-max" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Maximum’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Maximum&lt;/b&gt; function returns maximum value of entries values: max(a,b)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘A’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘b’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘B’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Maximum’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Maximum&lt;/b&gt; function returns maximum value of entries values: max(a,b)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-rand">
+<h3><a class="toc-backref" href="#id81">[80/84] ‘sbs::function::rand’</a><a class="headerlink" href="#sbs-function-rand" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Random’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Random&lt;/b&gt; function generates a random value between 0 and the input value &lt;b&gt;X&lt;/b&gt;’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘a’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘X’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Random’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Random&lt;/b&gt; function generates a random value between 0 and the input value &lt;b&gt;X&lt;/b&gt;’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-sequence">
+<h3><a class="toc-backref" href="#id82">[81/84] ‘sbs::function::sequence’</a><a class="headerlink" href="#sbs-function-sequence" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Sequence’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Sequence&lt;/b&gt; node ensures a portion of a Substance function graph (&lt;b&gt;In&lt;/b&gt;) is computed &lt;i&gt;before&lt;/i&gt; another portion (&lt;b&gt;Last&lt;/b&gt;). The node then outputs the &lt;b&gt;Last&lt;/b&gt; value.’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘seqin’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘In’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘seqlast’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Last’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Sequence’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Sequence&lt;/b&gt; node ensures a portion of a Substance function graph (&lt;b&gt;In&lt;/b&gt;) is computed &lt;i&gt;before&lt;/i&gt; another portion (&lt;b&gt;Last&lt;/b&gt;). The node then outputs the &lt;b&gt;Last&lt;/b&gt; value.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-ifelse">
+<h3><a class="toc-backref" href="#id83">[82/84] ‘sbs::function::ifelse’</a><a class="headerlink" href="#sbs-function-ifelse" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘If…Else’</p></li>
+<li><p>Description: ‘The &lt;b&gt;If…Else&lt;/b&gt; function returns the second value if the boolean entry is true else returns the third entry’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘condition’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Condition’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘ifpath’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘If’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘elsepath’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Else’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘If…Else’</p></li>
+<li><p>Description: ‘The &lt;b&gt;If…Else&lt;/b&gt; function returns the second value if the boolean entry is true else returns the third entry’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-while">
+<h3><a class="toc-backref" href="#id84">[83/84] ‘sbs::function::while’</a><a class="headerlink" href="#sbs-function-while" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘While Loop’</p></li>
+<li><p>Description: ‘The &lt;b&gt;While Loop&lt;/b&gt; node will execute the &lt;b&gt;Init&lt;/b&gt; branch once,                         then iterate over the &lt;b&gt;Exit Cond.&lt;/b&gt; and &lt;b&gt;Loop Body&lt;/b&gt; branches until the &lt;b&gt;Exit Cond.&lt;/b&gt;                       branch returns true&lt;br&gt;Nodes connected to the &lt;b&gt;Exit Cond.&lt;/b&gt; and &lt;b&gt;Loop Body&lt;/b&gt; branches &lt;b&gt;cannot&lt;/b&gt;                     be connected to other branches of the graph.&lt;br&gt;Loops have an implicit maximum number of iterations which                       can be disabled by setting it to -1.’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘init’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Init’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘cond’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Exit Cond.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘loop’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Loop Body’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘__constant__’ = SDValueInt(int(0))</dt><dd><ul>
+<li><p>Label: ‘Constant’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘While Loop’</p></li>
+<li><p>Description: ‘The &lt;b&gt;While Loop&lt;/b&gt; node will execute the &lt;b&gt;Init&lt;/b&gt; branch once,                   then iterate over the &lt;b&gt;Exit Cond.&lt;/b&gt; and &lt;b&gt;Loop Body&lt;/b&gt; branches until the &lt;b&gt;Exit Cond.&lt;/b&gt;                       branch returns true&lt;br&gt;Nodes connected to the &lt;b&gt;Exit Cond.&lt;/b&gt; and &lt;b&gt;Loop Body&lt;/b&gt; branches &lt;b&gt;cannot&lt;/b&gt;                     be connected to other branches of the graph.&lt;br&gt;Loops have an implicit maximum number of iterations which                       can be disabled by setting it to -1.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="sbs-function-passthrough">
+<h3><a class="toc-backref" href="#id85">[84/84] ‘sbs::function::passthrough’</a><a class="headerlink" href="#sbs-function-passthrough" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Dot’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Dot&lt;/b&gt; function is doing a passthrough (output=input)’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘input’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Input’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘unique_filter_output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><p>Label: ‘Dot’</p></li>
+<li><p>Description: ‘The &lt;b&gt;Dot&lt;/b&gt; function is doing a passthrough (output=input)’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+<li><p>‘int’ (SDTypeInt)</p></li>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+<li><p>‘string’ (SDTypeString)</p></li>
+<li><p>‘void’ (SDTypeVoid)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">sbs::function</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions:</a><ul>
+<li><a class="reference internal" href="#sbs-function-const-float1">[1/84] ‘sbs::function::const_float1’</a></li>
+<li><a class="reference internal" href="#sbs-function-const-float2">[2/84] ‘sbs::function::const_float2’</a></li>
+<li><a class="reference internal" href="#sbs-function-const-float3">[3/84] ‘sbs::function::const_float3’</a></li>
+<li><a class="reference internal" href="#sbs-function-const-float4">[4/84] ‘sbs::function::const_float4’</a></li>
+<li><a class="reference internal" href="#sbs-function-const-int1">[5/84] ‘sbs::function::const_int1’</a></li>
+<li><a class="reference internal" href="#sbs-function-const-int2">[6/84] ‘sbs::function::const_int2’</a></li>
+<li><a class="reference internal" href="#sbs-function-const-int3">[7/84] ‘sbs::function::const_int3’</a></li>
+<li><a class="reference internal" href="#sbs-function-const-int4">[8/84] ‘sbs::function::const_int4’</a></li>
+<li><a class="reference internal" href="#sbs-function-const-bool">[9/84] ‘sbs::function::const_bool’</a></li>
+<li><a class="reference internal" href="#sbs-function-const-string">[10/84] ‘sbs::function::const_string’</a></li>
+<li><a class="reference internal" href="#sbs-function-vector2">[11/84] ‘sbs::function::vector2’</a></li>
+<li><a class="reference internal" href="#sbs-function-vector3">[12/84] ‘sbs::function::vector3’</a></li>
+<li><a class="reference internal" href="#sbs-function-vector4">[13/84] ‘sbs::function::vector4’</a></li>
+<li><a class="reference internal" href="#sbs-function-swizzle1">[14/84] ‘sbs::function::swizzle1’</a></li>
+<li><a class="reference internal" href="#sbs-function-swizzle2">[15/84] ‘sbs::function::swizzle2’</a></li>
+<li><a class="reference internal" href="#sbs-function-swizzle3">[16/84] ‘sbs::function::swizzle3’</a></li>
+<li><a class="reference internal" href="#sbs-function-swizzle4">[17/84] ‘sbs::function::swizzle4’</a></li>
+<li><a class="reference internal" href="#sbs-function-ivector2">[18/84] ‘sbs::function::ivector2’</a></li>
+<li><a class="reference internal" href="#sbs-function-ivector3">[19/84] ‘sbs::function::ivector3’</a></li>
+<li><a class="reference internal" href="#sbs-function-ivector4">[20/84] ‘sbs::function::ivector4’</a></li>
+<li><a class="reference internal" href="#sbs-function-iswizzle1">[21/84] ‘sbs::function::iswizzle1’</a></li>
+<li><a class="reference internal" href="#sbs-function-iswizzle2">[22/84] ‘sbs::function::iswizzle2’</a></li>
+<li><a class="reference internal" href="#sbs-function-iswizzle3">[23/84] ‘sbs::function::iswizzle3’</a></li>
+<li><a class="reference internal" href="#sbs-function-iswizzle4">[24/84] ‘sbs::function::iswizzle4’</a></li>
+<li><a class="reference internal" href="#sbs-function-set">[25/84] ‘sbs::function::set’</a></li>
+<li><a class="reference internal" href="#sbs-function-get-float1">[26/84] ‘sbs::function::get_float1’</a></li>
+<li><a class="reference internal" href="#sbs-function-get-float2">[27/84] ‘sbs::function::get_float2’</a></li>
+<li><a class="reference internal" href="#sbs-function-get-float3">[28/84] ‘sbs::function::get_float3’</a></li>
+<li><a class="reference internal" href="#sbs-function-get-float4">[29/84] ‘sbs::function::get_float4’</a></li>
+<li><a class="reference internal" href="#sbs-function-get-integer1">[30/84] ‘sbs::function::get_integer1’</a></li>
+<li><a class="reference internal" href="#sbs-function-get-integer2">[31/84] ‘sbs::function::get_integer2’</a></li>
+<li><a class="reference internal" href="#sbs-function-get-integer3">[32/84] ‘sbs::function::get_integer3’</a></li>
+<li><a class="reference internal" href="#sbs-function-get-integer4">[33/84] ‘sbs::function::get_integer4’</a></li>
+<li><a class="reference internal" href="#sbs-function-get-bool">[34/84] ‘sbs::function::get_bool’</a></li>
+<li><a class="reference internal" href="#sbs-function-get-string">[35/84] ‘sbs::function::get_string’</a></li>
+<li><a class="reference internal" href="#sbs-function-samplelum">[36/84] ‘sbs::function::samplelum’</a></li>
+<li><a class="reference internal" href="#sbs-function-samplecol">[37/84] ‘sbs::function::samplecol’</a></li>
+<li><a class="reference internal" href="#sbs-function-tofloat">[38/84] ‘sbs::function::tofloat’</a></li>
+<li><a class="reference internal" href="#sbs-function-tofloat2">[39/84] ‘sbs::function::tofloat2’</a></li>
+<li><a class="reference internal" href="#sbs-function-tofloat3">[40/84] ‘sbs::function::tofloat3’</a></li>
+<li><a class="reference internal" href="#sbs-function-tofloat4">[41/84] ‘sbs::function::tofloat4’</a></li>
+<li><a class="reference internal" href="#sbs-function-toint1">[42/84] ‘sbs::function::toint1’</a></li>
+<li><a class="reference internal" href="#sbs-function-toint2">[43/84] ‘sbs::function::toint2’</a></li>
+<li><a class="reference internal" href="#sbs-function-toint3">[44/84] ‘sbs::function::toint3’</a></li>
+<li><a class="reference internal" href="#sbs-function-toint4">[45/84] ‘sbs::function::toint4’</a></li>
+<li><a class="reference internal" href="#sbs-function-add">[46/84] ‘sbs::function::add’</a></li>
+<li><a class="reference internal" href="#sbs-function-sub">[47/84] ‘sbs::function::sub’</a></li>
+<li><a class="reference internal" href="#sbs-function-mul">[48/84] ‘sbs::function::mul’</a></li>
+<li><a class="reference internal" href="#sbs-function-mulscalar">[49/84] ‘sbs::function::mulscalar’</a></li>
+<li><a class="reference internal" href="#sbs-function-div">[50/84] ‘sbs::function::div’</a></li>
+<li><a class="reference internal" href="#sbs-function-neg">[51/84] ‘sbs::function::neg’</a></li>
+<li><a class="reference internal" href="#sbs-function-mod">[52/84] ‘sbs::function::mod’</a></li>
+<li><a class="reference internal" href="#sbs-function-dot">[53/84] ‘sbs::function::dot’</a></li>
+<li><a class="reference internal" href="#sbs-function-and">[54/84] ‘sbs::function::and’</a></li>
+<li><a class="reference internal" href="#sbs-function-or">[55/84] ‘sbs::function::or’</a></li>
+<li><a class="reference internal" href="#sbs-function-not">[56/84] ‘sbs::function::not’</a></li>
+<li><a class="reference internal" href="#sbs-function-eq">[57/84] ‘sbs::function::eq’</a></li>
+<li><a class="reference internal" href="#sbs-function-noteq">[58/84] ‘sbs::function::noteq’</a></li>
+<li><a class="reference internal" href="#sbs-function-gt">[59/84] ‘sbs::function::gt’</a></li>
+<li><a class="reference internal" href="#sbs-function-gteq">[60/84] ‘sbs::function::gteq’</a></li>
+<li><a class="reference internal" href="#sbs-function-lr">[61/84] ‘sbs::function::lr’</a></li>
+<li><a class="reference internal" href="#sbs-function-lreq">[62/84] ‘sbs::function::lreq’</a></li>
+<li><a class="reference internal" href="#sbs-function-abs">[63/84] ‘sbs::function::abs’</a></li>
+<li><a class="reference internal" href="#sbs-function-floor">[64/84] ‘sbs::function::floor’</a></li>
+<li><a class="reference internal" href="#sbs-function-ceil">[65/84] ‘sbs::function::ceil’</a></li>
+<li><a class="reference internal" href="#sbs-function-cos">[66/84] ‘sbs::function::cos’</a></li>
+<li><a class="reference internal" href="#sbs-function-sin">[67/84] ‘sbs::function::sin’</a></li>
+<li><a class="reference internal" href="#sbs-function-tan">[68/84] ‘sbs::function::tan’</a></li>
+<li><a class="reference internal" href="#sbs-function-atan2">[69/84] ‘sbs::function::atan2’</a></li>
+<li><a class="reference internal" href="#sbs-function-cartesian">[70/84] ‘sbs::function::cartesian’</a></li>
+<li><a class="reference internal" href="#sbs-function-sqrt">[71/84] ‘sbs::function::sqrt’</a></li>
+<li><a class="reference internal" href="#sbs-function-log">[72/84] ‘sbs::function::log’</a></li>
+<li><a class="reference internal" href="#sbs-function-exp">[73/84] ‘sbs::function::exp’</a></li>
+<li><a class="reference internal" href="#sbs-function-log2">[74/84] ‘sbs::function::log2’</a></li>
+<li><a class="reference internal" href="#sbs-function-pow2">[75/84] ‘sbs::function::pow2’</a></li>
+<li><a class="reference internal" href="#sbs-function-pow">[76/84] ‘sbs::function::pow’</a></li>
+<li><a class="reference internal" href="#sbs-function-lerp">[77/84] ‘sbs::function::lerp’</a></li>
+<li><a class="reference internal" href="#sbs-function-min">[78/84] ‘sbs::function::min’</a></li>
+<li><a class="reference internal" href="#sbs-function-max">[79/84] ‘sbs::function::max’</a></li>
+<li><a class="reference internal" href="#sbs-function-rand">[80/84] ‘sbs::function::rand’</a></li>
+<li><a class="reference internal" href="#sbs-function-sequence">[81/84] ‘sbs::function::sequence’</a></li>
+<li><a class="reference internal" href="#sbs-function-ifelse">[82/84] ‘sbs::function::ifelse’</a></li>
+<li><a class="reference internal" href="#sbs-function-while">[83/84] ‘sbs::function::while’</a></li>
+<li><a class="reference internal" href="#sbs-function-passthrough">[84/84] ‘sbs::function::passthrough’</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sbs_compositing.html"
+                        title="previous chapter">sbs::compositing</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sbs_fxmap.html"
+                        title="next chapter">sbs::fxmap</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pythonapi/modules/sbs_function.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sbs_fxmap.html" title="sbs::fxmap"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sbs_compositing.html" title="sbs::compositing"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" >Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

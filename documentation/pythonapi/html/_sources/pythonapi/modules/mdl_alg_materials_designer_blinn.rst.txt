@@ -1,0 +1,76 @@
+mdl::alg::materials::designer::blinn
+====================================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/1] 'mdl::alg::materials::designer::blinn::blinn'
+###################################################
+   * Label: 'Blinn'
+   * Description: 'A material with a blinn shading'
+   * SDPropertyCategory = 'Input'
+      * 'baseColor' = SDValueColorRGB(ColorRGB(0.214040995,0.214040995,0.214040995)) [CONNECTABLE]
+         * Label: 'Diffuse'
+         * Description: 'Diffuse channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___194) [CONNECTABLE]
+         * Label: 'Normal'
+         * Description: 'Normal channel'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'height' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Height'
+         * Description: 'Height channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'heightScale' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scale'
+         * Description: 'provides significant physical detail to the surface by manipulating the vertices of the mesh'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'emissiveColor' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Emissive'
+         * Description: 'Emissive channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'emissiveIntensity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Emissive Intensity'
+         * Description: 'Controls how much light is emitted from the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'specular' = SDValueColorRGB(ColorRGB(0.214040995,0.214040995,0.214040995)) [CONNECTABLE]
+         * Label: 'Specular'
+         * Description: 'Specular channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'opacity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Opacity'
+         * Description: 'Opacity channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'glossiness' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Glossiness'
+         * Description: 'Glossiness channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'glossiness_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Scale'
+         * Description: 'Glossiness adjustments'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)

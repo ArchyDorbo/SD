@@ -1,0 +1,8 @@
+sdmdlvalueparameterreference module
+===================================
+
+.. automodule:: sd.api.mdl.sdmdlvalueparameterreference
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

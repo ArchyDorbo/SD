@@ -1,0 +1,66 @@
+SDMDLGraph
+==========
+
+.. contents:: :local:
+
+Category = Annotation
+#####################
+   * 'identifier' = 'SDValueString(string(MDL_graph))'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'category' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'show_in_library' = 'SDValueBool(bool(true))'
+      * Property Type: 'bool' (SDTypeBool)
+      * Value Type: 'bool' (SDTypeBool)
+      * Has label
+
+   * 'icon' = 'SDValueTexture(SDTexture(SDTexture))'
+      * Property Type: 'SDTypeTexture' (SDTypeTexture)
+      * Value Type: 'SDTexture' (SDTypeCustom)
+      * Has label
+
+   * 'description' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'in_group' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'display_name' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'author' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'contributors' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'keywords' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'hidden' = 'SDValueBool(bool(false))'
+      * Property Type: 'bool' (SDTypeBool)
+      * Value Type: 'bool' (SDTypeBool)
+      * Has label
+
+   * 'copyright_notice' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label

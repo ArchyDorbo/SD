@@ -1,0 +1,8 @@
+sdmdlvaluetexturereference module
+=================================
+
+.. automodule:: sd.api.mdl.sdmdlvaluetexturereference
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

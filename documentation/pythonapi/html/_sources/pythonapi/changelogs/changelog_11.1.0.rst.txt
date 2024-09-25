@@ -1,0 +1,18 @@
+Version 11.1.0
+--------------
+Details
+#######
+* [Changed] Class SDApplication
+	* [Added] Method SDApplication.getSpotColorLibrary()
+	* [Removed] Method SDApplication.registerPythonClass()
+	* [Removed] Method SDApplication.unregisterAllPythonClasses()
+* [Changed] Class SDColorManagementEngine
+	* [Added] Method SDColorManagementEngine.canConvertLabColorToWorkingColorSpace()
+	* [Added] Method SDColorManagementEngine.convertLabColorSpaceToWorkingColorSpace()
+	* [Added] Method SDColorManagementEngine.convertWorkingColorSpaceToDisplayColorSpace()
+* [Changed] Class SDGraph
+	* [Added] Method SDGraph.deleteGraphObject()
+* [Changed] Class SDResource
+	* [Added] Method SDResource.delete()
+* [Added] Class SDSpotColorLibrary
+* [Added] Class SDValueSpotColor

@@ -1,0 +1,8 @@
+sdtypematrix module
+===================
+
+.. automodule:: sd.api.sdtypematrix
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdproperty module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="sdresource module" href="sdresource.html" />
+    <link rel="prev" title="sdpluginmgr module" href="sdpluginmgr.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdresource.html" title="sdresource module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdpluginmgr.html" title="sdpluginmgr module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" accesskey="U">Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.sdproperty">
+<span id="sdproperty-module"></span><h1>sdproperty module<a class="headerlink" href="#module-sd.api.sdproperty" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.sdproperty.SDProperty">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdproperty.</code><code class="sig-name descname">SDProperty</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdproperty.SDProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sdapiobject.html#sd.api.sdapiobject.SDAPIObject" title="sd.api.sdapiobject.SDAPIObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdapiobject.SDAPIObject</span></code></a></p>
+<p>Description of property defined by an identifier, a type, and some additional information</p>
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.getCategory">
+<code class="sig-name descname">getCategory</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdproperty.SDPropertyCategory<a class="headerlink" href="#sd.api.sdproperty.SDProperty.getCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the category of the property (see SDPropertyCategory)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdproperty.SDProperty.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.getDefaultValue">
+<code class="sig-name descname">getDefaultValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdproperty.SDProperty.getDefaultValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the default value of the property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.getDescription">
+<code class="sig-name descname">getDescription</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdproperty.SDProperty.getDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the description of the property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.getId">
+<code class="sig-name descname">getId</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdproperty.SDProperty.getId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the identifier of the property. The identifier is unique in the current category.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.getLabel">
+<code class="sig-name descname">getLabel</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdproperty.SDProperty.getLabel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the label of the property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.getType">
+<code class="sig-name descname">getType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdproperty.SDProperty.getType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the first type of all available types returned by getTypes() (defined for convenience)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.getTypes">
+<code class="sig-name descname">getTypes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdproperty.SDProperty.getTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all types supported by this property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.isConnectable">
+<code class="sig-name descname">isConnectable</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#sd.api.sdproperty.SDProperty.isConnectable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether the property is connectable (i.e. if another node’s property can be connected to it)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.isFunctionOnly">
+<code class="sig-name descname">isFunctionOnly</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#sd.api.sdproperty.SDProperty.isFunctionOnly" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates if the property value is only controlled by a function. If so calling getPropertyValue/setPropertyValue is not allowed</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.isPrimary">
+<code class="sig-name descname">isPrimary</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#sd.api.sdproperty.SDProperty.isPrimary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether the property is the primary property in its category</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.isReadOnly">
+<code class="sig-name descname">isReadOnly</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#sd.api.sdproperty.SDProperty.isReadOnly" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether the property is readonly</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.isVariadic">
+<code class="sig-name descname">isVariadic</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#sd.api.sdproperty.SDProperty.isVariadic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether the property is variadic. If True, this parameter will be represented as multiple properties on the instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdproperty.SDProperty.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdproperty.SDProperty.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sd.api.sdproperty.SDPropertyCategory">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdproperty.</code><code class="sig-name descname">SDPropertyCategory</code><a class="headerlink" href="#sd.api.sdproperty.SDPropertyCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="sd.api.sdproperty.SDPropertyCategory.Annotation">
+<code class="sig-name descname">Annotation</code><em class="property"> = 0</em><a class="headerlink" href="#sd.api.sdproperty.SDPropertyCategory.Annotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdproperty.SDPropertyCategory.Input">
+<code class="sig-name descname">Input</code><em class="property"> = 1</em><a class="headerlink" href="#sd.api.sdproperty.SDPropertyCategory.Input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdproperty.SDPropertyCategory.Output">
+<code class="sig-name descname">Output</code><em class="property"> = 2</em><a class="headerlink" href="#sd.api.sdproperty.SDPropertyCategory.Output" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sd.api.sdproperty.SDPropertyInheritanceMethod">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdproperty.</code><code class="sig-name descname">SDPropertyInheritanceMethod</code><a class="headerlink" href="#sd.api.sdproperty.SDPropertyInheritanceMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Property value is relative to the node that is connected to this input property</p>
+<dl class="attribute">
+<dt id="sd.api.sdproperty.SDPropertyInheritanceMethod.Absolute">
+<code class="sig-name descname">Absolute</code><em class="property"> = 2</em><a class="headerlink" href="#sd.api.sdproperty.SDPropertyInheritanceMethod.Absolute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdproperty.SDPropertyInheritanceMethod.RelativeToInput">
+<code class="sig-name descname">RelativeToInput</code><em class="property"> = 0</em><a class="headerlink" href="#sd.api.sdproperty.SDPropertyInheritanceMethod.RelativeToInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property value is relative to the graph containing the node of this input property</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdproperty.SDPropertyInheritanceMethod.RelativeToParent">
+<code class="sig-name descname">RelativeToParent</code><em class="property"> = 1</em><a class="headerlink" href="#sd.api.sdproperty.SDPropertyInheritanceMethod.RelativeToParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property value is not relative</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdpluginmgr.html"
+                        title="previous chapter">sdpluginmgr module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdresource.html"
+                        title="next chapter">sdresource module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/pythonapi/api/sd/api/sdproperty.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdresource.html" title="sdresource module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdpluginmgr.html" title="sdpluginmgr module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" >Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+sdtypebool4 module
+==================
+
+.. automodule:: sd.api.sdtypebool4
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

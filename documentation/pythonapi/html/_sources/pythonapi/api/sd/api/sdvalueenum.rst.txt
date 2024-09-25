@@ -1,0 +1,8 @@
+sdvalueenum module
+==================
+
+.. automodule:: sd.api.sdvalueenum
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

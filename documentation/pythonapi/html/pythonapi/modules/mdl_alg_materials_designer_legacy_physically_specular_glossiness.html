@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>mdl::alg::materials::designer::legacy::physically_specular_glossiness &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mdl::alg::materials::designer::lights" href="mdl_alg_materials_designer_lights.html" />
+    <link rel="prev" title="mdl::alg::materials::designer::legacy::physically_metallic_roughness_sss" href="mdl_alg_materials_designer_legacy_physically_metallic_roughness_sss.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_alg_materials_designer_lights.html" title="mdl::alg::materials::designer::lights"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mdl_alg_materials_designer_legacy_physically_metallic_roughness_sss.html" title="mdl::alg::materials::designer::legacy::physically_metallic_roughness_sss"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" accesskey="U">Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mdl-alg-materials-designer-legacy-physically-specular-glossiness">
+<h1>mdl::alg::materials::designer::legacy::physically_specular_glossiness<a class="headerlink" href="#mdl-alg-materials-designer-legacy-physically-specular-glossiness" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#definitions" id="id1">Definitions:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-alg-materials-designer-legacy-physically-specular-glossiness-physically-specular-glossiness" id="id2">[1/1] ‘mdl::alg::materials::designer::legacy::physically_specular_glossiness::physically_specular_glossiness’</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="definitions">
+<h2><a class="toc-backref" href="#id1">Definitions:</a><a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-alg-materials-designer-legacy-physically-specular-glossiness-physically-specular-glossiness">
+<h3><a class="toc-backref" href="#id2">[1/1] ‘mdl::alg::materials::designer::legacy::physically_specular_glossiness::physically_specular_glossiness’</a><a class="headerlink" href="#mdl-alg-materials-designer-legacy-physically-specular-glossiness-physically-specular-glossiness" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Physically Specular Glossiness’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘baseColor’ = SDValueColorRGB(ColorRGB(0.214040995,0.214040995,0.214040995)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Diffuse’</p></li>
+<li><p>Description: ‘Diffuse channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘normal’ = SDMDLValueCall(mdl::state::normal()__default_call___199) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Normal’</p></li>
+<li><p>Description: ‘Normal channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘specular’ = SDValueColorRGB(ColorRGB(0.214040995,0.214040995,0.214040995)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Specular’</p></li>
+<li><p>Description: ‘Specular channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘glossiness’ = SDValueFloat(float(0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Glossiness’</p></li>
+<li><p>Description: ‘Glossiness channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘height’ = SDValueFloat(float(0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Height’</p></li>
+<li><p>Description: ‘Height channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘heightScale’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scale’</p></li>
+<li><p>Description: ‘provides significant physical detail to the surface by manipulating the vertices of the mesh’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘ambientOcclusion’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Ambient Occlusion’</p></li>
+<li><p>Description: ‘Ambient Occlusion channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘anisotropyLevel’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Anisotropy Level’</p></li>
+<li><p>Description: ‘Anisotropy Level channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘anisotropyAngle’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Anisotropy Angle’</p></li>
+<li><p>Description: ‘Anisotropy Angle channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘emissiveColor’ = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Emissive’</p></li>
+<li><p>Description: ‘Emissive channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘emissiveIntensity’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Emissive Intensity’</p></li>
+<li><p>Description: ‘Controls how much light is emitted from the surface’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘opacity’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Opacity’</p></li>
+<li><p>Description: ‘Opacity channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘refraction’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Refraction’</p></li>
+<li><p>Description: ‘Refraction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘refractionColor’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Refraction Color’</p></li>
+<li><p>Description: ‘Refraction channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘refractionIOR’ = SDValueFloat(float(1.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘IOR’</p></li>
+<li><p>Description: ‘Index of Refraction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scattering’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scattering’</p></li>
+<li><p>Description: ‘controls how much light is scattered through the surface’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘absorption’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Absorption’</p></li>
+<li><p>Description: ‘controls how much light is absorbed through the surface’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘absorptionColor’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Absorption Color’</p></li>
+<li><p>Description: ‘simulates shifts in color when light passes through the surface’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scalarZeroValue’ = SDValueFloat(float(0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scalar Zero Value’</p></li>
+<li><p>Description: ‘Determine the neutral height value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘tiling’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Tiling’</p></li>
+<li><p>Description: ‘Tiling value to keep displacement tiling independent’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::material’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">mdl::alg::materials::designer::legacy::physically_specular_glossiness</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions:</a><ul>
+<li><a class="reference internal" href="#mdl-alg-materials-designer-legacy-physically-specular-glossiness-physically-specular-glossiness">[1/1] ‘mdl::alg::materials::designer::legacy::physically_specular_glossiness::physically_specular_glossiness’</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mdl_alg_materials_designer_legacy_physically_metallic_roughness_sss.html"
+                        title="previous chapter">mdl::alg::materials::designer::legacy::physically_metallic_roughness_sss</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mdl_alg_materials_designer_lights.html"
+                        title="next chapter">mdl::alg::materials::designer::lights</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pythonapi/modules/mdl_alg_materials_designer_legacy_physically_specular_glossiness.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_alg_materials_designer_lights.html" title="mdl::alg::materials::designer::lights"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mdl_alg_materials_designer_legacy_physically_metallic_roughness_sss.html" title="mdl::alg::materials::designer::legacy::physically_metallic_roughness_sss"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" >Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

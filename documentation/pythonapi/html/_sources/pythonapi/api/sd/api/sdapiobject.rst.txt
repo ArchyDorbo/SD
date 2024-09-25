@@ -1,0 +1,9 @@
+sdapiobject module
+==================
+
+.. automodule:: sd.api.sdapiobject
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:
+   :exclude-members: release

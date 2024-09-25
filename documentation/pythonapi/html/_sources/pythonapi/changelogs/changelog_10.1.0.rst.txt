@@ -1,0 +1,11 @@
+Version 10.1.0
+--------------
+Details
+#######
+* [Changed] Class SDApplication
+	* [Added] Method SDApplication.getSDGraphDefinitionMgr()
+* [Added] Class SDGraphDefinition
+* [Added] Class SDGraphDefinitionMgr
+* [Added] Class SDMDLGraphDefinition
+* [Changed] Class SDResourceCustom
+	* [Added] Method SDResourceCustom.getFileContent()

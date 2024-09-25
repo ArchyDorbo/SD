@@ -1,0 +1,8 @@
+sdmdlvalueresourcereference module
+==================================
+
+.. automodule:: sd.api.mdl.sdmdlvalueresourcereference
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

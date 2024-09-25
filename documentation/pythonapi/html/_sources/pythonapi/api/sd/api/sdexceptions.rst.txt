@@ -1,0 +1,8 @@
+sdexceptions module
+===================
+
+.. automodule:: sd.api.sdexceptions
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

@@ -1,0 +1,8 @@
+sdmdltypebsdf module
+====================
+
+.. automodule:: sd.api.mdl.sdmdltypebsdf
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

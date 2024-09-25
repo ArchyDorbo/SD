@@ -1,0 +1,1689 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>mdl::alg::base::core &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mdl::alg::materials::asm::standard_scatter" href="mdl_alg_materials_asm_standard_scatter.html" />
+    <link rel="prev" title="mdl::alg::base::annotations" href="mdl_alg_base_annotations.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_alg_materials_asm_standard_scatter.html" title="mdl::alg::materials::asm::standard_scatter"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mdl_alg_base_annotations.html" title="mdl::alg::base::annotations"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" accesskey="U">Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mdl-alg-base-core">
+<h1>mdl::alg::base::core<a class="headerlink" href="#mdl-alg-base-core" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#definitions" id="id1">Definitions:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-volume-absorption-float-color" id="id2">[1/22] ‘mdl::alg::base::core::volume_absorption(float,color)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-volume-scattering-float" id="id3">[2/22] ‘mdl::alg::base::core::volume_scattering(float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-scattering-coeffs-from-rayleigh-redshift-float-float" id="id4">[3/22] ‘mdl::alg::base::core::scattering_coeffs_from_rayleigh_redshift(float,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-displacement-float-float-float-float" id="id5">[4/22] ‘mdl::alg::base::core::displacement(float,float,float,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-tangent-space-plugin-mode-alg-base-core-tangent-space-plugin-mode" id="id6">[5/22] ‘mdl::alg::base::core::tangent_space_plugin_mode(::alg::base::core::tangent_space_plugin_mode)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-int-alg-base-core-tangent-space-plugin-mode" id="id7">[6/22] ‘mdl::alg::base::core::int(::alg::base::core::tangent_space_plugin_mode)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-tangent-space-plugin-normal-texture-texture-2d-float-bool-bool-base-texture-coordinate-info-float2-float2-tex-wrap-mode-tex-wrap-mode-float-float-alg-base-core-tangent-space-plugin-mode-bool" id="id8">[7/22] ‘mdl::alg::base::core::tangent_space_plugin_normal_texture(texture_2d,float,bool,bool,::base::texture_coordinate_info,float2,float2,::tex::wrap_mode,::tex::wrap_mode,float,float,::alg::base::core::tangent_space_plugin_mode,bool)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-displacement-source-channel-alg-base-core-displacement-source-channel" id="id9">[8/22] ‘mdl::alg::base::core::displacement_source_channel(::alg::base::core::displacement_source_channel)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-int-alg-base-core-displacement-source-channel" id="id10">[9/22] ‘mdl::alg::base::core::int(::alg::base::core::displacement_source_channel)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-subsurface-scattering-type-alg-base-core-subsurface-scattering-type" id="id11">[10/22] ‘mdl::alg::base::core::subsurface_scattering_type(::alg::base::core::subsurface_scattering_type)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-int-alg-base-core-subsurface-scattering-type" id="id12">[11/22] ‘mdl::alg::base::core::int(::alg::base::core::subsurface_scattering_type)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-volume-return-alg-base-core-volume-return" id="id13">[12/22] ‘mdl::alg::base::core::volume_return(::alg::base::core::volume_return)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-volume-return-color-color" id="id14">[13/22] ‘mdl::alg::base::core::volume_return(color,color)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-volume-return-absorption-coefficient-alg-base-core-volume-return" id="id15">[14/22] ‘mdl::alg::base::core::volume_return.absorption_coefficient(::alg::base::core::volume_return)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-volume-return-scattering-coefficient-alg-base-core-volume-return" id="id16">[15/22] ‘mdl::alg::base::core::volume_return.scattering_coefficient(::alg::base::core::volume_return)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-volume-conversion-float-color-float-bool-alg-base-core-subsurface-scattering-type-color-float-float-float" id="id17">[16/22] ‘mdl::alg::base::core::volume_conversion(float,color,float,bool,::alg::base::core::subsurface_scattering_type,color,float,float,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-coat-behavior-alg-base-core-coat-behavior" id="id18">[17/22] ‘mdl::alg::base::core::coat_behavior(::alg::base::core::coat_behavior)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-int-alg-base-core-coat-behavior" id="id19">[18/22] ‘mdl::alg::base::core::int(::alg::base::core::coat_behavior)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-subsurface-scattering-source-channel-alg-base-core-subsurface-scattering-source-channel" id="id20">[19/22] ‘mdl::alg::base::core::subsurface_scattering_source_channel(::alg::base::core::subsurface_scattering_source_channel)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-int-alg-base-core-subsurface-scattering-source-channel" id="id21">[20/22] ‘mdl::alg::base::core::int(::alg::base::core::subsurface_scattering_source_channel)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-default-emission-intensity-float-color" id="id22">[21/22] ‘mdl::alg::base::core::default_emission_intensity(float,color)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-material-root" id="id23">[22/22] ‘mdl::alg::base::core::material_root’</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#types" id="id24">Types:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-tangent-space-plugin-mode" id="id25">[1/6] ‘mdl::alg::base::core::tangent_space_plugin_mode’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-displacement-source-channel" id="id26">[2/6] ‘mdl::alg::base::core::displacement_source_channel’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-subsurface-scattering-type" id="id27">[3/6] ‘mdl::alg::base::core::subsurface_scattering_type’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-volume-return" id="id28">[4/6] ‘mdl::alg::base::core::volume_return’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-coat-behavior" id="id29">[5/6] ‘mdl::alg::base::core::coat_behavior’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-alg-base-core-subsurface-scattering-source-channel" id="id30">[6/6] ‘mdl::alg::base::core::subsurface_scattering_source_channel’</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="definitions">
+<h2><a class="toc-backref" href="#id1">Definitions:</a><a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-alg-base-core-volume-absorption-float-color">
+<h3><a class="toc-backref" href="#id2">[1/22] ‘mdl::alg::base::core::volume_absorption(float,color)’</a><a class="headerlink" href="#mdl-alg-base-core-volume-absorption-float-color" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Absorption’</p></li>
+<li><p>Description: ‘Provides an absorption coefficient for the volume’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘absorption’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Volume Absorption’</p></li>
+<li><p>Description: ‘Controls how much light is absorbed through the surface’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘absorptionColor’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Absorption Color’</p></li>
+<li><p>Description: ‘Simulates shifts in color when light passes through the surface’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-volume-scattering-float">
+<h3><a class="toc-backref" href="#id3">[2/22] ‘mdl::alg::base::core::volume_scattering(float)’</a><a class="headerlink" href="#mdl-alg-base-core-volume-scattering-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Scattering’</p></li>
+<li><p>Description: ‘Provides a scattering coefficient for the volume’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘scattering’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Volume Scattering’</p></li>
+<li><p>Description: ‘Controls how much light is scattered through the surface’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-scattering-coeffs-from-rayleigh-redshift-float-float">
+<h3><a class="toc-backref" href="#id4">[3/22] ‘mdl::alg::base::core::scattering_coeffs_from_rayleigh_redshift(float,float)’</a><a class="headerlink" href="#mdl-alg-base-core-scattering-coeffs-from-rayleigh-redshift-float-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Description: ‘Provides a scattering coefficient from rayleigh / red-shift coefficients’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘rayleigh’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘red_shift’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-displacement-float-float-float-float">
+<h3><a class="toc-backref" href="#id5">[4/22] ‘mdl::alg::base::core::displacement(float,float,float,float)’</a><a class="headerlink" href="#mdl-alg-base-core-displacement-float-float-float-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Displacement’</p></li>
+<li><p>Description: ‘Provides significant physical detail to the surface by manipulating the vertices of the mesh’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘height’ = SDValueFloat(float(0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Height’</p></li>
+<li><p>Description: ‘Height channel’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘heightScale’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scale’</p></li>
+<li><p>Description: ‘scales the range of displacement’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scalarZeroValue’ = SDValueFloat(float(0.5)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Scalar Zero Value’</p></li>
+<li><p>Description: ‘Determine the neutral height value’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘tiling’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Label: ‘Tiling’</p></li>
+<li><p>Description: ‘Tiling value to keep displacement tiling independent’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-tangent-space-plugin-mode-alg-base-core-tangent-space-plugin-mode">
+<h3><a class="toc-backref" href="#id6">[5/22] ‘mdl::alg::base::core::tangent_space_plugin_mode(::alg::base::core::tangent_space_plugin_mode)’</a><a class="headerlink" href="#mdl-alg-base-core-tangent-space-plugin-mode-alg-base-core-tangent-space-plugin-mode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Tangent Space Plugin Mode’</p></li>
+<li><p>Description: ‘Describes Tangent Space Plugin behavior to adopt when computing’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘v’ = SDValueEnum(“mdl::alg::base::core::tangent_space_plugin_mode”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::tangent_space_plugin_mode’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::tangent_space_plugin_mode’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-int-alg-base-core-tangent-space-plugin-mode">
+<h3><a class="toc-backref" href="#id7">[6/22] ‘mdl::alg::base::core::int(::alg::base::core::tangent_space_plugin_mode)’</a><a class="headerlink" href="#mdl-alg-base-core-int-alg-base-core-tangent-space-plugin-mode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Tangent Space Plugin Mode’</p></li>
+<li><p>Description: ‘Describes Tangent Space Plugin behavior to adopt when computing’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::tangent_space_plugin_mode’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-tangent-space-plugin-normal-texture-texture-2d-float-bool-bool-base-texture-coordinate-info-float2-float2-tex-wrap-mode-tex-wrap-mode-float-float-alg-base-core-tangent-space-plugin-mode-bool">
+<h3><a class="toc-backref" href="#id8">[7/22] ‘mdl::alg::base::core::tangent_space_plugin_normal_texture(texture_2d,float,bool,bool,::base::texture_coordinate_info,float2,float2,::tex::wrap_mode,::tex::wrap_mode,float,float,::alg::base::core::tangent_space_plugin_mode,bool)’</a><a class="headerlink" href="#mdl-alg-base-core-tangent-space-plugin-normal-texture-texture-2d-float-bool-bool-base-texture-coordinate-info-float2-float2-tex-wrap-mode-tex-wrap-mode-float-float-alg-base-core-tangent-space-plugin-mode-bool" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Tangent Space Plugin Normal Texture’</p></li>
+<li><p>Description: ‘Reinterpretation of tangent_space_normal_texture to interpret correctly tangent/bitangent computed by popular tangent space computation plugin’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘texture’ [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘The input texture’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::texture_2d’ (SDMDLTypeTextureReference) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘factor’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Determines the degree of bumpiness’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘flip_tangent_u’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Can be used to fix mismatches between the object’s tangent space and the normal map’s tangent space’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘flip_tangent_v’ = SDValueBool(bool(true)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Can be used to fix mismatches between the object’s tangent space and the normal map’s tangent space’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘uvw’ = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___166) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Parameterization to be used for texture mapping. defaults to texture channel 0.’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::base::texture_coordinate_info’ (SDTypeStruct) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_u’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Restricts the texture access to sub-domain of the texture in the u direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘crop_v’ = SDValueFloat2(float2(0,1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Restricts the texture access to sub-domain of the texture in the v direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_u’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Wrapping mode in the u direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘wrap_v’ = SDValueEnum(“mdl::tex::wrap_mode”,1) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Wrapping mode in the v direction’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::tex::wrap_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scale’ = SDValueFloat(float(1)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Scales the value red from the texture file. can be used to adapt to different normal map formats’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘offset’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Offset applied to the value red from the texture file. can be used to adapt to different normal map formats’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘mode’ = SDValueEnum(“mdl::alg::base::core::tangent_space_plugin_mode”,0) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Tangent Space computation behavior’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::tangent_space_plugin_mode’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘force_compute_tangent_space’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><p>Description: ‘Force re-computation of tangent space based on normal &amp; tangent’</p></li>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-displacement-source-channel-alg-base-core-displacement-source-channel">
+<h3><a class="toc-backref" href="#id9">[8/22] ‘mdl::alg::base::core::displacement_source_channel(::alg::base::core::displacement_source_channel)’</a><a class="headerlink" href="#mdl-alg-base-core-displacement-source-channel-alg-base-core-displacement-source-channel" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Displacement Source Channel’</p></li>
+<li><p>Description: ‘Choose which channel will drives displacement’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘v’ = SDValueEnum(“mdl::alg::base::core::displacement_source_channel”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::displacement_source_channel’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::displacement_source_channel’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-int-alg-base-core-displacement-source-channel">
+<h3><a class="toc-backref" href="#id10">[9/22] ‘mdl::alg::base::core::int(::alg::base::core::displacement_source_channel)’</a><a class="headerlink" href="#mdl-alg-base-core-int-alg-base-core-displacement-source-channel" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Displacement Source Channel’</p></li>
+<li><p>Description: ‘Choose which channel will drives displacement’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::displacement_source_channel’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-subsurface-scattering-type-alg-base-core-subsurface-scattering-type">
+<h3><a class="toc-backref" href="#id11">[10/22] ‘mdl::alg::base::core::subsurface_scattering_type(::alg::base::core::subsurface_scattering_type)’</a><a class="headerlink" href="#mdl-alg-base-core-subsurface-scattering-type-alg-base-core-subsurface-scattering-type" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Subsurface Scattering Type’</p></li>
+<li><p>Description: ‘Skin, Translucent/Generic or Red Shift &amp; Rayleigh controls. It needs to be activated in the Display Settings and a Scattering channel needs to be present for these parameters to have an effect.’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘v’ = SDValueEnum(“mdl::alg::base::core::subsurface_scattering_type”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::subsurface_scattering_type’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::subsurface_scattering_type’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-int-alg-base-core-subsurface-scattering-type">
+<h3><a class="toc-backref" href="#id12">[11/22] ‘mdl::alg::base::core::int(::alg::base::core::subsurface_scattering_type)’</a><a class="headerlink" href="#mdl-alg-base-core-int-alg-base-core-subsurface-scattering-type" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Subsurface Scattering Type’</p></li>
+<li><p>Description: ‘Skin, Translucent/Generic or Red Shift &amp; Rayleigh controls. It needs to be activated in the Display Settings and a Scattering channel needs to be present for these parameters to have an effect.’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::subsurface_scattering_type’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-volume-return-alg-base-core-volume-return">
+<h3><a class="toc-backref" href="#id13">[12/22] ‘mdl::alg::base::core::volume_return(::alg::base::core::volume_return)’</a><a class="headerlink" href="#mdl-alg-base-core-volume-return-alg-base-core-volume-return" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘other’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::volume_return’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::volume_return’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-volume-return-color-color">
+<h3><a class="toc-backref" href="#id14">[13/22] ‘mdl::alg::base::core::volume_return(color,color)’</a><a class="headerlink" href="#mdl-alg-base-core-volume-return-color-color" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘absorption_coefficient’ = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scattering_coefficient’ = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::volume_return’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-volume-return-absorption-coefficient-alg-base-core-volume-return">
+<h3><a class="toc-backref" href="#id15">[14/22] ‘mdl::alg::base::core::volume_return.absorption_coefficient(::alg::base::core::volume_return)’</a><a class="headerlink" href="#mdl-alg-base-core-volume-return-absorption-coefficient-alg-base-core-volume-return" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘s’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::volume_return’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-volume-return-scattering-coefficient-alg-base-core-volume-return">
+<h3><a class="toc-backref" href="#id16">[15/22] ‘mdl::alg::base::core::volume_return.scattering_coefficient(::alg::base::core::volume_return)’</a><a class="headerlink" href="#mdl-alg-base-core-volume-return-scattering-coefficient-alg-base-core-volume-return" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘s’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::volume_return’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-volume-conversion-float-color-float-bool-alg-base-core-subsurface-scattering-type-color-float-float-float">
+<h3><a class="toc-backref" href="#id17">[16/22] ‘mdl::alg::base::core::volume_conversion(float,color,float,bool,::alg::base::core::subsurface_scattering_type,color,float,float,float)’</a><a class="headerlink" href="#mdl-alg-base-core-volume-conversion-float-color-float-bool-alg-base-core-subsurface-scattering-type-color-float-float-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Description: ‘Calculate volume properties from parameters’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘absorption’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘absorptionColor’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘scattering’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sssEnabled’ = SDValueBool(bool(false)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sssType’ = SDValueEnum(“mdl::alg::base::core::subsurface_scattering_type”,1) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::subsurface_scattering_type’ (SDTypeEnum) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sssColor’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sssScale’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sssRedShift’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘sssRayleigh’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::volume_return’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-coat-behavior-alg-base-core-coat-behavior">
+<h3><a class="toc-backref" href="#id18">[17/22] ‘mdl::alg::base::core::coat_behavior(::alg::base::core::coat_behavior)’</a><a class="headerlink" href="#mdl-alg-base-core-coat-behavior-alg-base-core-coat-behavior" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Coating Behavior’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘v’ = SDValueEnum(“mdl::alg::base::core::coat_behavior”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::coat_behavior’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::coat_behavior’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-int-alg-base-core-coat-behavior">
+<h3><a class="toc-backref" href="#id19">[18/22] ‘mdl::alg::base::core::int(::alg::base::core::coat_behavior)’</a><a class="headerlink" href="#mdl-alg-base-core-int-alg-base-core-coat-behavior" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Coating Behavior’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::coat_behavior’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-subsurface-scattering-source-channel-alg-base-core-subsurface-scattering-source-channel">
+<h3><a class="toc-backref" href="#id20">[19/22] ‘mdl::alg::base::core::subsurface_scattering_source_channel(::alg::base::core::subsurface_scattering_source_channel)’</a><a class="headerlink" href="#mdl-alg-base-core-subsurface-scattering-source-channel-alg-base-core-subsurface-scattering-source-channel" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Subsurface Scattering Source Channel’</p></li>
+<li><p>Description: ‘Select which channel is used to define scattering color. It needs to be activated in the Display Settings and a Scattering channel needs to be present for these parameters to have an effect.’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘v’ = SDValueEnum(“mdl::alg::base::core::subsurface_scattering_source_channel”,0) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::subsurface_scattering_source_channel’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::subsurface_scattering_source_channel’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-int-alg-base-core-subsurface-scattering-source-channel">
+<h3><a class="toc-backref" href="#id21">[20/22] ‘mdl::alg::base::core::int(::alg::base::core::subsurface_scattering_source_channel)’</a><a class="headerlink" href="#mdl-alg-base-core-int-alg-base-core-subsurface-scattering-source-channel" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Subsurface Scattering Source Channel’</p></li>
+<li><p>Description: ‘Select which channel is used to define scattering color. It needs to be activated in the Display Settings and a Scattering channel needs to be present for these parameters to have an effect.’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘x’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::alg::base::core::subsurface_scattering_source_channel’ (SDTypeEnum)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-default-emission-intensity-float-color">
+<h3><a class="toc-backref" href="#id22">[21/22] ‘mdl::alg::base::core::default_emission_intensity(float,color)’</a><a class="headerlink" href="#mdl-alg-base-core-default-emission-intensity-float-color" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Description: ‘Compute Emission Intensity consistenly across Substance applications’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘emission’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘emission_color’ = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-material-root">
+<h3><a class="toc-backref" href="#id23">[22/22] ‘mdl::alg::base::core::material_root’</a><a class="headerlink" href="#mdl-alg-base-core-material-root" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>Label: ‘Material’</p></li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘materialRoot’ = SDMDLValueCall(mdl::material(bool,material_surface,material_surface,color,material_volume,material_geometry,hair_bsdf)__default_call___173) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::material’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘mdl::material’ (SDTypeStruct)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="types">
+<h2><a class="toc-backref" href="#id24">Types:</a><a class="headerlink" href="#types" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-alg-base-core-tangent-space-plugin-mode">
+<h3><a class="toc-backref" href="#id25">[1/6] ‘mdl::alg::base::core::tangent_space_plugin_mode’</a><a class="headerlink" href="#mdl-alg-base-core-tangent-space-plugin-mode" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::alg::base::core::tangent_space_plugin_mode’ (SDTypeEnum)</dt><dd><ul>
+<li><p>int None = SDValueInt(int(0))</p></li>
+<li><p>int Mikk = SDValueInt(int(1))</p></li>
+<li><p>int Unreal = SDValueInt(int(2))</p></li>
+<li><p>int Unity = SDValueInt(int(3))</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-displacement-source-channel">
+<h3><a class="toc-backref" href="#id26">[2/6] ‘mdl::alg::base::core::displacement_source_channel’</a><a class="headerlink" href="#mdl-alg-base-core-displacement-source-channel" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::alg::base::core::displacement_source_channel’ (SDTypeEnum)</dt><dd><ul>
+<li><p>int displacement_source_channel_height = SDValueInt(int(0))</p></li>
+<li><p>int displacement_source_channel_displacement = SDValueInt(int(1))</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-subsurface-scattering-type">
+<h3><a class="toc-backref" href="#id27">[3/6] ‘mdl::alg::base::core::subsurface_scattering_type’</a><a class="headerlink" href="#mdl-alg-base-core-subsurface-scattering-type" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::alg::base::core::subsurface_scattering_type’ (SDTypeEnum)</dt><dd><ul>
+<li><p>int subsurface_scattering_type_translucent = SDValueInt(int(0))</p></li>
+<li><p>int subsurface_scattering_type_skin = SDValueInt(int(1))</p></li>
+<li><p>int subsurface_scattering_type_rayleigh = SDValueInt(int(2))</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-volume-return">
+<h3><a class="toc-backref" href="#id28">[4/6] ‘mdl::alg::base::core::volume_return’</a><a class="headerlink" href="#mdl-alg-base-core-volume-return" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::alg::base::core::volume_return’ (SDTypeStruct)</dt><dd><ul>
+<li><p>ColorRGB absorption_coefficient</p></li>
+<li><p>ColorRGB scattering_coefficient</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-coat-behavior">
+<h3><a class="toc-backref" href="#id29">[5/6] ‘mdl::alg::base::core::coat_behavior’</a><a class="headerlink" href="#mdl-alg-base-core-coat-behavior" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::alg::base::core::coat_behavior’ (SDTypeEnum)</dt><dd><ul>
+<li><p>int coat_behavior_smooth_surface = SDValueInt(int(0))</p></li>
+<li><p>int coat_behavior_keep_details = SDValueInt(int(1))</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-alg-base-core-subsurface-scattering-source-channel">
+<h3><a class="toc-backref" href="#id30">[6/6] ‘mdl::alg::base::core::subsurface_scattering_source_channel’</a><a class="headerlink" href="#mdl-alg-base-core-subsurface-scattering-source-channel" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>‘mdl::alg::base::core::subsurface_scattering_source_channel’ (SDTypeEnum)</dt><dd><ul>
+<li><p>int subsurface_scattering_source_channel_albedo = SDValueInt(int(0))</p></li>
+<li><p>int subsurface_scattering_source_channel_scatteringcolor = SDValueInt(int(1))</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">mdl::alg::base::core</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions:</a><ul>
+<li><a class="reference internal" href="#mdl-alg-base-core-volume-absorption-float-color">[1/22] ‘mdl::alg::base::core::volume_absorption(float,color)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-volume-scattering-float">[2/22] ‘mdl::alg::base::core::volume_scattering(float)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-scattering-coeffs-from-rayleigh-redshift-float-float">[3/22] ‘mdl::alg::base::core::scattering_coeffs_from_rayleigh_redshift(float,float)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-displacement-float-float-float-float">[4/22] ‘mdl::alg::base::core::displacement(float,float,float,float)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-tangent-space-plugin-mode-alg-base-core-tangent-space-plugin-mode">[5/22] ‘mdl::alg::base::core::tangent_space_plugin_mode(::alg::base::core::tangent_space_plugin_mode)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-int-alg-base-core-tangent-space-plugin-mode">[6/22] ‘mdl::alg::base::core::int(::alg::base::core::tangent_space_plugin_mode)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-tangent-space-plugin-normal-texture-texture-2d-float-bool-bool-base-texture-coordinate-info-float2-float2-tex-wrap-mode-tex-wrap-mode-float-float-alg-base-core-tangent-space-plugin-mode-bool">[7/22] ‘mdl::alg::base::core::tangent_space_plugin_normal_texture(texture_2d,float,bool,bool,::base::texture_coordinate_info,float2,float2,::tex::wrap_mode,::tex::wrap_mode,float,float,::alg::base::core::tangent_space_plugin_mode,bool)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-displacement-source-channel-alg-base-core-displacement-source-channel">[8/22] ‘mdl::alg::base::core::displacement_source_channel(::alg::base::core::displacement_source_channel)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-int-alg-base-core-displacement-source-channel">[9/22] ‘mdl::alg::base::core::int(::alg::base::core::displacement_source_channel)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-subsurface-scattering-type-alg-base-core-subsurface-scattering-type">[10/22] ‘mdl::alg::base::core::subsurface_scattering_type(::alg::base::core::subsurface_scattering_type)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-int-alg-base-core-subsurface-scattering-type">[11/22] ‘mdl::alg::base::core::int(::alg::base::core::subsurface_scattering_type)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-volume-return-alg-base-core-volume-return">[12/22] ‘mdl::alg::base::core::volume_return(::alg::base::core::volume_return)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-volume-return-color-color">[13/22] ‘mdl::alg::base::core::volume_return(color,color)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-volume-return-absorption-coefficient-alg-base-core-volume-return">[14/22] ‘mdl::alg::base::core::volume_return.absorption_coefficient(::alg::base::core::volume_return)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-volume-return-scattering-coefficient-alg-base-core-volume-return">[15/22] ‘mdl::alg::base::core::volume_return.scattering_coefficient(::alg::base::core::volume_return)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-volume-conversion-float-color-float-bool-alg-base-core-subsurface-scattering-type-color-float-float-float">[16/22] ‘mdl::alg::base::core::volume_conversion(float,color,float,bool,::alg::base::core::subsurface_scattering_type,color,float,float,float)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-coat-behavior-alg-base-core-coat-behavior">[17/22] ‘mdl::alg::base::core::coat_behavior(::alg::base::core::coat_behavior)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-int-alg-base-core-coat-behavior">[18/22] ‘mdl::alg::base::core::int(::alg::base::core::coat_behavior)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-subsurface-scattering-source-channel-alg-base-core-subsurface-scattering-source-channel">[19/22] ‘mdl::alg::base::core::subsurface_scattering_source_channel(::alg::base::core::subsurface_scattering_source_channel)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-int-alg-base-core-subsurface-scattering-source-channel">[20/22] ‘mdl::alg::base::core::int(::alg::base::core::subsurface_scattering_source_channel)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-default-emission-intensity-float-color">[21/22] ‘mdl::alg::base::core::default_emission_intensity(float,color)’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-material-root">[22/22] ‘mdl::alg::base::core::material_root’</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#types">Types:</a><ul>
+<li><a class="reference internal" href="#mdl-alg-base-core-tangent-space-plugin-mode">[1/6] ‘mdl::alg::base::core::tangent_space_plugin_mode’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-displacement-source-channel">[2/6] ‘mdl::alg::base::core::displacement_source_channel’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-subsurface-scattering-type">[3/6] ‘mdl::alg::base::core::subsurface_scattering_type’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-volume-return">[4/6] ‘mdl::alg::base::core::volume_return’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-coat-behavior">[5/6] ‘mdl::alg::base::core::coat_behavior’</a></li>
+<li><a class="reference internal" href="#mdl-alg-base-core-subsurface-scattering-source-channel">[6/6] ‘mdl::alg::base::core::subsurface_scattering_source_channel’</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mdl_alg_base_annotations.html"
+                        title="previous chapter">mdl::alg::base::annotations</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mdl_alg_materials_asm_standard_scatter.html"
+                        title="next chapter">mdl::alg::materials::asm::standard_scatter</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pythonapi/modules/mdl_alg_base_core.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_alg_materials_asm_standard_scatter.html" title="mdl::alg::materials::asm::standard_scatter"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mdl_alg_base_annotations.html" title="mdl::alg::base::annotations"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" >Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

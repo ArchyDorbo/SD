@@ -1,0 +1,8 @@
+sdmdltypecall module
+====================
+
+.. automodule:: sd.api.mdl.sdmdltypecall
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

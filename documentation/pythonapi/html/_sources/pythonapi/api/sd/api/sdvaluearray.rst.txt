@@ -1,0 +1,8 @@
+sdvaluearray module
+===================
+
+.. automodule:: sd.api.sdvaluearray
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

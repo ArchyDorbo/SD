@@ -1,0 +1,2763 @@
+sbs::compositing
+================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/29] 'sbs::compositing::valueprocessor'
+#########################################
+   * Label: 'Value Processor'
+   * Description: 'The <b>Value Processor</b> filter evaluates a function for a single value'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input' [CONNECTABLE, READ_ONLY, VARIADIC]
+         * Label: 'Input Image 0'
+         * Description: 'Input Image 0'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'function' = SDValueBool(bool(false)) [FUNCTION_ONLY]
+         * Label: 'Value Processor Function'
+         * Description: 'Function evaluated by this Value Processor'
+         * Types:
+            * 'bool' (SDTypeBool)
+            * 'int' (SDTypeInt)
+            * 'int2' (SDTypeInt2)
+            * 'int3' (SDTypeInt3)
+            * 'int4' (SDTypeInt4)
+            * 'float' (SDTypeFloat)
+            * 'float2' (SDTypeFloat2)
+            * 'float3' (SDTypeFloat3)
+            * 'float4' (SDTypeFloat4)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'bool' (SDTypeBool)
+            * 'int' (SDTypeInt)
+            * 'int2' (SDTypeInt2)
+            * 'int3' (SDTypeInt3)
+            * 'int4' (SDTypeInt4)
+            * 'float' (SDTypeFloat)
+            * 'float2' (SDTypeFloat2)
+            * 'float3' (SDTypeFloat3)
+            * 'float4' (SDTypeFloat4)
+
+[2/29] 'sbs::compositing::fxmaps'
+#################################
+   * Label: 'FX-Map'
+   * Description: 'The <b>FX-Map</b> filter creates procedural noises and patterns'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'colorswitch' = SDValueBool(bool(true))
+         * Label: 'Color Mode'
+         * Description: 'The <b>Color Mode</b> parameter toggles between a grayscale and a color output image'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'background' = SDValueFloat4(float4(0,0,0,0)) [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Background'
+         * Description: 'The <b>Background</b> parameter sets an optional color or grayscale input background image'
+         * Types:
+            * 'ColorRGBA' (SDTypeColorRGBA)
+
+      * 'inputpattern' [CONNECTABLE, READ_ONLY, VARIADIC]
+         * Label: 'Input Image 0'
+         * Description: 'Input Image 0'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'renderroi' = SDValueFloat4(float4(0,1,0,1))
+         * Label: 'Render Region'
+         * Description: 'The <b>Render Region</b> parameter sets the region to render (left, right, top, bottom)'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'tilingroi' = SDValueFloat4(float4(0,1,0,1))
+         * Label: 'Tiling Region'
+         * Description: 'The <b>Tiling Region</b> parameter sets a region of the FX-Map to tile (left, right, top, bottom)'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'culling' = SDValueBool(bool(false))
+         * Label: 'Cull Outside'
+         * Description: 'Activate <b>Cull Outside</b> parameter in order to discard all patterns w/ centers outside the tiling region'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'hurst' = SDValueFloat(float(1))
+         * Label: 'Roughness'
+         * Description: 'The <b>Roughness</b> parameter calculates the roughness value (depth and opacity multiplier). It applies a bias to the FX-Map's blending process'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'opacitymult' = SDValueFloat(float(1))
+         * Label: 'Global Opacity'
+         * Description: 'The <b>Global Opacity</b> parameter is an opacity multiplier applied to each Fx-Map's patterns'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[3/29] 'sbs::compositing::blend'
+################################
+   * Label: 'Blend'
+   * Description: 'The <b>Blend</b> filter mixes two color inputs according to the grayscale input intensity'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'source' [CONNECTABLE, READ_ONLY]
+         * Label: 'Foreground'
+         * Description: 'Input 1 color or grayscale image'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'destination' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Background'
+         * Description: 'Input 2 color or grayscale image'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'opacity' [CONNECTABLE, READ_ONLY]
+         * Label: 'Opacity'
+         * Description: 'Optional Opacity Input: per-pixel blending result mask'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'opacitymult' = SDValueFloat(float(1))
+         * Label: 'Opacity'
+         * Description: 'The <b>Opacity</b> parameter sets the transparency of the blend'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'blendingmode' = SDValueEnum("sbs::compositing::blendingmode",0)
+         * Label: 'Blending Mode'
+         * Description: 'The <b>Blending Mode</b> parameter defines the blending operation used to combine the foreground and background images'
+         * Types:
+            * 'sbs::compositing::blendingmode' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'colorblending' = SDValueEnum("sbs::compositing::colorblending",0)
+         * Label: 'Alpha Blending'
+         * Description: 'The <b>Alpha Blending</b> parameter defines the how alpha channels of color source and destination are interpreted'
+         * Types:
+            * 'sbs::compositing::colorblending' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'maskrectangle' = SDValueFloat4(float4(0,1,0,1))
+         * Label: 'Cropping Area'
+         * Description: 'The <b>Cropping Area</b> parameter applies a cropping area on the foreground input'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[4/29] 'sbs::compositing::curve'
+################################
+   * Label: 'Curve'
+   * Description: 'The <b>Curve</b> filter replaces the colors or grayscale values of the input image by remapping them with a curve'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be processed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'exposecurve' = SDValueBool(bool(false))
+         * Label: 'Apply / Expose curve'
+         * Description: 'The <b>Apply / Expose curve</b> parameter allows to copy the user curve to the output instead of applying it to the input image'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'addressingrepeat' = SDValueBool(bool(false))
+         * Label: 'Curve Addressing'
+         * Description: 'This parameter determines how out of 0..1 range <b>HDR</b> pixels of the input are handled: clamped or fold up to 0..1.'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'curveluminance'
+         * Label: 'Curve luminance'
+         * Types:
+            * 'SDTypeArray<sbs::compositing::curve_key>' (SDTypeArray)
+
+      * 'curvered'
+         * Label: 'Curve red'
+         * Types:
+            * 'SDTypeArray<sbs::compositing::curve_key>' (SDTypeArray)
+
+      * 'curvegreen'
+         * Label: 'Curve Green'
+         * Types:
+            * 'SDTypeArray<sbs::compositing::curve_key>' (SDTypeArray)
+
+      * 'curveblue'
+         * Label: 'Curve blue'
+         * Types:
+            * 'SDTypeArray<sbs::compositing::curve_key>' (SDTypeArray)
+
+      * 'curvealpha'
+         * Label: 'Curve Alpha'
+         * Types:
+            * 'SDTypeArray<sbs::compositing::curve_key>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[5/29] 'sbs::compositing::pixelprocessor'
+#########################################
+   * Label: 'Pixel Processor'
+   * Description: 'The <b>Pixel Processor</b> filter evaluates a function per pixel'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'colorswitch' = SDValueBool(bool(true))
+         * Label: 'Color Mode'
+         * Description: 'The <b>Color Mode</b> parameter toggles between a grayscale and a color output image'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'input' [CONNECTABLE, READ_ONLY, VARIADIC]
+         * Label: 'Input Image 0'
+         * Description: 'Input Image 0'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'perpixel' = SDValueFloat4(float4(0,0,0,1)) [FUNCTION_ONLY]
+         * Label: 'Per Pixel Function'
+         * Description: 'Function evaluated per pixel'
+         * Types:
+            * 'ColorRGBA' (SDTypeColorRGBA)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[6/29] 'sbs::compositing::svg'
+##############################
+   * Label: 'SVG'
+   * Description: 'The <b>Vector Graphics</b> filter takes a vector graphic image and inserts it into the graph as a bitmap'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'colorswitch' = SDValueBool(bool(true))
+         * Label: 'Color Mode'
+         * Description: 'The <b>Color Mode</b> parameter toggles between a grayscale or color image output'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'background' = SDValueFloat4(float4(0,0,0,0)) [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Background'
+         * Description: 'The <b>Background</b> input/parameter sets the output image's background color'
+         * Types:
+            * 'ColorRGBA' (SDTypeColorRGBA)
+
+      * 'vectorresourcepath' = SDValueString(string())
+         * Label: 'PKG Resource Path'
+         * Description: 'The <b>PKG Resource Path</b> parameter displays the location of the vector image (SVG format) in your package'
+         * Types:
+            * 'string' (SDTypeString)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[7/29] 'sbs::compositing::bitmap'
+#################################
+   * Label: 'Bitmap'
+   * Description: 'The <b>Bitmap</b> filter imports a bitmap image resource into the graph'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'colorswitch' = SDValueBool(bool(true))
+         * Label: 'Color Mode'
+         * Description: 'The <b>Color Mode</b> parameter toggles between a grayscale and a color output image'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'bitmapresourcepath' = SDValueString(string())
+         * Label: 'PKG Resource Path'
+         * Description: 'The <b>PKG Resource Path</b> parameter displays the bitmap's location in your package'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'resizemethod' = SDValueEnum("sbs::compositing::resizemethod",0)
+         * Label: 'Resize method'
+         * Description: 'The <b>Resize method</b> parameter select how the bitmap is resized if required'
+         * Types:
+            * 'sbs::compositing::resizemethod' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[8/29] 'sbs::compositing::shuffle'
+##################################
+   * Label: 'Channels Shuffle'
+   * Description: 'The <b>Channels Shuffle</b> filter lets you create an output image using individual channels from either of the two input images, arranged in any order'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input 1'
+         * Description: 'Primary input image'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'input2' [CONNECTABLE, READ_ONLY]
+         * Label: 'Input 2'
+         * Description: 'Secondary input image'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'channelred' = SDValueEnum("sbs::compositing::channelred",0)
+         * Label: 'Red Channel'
+         * Description: 'Choose the source channel to be inserted into the output image's Red channel'
+         * Types:
+            * 'sbs::compositing::channelred' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'channelgreen' = SDValueEnum("sbs::compositing::channelgreen",1)
+         * Label: 'Green Channel'
+         * Description: 'Choose the source channel to be inserted into the output image's Green channel'
+         * Types:
+            * 'sbs::compositing::channelgreen' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'channelblue' = SDValueEnum("sbs::compositing::channelblue",2)
+         * Label: 'Blue Channel'
+         * Description: 'Choose the source channel to be inserted into the output image's Blue channel'
+         * Types:
+            * 'sbs::compositing::channelblue' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'channelalpha' = SDValueEnum("sbs::compositing::channelalpha",3)
+         * Label: 'Alpha Channel'
+         * Description: 'Choose the source channel to be inserted into the output image's Alpha channel'
+         * Types:
+            * 'sbs::compositing::channelalpha' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[9/29] 'sbs::compositing::normal'
+#################################
+   * Label: 'Normal'
+   * Description: 'The <b>Normal</b> filter computes a normal map from a grayscale input image interpreted as height map'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Input Image Grayscale; interpreted as a height map'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'intensity' = SDValueFloat(float(1))
+         * Label: 'Intensity'
+         * Description: 'The <b>Intensity</b> parameter modifies the intensity of height map '
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'inversedy' = SDValueBool(bool(false))
+         * Label: 'Normal Format'
+         * Description: 'The <b>Normal Format</b> parameter inverts y coordinates of height map (Open-GL)'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'input2alpha' = SDValueBool(bool(true))
+         * Label: 'Alpha Channel Content'
+         * Description: 'When checked, the <b>Alpha Channel Content</b> parameter will fill the normal map's alpha channel with the input texture'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[10/29] 'sbs::compositing::uniform'
+###################################
+   * Label: 'Uniform Color'
+   * Description: 'The <b>Uniform Color</b> filter creates an image that uses only one color, whether it is an RGB color image or a grayscale image'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'colorswitch' = SDValueBool(bool(true))
+         * Label: 'Color Mode'
+         * Description: 'The <b>Color Mode</b> parameter toggles between a grayscale and a color output image'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'outputcolor' = SDValueFloat4(float4(0,0,0,1))
+         * Label: 'Output Color'
+         * Description: 'The <b>Color Output</b> parameter creates a uniform color output image'
+         * Types:
+            * 'ColorRGBA' (SDTypeColorRGBA)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[11/29] 'sbs::compositing::hsl'
+###############################
+   * Label: 'HSL'
+   * Description: 'The <b>HSL</b> filter adjusts the color appearance of an output image by modifying the intensity of the <b>hue</b>, <b>saturation</b>, and <b>lightness</b> parameters of the color input image'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be processed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'hue' = SDValueFloat(float(0.5))
+         * Label: 'Hue'
+         * Description: 'The <b>Hue</b> parameter determines the color of the input image'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'saturation' = SDValueFloat(float(0.5))
+         * Label: 'Saturation'
+         * Description: 'The <b>Saturation</b> parameter determines the saturation of the input image's color'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'luminosity' = SDValueFloat(float(0.5))
+         * Label: 'Lightness'
+         * Description: 'The <b>Lightness</b> parameter determines the lightness of the input image'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[12/29] 'sbs::compositing::blur'
+################################
+   * Label: 'Blur'
+   * Description: 'The <b>Blur</b> filter softens the input image'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be processed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'intensity' = SDValueFloat(float(10))
+         * Label: 'Intensity'
+         * Description: 'The <b>Intensity</b> parameter sets the intensity of the blur in pixels'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[13/29] 'sbs::compositing::gradient'
+####################################
+   * Label: 'Gradient Map'
+   * Description: 'The <b>Gradient Map</b> filter replaces the grayscale values of the input image by remapping with a color gradient'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be processed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'colorswitch' = SDValueBool(bool(true))
+         * Label: 'Color Mode'
+         * Description: 'The <b>Color Mode</b> parameter toggles between the grayscale and the color image'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'addressingrepeat' = SDValueBool(bool(false))
+         * Label: 'Gradient Addressing'
+         * Description: 'This parameter determines how out of 0..1 range <b>HDR</b> pixels of the grayscale input are handled: clamped or fold up to 0..1.'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'gradientrgba'
+         * Label: 'Gradient RGBA'
+         * Types:
+            * 'SDTypeArray<sbs::compositing::gradient_key_rgba>' (SDTypeArray)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[14/29] 'sbs::compositing::dyngradient'
+#######################################
+   * Label: 'Gradient (Dynamic)'
+   * Description: 'The <b>Dynamic Gradient Map</b> filter replaces the grayscale values of the first input image by remapping with a color gradient read from the second input'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Grayscale Input'
+         * Description: 'Primary Input Image. Grayscale image to remap'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'input2' [CONNECTABLE, READ_ONLY]
+         * Label: 'Gradient Input'
+         * Description: '<b>Gradient image</b>. Gradient is sampled from this image'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'addressingrepeat' = SDValueBool(bool(false))
+         * Label: 'Gradient Addressing'
+         * Description: 'This parameter determines how out of 0..1 range <b>HDR</b> pixels of the grayscale input are handled: clamped or fold up to 0..1.'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'uvselector' = SDValueEnum("sbs::compositing::uvselector",0)
+         * Label: 'Gradient Orientation'
+         * Description: 'The <b>Gradient Orientation</b> parameter defines how the gradient values are sampled in gradient input'
+         * Types:
+            * 'sbs::compositing::uvselector' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'coordinate' = SDValueFloat(float(0))
+         * Label: 'Gradient Input Position'
+         * Description: 'Normalized coordinate of the line/column to sample in gradient input'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[15/29] 'sbs::compositing::passthrough'
+#######################################
+   * Label: 'Dot'
+   * Description: 'The <b>Dot</b> node lets you <i>reroute</i> connections between nodes. Rerouted connections can be hidden by using Dot nodes as portals.<br><br>Note: this node is a layout tool only and has no impact on the result of the graph.'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Input Image or Value.'
+         * Types:
+            * 'bool' (SDTypeBool)
+            * 'int' (SDTypeInt)
+            * 'int2' (SDTypeInt2)
+            * 'int3' (SDTypeInt3)
+            * 'int4' (SDTypeInt4)
+            * 'float' (SDTypeFloat)
+            * 'float2' (SDTypeFloat2)
+            * 'float3' (SDTypeFloat3)
+            * 'float4' (SDTypeFloat4)
+            * 'string' (SDTypeString)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'bool' (SDTypeBool)
+            * 'int' (SDTypeInt)
+            * 'int2' (SDTypeInt2)
+            * 'int3' (SDTypeInt3)
+            * 'int4' (SDTypeInt4)
+            * 'float' (SDTypeFloat)
+            * 'float2' (SDTypeFloat2)
+            * 'float3' (SDTypeFloat3)
+            * 'float4' (SDTypeFloat4)
+            * 'string' (SDTypeString)
+
+[16/29] 'sbs::compositing::dirmotionblur'
+#########################################
+   * Label: 'Directional Blur'
+   * Description: 'The <b>Directional Blur</b> filter displaces the color input pixels in a given direction according to a specific intensity'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be processed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'intensity' = SDValueFloat(float(10))
+         * Label: 'Intensity'
+         * Description: 'The <b>Intensity</b> parameter sets the intensity of the blur'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'mblurangle' = SDValueFloat(float(0))
+         * Label: 'Angle'
+         * Description: 'The <b>Angle</b> parameter defines the direction of the blur effect'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[17/29] 'sbs::compositing::sharpen'
+###################################
+   * Label: 'Sharpen'
+   * Description: 'The <b>Sharpen</b> filter emphasizes the edges in the image, or the differences between adjacent light and dark sample points in an image and improves the clarity of a fuzzy image'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be processed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'intensity' = SDValueFloat(float(1))
+         * Label: 'Intensity'
+         * Description: 'The <b>Intensity</b> parameter determines the intensity of the sharpening'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'punchthrough' = SDValueBool(bool(false))
+         * Label: 'Punchthrough Alpha'
+         * Description: 'The <b>Punchthrough Alpha</b> parameter determines whether the Alpha channel is sharpened or left untouched'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[18/29] 'sbs::compositing::text'
+################################
+   * Label: 'Text'
+   * Description: 'The <b>Text</b> filter defines the text color, size, alignment and position'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'colorswitch' = SDValueBool(bool(false))
+         * Label: 'Color Mode'
+         * Description: 'The <b>Color Mode</b> parameter toggles between a grayscale and a color output image'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'text' = SDValueString(string())
+         * Label: 'Text'
+         * Description: 'The <b>Text</b> parameter determines the text description'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'fontdata' = SDValueString(string())
+         * Label: 'Font'
+         * Description: 'The <b>Font</b> resource used to render the <b>Text</b>'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'fontsize' = SDValueFloat(float(0.25))
+         * Label: 'Font Size'
+         * Description: 'The <b>Font Size</b> parameter sets the font size of the text in points'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'alignment' = SDValueEnum("sbs::compositing::alignment",1)
+         * Label: 'Alignment'
+         * Description: 'The <b>Alignment</b> parameter sets the text alignment as left, center (default), or right'
+         * Types:
+            * 'sbs::compositing::alignment' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'matrix22' = SDValueFloat4(float4(1,0,0,1))
+         * Label: 'Transformation'
+         * Description: 'The 2x2 <b>Transformation</b> matrix applied to the rendered text'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'position' = SDValueFloat2(float2(0,0))
+         * Label: 'Position'
+         * Description: 'The <b>Position</b> parameter determines the position of the text in the output image'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'background' = SDValueFloat4(float4(0,0,0,1)) [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Background'
+         * Description: 'The <b>Background</b> input/parameter sets the output image's background color'
+         * Types:
+            * 'ColorRGBA' (SDTypeColorRGBA)
+
+      * 'frontcolor' = SDValueFloat4(float4(1,1,1,1))
+         * Label: 'Font Color'
+         * Description: 'The <b>Font Color</b> parameter sets the color of the text'
+         * Types:
+            * 'ColorRGBA' (SDTypeColorRGBA)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[19/29] 'sbs::compositing::transformation'
+##########################################
+   * Label: 'Transformation 2D'
+   * Description: 'The <b>Transformation 2D</b> filter applies a 2D geometric transformation to either a color or a grayscale input image'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be transformed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'matrix22' = SDValueFloat4(float4(1,0,0,1))
+         * Label: 'Transform matrix'
+         * Description: 'Open the underlying transform <b>matrix</b> for direct editing'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'offset' = SDValueFloat2(float2(0,0))
+         * Label: 'Offset'
+         * Description: 'The <b>Offset</b> parameter defines the 2D displacement of the image'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * 'mipmapmode' = SDValueEnum("sbs::compositing::mipmapmode",0)
+         * Label: 'Mipmap Mode'
+         * Description: 'The <b>Mipmap Mode</b> parameter reduces artifacts in an image using texture filtering'
+         * Types:
+            * 'sbs::compositing::mipmapmode' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * 'manualmiplevel' = SDValueInt(int(0))
+         * Label: 'Mipmap Level'
+         * Description: 'The <b>MipMap level</b> parameter sets the mipmap level used if the Mipmap mode parameter is set to Manual'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'mattecolor' = SDValueFloat4(float4(0,0,0,0))
+         * Label: 'Matte Color'
+         * Description: 'The <b>Matte Color</b> parameter is used as the background color when tiling of transformation is disabled'
+         * Types:
+            * 'ColorRGBA' (SDTypeColorRGBA)
+
+      * 'filtering' = SDValueEnum("sbs::compositing::filtering",0)
+         * Label: 'Filtering'
+         * Description: 'Filtering'
+         * Types:
+            * 'sbs::compositing::filtering' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[20/29] 'sbs::compositing::directionalwarp'
+###########################################
+   * Label: 'Directional Warp'
+   * Description: 'The <b>Directional Warp</b> filter displaces the input image’s color pixels in a given direction to create a warp effect'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be processed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'inputintensity' [CONNECTABLE, READ_ONLY]
+         * Label: 'Intensity Input'
+         * Description: '<b>Warp Intensity image</b>. Grayscale image map defining the amount of warp to apply to the primary input image'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'intensity' = SDValueFloat(float(10))
+         * Label: 'Intensity'
+         * Description: 'The <b>Intensity</b> parameter sets the intensity of the warp'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'warpangle' = SDValueFloat(float(0))
+         * Label: 'Warp Angle'
+         * Description: 'The <b>Angle</b> parameter sets the angle of the warp'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'warpfilter' = SDValueBool(bool(false))
+         * Label: 'Input Filtering Mode'
+         * Description: 'Controls whether bilinear or nearest filtering is used to sample the input'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'intensityoffset' = SDValueFloat(float(0))
+         * Label: 'Intensity Map Offset'
+         * Description: 'This offset is subtracted from the Intensity input values'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[21/29] 'sbs::compositing::grayscaleconversion'
+###############################################
+   * Label: 'Grayscale Conversion'
+   * Description: 'The <b>Grayscale Conversion</b> filter replaces the color values of the input image using a grayscale gradient'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be processed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'channelsweights' = SDValueFloat4(float4(0.330000013,0.330000013,0.330000013,0))
+         * Label: 'Channels Weights'
+         * Description: 'The <b>Channels Weights</b> parameter defines the weightings for each channel. These weightings are used to calculate the grayscale result'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'alphamult' = SDValueBool(bool(false))
+         * Label: 'Flatten Alpha'
+         * Description: 'The <b>Flatten Alpha</b> parameter multiplies the grayscale conversion by the input image’s alpha channel'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'mattelevel' = SDValueFloat(float(1))
+         * Label: 'Background Value'
+         * Description: 'The <b>Background Value</b> parameter determines which pixels are to be treated as transparent. (Only used if the <b>Flatten Alpha</b> parameter is set to True)'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[22/29] 'sbs::compositing::distance'
+####################################
+   * Label: 'Distance'
+   * Description: 'The <b>Distance</b> filter computes per-pixel distance to nearest white pixel from a mask and/or copy from this position in source input '
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'colorswitch' = SDValueBool(bool(false))
+         * Label: 'Color Mode'
+         * Description: 'The <b>Color Mode</b> parameter toggles between a grayscale and a color output image'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'mask' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Mask Input'
+         * Description: 'Mask input to compute distance from'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'source' [CONNECTABLE, READ_ONLY]
+         * Label: 'Source Input'
+         * Description: 'Optional source input for nearest pixel copy'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'distance' = SDValueFloat(float(10))
+         * Label: 'Maximum Distance'
+         * Description: 'The <b>Maximum Distance</b> parameter adjusts the distance computation and copy limit'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'combinedistance' = SDValueBool(bool(true))
+         * Label: 'Combine Source/Distance'
+         * Description: 'If Source Input is set, determines if is combined with computed distance.'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+      * 'distancemode' = SDValueInt(int(0))
+         * Label: 'Distance Mode'
+         * Description: 'Choose the method of distance computation'
+         * Types:
+            * 'sbs::compositing::distancemode' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[23/29] 'sbs::compositing::levels'
+##################################
+   * Label: 'Levels'
+   * Description: 'The <b>Levels</b> filter adjusts the global tonal range and color balance of an image by modifying intensity levels of the image’s shadows, midtones, and highlights'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be processed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'levelinlow' = SDValueFloat4(float4(0,0,0,0))
+         * Label: 'Level In Low'
+         * Description: 'The <b>Level in low</b> parameter defines the input image's lowlight levels'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'levelinhigh' = SDValueFloat4(float4(1,1,1,1))
+         * Label: 'Level In High'
+         * Description: 'The <b>Level in high</b> parameter defines the input image's highlight levels'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'levelinmid' = SDValueFloat4(float4(0.5,0.5,0.5,0.5))
+         * Label: 'Level In Mid'
+         * Description: 'The <b>Level in mid</b> parameter defines the input image's midtone levels'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'leveloutlow' = SDValueFloat4(float4(0,0,0,0))
+         * Label: 'Level Out Low'
+         * Description: 'The <b>Level out low</b> parameter defines the output image's lowlight levels'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'levelouthigh' = SDValueFloat4(float4(1,1,1,1))
+         * Label: 'Level Out High'
+         * Description: 'The <b>Level out high</b> parameter defines the output image's highlight levels'
+         * Types:
+            * 'float4' (SDTypeFloat4)
+
+      * 'clampinterm' = SDValueBool(bool(true))
+         * Label: 'Intermediary Clamp'
+         * Description: 'This parameter determines if transformed input value is clamped to 0..1 before computing output level'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[24/29] 'sbs::compositing::emboss'
+##################################
+   * Label: 'Emboss'
+   * Description: 'The <b>Emboss</b> filter displaces the Input 1 image’s color pixels in a given direction'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. Image to be processed'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'inputgradient' [CONNECTABLE, READ_ONLY]
+         * Label: 'Intensity Input'
+         * Description: 'The intensity input displaces the Input 1 image’s color pixels in a given direction'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'intensity' = SDValueFloat(float(5))
+         * Label: 'Intensity'
+         * Description: 'The <b>Intensity</b> parameter adjusts the global intensity of illumination effect'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'lightangle' = SDValueFloat(float(0))
+         * Label: 'Light Angle'
+         * Description: 'The <b>Light Angle</b> defines the illumination angle of the embossed image's highlight'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'highlightcolor' = SDValueFloat4(float4(1,1,1,1))
+         * Label: 'Highlight Color'
+         * Description: 'The <b>Highlight</b> parameter sets the color of the highlight if the input image is color'
+         * Types:
+            * 'ColorRGBA' (SDTypeColorRGBA)
+
+      * 'shadowcolor' = SDValueFloat4(float4(0,0,0,0))
+         * Label: 'Shadow Color'
+         * Description: 'The <b>Shadow Color</b> parameter sets the color of the shadowed regions of the embossed image'
+         * Types:
+            * 'ColorRGBA' (SDTypeColorRGBA)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[25/29] 'sbs::compositing::warp'
+################################
+   * Label: 'Warp'
+   * Description: 'The <b>Warp</b> filter displaces the color pixels in the input image'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'input1' [CONNECTABLE, READ_ONLY, PRIMARY]
+         * Label: 'Input'
+         * Description: 'Primary Input Image. The color or grayscale image'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'inputgradient' [CONNECTABLE, READ_ONLY]
+         * Label: 'Gradient Input'
+         * Description: 'The slope of the gradient of the grayscale input image determines the warp effect in the output image'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+      * 'intensity' = SDValueFloat(float(1))
+         * Label: 'Intensity'
+         * Description: 'The <b>Intensity</b> parameter sets the intensity of the warp'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'warpfilter' = SDValueBool(bool(false))
+         * Label: 'Input Filtering Mode'
+         * Description: 'Controls whether bilinear or nearest filtering is used to sample the input'
+         * Types:
+            * 'bool' (SDTypeBool)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+[26/29] 'sbs::compositing::input_color'
+#######################################
+   * Label: 'Input'
+   * Description: 'Input'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'bitmapresourcepath' = SDValueString(string())
+         * Label: 'PKG Resource Path'
+         * Description: 'The <b>PKG Resource Path</b> parameter displays the bitmap's location in your package'
+         * Types:
+            * 'string' (SDTypeString)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+   * SDPropertyCategory = 'Annotation'
+      * 'label'
+         * Label: 'Label'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'description'
+         * Label: 'Description'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'identifier'
+         * Label: 'Identifier'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'userdata'
+         * Label: 'User Data'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'group'
+         * Label: 'Group'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'visible_if'
+         * Label: 'Visible If'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'usages'
+         * Label: 'Usages'
+         * Types:
+            * 'SDTypeArray<SDTypeUsage>' (SDTypeArray)
+
+[27/29] 'sbs::compositing::input_grayscale'
+###########################################
+   * Label: 'Input'
+   * Description: 'Input'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'bitmapresourcepath' = SDValueString(string())
+         * Label: 'PKG Resource Path'
+         * Description: 'The <b>PKG Resource Path</b> parameter displays the bitmap's location in your package'
+         * Types:
+            * 'string' (SDTypeString)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+
+   * SDPropertyCategory = 'Annotation'
+      * 'label'
+         * Label: 'Label'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'description'
+         * Label: 'Description'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'identifier'
+         * Label: 'Identifier'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'userdata'
+         * Label: 'User Data'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'group'
+         * Label: 'Group'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'visible_if'
+         * Label: 'Visible If'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'usages'
+         * Label: 'Usages'
+         * Types:
+            * 'SDTypeArray<SDTypeUsage>' (SDTypeArray)
+
+[28/29] 'sbs::compositing::input_value'
+#######################################
+   * Label: 'Input'
+   * Description: 'Input'
+   * SDPropertyCategory = 'Input'
+      * '$outputsize' = SDValueInt2(int2(8,8))
+         * Label: 'Output Size'
+         * Description: 'The <b>Output Size</b> parameter defines the horizontal and vertical size of the output image as a power of 2. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int2' (SDTypeInt2)
+
+      * '$format' = SDValueEnum("sbs::compositing::format",0)
+         * Label: 'Output Format'
+         * Description: 'The <b>Output Format</b> parameter sets the output image format. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::format' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$pixelsize' = SDValueFloat2(float2(1,1))
+         * Label: 'Pixel Size'
+         * Description: 'The <b>Pixel Size</b> parameter defines the horizontal and vertical size of a pixel. This</b> parameter is used by the non-local</b> filters: Blur, Sharpen, Transformation 2D, Directional Motion Blur, and Directional Warp. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'float2' (SDTypeFloat2)
+
+      * '$pixelratio' = SDValueEnum("sbs::compositing::pixelratio",1)
+         * Label: 'Pixel Ratio'
+         * Description: 'The <b>Pixel Ratio</b> parameter defines the behavior of the pixel size's aspect ratio with respect to the output size's aspect ratio. The parameter is used by non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::pixelratio' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$tiling' = SDValueEnum("sbs::compositing::tiling",3)
+         * Label: 'Tiling Mode'
+         * Description: 'The <b>Tiling</b> parameter defines the input’s tiling behavior. The parameter is used by the non-local filters. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'sbs::compositing::tiling' (SDTypeEnum)
+            * 'int' (SDTypeInt)
+
+      * '$randomseed' = SDValueInt(int(0))
+         * Label: 'Random Seed'
+         * Description: 'The <b>Random Seed</b> parameter defines the random seed of the filter node. This parameter is used by all random generators. Random seed is cumulative if the inherited qualifier is set. The final random seed is the sum of the random seeds of all of filters of its hierarchy. Parameter can be <i>inherited</i> from parent object, or set to an <i>absolute</i> value'
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [CONNECTABLE, READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'bool' (SDTypeBool)
+            * 'int' (SDTypeInt)
+            * 'int2' (SDTypeInt2)
+            * 'int3' (SDTypeInt3)
+            * 'int4' (SDTypeInt4)
+            * 'float' (SDTypeFloat)
+            * 'float2' (SDTypeFloat2)
+            * 'float3' (SDTypeFloat3)
+            * 'float4' (SDTypeFloat4)
+
+   * SDPropertyCategory = 'Annotation'
+      * 'label'
+         * Label: 'Label'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'description'
+         * Label: 'Description'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'identifier'
+         * Label: 'Identifier'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'userdata'
+         * Label: 'User Data'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'group'
+         * Label: 'Group'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'visible_if'
+         * Label: 'Visible If'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'usages'
+         * Label: 'Usages'
+         * Types:
+            * 'SDTypeArray<SDTypeUsage>' (SDTypeArray)
+
+[29/29] 'sbs::compositing::output'
+##################################
+   * Label: 'Input'
+   * Description: 'Input connector'
+   * SDPropertyCategory = 'Input'
+      * 'inputNodeOutput' [CONNECTABLE, READ_ONLY]
+         * Label: 'Input'
+         * Description: 'Input connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+            * 'bool' (SDTypeBool)
+            * 'int' (SDTypeInt)
+            * 'int2' (SDTypeInt2)
+            * 'int3' (SDTypeInt3)
+            * 'int4' (SDTypeInt4)
+            * 'float' (SDTypeFloat)
+            * 'float2' (SDTypeFloat2)
+            * 'float3' (SDTypeFloat3)
+            * 'float4' (SDTypeFloat4)
+
+   * SDPropertyCategory = 'Output'
+      * 'unique_filter_output' [READ_ONLY]
+         * Label: 'Output'
+         * Description: 'Output Connector'
+         * Types:
+            * 'SDTypeTexture' (SDTypeTexture)
+            * 'bool' (SDTypeBool)
+            * 'int' (SDTypeInt)
+            * 'int2' (SDTypeInt2)
+            * 'int3' (SDTypeInt3)
+            * 'int4' (SDTypeInt4)
+            * 'float' (SDTypeFloat)
+            * 'float2' (SDTypeFloat2)
+            * 'float3' (SDTypeFloat3)
+            * 'float4' (SDTypeFloat4)
+
+   * SDPropertyCategory = 'Annotation'
+      * 'label'
+         * Label: 'Label'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'description'
+         * Label: 'Description'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'identifier'
+         * Label: 'Identifier'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'userdata'
+         * Label: 'User Data'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'group'
+         * Label: 'Group'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'visible_if'
+         * Label: 'Visible If'
+         * Types:
+            * 'string' (SDTypeString)
+
+      * 'usages'
+         * Label: 'Usages'
+         * Types:
+            * 'SDTypeArray<SDTypeUsage>' (SDTypeArray)
+
+      * 'mipmaps'
+         * Label: 'Mipmaps'
+         * Types:
+            * 'int' (SDTypeInt)
+
+      * 'format'
+         * Label: 'Format'
+         * Types:
+            * 'int' (SDTypeInt)
+
+Types:
+------
+[1/17] 'sbs::compositing::distancemode'
+#######################################
+   * 'sbs::compositing::distancemode' (SDTypeEnum)
+      * int euclidean = SDValueInt(int(0))
+         * Label: 'Euclidean distance'
+         * Description: 'Euclidean distance'
+
+      * int manhattan = SDValueInt(int(1))
+         * Label: 'Manhattan distance'
+         * Description: 'Manhattan distance'
+
+      * int chebyshev = SDValueInt(int(2))
+         * Label: 'Chebyshev distance'
+         * Description: 'Chebyshev distance'
+
+[2/17] 'sbs::compositing::filtering'
+####################################
+   * 'sbs::compositing::filtering' (SDTypeEnum)
+      * int bilinear = SDValueInt(int(0))
+         * Label: 'Bilinear'
+         * Description: 'Bilinear'
+
+      * int nearest = SDValueInt(int(1))
+         * Label: 'Nearest'
+         * Description: 'Nearest'
+
+[3/17] 'sbs::compositing::mipmapmode'
+#####################################
+   * 'sbs::compositing::mipmapmode' (SDTypeEnum)
+      * int automatic = SDValueInt(int(0))
+         * Label: 'Automatic'
+         * Description: 'Automatic'
+
+      * int manual = SDValueInt(int(1))
+         * Label: 'Manual'
+         * Description: 'Manual'
+
+[4/17] 'sbs::compositing::alignment'
+####################################
+   * 'sbs::compositing::alignment' (SDTypeEnum)
+      * int left = SDValueInt(int(0))
+         * Label: 'Left'
+         * Description: 'Left'
+
+      * int center = SDValueInt(int(1))
+         * Label: 'Center'
+         * Description: 'Center'
+
+      * int right = SDValueInt(int(2))
+         * Label: 'Right'
+         * Description: 'Right'
+
+[5/17] 'sbs::compositing::uvselector'
+#####################################
+   * 'sbs::compositing::uvselector' (SDTypeEnum)
+      * int u = SDValueInt(int(0))
+         * Label: 'Horizontal'
+         * Description: 'Horizontal'
+
+      * int v = SDValueInt(int(1))
+         * Label: 'Vertical'
+         * Description: 'Vertical'
+
+[6/17] 'sbs::compositing::gradient_key_rgba'
+############################################
+   * 'sbs::compositing::gradient_key_rgba' (SDTypeStruct)
+      * ColorRGBA value
+         * Label: 'Gradient RGBA Value'
+         * Description: 'Gradient RGBA Value'
+
+      * float position
+         * Label: 'Gradient RGB Position'
+         * Description: 'Gradient RGB Position'
+
+      * float midpoint
+         * Label: 'Gradient RGBA Midpoint'
+         * Description: 'Gradient RGBA Midpoint'
+
+[7/17] 'sbs::compositing::channelalpha'
+#######################################
+   * 'sbs::compositing::channelalpha' (SDTypeEnum)
+      * int input1red = SDValueInt(int(0))
+         * Label: 'Input 1 Red Channel'
+         * Description: 'Input 1 Red Channel'
+
+      * int input1green = SDValueInt(int(1))
+         * Label: 'Input 1 Green Channel'
+         * Description: 'Input 1 Green Channel'
+
+      * int input1blue = SDValueInt(int(2))
+         * Label: 'Input 1 Blue Channel'
+         * Description: 'Input 1 Blue Channel'
+
+      * int input1alpha = SDValueInt(int(3))
+         * Label: 'Input 1 Alpha Channel'
+         * Description: 'Input 1 Alpha Channel'
+
+      * int input2red = SDValueInt(int(4))
+         * Label: 'Input 2 Red Channel'
+         * Description: 'Input 2 Red Channel'
+
+      * int input2green = SDValueInt(int(5))
+         * Label: 'Input 2 Green Channel'
+         * Description: 'Input 2 Green Channel'
+
+      * int input2blue = SDValueInt(int(6))
+         * Label: 'Input 2 Blue Channel'
+         * Description: 'Input 2 Blue Channel'
+
+      * int input2alpha = SDValueInt(int(7))
+         * Label: 'Input 2 Alpha Channel'
+         * Description: 'Input 2 Alpha Channel'
+
+[8/17] 'sbs::compositing::channelblue'
+######################################
+   * 'sbs::compositing::channelblue' (SDTypeEnum)
+      * int input1red = SDValueInt(int(0))
+         * Label: 'Input 1 Red Channel'
+         * Description: 'Input 1 Red Channel'
+
+      * int input1green = SDValueInt(int(1))
+         * Label: 'Input 1 Green Channel'
+         * Description: 'Input 1 Green Channel'
+
+      * int input1blue = SDValueInt(int(2))
+         * Label: 'Input 1 Blue Channel'
+         * Description: 'Input 1 Blue Channel'
+
+      * int input1alpha = SDValueInt(int(3))
+         * Label: 'Input 1 Alpha Channel'
+         * Description: 'Input 1 Alpha Channel'
+
+      * int input2red = SDValueInt(int(4))
+         * Label: 'Input 2 Red Channel'
+         * Description: 'Input 2 Red Channel'
+
+      * int input2green = SDValueInt(int(5))
+         * Label: 'Input 2 Green Channel'
+         * Description: 'Input 2 Green Channel'
+
+      * int input2blue = SDValueInt(int(6))
+         * Label: 'Input 2 Blue Channel'
+         * Description: 'Input 2 Blue Channel'
+
+      * int input2alpha = SDValueInt(int(7))
+         * Label: 'Input 2 Alpha Channel'
+         * Description: 'Input 2 Alpha Channel'
+
+[9/17] 'sbs::compositing::channelgreen'
+#######################################
+   * 'sbs::compositing::channelgreen' (SDTypeEnum)
+      * int input1red = SDValueInt(int(0))
+         * Label: 'Input 1 Red Channel'
+         * Description: 'Input 1 Red Channel'
+
+      * int input1green = SDValueInt(int(1))
+         * Label: 'Input 1 Green Channel'
+         * Description: 'Input 1 Green Channel'
+
+      * int input1blue = SDValueInt(int(2))
+         * Label: 'Input 1 Blue Channel'
+         * Description: 'Input 1 Blue Channel'
+
+      * int input1alpha = SDValueInt(int(3))
+         * Label: 'Input 1 Alpha Channel'
+         * Description: 'Input 1 Alpha Channel'
+
+      * int input2red = SDValueInt(int(4))
+         * Label: 'Input 2 Red Channel'
+         * Description: 'Input 2 Red Channel'
+
+      * int input2green = SDValueInt(int(5))
+         * Label: 'Input 2 Green Channel'
+         * Description: 'Input 2 Green Channel'
+
+      * int input2blue = SDValueInt(int(6))
+         * Label: 'Input 2 Blue Channel'
+         * Description: 'Input 2 Blue Channel'
+
+      * int input2alpha = SDValueInt(int(7))
+         * Label: 'Input 2 Alpha Channel'
+         * Description: 'Input 2 Alpha Channel'
+
+[10/17] 'sbs::compositing::channelred'
+######################################
+   * 'sbs::compositing::channelred' (SDTypeEnum)
+      * int input1red = SDValueInt(int(0))
+         * Label: 'Input 1 Red Channel'
+         * Description: 'Input 1 Red Channel'
+
+      * int input1green = SDValueInt(int(1))
+         * Label: 'Input 1 Green Channel'
+         * Description: 'Input 1 Green Channel'
+
+      * int input1blue = SDValueInt(int(2))
+         * Label: 'Input 1 Blue Channel'
+         * Description: 'Input 1 Blue Channel'
+
+      * int input1alpha = SDValueInt(int(3))
+         * Label: 'Input 1 Alpha Channel'
+         * Description: 'Input 1 Alpha Channel'
+
+      * int input2red = SDValueInt(int(4))
+         * Label: 'Input 2 Red Channel'
+         * Description: 'Input 2 Red Channel'
+
+      * int input2green = SDValueInt(int(5))
+         * Label: 'Input 2 Green Channel'
+         * Description: 'Input 2 Green Channel'
+
+      * int input2blue = SDValueInt(int(6))
+         * Label: 'Input 2 Blue Channel'
+         * Description: 'Input 2 Blue Channel'
+
+      * int input2alpha = SDValueInt(int(7))
+         * Label: 'Input 2 Alpha Channel'
+         * Description: 'Input 2 Alpha Channel'
+
+[11/17] 'sbs::compositing::blendingmode'
+########################################
+   * 'sbs::compositing::blendingmode' (SDTypeEnum)
+      * int copy = SDValueInt(int(0))
+         * Label: 'Copy'
+         * Description: 'Copy'
+
+      * int add = SDValueInt(int(1))
+         * Label: 'Add (Linear Dodge)'
+         * Description: 'Add (Linear Dodge)'
+
+      * int substract = SDValueInt(int(2))
+         * Label: 'Subtract'
+         * Description: 'Subtract'
+
+      * int multiply = SDValueInt(int(3))
+         * Label: 'Multiply'
+         * Description: 'Multiply'
+
+      * int addsub = SDValueInt(int(4))
+         * Label: 'Add Sub'
+         * Description: 'Add Sub'
+
+      * int max = SDValueInt(int(5))
+         * Label: 'Max (Lighten)'
+         * Description: 'Max (Lighten)'
+
+      * int min = SDValueInt(int(6))
+         * Label: 'Min (Darken)'
+         * Description: 'Min (Darken)'
+
+      * int switch = SDValueInt(int(7))
+         * Label: 'Switch'
+         * Description: 'Switch'
+
+      * int divide = SDValueInt(int(8))
+         * Label: 'Divide'
+         * Description: 'Divide'
+
+      * int overlay = SDValueInt(int(9))
+         * Label: 'Overlay'
+         * Description: 'Overlay'
+
+      * int screen = SDValueInt(int(10))
+         * Label: 'Screen'
+         * Description: 'Screen'
+
+      * int softlight = SDValueInt(int(11))
+         * Label: 'Soft Light'
+         * Description: 'Soft Light'
+
+[12/17] 'sbs::compositing::curve_key'
+#####################################
+   * 'sbs::compositing::curve_key' (SDTypeStruct)
+      * float2 position
+         * Label: 'Luminance Position'
+         * Description: 'Luminance Position'
+
+      * bool isLocked
+         * Label: 'Luminance Locked'
+         * Description: 'Luminance Locked'
+
+      * float2 left
+         * Label: 'Luminance Left Tangent Handle'
+         * Description: 'Luminance Left Tangent Handle'
+
+      * bool isLeftBroken
+         * Label: 'Luminance Left Broken'
+         * Description: 'Luminance Left Broken'
+
+      * float2 right
+         * Label: 'Luminance Right Tangent Handle'
+         * Description: 'Luminance Right Tangent Handle'
+
+      * bool isRightBroken
+         * Label: 'Luminance Right Broken'
+         * Description: 'Luminance Right Broken'
+
+[13/17] 'sbs::compositing::resizemethod'
+########################################
+   * 'sbs::compositing::resizemethod' (SDTypeEnum)
+      * int stretchbilinear = SDValueInt(int(0))
+         * Label: 'Smooth stretch'
+         * Description: 'Smooth stretch'
+
+      * int stretchnearest = SDValueInt(int(1))
+         * Label: 'Nearest stretch'
+         * Description: 'Nearest stretch'
+
+[14/17] 'sbs::compositing::colorblending'
+#########################################
+   * 'sbs::compositing::colorblending' (SDTypeEnum)
+      * int usesourcealpha = SDValueInt(int(0))
+         * Label: 'Use Source Alpha'
+         * Description: 'Use Source Alpha'
+
+      * int ignorealpha = SDValueInt(int(1))
+         * Label: 'Ignore Alpha'
+         * Description: 'Ignore Alpha'
+
+      * int straight = SDValueInt(int(2))
+         * Label: 'Straight Alpha Blending'
+         * Description: 'Straight Alpha Blending'
+
+      * int premul = SDValueInt(int(3))
+         * Label: 'Premultiplied Alpha Blending (Copy only)'
+         * Description: 'Premultiplied Alpha Blending (Copy only)'
+
+[15/17] 'sbs::compositing::format'
+##################################
+   * 'sbs::compositing::format' (SDTypeEnum)
+      * int 8_bits_per_channel = SDValueInt(int(0))
+         * Label: '8 Bits per Channel'
+         * Description: '8 Bits per Channel'
+
+      * int 16_bits_per_channel = SDValueInt(int(1))
+         * Label: '16 Bits per Channel'
+         * Description: '16 Bits per Channel'
+
+      * int hdr_low_precision = SDValueInt(int(2))
+         * Label: 'HDR Low Precision (16F)'
+         * Description: 'HDR Low Precision (16F)'
+
+      * int hdr_high_precision = SDValueInt(int(3))
+         * Label: 'HDR High Precision (32F)'
+         * Description: 'HDR High Precision (32F)'
+
+[16/17] 'sbs::compositing::tiling'
+##################################
+   * 'sbs::compositing::tiling' (SDTypeEnum)
+      * int no_tiling = SDValueInt(int(0))
+         * Label: 'No Tiling'
+         * Description: 'No Tiling'
+
+      * int horizontal_tiling = SDValueInt(int(1))
+         * Label: 'Horizontal Tiling'
+         * Description: 'Horizontal Tiling'
+
+      * int vertical_tiling = SDValueInt(int(2))
+         * Label: 'Vertical Tiling'
+         * Description: 'Vertical Tiling'
+
+      * int h_and_v_tiling = SDValueInt(int(3))
+         * Label: 'H and V Tiling'
+         * Description: 'H and V Tiling'
+
+[17/17] 'sbs::compositing::pixelratio'
+######################################
+   * 'sbs::compositing::pixelratio' (SDTypeEnum)
+      * int stretch = SDValueInt(int(0))
+         * Label: 'Stretch'
+         * Description: 'Stretch'
+
+      * int square = SDValueInt(int(1))
+         * Label: 'Square'
+         * Description: 'Square'

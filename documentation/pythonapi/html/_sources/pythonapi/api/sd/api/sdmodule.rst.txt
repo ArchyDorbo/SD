@@ -1,0 +1,8 @@
+sdmodule module
+===============
+
+.. automodule:: sd.api.sdmodule
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

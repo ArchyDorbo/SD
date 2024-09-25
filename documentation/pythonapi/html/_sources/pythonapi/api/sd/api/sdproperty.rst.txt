@@ -1,0 +1,8 @@
+sdproperty module
+=================
+
+.. automodule:: sd.api.sdproperty
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

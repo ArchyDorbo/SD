@@ -1,0 +1,8 @@
+sdresourcecustom module
+=======================
+
+.. automodule:: sd.api.sdresourcecustom
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

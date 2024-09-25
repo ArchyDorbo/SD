@@ -1,0 +1,8 @@
+sdmetadatadict module
+=====================
+
+.. automodule:: sd.api.sdmetadatadict
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

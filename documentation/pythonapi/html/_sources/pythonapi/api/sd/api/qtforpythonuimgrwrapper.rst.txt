@@ -1,0 +1,8 @@
+qtforpythonuimgrwrapper module
+==============================
+
+.. automodule:: sd.api.qtforpythonuimgrwrapper
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

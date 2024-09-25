@@ -1,0 +1,1259 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>mdl::scene &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="mdl::state" href="mdl_state.html" />
+    <link rel="prev" title="mdl::nvidia::core_definitions" href="mdl_nvidia_core_definitions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_state.html" title="mdl::state"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mdl_nvidia_core_definitions.html" title="mdl::nvidia::core_definitions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" accesskey="U">Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mdl-scene">
+<h1>mdl::scene<a class="headerlink" href="#mdl-scene" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#definitions" id="id1">Definitions:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mdl-scene-data-isvalid-string" id="id2">[1/19] ‘mdl::scene::data_isvalid(string)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-int-string-int" id="id3">[2/19] ‘mdl::scene::data_lookup_int(string,int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-uniform-int-string-int" id="id4">[3/19] ‘mdl::scene::data_lookup_uniform_int(string,int)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-int2-string-int2" id="id5">[4/19] ‘mdl::scene::data_lookup_int2(string,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-uniform-int2-string-int2" id="id6">[5/19] ‘mdl::scene::data_lookup_uniform_int2(string,int2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-int3-string-int3" id="id7">[6/19] ‘mdl::scene::data_lookup_int3(string,int3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-uniform-int3-string-int3" id="id8">[7/19] ‘mdl::scene::data_lookup_uniform_int3(string,int3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-int4-string-int4" id="id9">[8/19] ‘mdl::scene::data_lookup_int4(string,int4)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-uniform-int4-string-int4" id="id10">[9/19] ‘mdl::scene::data_lookup_uniform_int4(string,int4)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-float-string-float" id="id11">[10/19] ‘mdl::scene::data_lookup_float(string,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-uniform-float-string-float" id="id12">[11/19] ‘mdl::scene::data_lookup_uniform_float(string,float)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-float2-string-float2" id="id13">[12/19] ‘mdl::scene::data_lookup_float2(string,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-uniform-float2-string-float2" id="id14">[13/19] ‘mdl::scene::data_lookup_uniform_float2(string,float2)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-float3-string-float3" id="id15">[14/19] ‘mdl::scene::data_lookup_float3(string,float3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-uniform-float3-string-float3" id="id16">[15/19] ‘mdl::scene::data_lookup_uniform_float3(string,float3)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-float4-string-float4" id="id17">[16/19] ‘mdl::scene::data_lookup_float4(string,float4)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-uniform-float4-string-float4" id="id18">[17/19] ‘mdl::scene::data_lookup_uniform_float4(string,float4)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-color-string-color" id="id19">[18/19] ‘mdl::scene::data_lookup_color(string,color)’</a></p></li>
+<li><p><a class="reference internal" href="#mdl-scene-data-lookup-uniform-color-string-color" id="id20">[19/19] ‘mdl::scene::data_lookup_uniform_color(string,color)’</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="definitions">
+<h2><a class="toc-backref" href="#id1">Definitions:</a><a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<section id="mdl-scene-data-isvalid-string">
+<h3><a class="toc-backref" href="#id2">[1/19] ‘mdl::scene::data_isvalid(string)’</a><a class="headerlink" href="#mdl-scene-data-isvalid-string" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘bool’ (SDTypeBool)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-int-string-int">
+<h3><a class="toc-backref" href="#id3">[2/19] ‘mdl::scene::data_lookup_int(string,int)’</a><a class="headerlink" href="#mdl-scene-data-lookup-int-string-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueInt(int(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-uniform-int-string-int">
+<h3><a class="toc-backref" href="#id4">[3/19] ‘mdl::scene::data_lookup_uniform_int(string,int)’</a><a class="headerlink" href="#mdl-scene-data-lookup-uniform-int-string-int" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueInt(int(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int’ (SDTypeInt) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-int2-string-int2">
+<h3><a class="toc-backref" href="#id5">[4/19] ‘mdl::scene::data_lookup_int2(string,int2)’</a><a class="headerlink" href="#mdl-scene-data-lookup-int2-string-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-uniform-int2-string-int2">
+<h3><a class="toc-backref" href="#id6">[5/19] ‘mdl::scene::data_lookup_uniform_int2(string,int2)’</a><a class="headerlink" href="#mdl-scene-data-lookup-uniform-int2-string-int2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueInt2(int2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int2’ (SDTypeInt2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-int3-string-int3">
+<h3><a class="toc-backref" href="#id7">[6/19] ‘mdl::scene::data_lookup_int3(string,int3)’</a><a class="headerlink" href="#mdl-scene-data-lookup-int3-string-int3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueInt3(int3(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-uniform-int3-string-int3">
+<h3><a class="toc-backref" href="#id8">[7/19] ‘mdl::scene::data_lookup_uniform_int3(string,int3)’</a><a class="headerlink" href="#mdl-scene-data-lookup-uniform-int3-string-int3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueInt3(int3(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int3’ (SDTypeInt3) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-int4-string-int4">
+<h3><a class="toc-backref" href="#id9">[8/19] ‘mdl::scene::data_lookup_int4(string,int4)’</a><a class="headerlink" href="#mdl-scene-data-lookup-int4-string-int4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueInt4(int4(0,0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-uniform-int4-string-int4">
+<h3><a class="toc-backref" href="#id10">[9/19] ‘mdl::scene::data_lookup_uniform_int4(string,int4)’</a><a class="headerlink" href="#mdl-scene-data-lookup-uniform-int4-string-int4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueInt4(int4(0,0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘int4’ (SDTypeInt4) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-float-string-float">
+<h3><a class="toc-backref" href="#id11">[10/19] ‘mdl::scene::data_lookup_float(string,float)’</a><a class="headerlink" href="#mdl-scene-data-lookup-float-string-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-uniform-float-string-float">
+<h3><a class="toc-backref" href="#id12">[11/19] ‘mdl::scene::data_lookup_uniform_float(string,float)’</a><a class="headerlink" href="#mdl-scene-data-lookup-uniform-float-string-float" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueFloat(float(0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float’ (SDTypeFloat) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-float2-string-float2">
+<h3><a class="toc-backref" href="#id13">[12/19] ‘mdl::scene::data_lookup_float2(string,float2)’</a><a class="headerlink" href="#mdl-scene-data-lookup-float2-string-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueFloat2(float2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-uniform-float2-string-float2">
+<h3><a class="toc-backref" href="#id14">[13/19] ‘mdl::scene::data_lookup_uniform_float2(string,float2)’</a><a class="headerlink" href="#mdl-scene-data-lookup-uniform-float2-string-float2" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueFloat2(float2(0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float2’ (SDTypeFloat2) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-float3-string-float3">
+<h3><a class="toc-backref" href="#id15">[14/19] ‘mdl::scene::data_lookup_float3(string,float3)’</a><a class="headerlink" href="#mdl-scene-data-lookup-float3-string-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-uniform-float3-string-float3">
+<h3><a class="toc-backref" href="#id16">[15/19] ‘mdl::scene::data_lookup_uniform_float3(string,float3)’</a><a class="headerlink" href="#mdl-scene-data-lookup-uniform-float3-string-float3" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float3’ (SDTypeFloat3) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-float4-string-float4">
+<h3><a class="toc-backref" href="#id17">[16/19] ‘mdl::scene::data_lookup_float4(string,float4)’</a><a class="headerlink" href="#mdl-scene-data-lookup-float4-string-float4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueFloat4(float4(0,0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-uniform-float4-string-float4">
+<h3><a class="toc-backref" href="#id18">[17/19] ‘mdl::scene::data_lookup_uniform_float4(string,float4)’</a><a class="headerlink" href="#mdl-scene-data-lookup-uniform-float4-string-float4" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueFloat4(float4(0,0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘float4’ (SDTypeFloat4) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-color-string-color">
+<h3><a class="toc-backref" href="#id19">[18/19] ‘mdl::scene::data_lookup_color(string,color)’</a><a class="headerlink" href="#mdl-scene-data-lookup-color-string-color" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Varying]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mdl-scene-data-lookup-uniform-color-string-color">
+<h3><a class="toc-backref" href="#id20">[19/19] ‘mdl::scene::data_lookup_uniform_color(string,color)’</a><a class="headerlink" href="#mdl-scene-data-lookup-uniform-color-string-color" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Input’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘name’ [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘string’ (SDTypeString) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>‘default_value’ = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>SDPropertyCategory = ‘Output’</dt><dd><ul>
+<li><dl class="simple">
+<dt>‘output’ [CONNECTABLE, READ_ONLY]</dt><dd><ul>
+<li><dl class="simple">
+<dt>Types:</dt><dd><ul>
+<li><p>‘ColorRGB’ (SDTypeColorRGB) [Uniform]</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">mdl::scene</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions:</a><ul>
+<li><a class="reference internal" href="#mdl-scene-data-isvalid-string">[1/19] ‘mdl::scene::data_isvalid(string)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-int-string-int">[2/19] ‘mdl::scene::data_lookup_int(string,int)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-uniform-int-string-int">[3/19] ‘mdl::scene::data_lookup_uniform_int(string,int)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-int2-string-int2">[4/19] ‘mdl::scene::data_lookup_int2(string,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-uniform-int2-string-int2">[5/19] ‘mdl::scene::data_lookup_uniform_int2(string,int2)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-int3-string-int3">[6/19] ‘mdl::scene::data_lookup_int3(string,int3)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-uniform-int3-string-int3">[7/19] ‘mdl::scene::data_lookup_uniform_int3(string,int3)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-int4-string-int4">[8/19] ‘mdl::scene::data_lookup_int4(string,int4)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-uniform-int4-string-int4">[9/19] ‘mdl::scene::data_lookup_uniform_int4(string,int4)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-float-string-float">[10/19] ‘mdl::scene::data_lookup_float(string,float)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-uniform-float-string-float">[11/19] ‘mdl::scene::data_lookup_uniform_float(string,float)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-float2-string-float2">[12/19] ‘mdl::scene::data_lookup_float2(string,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-uniform-float2-string-float2">[13/19] ‘mdl::scene::data_lookup_uniform_float2(string,float2)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-float3-string-float3">[14/19] ‘mdl::scene::data_lookup_float3(string,float3)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-uniform-float3-string-float3">[15/19] ‘mdl::scene::data_lookup_uniform_float3(string,float3)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-float4-string-float4">[16/19] ‘mdl::scene::data_lookup_float4(string,float4)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-uniform-float4-string-float4">[17/19] ‘mdl::scene::data_lookup_uniform_float4(string,float4)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-color-string-color">[18/19] ‘mdl::scene::data_lookup_color(string,color)’</a></li>
+<li><a class="reference internal" href="#mdl-scene-data-lookup-uniform-color-string-color">[19/19] ‘mdl::scene::data_lookup_uniform_color(string,color)’</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mdl_nvidia_core_definitions.html"
+                        title="previous chapter">mdl::nvidia::core_definitions</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mdl_state.html"
+                        title="next chapter">mdl::state</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pythonapi/modules/mdl_scene.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mdl_state.html" title="mdl::state"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mdl_nvidia_core_definitions.html" title="mdl::nvidia::core_definitions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../modules_definitions.html" >Modules Definitions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

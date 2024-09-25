@@ -1,0 +1,8 @@
+sdsbsfunctiongraph module
+=========================
+
+.. automodule:: sd.api.sbs.sdsbsfunctiongraph
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

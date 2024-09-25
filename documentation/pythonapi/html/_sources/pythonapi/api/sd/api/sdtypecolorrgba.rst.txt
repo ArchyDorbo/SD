@@ -1,0 +1,8 @@
+sdtypecolorrgba module
+======================
+
+.. automodule:: sd.api.sdtypecolorrgba
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

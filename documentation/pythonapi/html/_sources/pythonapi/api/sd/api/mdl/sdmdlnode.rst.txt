@@ -1,0 +1,8 @@
+sdmdlnode module
+================
+
+.. automodule:: sd.api.mdl.sdmdlnode
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

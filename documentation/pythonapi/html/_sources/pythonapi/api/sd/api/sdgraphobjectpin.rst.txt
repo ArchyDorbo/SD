@@ -1,0 +1,8 @@
+sdgraphobjectpin module
+=======================
+
+.. automodule:: sd.api.sdgraphobjectpin
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Version 2018.3.0 &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="API Reference" href="../api_reference.html" />
+    <link rel="prev" title="Version 2018.3.1" href="changelog_2018.3.1.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../api_reference.html" title="API Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="changelog_2018.3.1.html" title="Version 2018.3.1"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../changelog.html" accesskey="U">Changelogs</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="version-2018-3-0">
+<h1>Version 2018.3.0<a class="headerlink" href="#version-2018-3-0" title="Permalink to this headline">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The API now supports the possibility to create and edit runtime data.</p>
+<p>Many big changes have been done in these version to offer more possibilities to the user and also to make the API more understandable and more generic.</p>
+<p>For scripts that have been generated with the previous version, the modifications to do are limited to make them compatible with this new API version.</p>
+<p>Here is a list of the main features of this new version:</p>
+<ul>
+<li><dl class="simple">
+<dt>To make the API simpler to understand, all the classes located in the sd.api.generated have been removed.</dt><dd><ul class="simple">
+<li><p>It means that the content of the ‘Stub’ classes have been merged with the public class itself:</p></li>
+<li><dl class="simple">
+<dt>Example:</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sd.api.generated.SDGraphStub</span></code> has been merged in <code class="docutils literal notranslate"><span class="pre">sd.api.SDGraph</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><strong>IMPORTANT</strong>: You will have to edit your code to support this modification</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>All the base types (<code class="docutils literal notranslate"><span class="pre">int2</span></code>, <code class="docutils literal notranslate"><span class="pre">ColorRGB</span></code>, …) have been moved from <code class="docutils literal notranslate"><span class="pre">SDValue</span></code> to <code class="docutils literal notranslate"><span class="pre">sd.api.sdbasetypes</span></code></p></li>
+<li><dl>
+<dt>Specific <code class="docutils literal notranslate"><span class="pre">SDValue</span></code> classes have been added for each base types.</dt><dd><ul>
+<li><p>All conversion methods of <code class="docutils literal notranslate"><span class="pre">SDValue</span></code> that was used to get the base type value (<code class="docutils literal notranslate"><span class="pre">int2</span></code>, <code class="docutils literal notranslate"><span class="pre">ColorRGB</span></code>, …) have been removed.</p></li>
+<li><p>Example:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SDValue.toInt2()-&gt;int2</span></code>, is now available through <code class="docutils literal notranslate"><span class="pre">SDValueInt2.get()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">myInt2</span> <span class="pre">=</span> <span class="pre">myNode.getPropertyValueFromIdentifier('position',</span> <span class="pre">SDPropertyCategory.Input)</span></code>.get()</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>IMPORTANT</strong>: In the existing code, replace the method of <code class="docutils literal notranslate"><span class="pre">SDValue</span></code> <code class="docutils literal notranslate"><span class="pre">&quot;.to####()&quot;</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;.get()&quot;</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Accessing to all the node definitions is now possible through the <code class="docutils literal notranslate"><span class="pre">SDModuleMgr</span></code> class</dt><dd><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">SDModuleMgr</span></code> contains a list of <code class="docutils literal notranslate"><span class="pre">SDModule</span></code> and can be retrieved through the  <code class="docutils literal notranslate"><span class="pre">SDApplication.getModuleMgr()</span></code> method</p></li>
+<li><dl class="simple">
+<dt>Each <code class="docutils literal notranslate"><span class="pre">SDModule</span></code> contains:</dt><dd><ul>
+<li><dl class="simple">
+<dt>a list of <code class="docutils literal notranslate"><span class="pre">SDDefinition</span></code>:</dt><dd><ul>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">SDDefinition</span></code> contains all the properties of a node.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>a list of types: structs and enums</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>It means that many of the nodes and types used at runtime can now be retrieved without having to instantiate them.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Properties values and types of MDL objects are now compatible with other <code class="docutils literal notranslate"><span class="pre">SDType</span></code> and <code class="docutils literal notranslate"><span class="pre">SDValue</span></code>.</dt><dd><ul class="simple">
+<li><p>the property value of an MDL object now return <code class="docutils literal notranslate"><span class="pre">SDValue</span></code> like other Substance objects</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Add support of new <code class="docutils literal notranslate"><span class="pre">SDType</span></code> and <code class="docutils literal notranslate"><span class="pre">SDValue</span></code> for: enum, struct, matrix</p></li>
+</ul>
+</section>
+<section id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>[Changed] Class SDAPIObject</dt><dd><ul>
+<li><dl class="simple">
+<dt>[Changed] Enum SDApiError</dt><dd><ul>
+<li><p>[Added] InvalidHandle = 9</p></li>
+<li><p>[Added] InvalidType = 10</p></li>
+<li><p>[Added] InvalidValue = 11</p></li>
+<li><p>[Added] NotImplemented = 12</p></li>
+<li><p>[Added] NotSupported = 13</p></li>
+<li><p>[Added] ItemNotFound = 14</p></li>
+<li><p>[Added] DataIsReadOnly = 15</p></li>
+<li><p>[Added] IrayNotInitialized = 16</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDApplication</dt><dd><ul>
+<li><p>[Added] Enum SDApplicationPath</p></li>
+<li><p>[Added] Method SDApplication.getModuleMgr()</p></li>
+<li><p>[Added] Method SDApplication.getPath()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDArray</dt><dd><ul>
+<li><p>[Added] Method SDArray.pushBack()</p></li>
+<li><p>[Added] Method SDArray.sNew()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>[Added] Class SDBaseTypes</p></li>
+<li><p>[Added] Class SDColorSpace</p></li>
+<li><dl class="simple">
+<dt>[Changed] Class SDConnection</dt><dd><ul>
+<li><p>[Added] Method SDConnection.getInputProperty()</p></li>
+<li><p>[Added] Method SDConnection.getInputPropertyNode()</p></li>
+<li><p>[Removed] Method SDConnection.getTargetNode()</p></li>
+<li><p>[Removed] Method SDConnection.getTargetProperty()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>[Added] Class SDDefinition</p></li>
+<li><dl class="simple">
+<dt>[Changed] Class SDGraph</dt><dd><ul>
+<li><p>[Added] Method SDGraph.deleteNode()</p></li>
+<li><p>[Added] Method SDGraph.getGraphObjects()</p></li>
+<li><p>[Added] Method SDGraph.getNodeDefinitions()</p></li>
+<li><p>[Added] Method SDGraph.getNodeFromId()</p></li>
+<li><p>[Added] Method SDGraph.newInstanceNode()</p></li>
+<li><p>[Added] Method SDGraph.newNode()</p></li>
+<li><p>[Added] Method SDGraph.setOutputNode()</p></li>
+<li><p>[Removed] Method SDGraph.getNodeFromIdentifier()</p></li>
+<li><p>[Removed] Method SDGraph.getProperties()</p></li>
+<li><p>[Removed] Method SDGraph.getPropertyFromIdentifier()</p></li>
+<li><p>[Removed] Method SDGraph.getPropertyValue()</p></li>
+<li><p>[Removed] Method SDGraph.getPropertyValueFromIdentifier()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>[Added] Class SDGraphObject</p></li>
+<li><p>[Added] Class SDGraphObjectComment</p></li>
+<li><p>[Added] Class SDGraphObjectFrame</p></li>
+<li><p>[Added] Class SDGraphObjectPin</p></li>
+<li><p>[Added] Class SDMDLConstantNode</p></li>
+<li><p>[Added] Class SDMDLExporter</p></li>
+<li><dl class="simple">
+<dt>[Changed] Class SDMDLGraph</dt><dd><ul>
+<li><p>[Added] Method SDMDLGraph.sNew()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>[Added] Class SDMDLModule</p></li>
+<li><p>[Added] Class SDMDLType</p></li>
+<li><p>[Added] Class SDMDLTypeAlias</p></li>
+<li><p>[Added] Class SDMDLTypeBSDF</p></li>
+<li><p>[Added] Class SDMDLTypeBSDFMeasurementReference</p></li>
+<li><p>[Added] Class SDMDLTypeCall</p></li>
+<li><p>[Added] Class SDMDLTypeDF</p></li>
+<li><p>[Added] Class SDMDLTypeEDF</p></li>
+<li><p>[Added] Class SDMDLTypeLightProfileReference</p></li>
+<li><p>[Added] Class SDMDLTypeParameterReference</p></li>
+<li><p>[Added] Class SDMDLTypeReference</p></li>
+<li><p>[Added] Class SDMDLTypeResourceReference</p></li>
+<li><p>[Added] Class SDMDLTypeTextureReference</p></li>
+<li><p>[Added] Class SDMDLTypeVDF</p></li>
+<li><p>[Added] Class SDMDLValue</p></li>
+<li><p>[Added] Class SDMDLValueAlias</p></li>
+<li><p>[Added] Class SDMDLValueBSDF</p></li>
+<li><p>[Added] Class SDMDLValueBSDFMeasurementReference</p></li>
+<li><p>[Added] Class SDMDLValueCall</p></li>
+<li><p>[Added] Class SDMDLValueDF</p></li>
+<li><p>[Added] Class SDMDLValueEDF</p></li>
+<li><p>[Added] Class SDMDLValueLightProfileReference</p></li>
+<li><p>[Added] Class SDMDLValueParameterReference</p></li>
+<li><p>[Added] Class SDMDLValueReference</p></li>
+<li><p>[Added] Class SDMDLValueResourceReference</p></li>
+<li><p>[Added] Class SDMDLValueTextureReference</p></li>
+<li><p>[Added] Class SDMDLValueVDF</p></li>
+<li><p>[Added] Class SDModule</p></li>
+<li><p>[Added] Class SDModuleMgr</p></li>
+<li><dl class="simple">
+<dt>[Changed] Class SDNode</dt><dd><ul>
+<li><p>[Added] Method SDNode.deletePropertyConnections()</p></li>
+<li><p>[Added] Method SDNode.deletePropertyGraph()</p></li>
+<li><p>[Added] Method SDNode.getAnnotationPropertyValueFromId()</p></li>
+<li><p>[Added] Method SDNode.getDefinition()</p></li>
+<li><p>[Added] Method SDNode.getInputPropertyValueFromId()</p></li>
+<li><p>[Added] Method SDNode.getPropertyFromId()</p></li>
+<li><p>[Added] Method SDNode.getPropertyValueFromId()</p></li>
+<li><p>[Added] Method SDNode.getReferencedResource()</p></li>
+<li><p>[Added] Method SDNode.newPropertyConnection()</p></li>
+<li><p>[Added] Method SDNode.newPropertyConnectionFromId()</p></li>
+<li><p>[Added] Method SDNode.newPropertyGraph()</p></li>
+<li><p>[Added] Method SDNode.setAnnotationPropertyValueFromId()</p></li>
+<li><p>[Added] Method SDNode.setInputPropertyValueFromId()</p></li>
+<li><p>[Added] Method SDNode.setPropertyValue()</p></li>
+<li><p>[Removed] Method SDNode.getPropertyFromIdentifier()</p></li>
+<li><p>[Removed] Method SDNode.getPropertyValueFromIdentifier()</p></li>
+<li><p>[Removed] Method SDNode.getReferencedGraph()</p></li>
+<li><p>[Removed] Method SDNode.getType()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDPackageMgr</dt><dd><ul>
+<li><p>[Added] Method SDPackageMgr.newUserPackage()</p></li>
+<li><p>[Added] Method SDPackageMgr.savePackageAs()</p></li>
+<li><p>[Removed] Method SDPackageMgr.saveAsPackage()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDProperty</dt><dd><ul>
+<li><p>[Added] Enum SDPropertyInheritanceMethod</p></li>
+<li><p>[Added] Method SDProperty.getDefaultValue()</p></li>
+<li><p>[Added] Method SDProperty.getDescription()</p></li>
+<li><p>[Added] Method SDProperty.getId()</p></li>
+<li><p>[Added] Method SDProperty.getTypes()</p></li>
+<li><p>[Added] Method SDProperty.isPrimary()</p></li>
+<li><p>[Added] Method SDProperty.isReadOnly()</p></li>
+<li><p>[Added] Method SDProperty.isVariadic()</p></li>
+<li><p>[Removed] Method SDProperty.getIdentifier()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDResource</dt><dd><ul>
+<li><p>[Added] Method SDResource.deleteProperty()</p></li>
+<li><p>[Added] Method SDResource.getAnnotationPropertyValueFromId()</p></li>
+<li><p>[Added] Method SDResource.getInputPropertyValueFromId()</p></li>
+<li><p>[Added] Method SDResource.getProperties()</p></li>
+<li><p>[Added] Method SDResource.getPropertyAnnotationValueFromId()</p></li>
+<li><p>[Added] Method SDResource.getPropertyAnnotations()</p></li>
+<li><p>[Added] Method SDResource.getPropertyFromId()</p></li>
+<li><p>[Added] Method SDResource.getPropertyValue()</p></li>
+<li><p>[Added] Method SDResource.getPropertyValueFromId()</p></li>
+<li><p>[Added] Method SDResource.newProperty()</p></li>
+<li><p>[Added] Method SDResource.setAnnotationPropertyValueFromId()</p></li>
+<li><p>[Added] Method SDResource.setIdentifier()</p></li>
+<li><p>[Added] Method SDResource.setInputPropertyValueFromId()</p></li>
+<li><p>[Added] Method SDResource.setPropertyAnnotationValueFromId()</p></li>
+<li><p>[Added] Method SDResource.setPropertyValue()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>[Added] Class SDResourceBSDFMeasurement</p></li>
+<li><dl class="simple">
+<dt>[Changed] Class SDResourceBitmap</dt><dd><ul>
+<li><p>[Added] Method SDResourceBitmap.sNew()</p></li>
+<li><p>[Added] Method SDResourceBitmap.sNewFromFile()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDResourceFolder</dt><dd><ul>
+<li><p>[Added] Method SDResourceFolder.sNew()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDResourceFont</dt><dd><ul>
+<li><p>[Added] Method SDResourceFont.sNewFromFile()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>[Added] Class SDResourceLightProfile</p></li>
+<li><dl class="simple">
+<dt>[Changed] Class SDResourceSVG</dt><dd><ul>
+<li><p>[Added] Method SDResourceSVG.sNew()</p></li>
+<li><p>[Added] Method SDResourceSVG.sNewFromFile()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDResourceScene</dt><dd><ul>
+<li><p>[Added] Method SDResourceScene.sGetAvailablePrimitiveDefinitions()</p></li>
+<li><p>[Added] Method SDResourceScene.sNewFromFile()</p></li>
+<li><p>[Added] Method SDResourceScene.sNewFromPrimitiveId()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDSBSCompGraph</dt><dd><ul>
+<li><p>[Added] Method SDSBSCompGraph.getPropertyInheritanceMethod()</p></li>
+<li><p>[Added] Method SDSBSCompGraph.sNew()</p></li>
+<li><p>[Added] Method SDSBSCompGraph.setIcon()</p></li>
+<li><p>[Added] Method SDSBSCompGraph.setPropertyInheritanceMethod()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDSBSCompNode</dt><dd><ul>
+<li><p>[Added] Method SDSBSCompNode.getInputPropertyInheritanceMethodFromId()</p></li>
+<li><p>[Added] Method SDSBSCompNode.getPropertyInheritanceMethod()</p></li>
+<li><p>[Added] Method SDSBSCompNode.setInputPropertyInheritanceMethodFromId()</p></li>
+<li><p>[Added] Method SDSBSCompNode.setPropertyInheritanceMethod()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDSBSFunctionGraph</dt><dd><ul>
+<li><p>[Added] Method SDSBSFunctionGraph.sNew()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDTexture</dt><dd><ul>
+<li><p>[Added] Method SDTexture.sFromFile()</p></li>
+<li><p>[Removed] Struct SDSize</p></li>
+<li><dl class="simple">
+<dt>[Changed] Method SDTexture.getSize()</dt><dd><ul>
+<li><p>[Changed] Return type changed from ‘SDSize’ to ‘int2’</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDType</dt><dd><ul>
+<li><p>[Added] Enum SDTypeModifier</p></li>
+<li><p>[Added] Method SDType.getId()</p></li>
+<li><p>[Added] Method SDType.getModifier()</p></li>
+<li><p>[Removed] Method SDType.getMembers()</p></li>
+<li><p>[Removed] Method SDType.getName()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>[Added] Class SDTypeArray</p></li>
+<li><p>[Added] Class SDTypeBaseType</p></li>
+<li><p>[Added] Class SDTypeBool</p></li>
+<li><p>[Added] Class SDTypeBool2</p></li>
+<li><p>[Added] Class SDTypeBool3</p></li>
+<li><p>[Added] Class SDTypeBool4</p></li>
+<li><p>[Added] Class SDTypeColorRGB</p></li>
+<li><p>[Added] Class SDTypeColorRGBA</p></li>
+<li><p>[Added] Class SDTypeCustom</p></li>
+<li><p>[Added] Class SDTypeDouble</p></li>
+<li><p>[Added] Class SDTypeDouble2</p></li>
+<li><p>[Added] Class SDTypeDouble3</p></li>
+<li><p>[Added] Class SDTypeDouble4</p></li>
+<li><p>[Added] Class SDTypeEnum</p></li>
+<li><p>[Added] Class SDTypeFloat</p></li>
+<li><p>[Added] Class SDTypeFloat2</p></li>
+<li><p>[Added] Class SDTypeFloat3</p></li>
+<li><p>[Added] Class SDTypeFloat4</p></li>
+<li><p>[Added] Class SDTypeInt</p></li>
+<li><p>[Added] Class SDTypeInt2</p></li>
+<li><p>[Added] Class SDTypeInt3</p></li>
+<li><p>[Added] Class SDTypeInt4</p></li>
+<li><p>[Added] Class SDTypeMatrix</p></li>
+<li><p>[Removed] Class SDTypeMember</p></li>
+<li><p>[Added] Class SDTypeString</p></li>
+<li><p>[Added] Class SDTypeStruct</p></li>
+<li><p>[Added] Class SDTypeTexture</p></li>
+<li><p>[Added] Class SDTypeUsage</p></li>
+<li><p>[Added] Class SDTypeVector</p></li>
+<li><p>[Added] Class SDTypeVoid</p></li>
+<li><dl class="simple">
+<dt>[Changed] Class SDUsage</dt><dd><ul>
+<li><p>[Added] Method SDUsage.sNew()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>[Changed] Class SDValue</dt><dd><ul>
+<li><p>[Removed] Struct int2</p></li>
+<li><p>[Removed] Struct int3</p></li>
+<li><p>[Removed] Struct int4</p></li>
+<li><p>[Removed] Struct float2</p></li>
+<li><p>[Removed] Struct float3</p></li>
+<li><p>[Removed] Struct float4</p></li>
+<li><p>[Removed] Struct ColorRGB</p></li>
+<li><p>[Removed] Struct ColorRGBA</p></li>
+<li><p>[Removed] Method SDValue.getMemberValueFromName()</p></li>
+<li><p>[Removed] Method SDValue.toBool()</p></li>
+<li><p>[Removed] Method SDValue.toColorRGB()</p></li>
+<li><p>[Removed] Method SDValue.toColorRGBA()</p></li>
+<li><p>[Removed] Method SDValue.toFloat()</p></li>
+<li><p>[Removed] Method SDValue.toFloat2()</p></li>
+<li><p>[Removed] Method SDValue.toFloat3()</p></li>
+<li><p>[Removed] Method SDValue.toFloat4()</p></li>
+<li><p>[Removed] Method SDValue.toInt()</p></li>
+<li><p>[Removed] Method SDValue.toInt2()</p></li>
+<li><p>[Removed] Method SDValue.toInt3()</p></li>
+<li><p>[Removed] Method SDValue.toInt4()</p></li>
+<li><p>[Removed] Method SDValue.toSDArray()</p></li>
+<li><p>[Removed] Method SDValue.toSDTexture()</p></li>
+<li><p>[Removed] Method SDValue.toString()</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>[Added] Class SDValueArray</p></li>
+<li><p>[Added] Class SDValueBaseType</p></li>
+<li><p>[Added] Class SDValueBool</p></li>
+<li><p>[Added] Class SDValueBool2</p></li>
+<li><p>[Added] Class SDValueBool3</p></li>
+<li><p>[Added] Class SDValueBool4</p></li>
+<li><p>[Added] Class SDValueColorRGB</p></li>
+<li><p>[Added] Class SDValueColorRGBA</p></li>
+<li><p>[Added] Class SDValueCustom</p></li>
+<li><p>[Added] Class SDValueDouble</p></li>
+<li><p>[Added] Class SDValueDouble2</p></li>
+<li><p>[Added] Class SDValueDouble3</p></li>
+<li><p>[Added] Class SDValueDouble4</p></li>
+<li><p>[Added] Class SDValueEnum</p></li>
+<li><p>[Added] Class SDValueFloat</p></li>
+<li><p>[Added] Class SDValueFloat2</p></li>
+<li><p>[Added] Class SDValueFloat3</p></li>
+<li><p>[Added] Class SDValueFloat4</p></li>
+<li><p>[Added] Class SDValueInt</p></li>
+<li><p>[Added] Class SDValueInt2</p></li>
+<li><p>[Added] Class SDValueInt3</p></li>
+<li><p>[Added] Class SDValueInt4</p></li>
+<li><p>[Added] Class SDValueMatrix</p></li>
+<li><p>[Added] Class SDValueSerializer</p></li>
+<li><p>[Added] Class SDValueString</p></li>
+<li><p>[Added] Class SDValueStruct</p></li>
+<li><p>[Added] Class SDValueTexture</p></li>
+<li><p>[Added] Class SDValueUsage</p></li>
+<li><p>[Added] Class SDValueVector</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Version 2018.3.0</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#details">Details</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="changelog_2018.3.1.html"
+                        title="previous chapter">Version 2018.3.1</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../api_reference.html"
+                        title="next chapter">API Reference</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/pythonapi/changelogs/changelog_2018.3.0.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../api_reference.html" title="API Reference"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="changelog_2018.3.1.html" title="Version 2018.3.1"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../changelog.html" >Changelogs</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

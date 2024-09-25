@@ -1,0 +1,8 @@
+sdmdltypealias module
+=====================
+
+.. automodule:: sd.api.mdl.sdmdltypealias
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

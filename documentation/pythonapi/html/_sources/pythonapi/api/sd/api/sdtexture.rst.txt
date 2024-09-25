@@ -1,0 +1,8 @@
+sdtexture module
+================
+
+.. automodule:: sd.api.sdtexture
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

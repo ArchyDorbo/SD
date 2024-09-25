@@ -1,0 +1,8 @@
+sdsbsfxmapgraph module
+======================
+
+.. automodule:: sd.api.sbs.sdsbsfxmapgraph
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

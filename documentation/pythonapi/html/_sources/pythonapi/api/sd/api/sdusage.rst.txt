@@ -1,0 +1,8 @@
+sdusage module
+==============
+
+.. automodule:: sd.api.sdusage
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

@@ -1,0 +1,21 @@
+mdl::alg::materials::designer::lambert
+======================================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/1] 'mdl::alg::materials::designer::lambert::lambert'
+#######################################################
+   * Label: 'Lambert'
+   * SDPropertyCategory = 'Input'
+      * 'baseColor' = SDValueColorRGB(ColorRGB(0.214040995,0.214040995,0.214040995)) [CONNECTABLE]
+         * Label: 'Diffuse'
+         * Description: 'Diffuse channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)

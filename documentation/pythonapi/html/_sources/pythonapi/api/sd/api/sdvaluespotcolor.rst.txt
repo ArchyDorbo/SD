@@ -1,0 +1,8 @@
+sdvaluespotcolor module
+=======================
+
+.. automodule:: sd.api.sdvaluespotcolor
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

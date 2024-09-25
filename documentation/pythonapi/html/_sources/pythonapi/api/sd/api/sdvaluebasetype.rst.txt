@@ -1,0 +1,8 @@
+sdvaluebasetype module
+======================
+
+.. automodule:: sd.api.sdvaluebasetype
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

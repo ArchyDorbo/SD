@@ -1,0 +1,19 @@
+Version 13.0.0
+--------------
+Details
+#######
+* [Changed] Class SDAppInteropMgr
+	* [Added] Method SDAppInteropMgr.sendPackageToStager()
+	* [Removed] Method SDAppInteropMgr.sendModelGraphToStager()
+* [Added] Class SDGraphPresetInput
+* [Changed] Class SDSBSCompGraph
+	* [Added] Method SDSBSCompGraph.deletePreset()
+	* [Added] Method SDSBSCompGraph.getDefaultParentSize()
+	* [Added] Method SDSBSCompGraph.getPreset()
+	* [Added] Method SDSBSCompGraph.getPresets()
+	* [Added] Method SDSBSCompGraph.newPreset()
+	* [Added] Method SDSBSCompGraph.setDefaultParentSize()
+* [Added] Class SDSBSCompGraphPreset
+* [Removed] Class SDSBSModelGraph
+* [Changed] Class SDUIMgr
+	* [Added] Method SDUIMgr.addActionToGraphViewToolbar()

@@ -1,0 +1,8 @@
+sdgraphobjectframe module
+=========================
+
+.. automodule:: sd.api.sdgraphobjectframe
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdmdlexporter module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="sdmdlgraph module" href="sdmdlgraph.html" />
+    <link rel="prev" title="sdmdleexporter module" href="sdmdleexporter.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdmdlgraph.html" title="sdmdlgraph module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdmdleexporter.html" title="sdmdleexporter module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../modules.html" >Python Package ‘api’</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="modules.html" accesskey="U">Python Package ‘mdl’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.mdl.sdmdlexporter">
+<span id="sdmdlexporter-module"></span><h1>sdmdlexporter module<a class="headerlink" href="#module-sd.api.mdl.sdmdlexporter" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.mdl.sdmdlexporter.SDMDLExporter">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.mdl.sdmdlexporter.</code><code class="sig-name descname">SDMDLExporter</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlexporter.SDMDLExporter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../sdapiobject.html#sd.api.sdapiobject.SDAPIObject" title="sd.api.sdapiobject.SDAPIObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdapiobject.SDAPIObject</span></code></a></p>
+<p>Utility to export MDL modules and presets</p>
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlexporter.SDMDLExporter.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.mdl.sdmdlexporter.SDMDLExporter.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlexporter.SDMDLExporter.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlexporter.SDMDLExporter.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlexporter.SDMDLExporter.sExportPackage">
+<em class="property">static </em><code class="sig-name descname">sExportPackage</code><span class="sig-paren">(</span><em class="sig-param">sdPackage: sd.api.sdpackage.SDPackage</em>, <em class="sig-param">mdlModuleFilePath: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlexporter.SDMDLExporter.sExportPackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export the specified SDPackage to the specified MDL module file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPackage</strong> – The SDPackage to export</p></li>
+<li><p><strong>mdlModuleFilePath</strong> – The file path of the MDL Module that will be generated</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlexporter.SDMDLExporter.sExportPreset">
+<em class="property">static </em><code class="sig-name descname">sExportPreset</code><span class="sig-paren">(</span><em class="sig-param">sdMDLGraph: sd.api.mdl.sdmdlgraph.SDMDLGraph</em>, <em class="sig-param">mdlPresetModuleFilePath: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlexporter.SDMDLExporter.sExportPreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export the specified SDMDLGraph as a preset to the specified MDL module file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdMDLGraph</strong> – The SDMDLGraph to export</p></li>
+<li><p><strong>mdlPresetModuleFilePath</strong> – The file path of the MDL Module that will be generated</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdmdleexporter.html"
+                        title="previous chapter">sdmdleexporter module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdmdlgraph.html"
+                        title="next chapter">sdmdlgraph module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../../_sources/pythonapi/api/sd/api/mdl/sdmdlexporter.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdmdlgraph.html" title="sdmdlgraph module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdmdleexporter.html" title="sdmdleexporter module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../modules.html" >Python Package ‘api’</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="modules.html" >Python Package ‘mdl’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

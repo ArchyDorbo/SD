@@ -1,0 +1,334 @@
+mdl::state
+==========
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/28] 'mdl::state::position()'
+###############################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[2/28] 'mdl::state::normal()'
+#############################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[3/28] 'mdl::state::geometry_normal()'
+######################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[4/28] 'mdl::state::motion()'
+#############################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[5/28] 'mdl::state::texture_space_max()'
+########################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt) [Varying]
+
+[6/28] 'mdl::state::texture_coordinate(int)'
+############################################
+   * SDPropertyCategory = 'Input'
+      * 'index' [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[7/28] 'mdl::state::texture_tangent_u(int)'
+###########################################
+   * SDPropertyCategory = 'Input'
+      * 'index' [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[8/28] 'mdl::state::texture_tangent_v(int)'
+###########################################
+   * SDPropertyCategory = 'Input'
+      * 'index' [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[9/28] 'mdl::state::tangent_space(int)'
+#######################################
+   * SDPropertyCategory = 'Input'
+      * 'index' [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'matrix<float>[3][3]' (SDTypeMatrix) [Varying]
+
+[10/28] 'mdl::state::geometry_tangent_u(int)'
+#############################################
+   * SDPropertyCategory = 'Input'
+      * 'index' [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[11/28] 'mdl::state::geometry_tangent_v(int)'
+#############################################
+   * SDPropertyCategory = 'Input'
+      * 'index' [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[12/28] 'mdl::state::direction()'
+#################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[13/28] 'mdl::state::animation_time()'
+######################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+[14/28] 'mdl::state::wavelength_base()'
+#######################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'SDTypeArray<float>' (SDTypeArray)
+
+[15/28] 'mdl::state::coordinate_space(::state::coordinate_space)'
+#################################################################
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::state::coordinate_space",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+[16/28] 'mdl::state::int(::state::coordinate_space)'
+####################################################
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[17/28] 'mdl::state::transform(::state::coordinate_space,::state::coordinate_space)'
+####################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'from' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+      * 'to' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'matrix<float>[4][4]' (SDTypeMatrix)
+
+[18/28] 'mdl::state::transform_point(::state::coordinate_space,::state::coordinate_space,float3)'
+#################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'from' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+      * 'to' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+      * 'point' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[19/28] 'mdl::state::transform_vector(::state::coordinate_space,::state::coordinate_space,float3)'
+##################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'from' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+      * 'to' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+      * 'vector' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[20/28] 'mdl::state::transform_normal(::state::coordinate_space,::state::coordinate_space,float3)'
+##################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'from' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+      * 'to' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+      * 'normal' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[21/28] 'mdl::state::transform_scale(::state::coordinate_space,::state::coordinate_space,float)'
+################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'from' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+      * 'to' [CONNECTABLE]
+         * Types:
+            * 'mdl::state::coordinate_space' (SDTypeEnum)
+
+      * 'scale' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[22/28] 'mdl::state::rounded_corner_normal$1.2(float,bool)'
+###########################################################
+   * SDPropertyCategory = 'Input'
+      * 'radius' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'across_materials' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[23/28] 'mdl::state::rounded_corner_normal(float,bool,float)'
+#############################################################
+   * SDPropertyCategory = 'Input'
+      * 'radius' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'across_materials' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'roundness' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[24/28] 'mdl::state::meters_per_scene_unit()'
+#############################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[25/28] 'mdl::state::scene_units_per_meter()'
+#############################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[26/28] 'mdl::state::object_id()'
+#################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[27/28] 'mdl::state::wavelength_min()'
+######################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[28/28] 'mdl::state::wavelength_max()'
+######################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+Types:
+------
+[1/1] 'mdl::state::coordinate_space'
+####################################
+   * 'mdl::state::coordinate_space' (SDTypeEnum)
+      * int coordinate_internal = SDValueInt(int(0))
+      * int coordinate_object = SDValueInt(int(1))
+      * int coordinate_world = SDValueInt(int(2))

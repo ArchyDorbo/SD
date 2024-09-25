@@ -1,0 +1,7 @@
+Python Package 'custom_graph'
+=============================
+
+.. toctree::
+   :maxdepth: 5
+
+   custom_graph<custom_graph.rst>

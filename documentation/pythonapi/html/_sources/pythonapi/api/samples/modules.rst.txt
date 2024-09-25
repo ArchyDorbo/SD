@@ -1,0 +1,14 @@
+Python Package 'samples'
+========================
+
+.. toctree::
+   :maxdepth: 5
+
+   plugins<plugins/modules.rst>
+   sample_mdl_graph_template_metallic<sample_mdl_graph_template_metallic.rst>
+   sample_sbs_graph<sample_sbs_graph.rst>
+   sample_sbs_graph_icon<sample_sbs_graph_icon.rst>
+   sample_sbs_graph_inputs<sample_sbs_graph_inputs.rst>
+   sample_sbs_graph_instance<sample_sbs_graph_instance.rst>
+   sample_sbs_graph_objects<sample_sbs_graph_objects.rst>
+   sample_sbs_parameter_function<sample_sbs_parameter_function.rst>

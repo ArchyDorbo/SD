@@ -1,0 +1,8 @@
+sdmdltyperesourcereference module
+=================================
+
+.. automodule:: sd.api.mdl.sdmdltyperesourcereference
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

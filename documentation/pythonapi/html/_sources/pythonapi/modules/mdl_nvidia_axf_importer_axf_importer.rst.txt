@@ -1,0 +1,436 @@
+mdl::nvidia::axf_importer::axf_importer
+=======================================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/7] 'mdl::nvidia::axf_importer::axf_importer::brdf_type(::nvidia::axf_importer::axf_importer::brdf_type)'
+###########################################################################################################
+   * Description: 'BRDF types supported for AxF SVBRDFs'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::nvidia::axf_importer::axf_importer::brdf_type",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::axf_importer::axf_importer::brdf_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::nvidia::axf_importer::axf_importer::brdf_type' (SDTypeEnum)
+
+[2/7] 'mdl::nvidia::axf_importer::axf_importer::int(::nvidia::axf_importer::axf_importer::brdf_type)'
+#####################################################################################################
+   * Description: 'BRDF types supported for AxF SVBRDFs'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::axf_importer::axf_importer::brdf_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[3/7] 'mdl::nvidia::axf_importer::axf_importer::fresnel_type(::nvidia::axf_importer::axf_importer::fresnel_type)'
+#################################################################################################################
+   * Description: 'Fresnel types supported for AxF SVBRDFs'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::nvidia::axf_importer::axf_importer::fresnel_type",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::axf_importer::axf_importer::fresnel_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::nvidia::axf_importer::axf_importer::fresnel_type' (SDTypeEnum)
+
+[4/7] 'mdl::nvidia::axf_importer::axf_importer::int(::nvidia::axf_importer::axf_importer::fresnel_type)'
+########################################################################################################
+   * Description: 'Fresnel types supported for AxF SVBRDFs'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::axf_importer::axf_importer::fresnel_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[5/7] 'mdl::nvidia::axf_importer::axf_importer::svbrdf'
+#######################################################
+   * Label: 'AxF SVBRDF material'
+   * Description: 'MDL implementation of the SVBRDF model used in AxF files'
+   * SDPropertyCategory = 'Input'
+      * 'diffuse_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'specular_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'normal_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'specular_brdf_texture_u' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'specular_brdf_texture_v' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'specular_brdf_texture_rotation' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'specular_brdf_texture_f0' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'brdf_type' = SDValueEnum("mdl::nvidia::axf_importer::axf_importer::brdf_type",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::axf_importer::axf_importer::brdf_type' (SDTypeEnum) [Uniform]
+
+      * 'isotropic' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'fresnel_type' = SDValueEnum("mdl::nvidia::axf_importer::axf_importer::fresnel_type",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::axf_importer::axf_importer::fresnel_type' (SDTypeEnum) [Uniform]
+
+      * 'specular_brdf_texture_fresnel' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'has_clearcoat' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'clearcoat_normal_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'clearcoat_ior_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'clearcoat_color_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coordinate_override' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___276) [CONNECTABLE]
+         * Description: 'By default, texturing is using object uv coordinates. Procedural coordinate generators like base::coordinate_projection can be attached here to override the default behavior'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'use_sample_size' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Label: 'Use sample size'
+         * Description: 'Set to true if the real world measurements of the measured sample are known'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'sample_size_u' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Sample size U'
+         * Description: 'The size of the measured sample in m, measured in the U direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'sample_size_v' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Sample size V'
+         * Description: 'The size of the measured sample in m, measured in the V direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scene_to_meter' = SDMDLValueCall(mdl::state::meters_per_scene_unit()__default_call___277) [CONNECTABLE]
+         * Label: 'Scene to m conversion factor'
+         * Description: 'Conversion factor from modeling scale used in the scene and m. Only used if "Use real world size" is true and for displacement'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scale_u' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Scale V'
+         * Description: 'Scale factor in V direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scale_v' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Scale U'
+         * Description: 'Scale factor in U direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'rotate_uv' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Rotation angle'
+         * Description: 'Changes the orientation of the textures on the object'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'wrap' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Label: 'Texture wrapping behavior'
+         * Description: 'Controls the wrapping behavior of the texture if it fits multiple times on an object'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'normal_texture_strength' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Normal texture strength'
+         * Description: 'Can be used to tweak the bumpiness of the material. At 1.0 it will match the measured bumpiness'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'geometry_normal' = SDMDLValueCall(mdl::state::normal()__default_call___278) [CONNECTABLE]
+         * Label: 'Geometry normal'
+         * Description: 'Allows the use of an additional bump mapping effect'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'scale_height' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Scale height texture'
+         * Description: 'Scale factor for the displacement mapping effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'height_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'alpha_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'transmission_color_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'specular_amount_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[6/7] 'mdl::nvidia::axf_importer::axf_importer::carpaint'
+#########################################################
+   * Label: 'AxF carpaint material'
+   * Description: 'MDL approximation of the AxF carpaint material'
+   * SDPropertyCategory = 'Input'
+      * 'brdf_colors' = SDValueArray(SDValueColorRGB(ColorRGB(1,1,1))) [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<ColorRGB>' (SDTypeArray)
+
+      * 'clearcoat_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'brdf_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ior' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ct_diffuse' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ct_coeffs' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'ct_f0s' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'ct_spreads' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'clearcoat_normal_texture' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'coordinate_override' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___282) [CONNECTABLE]
+         * Description: 'By default, texturing is using object uv coordinates. Procedural coordinate generators like base::coordinate_projection can be attached here to override the default behavior'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'use_sample_size' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Label: 'Use sample size'
+         * Description: 'Set to true if the real world measurements of the measured sample are known'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'sample_size_u' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Sample size U'
+         * Description: 'The size of the measured sample in m, measured in the U direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'sample_size_v' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Sample size V'
+         * Description: 'The size of the measured sample in m, measured in the V direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scene_to_meter' = SDMDLValueCall(mdl::state::meters_per_scene_unit()__default_call___283) [CONNECTABLE]
+         * Label: 'Scene to m conversion factor'
+         * Description: 'Conversion factor from modeling scale used in the scene and m. Only used if "Use real world size" is true'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scale_u' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Scale V'
+         * Description: 'Scale factor in V direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scale_v' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Scale U'
+         * Description: 'Scale factor in U direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'rotate_uv' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Rotation angle'
+         * Description: 'Changes the orientation of the textures on the object'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'wrap' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Label: 'Texture wrapping behavior'
+         * Description: 'Controls the wrapping behavior of the texture if it fits multiple times on an object'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'geometry_normal' = SDMDLValueCall(mdl::state::normal()__default_call___284) [CONNECTABLE]
+         * Label: 'Geometry normal'
+         * Description: 'Allows the use of an additional bump mapping effect'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'enable_flakes' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Enable flakes'
+         * Description: 'Enables the additional flake component'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'flake_uvw_scale' = SDValueFloat3(float3(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'flake_importance_data' = SDValueArray() [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<int>' (SDTypeArray)
+
+      * 'flake_peak_intensity_scale' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'flake_size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Flake size'
+         * Description: 'Artistic control to modifiy flake size'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'flake_bsdf_roughness' = SDValueFloat(float(0.00999999978)) [CONNECTABLE]
+         * Label: 'Flake roughness'
+         * Description: 'Artistic flake reflection roughness control'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'flake_intensity_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Flake brightness'
+         * Description: 'Artistic flake brightness control'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'precise_sub_clearcoat_component' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Measured sub-clearcoat BRDF'
+         * Description: 'Use a measured BRDF for sub-clearcoat layer. Enables correct rendering for refracting clearcoats and color shifting paints.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'sub_clearcoat_measurement' = SDMDLValueBSDFMeasurementReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::bsdf_measurement' (SDMDLTypeBSDFMeasurementReference) [Uniform]
+
+      * 'flake_orientation_falloff' = SDValueArray() [CONNECTABLE]
+         * Types:
+            * 'SDTypeArray<float>' (SDTypeArray)
+
+      * 'brdf_colors_2d' = SDMDLValueTextureReference() [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'brdf_colors_2d_included_in_measurement' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[7/7] 'mdl::nvidia::axf_importer::axf_importer::volumetric'
+###########################################################
+   * Label: 'AxF volumetric material'
+   * Description: 'MDL version of the AxF volumetric material'
+   * SDPropertyCategory = 'Input'
+      * 'sigma_a' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'sigma_s' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'phasefunc_g' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ior' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+Types:
+------
+[1/4] 'mdl::nvidia::axf_importer::axf_importer::brdf_type'
+##########################################################
+   * 'mdl::nvidia::axf_importer::axf_importer::brdf_type' (SDTypeEnum)
+      * int brdf_ward_geislermoroder = SDValueInt(int(0))
+      * int brdf_cooktorrance = SDValueInt(int(1))
+      * int brdf_ggx = SDValueInt(int(2))
+      * int brdf_count = SDValueInt(int(3))
+
+[2/4] 'mdl::nvidia::axf_importer::axf_importer::fresnel_type'
+#############################################################
+   * 'mdl::nvidia::axf_importer::axf_importer::fresnel_type' (SDTypeEnum)
+      * int fresnel_none = SDValueInt(int(0))
+      * int fresnel_schlick = SDValueInt(int(1))
+      * int fresnel_fresnel = SDValueInt(int(2))
+      * int fresnel_count = SDValueInt(int(3))
+
+[3/4] 'mdl::nvidia::axf_importer::axf_importer::flake_value'
+############################################################
+   * 'mdl::nvidia::axf_importer::axf_importer::flake_value' (SDTypeStruct)
+      * float weight
+      * float3 col
+      * float3 normal
+      * float f0
+
+[4/4] 'mdl::nvidia::axf_importer::axf_importer::flake_noise_value'
+##################################################################
+   * 'mdl::nvidia::axf_importer::axf_importer::flake_noise_value' (SDTypeStruct)
+      * float priority
+      * int rnd_seed

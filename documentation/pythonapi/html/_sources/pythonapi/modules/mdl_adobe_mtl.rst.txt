@@ -1,0 +1,94 @@
+mdl::adobe::mtl
+===============
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/1] 'mdl::adobe::mtl::standard'
+#################################
+   * Label: 'Adobe Standard Material'
+   * Description: 'Adobe Standard Material with consolidated base color.'
+   * SDPropertyCategory = 'Input'
+      * 'baseColor' = SDValueColorRGB(ColorRGB(0.630756974,0.630756974,0.630756974)) [CONNECTABLE]
+         * Label: 'Base Color'
+         * Description: 'The color of the surface.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'opacity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Opacity'
+         * Description: 'The visibility of the surface.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'roughness' = SDValueFloat(float(0.400000006)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'How shiny the surface is.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'metallic' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Metallic'
+         * Description: 'The degree of metallic luster the surface has.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'glow' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Glow'
+         * Description: 'The intensity of light emitted from the surface.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'height' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Height'
+         * Description: 'Use an image to offset the surface shape.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'heightScale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Height Scale'
+         * Description: 'Adjust the strength of the offset created by the height image.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___183) [CONNECTABLE]
+         * Label: 'Normal'
+         * Description: 'Adds details to the surface without displacement.'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'translucence' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Translucence'
+         * Description: 'The amount of light able to refract through the object.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'indexOfRefraction' = SDValueFloat(float(1.60000002)) [CONNECTABLE]
+         * Label: 'Index of Refraction'
+         * Description: 'The amount light bends as it passes through the object.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'density' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Density'
+         * Description: 'Adjusts the clarity of the interior volume to be clear or foggy.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'interiorColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Interior Color'
+         * Description: 'Adjusts the color of interior volume fog.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'ambientOcclusion' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Ambient Occlusion'
+         * Description: 'Ambient occlusion coefficient for the surface.'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)

@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdresource module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="sdresourcebitmap module" href="sdresourcebitmap.html" />
+    <link rel="prev" title="sdproperty module" href="sdproperty.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdresourcebitmap.html" title="sdresourcebitmap module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdproperty.html" title="sdproperty module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" accesskey="U">Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.sdresource">
+<span id="sdresource-module"></span><h1>sdresource module<a class="headerlink" href="#module-sd.api.sdresource" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.sdresource.EmbedMethod">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdresource.</code><code class="sig-name descname">EmbedMethod</code><a class="headerlink" href="#sd.api.sdresource.EmbedMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Enum representing the embedding method for resources when using external assets</p>
+<dl class="attribute">
+<dt id="sd.api.sdresource.EmbedMethod.BinaryEmbedded">
+<code class="sig-name descname">BinaryEmbedded</code><em class="property"> = 3</em><a class="headerlink" href="#sd.api.sdresource.EmbedMethod.BinaryEmbedded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdresource.EmbedMethod.CopiedAndLinked">
+<code class="sig-name descname">CopiedAndLinked</code><em class="property"> = 2</em><a class="headerlink" href="#sd.api.sdresource.EmbedMethod.CopiedAndLinked" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file content is encoded directly in the resource (in memory at runtime, and in the Package file content). No file is referenced.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdresource.EmbedMethod.Linked">
+<code class="sig-name descname">Linked</code><em class="property"> = 1</em><a class="headerlink" href="#sd.api.sdresource.EmbedMethod.Linked" title="Permalink to this definition">¶</a></dt>
+<dd><p>The original file is copied to another location, and the resource references the copy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sd.api.sdresource.EmbedMethod.Undefined">
+<code class="sig-name descname">Undefined</code><em class="property"> = 0</em><a class="headerlink" href="#sd.api.sdresource.EmbedMethod.Undefined" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource references its original file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sd.api.sdresource.SDResource">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sdresource.</code><code class="sig-name descname">SDResource</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sdapiobject.html#sd.api.sdapiobject.SDAPIObject" title="sd.api.sdapiobject.SDAPIObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdapiobject.SDAPIObject</span></code></a></p>
+<p>Class managing any element that can be part of a SDPackage (Graph, Bitmap, Folder, …)</p>
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresource.SDResource.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the SDResource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.deleteProperty">
+<code class="sig-name descname">deleteProperty</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresource.SDResource.deleteProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified SDProperty</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The property to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getAnnotationPropertyValueFromId">
+<code class="sig-name descname">getAnnotationPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getAnnotationPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the annotation property that matches the specified identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyId</strong> – The identifier of the annotation property we want to retrieve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdresource.SDResource.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getEmbedMethod">
+<code class="sig-name descname">getEmbedMethod</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdresource.EmbedMethod<a class="headerlink" href="#sd.api.sdresource.SDResource.getEmbedMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the method used by this resource to reference its content or file (See EmbedMethod enum)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getFilePath">
+<code class="sig-name descname">getFilePath</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdresource.SDResource.getFilePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path of the file used by this resource</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getIdentifier">
+<code class="sig-name descname">getIdentifier</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdresource.SDResource.getIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the resource identifier as string</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getInputPropertyValueFromId">
+<code class="sig-name descname">getInputPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getInputPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the input property that matches the specified identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyId</strong> – The identifier of the input property we want to retrieve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getMetadataDict">
+<code class="sig-name descname">getMetadataDict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getMetadataDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the metadata of this resource as a SDMetadataDict.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getPackage">
+<code class="sig-name descname">getPackage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; SDPackage<a class="headerlink" href="#sd.api.sdresource.SDResource.getPackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the SDPackage the current SDResource belongs to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getProperties">
+<code class="sig-name descname">getProperties</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all properties of the specified category (Input, Output or Annotation)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyCategory</strong> – The enum value the indicate which type of properties to get</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getPropertyAnnotationValueFromId">
+<code class="sig-name descname">getPropertyAnnotationValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getPropertyAnnotationValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the property annotation value of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property we want to retrieve the annotation value from</p></li>
+<li><p><strong>sdPropertyAnnotationId</strong> – The identifier of the annotation to retrieve</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getPropertyAnnotations">
+<code class="sig-name descname">getPropertyAnnotations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getPropertyAnnotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the annotation properties of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The SDProperty to retrieve the annotations from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getPropertyFromId">
+<code class="sig-name descname">getPropertyFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getPropertyFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get property that match the specified identifier in the specified category</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getPropertyMetadataDictFromId">
+<code class="sig-name descname">getPropertyMetadataDictFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getPropertyMetadataDictFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the metadata of the property that matches the specified identifier in the specified category as a SDMetadataDict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getPropertyValue">
+<code class="sig-name descname">getPropertyValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getPropertyValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of a property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The property we want to retrieve the value from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getPropertyValueFromId">
+<code class="sig-name descname">getPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the property that matches the specified identifier in the specified category</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getType">
+<code class="sig-name descname">getType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.getType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the resource type as SDType</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.getUrl">
+<code class="sig-name descname">getUrl</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sdresource.SDResource.getUrl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the resource URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.newProperty">
+<code class="sig-name descname">newProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sdresource.SDResource.newProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new SDProperty of the specified type and in the specified SDPropertyCategory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the new property</p></li>
+<li><p><strong>sdPropertyType</strong> – The type of the new property</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The SDPropertyCategory of the new property to create</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresource.SDResource.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.sNewFromFile">
+<em class="property">static </em><code class="sig-name descname">sNewFromFile</code><span class="sig-paren">(</span><em class="sig-param">parent: sd.api.sdapiobject.SDAPIObject</em>, <em class="sig-param">filePath: str</em>, <em class="sig-param">embedMethod: sd.api.sdresource.EmbedMethod</em><span class="sig-paren">)</span> &#x2192; sd.api.sdresource.SDResource<a class="headerlink" href="#sd.api.sdresource.SDResource.sNewFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new SDResource from the specified file. The resource may reference or copy the file content depending on the EmbedMethod</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent</strong> – The parent data that will contains the newly created resource. Can be SDPackage or SDResourceFolder</p></li>
+<li><p><strong>filePath</strong> – The file path</p></li>
+<li><p><strong>embedMethod</strong> – The embed method</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.setAnnotationPropertyValueFromId">
+<code class="sig-name descname">setAnnotationPropertyValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdAnnotationPropertyId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresource.SDResource.setAnnotationPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified annotation property retrieved by his identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdAnnotationPropertyId</strong> – The identifier of the annotation property</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.setIdentifier">
+<code class="sig-name descname">setIdentifier</code><span class="sig-paren">(</span><em class="sig-param">identifier: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresource.SDResource.setIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the resource identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> – The new resource identifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.setInputPropertyValueFromId">
+<code class="sig-name descname">setInputPropertyValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdInputPropertyId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresource.SDResource.setInputPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified input property retrieved by his identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdInputPropertyId</strong> – The identifier of the input property</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.setPropertyAnnotationValueFromId">
+<code class="sig-name descname">setPropertyAnnotationValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em>, <em class="sig-param">sdPropertyAnnotationId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresource.SDResource.setPropertyAnnotationValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the property annotation value of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property whose we want to change the annotation value</p></li>
+<li><p><strong>sdPropertyAnnotationId</strong> – The identifier of the annotation to set</p></li>
+<li><p><strong>sdValue</strong> – The SDValue to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sdresource.SDResource.setPropertyValue">
+<code class="sig-name descname">setPropertyValue</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sdresource.SDResource.setPropertyValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property we want to retrieve the value from</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../index.html">
+              <img class="logo" src="../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdproperty.html"
+                        title="previous chapter">sdproperty module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdresourcebitmap.html"
+                        title="next chapter">sdresourcebitmap module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/pythonapi/api/sd/api/sdresource.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdresourcebitmap.html" title="sdresourcebitmap module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdproperty.html" title="sdproperty module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="modules.html" >Python Package ‘api’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

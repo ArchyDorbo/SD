@@ -1,0 +1,8 @@
+sdsbscompnode module
+====================
+
+.. automodule:: sd.api.sbs.sdsbscompnode
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

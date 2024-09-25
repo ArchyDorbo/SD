@@ -1,0 +1,21 @@
+Version 2019.2.0
+----------------
+Details
+#######
+* [Added] Class SDMDLEExporter
+* [Added] Class SDMDLTypeHairBSDF
+* [Added] Class SDMDLValueHairBSDF
+* [Added] Class SDMetadataDict
+* [Changed] Class SDPackage
+	* [Added] Method SDPackage.getDependencies()
+	* [Added] Method SDPackage.getMetadataDict()
+* [Added] Class SDPackageDependency
+* [Changed] Class SDPlugin
+	* [Added] Method SDPlugin.getLastErrorMessage()
+* [Changed] Class SDPluginMgr
+	* [Added] Method SDPluginMgr.checkPluginCompatibility()
+	* [Added] Method SDPluginMgr.getUserPluginsDir()
+* [Changed] Class SDResource
+	* [Added] Method SDResource.getPackage()
+	* [Added] Method SDResource.sNewFromFile()
+* [Added] Class SDResourceCustom

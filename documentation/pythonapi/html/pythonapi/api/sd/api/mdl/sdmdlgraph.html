@@ -1,0 +1,508 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdmdlgraph module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="sdmdlgraphdefinition module" href="sdmdlgraphdefinition.html" />
+    <link rel="prev" title="sdmdlexporter module" href="sdmdlexporter.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdmdlgraphdefinition.html" title="sdmdlgraphdefinition module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdmdlexporter.html" title="sdmdlexporter module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../modules.html" >Python Package ‘api’</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="modules.html" accesskey="U">Python Package ‘mdl’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.mdl.sdmdlgraph">
+<span id="sdmdlgraph-module"></span><h1>sdmdlgraph module<a class="headerlink" href="#module-sd.api.mdl.sdmdlgraph" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.mdl.sdmdlgraph.</code><code class="sig-name descname">SDMDLGraph</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../sdgraph.html#sd.api.sdgraph.SDGraph" title="sd.api.sdgraph.SDGraph"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdgraph.SDGraph</span></code></a></p>
+<p>Class managing a MDL material graph</p>
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.delete">
+<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the SDResource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.deleteGraphObject">
+<code class="sig-name descname">deleteGraphObject</code><span class="sig-paren">(</span><em class="sig-param">sdGraphObj: sd.api.sdgraphobject.SDGraphObject</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.deleteGraphObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified graph object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdGraphObj</strong> – The graph object to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.deleteNode">
+<code class="sig-name descname">deleteNode</code><span class="sig-paren">(</span><em class="sig-param">sdNode: sd.api.sdnode.SDNode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.deleteNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdNode</strong> – The node to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.deleteProperty">
+<code class="sig-name descname">deleteProperty</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.deleteProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified SDProperty</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The property to delete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getAnnotationPropertyValueFromId">
+<code class="sig-name descname">getAnnotationPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getAnnotationPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the annotation property that matches the specified identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyId</strong> – The identifier of the annotation property we want to retrieve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getEmbedMethod">
+<code class="sig-name descname">getEmbedMethod</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdresource.EmbedMethod<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getEmbedMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the method used by this resource to reference its content or file (See EmbedMethod enum)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getFilePath">
+<code class="sig-name descname">getFilePath</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getFilePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the path of the file used by this resource</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getGraphObjects">
+<code class="sig-name descname">getGraphObjects</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getGraphObjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all SDGraphObject of the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getIdentifier">
+<code class="sig-name descname">getIdentifier</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the resource identifier as string</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getInputPropertyValueFromId">
+<code class="sig-name descname">getInputPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getInputPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the input property that matches the specified identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyId</strong> – The identifier of the input property we want to retrieve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getMetadataDict">
+<code class="sig-name descname">getMetadataDict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getMetadataDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the metadata of this resource as a SDMetadataDict.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getNodeDefinitions">
+<code class="sig-name descname">getNodeDefinitions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getNodeDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all available node definitions for this type of graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getNodeFromId">
+<code class="sig-name descname">getNodeFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getNodeFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node that matches the specified identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdNodeId</strong> – The node identifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getNodes">
+<code class="sig-name descname">getNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all nodes of this graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getOutputNodes">
+<code class="sig-name descname">getOutputNodes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getOutputNodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of all output nodes of the graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getPackage">
+<code class="sig-name descname">getPackage</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; SDPackage<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getPackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the SDPackage the current SDResource belongs to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getProperties">
+<code class="sig-name descname">getProperties</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all properties of the specified category (Input, Output or Annotation)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyCategory</strong> – The enum value the indicate which type of properties to get</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyAnnotationValueFromId">
+<code class="sig-name descname">getPropertyAnnotationValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyAnnotationValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the property annotation value of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property we want to retrieve the annotation value from</p></li>
+<li><p><strong>sdPropertyAnnotationId</strong> – The identifier of the annotation to retrieve</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyAnnotations">
+<code class="sig-name descname">getPropertyAnnotations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyAnnotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the annotation properties of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The SDProperty to retrieve the annotations from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyFromId">
+<code class="sig-name descname">getPropertyFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get property that match the specified identifier in the specified category</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyMetadataDictFromId">
+<code class="sig-name descname">getPropertyMetadataDictFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyMetadataDictFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the metadata of the property that matches the specified identifier in the specified category as a SDMetadataDict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyValue">
+<code class="sig-name descname">getPropertyValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of a property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The property we want to retrieve the value from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyValueFromId">
+<code class="sig-name descname">getPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the property that matches the specified identifier in the specified category</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getType">
+<code class="sig-name descname">getType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the resource type as SDType</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.getUrl">
+<code class="sig-name descname">getUrl</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.getUrl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the resource URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.newInstanceNode">
+<code class="sig-name descname">newInstanceNode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.newInstanceNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new instance node from the specified resource</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdResourceToInstantiate</strong> – The resource to instantiate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.newNode">
+<code class="sig-name descname">newNode</code><span class="sig-paren">(</span><em class="sig-param">sdDefinitionId: str</em><span class="sig-paren">)</span> &#x2192; sd.api.sdnode.SDNode<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.newNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdDefinitionId</strong> – The identifier of the SDDefinition of the node to create</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.newProperty">
+<code class="sig-name descname">newProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.newProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new SDProperty of the specified type and in the specified SDPropertyCategory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the new property</p></li>
+<li><p><strong>sdPropertyType</strong> – The type of the new property</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The SDPropertyCategory of the new property to create</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.sNew">
+<em class="property">static </em><code class="sig-name descname">sNew</code><span class="sig-paren">(</span><em class="sig-param">parent: sd.api.sdapiobject.SDAPIObject</em><span class="sig-paren">)</span> &#x2192; sd.api.mdl.sdmdlgraph.SDMDLGraph<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.sNew" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new SDMDLGraph under the specified parent</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parent</strong> – The parent data that will contains the newly created MDL graph. Can be SDPackage or SDResourceFolder</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.sNewFromFile">
+<em class="property">static </em><code class="sig-name descname">sNewFromFile</code><span class="sig-paren">(</span><em class="sig-param">parent: sd.api.sdapiobject.SDAPIObject</em>, <em class="sig-param">filePath: str</em>, <em class="sig-param">embedMethod: sd.api.sdresource.EmbedMethod</em><span class="sig-paren">)</span> &#x2192; sd.api.sdresource.SDResource<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.sNewFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new SDResource from the specified file. The resource may reference or copy the file content depending on the EmbedMethod</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent</strong> – The parent data that will contains the newly created resource. Can be SDPackage or SDResourceFolder</p></li>
+<li><p><strong>filePath</strong> – The file path</p></li>
+<li><p><strong>embedMethod</strong> – The embed method</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.setAnnotationPropertyValueFromId">
+<code class="sig-name descname">setAnnotationPropertyValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdAnnotationPropertyId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.setAnnotationPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified annotation property retrieved by his identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdAnnotationPropertyId</strong> – The identifier of the annotation property</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.setIdentifier">
+<code class="sig-name descname">setIdentifier</code><span class="sig-paren">(</span><em class="sig-param">identifier: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.setIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the resource identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> – The new resource identifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.setInputPropertyValueFromId">
+<code class="sig-name descname">setInputPropertyValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdInputPropertyId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.setInputPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified input property retrieved by his identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdInputPropertyId</strong> – The identifier of the input property</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.setOutputNode">
+<code class="sig-name descname">setOutputNode</code><span class="sig-paren">(</span><em class="sig-param">sdNode: sd.api.sdnode.SDNode</em>, <em class="sig-param">isOutput: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.setOutputNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set/Unset the specified node as an output node of the graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdNode</strong> – The node to set/unset as an output node</p></li>
+<li><p><strong>isOutput</strong> – Indicates whether the specified node is an output node</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.setPropertyAnnotationValueFromId">
+<code class="sig-name descname">setPropertyAnnotationValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em>, <em class="sig-param">sdPropertyAnnotationId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.setPropertyAnnotationValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the property annotation value of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property whose we want to change the annotation value</p></li>
+<li><p><strong>sdPropertyAnnotationId</strong> – The identifier of the annotation to set</p></li>
+<li><p><strong>sdValue</strong> – The SDValue to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.mdl.sdmdlgraph.SDMDLGraph.setPropertyValue">
+<code class="sig-name descname">setPropertyValue</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.mdl.sdmdlgraph.SDMDLGraph.setPropertyValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property we want to retrieve the value from</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdmdlexporter.html"
+                        title="previous chapter">sdmdlexporter module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdmdlgraphdefinition.html"
+                        title="next chapter">sdmdlgraphdefinition module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../../_sources/pythonapi/api/sd/api/mdl/sdmdlgraph.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdmdlgraphdefinition.html" title="sdmdlgraphdefinition module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdmdlexporter.html" title="sdmdlexporter module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../modules.html" >Python Package ‘api’</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="modules.html" >Python Package ‘mdl’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

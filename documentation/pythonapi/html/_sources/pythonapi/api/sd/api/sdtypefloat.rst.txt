@@ -1,0 +1,8 @@
+sdtypefloat module
+==================
+
+.. automodule:: sd.api.sdtypefloat
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

@@ -1,0 +1,2750 @@
+mdl::nvidia::core_definitions
+=============================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/62] 'mdl::nvidia::core_definitions::texture_return.tint(::base::texture_return)'
+###################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[2/62] 'mdl::nvidia::core_definitions::texture_return.mono(::base::texture_return)'
+###################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[3/62] 'mdl::nvidia::core_definitions::material_type(::nvidia::core_definitions::material_type)'
+################################################################################################
+   * Label: 'User interface group'
+   * Description: 'User interface grouping hint for materials'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::nvidia::core_definitions::material_type",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::core_definitions::material_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::nvidia::core_definitions::material_type' (SDTypeEnum)
+
+[4/62] 'mdl::nvidia::core_definitions::int(::nvidia::core_definitions::material_type)'
+######################################################################################
+   * Label: 'User interface group'
+   * Description: 'User interface grouping hint for materials'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::core_definitions::material_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[5/62] 'mdl::nvidia::core_definitions::emission_type(::nvidia::core_definitions::emission_type)'
+################################################################################################
+   * Label: 'Emission mode'
+   * Description: 'Emission mode definition for light sources'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::nvidia::core_definitions::emission_type",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::core_definitions::emission_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::nvidia::core_definitions::emission_type' (SDTypeEnum)
+
+[6/62] 'mdl::nvidia::core_definitions::int(::nvidia::core_definitions::emission_type)'
+######################################################################################
+   * Label: 'Emission mode'
+   * Description: 'Emission mode definition for light sources'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::core_definitions::emission_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[7/62] 'mdl::nvidia::core_definitions::cell_type(::nvidia::core_definitions::cell_type)'
+########################################################################################
+   * Label: 'Worley noise cell type'
+   * Description: 'Behavior of the Worley noise cell'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::nvidia::core_definitions::cell_type",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::core_definitions::cell_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::nvidia::core_definitions::cell_type' (SDTypeEnum)
+
+[8/62] 'mdl::nvidia::core_definitions::int(::nvidia::core_definitions::cell_type)'
+##################################################################################
+   * Label: 'Worley noise cell type'
+   * Description: 'Behavior of the Worley noise cell'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::core_definitions::cell_type' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[9/62] 'mdl::nvidia::core_definitions::cell_base(::nvidia::core_definitions::cell_base)'
+########################################################################################
+   * Label: 'Worley noise cell shape'
+   * Description: 'Shape of the Worley noise cell'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::nvidia::core_definitions::cell_base",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::core_definitions::cell_base' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::nvidia::core_definitions::cell_base' (SDTypeEnum)
+
+[10/62] 'mdl::nvidia::core_definitions::int(::nvidia::core_definitions::cell_base)'
+###################################################################################
+   * Label: 'Worley noise cell shape'
+   * Description: 'Shape of the Worley noise cell'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::nvidia::core_definitions::cell_base' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[11/62] 'mdl::nvidia::core_definitions::blend_colors(color,color,::base::color_layer_mode,float,bool)'
+######################################################################################################
+   * Label: 'Blend colors'
+   * Description: 'Allows combining textures and colors in varied ways'
+   * SDPropertyCategory = 'Input'
+      * 'color_1' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Color 1'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color_2' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Color 2'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'mode' = SDValueEnum("mdl::base::color_layer_mode",0) [CONNECTABLE]
+         * Label: 'Blend mode'
+         * Description: 'Describes how Color 1 and Color 2 are combined'
+         * Types:
+            * 'mdl::base::color_layer_mode' (SDTypeEnum) [Uniform]
+
+      * 'weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Blend weight'
+         * Description: 'Defines strength of the effect. At weight 0, only color 1 will be visible. At weight 1, the blend function will have full effect.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'linear_blend' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Label: 'Linear blend'
+         * Description: 'The blend opperation can either be applied in linear or gamma (2.2) color space'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[12/62] 'mdl::nvidia::core_definitions::file_texture(texture_2d,::base::mono_mode,float,float,float2,float2,float,bool,int,bool)'
+#################################################################################################################################
+   * Label: 'Bitmap texture'
+   * Description: 'Allows texturing using image files of various file formats'
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Label: 'Bitmap file'
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'mono_source' = SDValueEnum("mdl::base::mono_mode",1) [CONNECTABLE]
+         * Label: 'Scalar mode'
+         * Description: 'Defines how the texture applies to scalar parameters'
+         * Types:
+            * 'mdl::base::mono_mode' (SDTypeEnum) [Uniform]
+
+      * 'brightness' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Brightness'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'contrast' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Contrast'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scaling' = SDValueFloat2(float2(1,1)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'translation' = SDValueFloat2(float2(0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'clip' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Clip'
+         * Description: 'If set to true, texture will not repeat. Outside of the texture, color will be black and the scalar value will be 0.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Selects a specific UV space'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'invert' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Invert image'
+         * Description: 'Invert image'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct) [Varying]
+
+[13/62] 'mdl::nvidia::core_definitions::perlin_noise_texture(color,color,bool,int,bool,float,float,float3,float3,float3,int)'
+#############################################################################################################################
+   * Label: 'Perlin noise texture'
+   * Description: 'Enable texturing with a random noise pattern'
+   * SDPropertyCategory = 'Input'
+      * 'color1' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Color 1'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color2' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Color 2'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'object_space' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Label: 'Use object space'
+         * Description: 'If off, UV space will be used. If on, 3D texturing in object space will apply. For applications that do not support object space, world space will be used.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'noise_levels' = SDValueInt(int(3)) [CONNECTABLE]
+         * Label: 'Levels'
+         * Description: 'Higher amounts will add detail to the noise'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'absolute_noise' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Billowing appearance'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'noise_threshold_high' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Upper threshold'
+         * Description: 'Lowering this value will create bigger areas uniformly colored with Color 1'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_threshold_low' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Lower threshold'
+         * Description: 'Increasing this value will create bigger areas uniformly colored with Color 2'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scaling' = SDValueFloat3(float3(10,10,10)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'translation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'rotation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Only applies if "Use object space" is off. Selects a specific UV space.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct) [Varying]
+
+[14/62] 'mdl::nvidia::core_definitions::perlin_noise_bump_texture(float,float3,int,bool,bool,float,float,float3,float3,int)'
+############################################################################################################################
+   * Label: 'Perlin noise texture -- bump mapping'
+   * Description: 'Enable bump-map texturing with a random noise pattern'
+   * SDPropertyCategory = 'Input'
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Bump strength'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scaling' = SDValueFloat3(float3(10,10,10)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'noise_levels' = SDValueInt(int(1)) [CONNECTABLE]
+         * Label: 'Levels'
+         * Description: 'Higher amounts will add detail to the noise'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'object_space' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Label: 'Use object space'
+         * Description: 'If off, UV space will be used. If on, 3D texturing in object space will apply. For applications that do not support object space, world space will be used.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'absolute_noise' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Billowing appearance'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'noise_threshold_high' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Upper threshold'
+         * Description: 'Lowering this value will create bigger areas uniformly colored with Color 1'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_threshold_low' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Lower threshold'
+         * Description: 'Increasing this value will create bigger areas uniformly colored with Color 2'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'translation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'rotation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Only applies if "Use object space" is off. Selects a specific UV space.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[15/62] 'mdl::nvidia::core_definitions::worley_noise_texture(color,color,bool,int,::nvidia::core_definitions::cell_type,::nvidia::core_definitions::cell_base,float,float,float3,float3,float3)'
+################################################################################################################################################################################################
+   * Label: 'Cellular noise texture'
+   * Description: 'Allow texturing with a cell forming pattern'
+   * SDPropertyCategory = 'Input'
+      * 'color1' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Color 1'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color2' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Color 2'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'object_space' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Label: 'Use object space'
+         * Description: 'If off, UV space will be used. If on, 3D texturing in object space will apply. For applications that do not support object space, world space will be used.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Only applies if "Use object space" is off. Selects a specific UV space.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'mode' = SDValueEnum("mdl::nvidia::core_definitions::cell_type",0) [CONNECTABLE]
+         * Label: 'Cell type'
+         * Description: 'Cell pattern type'
+         * Types:
+            * 'mdl::nvidia::core_definitions::cell_type' (SDTypeEnum) [Uniform]
+
+      * 'metric' = SDValueEnum("mdl::nvidia::core_definitions::cell_base",0) [CONNECTABLE]
+         * Label: 'Cell shape'
+         * Description: 'The shape of the cell form'
+         * Types:
+            * 'mdl::nvidia::core_definitions::cell_base' (SDTypeEnum) [Uniform]
+
+      * 'noise_threshold_high' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Upper threshold'
+         * Description: 'Lowering this value will create bigger areas uniformly colored with Color 1'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_threshold_low' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Lower threshold'
+         * Description: 'Increasing this value will create bigger areas uniformly colored with Color 2'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scaling' = SDValueFloat3(float3(10,10,10)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'translation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'rotation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct) [Varying]
+
+[16/62] 'mdl::nvidia::core_definitions::worley_noise_bump_texture(float,::nvidia::core_definitions::cell_base,bool,int,float,float,float3,float3,float3)'
+#########################################################################################################################################################
+   * Label: 'Cellular noise texture -- bump mapping'
+   * Description: 'Allow texturing with a cell forming pattern'
+   * SDPropertyCategory = 'Input'
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Bump strength'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'metric' = SDValueEnum("mdl::nvidia::core_definitions::cell_base",0) [CONNECTABLE]
+         * Label: 'Cell shape'
+         * Description: 'The shape of the cell form'
+         * Types:
+            * 'mdl::nvidia::core_definitions::cell_base' (SDTypeEnum) [Uniform]
+
+      * 'object_space' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Label: 'Use object space'
+         * Description: 'If off, UV space will be used. If on, 3D texturing in object space will apply. For applications that do not support object space, world space will be used.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Only applies if "Use object space" is off. Selects a specific UV space.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'noise_threshold_high' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Upper threshold'
+         * Description: 'Lowering this value will create bigger areas uniformly colored with Color 1'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_threshold_low' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Lower threshold'
+         * Description: 'Increasing this value will create bigger areas uniformly colored with Color 2'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scaling' = SDValueFloat3(float3(10,10,10)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'translation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'rotation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[17/62] 'mdl::nvidia::core_definitions::flow_noise_texture(color,color,bool,int,int,bool,float,float,float,float,float,float3,float3,float3)'
+#############################################################################################################################################
+   * Label: 'Flow noise texture'
+   * Description: 'Allow texturing with a 2D noise pattern suitable for waves'
+   * SDPropertyCategory = 'Input'
+      * 'color1' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Color 1'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color2' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Color 2'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'object_space' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Use object space'
+         * Description: 'If off, UV space will be used. If on, 3D texturing in object space will apply. For applications that do not support object space, world space will be used.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Only applies if "Use object space" is off. Selects a specific UV space.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'noise_levels' = SDValueInt(int(3)) [CONNECTABLE]
+         * Label: 'Levels'
+         * Description: 'Higher amounts will add detail to the noise'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'absolute_noise' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Billowing appearance'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'phase' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Phase offset'
+         * Description: 'Controls the third dimension of the function'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_gain' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Level intensity gain'
+         * Description: 'If multiple levels are used, this parameter specifies a weighting factor for subsequent levels'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_scale' = SDValueFloat(float(2)) [CONNECTABLE]
+         * Label: 'Level scaling'
+         * Description: 'If multiple levels are used, this parameter specifies a global scaling factor for subsequent levels'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_progressive_u_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Progressive u scale'
+         * Description: 'If multiple levels are used, this parameter specifies an additional scaling factor in the "u" direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_progressive_v_motion' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Progressive v offset'
+         * Description: 'If multiple levels are used, this parameter specifies an offset for subsequent levels in the "v" direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scaling' = SDValueFloat3(float3(10,10,10)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'translation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'rotation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct) [Varying]
+
+[18/62] 'mdl::nvidia::core_definitions::flow_noise_bump_texture(float,float3,int,bool,int,bool,float,float,float,float,float,float3,float3)'
+############################################################################################################################################
+   * Label: 'Flow noise texture -- bump mapping'
+   * Description: 'Allow texturing with a 2D noise pattern suitable for waves'
+   * SDPropertyCategory = 'Input'
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Bump strength'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scaling' = SDValueFloat3(float3(10,10,10)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'noise_levels' = SDValueInt(int(1)) [CONNECTABLE]
+         * Label: 'Levels'
+         * Description: 'Higher amounts will add detail to the noise'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'object_space' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Use object space'
+         * Description: 'If off, UV space will be used. If on, 3D texturing in object space will apply. For applications that do not support object space, world space will be used.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Only applies if "Use object space" is off. Selects a specific UV space.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'absolute_noise' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Billowing appearance'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'phase' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Phase offset'
+         * Description: 'Controls the 3rd dimension of the function'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_gain' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Level intensity gain'
+         * Description: 'If multiple levels are used, this parameter specifies a weighting factor for subsequent levels'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_scale' = SDValueFloat(float(2)) [CONNECTABLE]
+         * Label: 'Level scaling'
+         * Description: 'If multiple levels are used, this parameter specifies a global scaling factor for subsequent levels'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_progressive_u_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Progressive u scale'
+         * Description: 'If multiple levels are used, this parameter specifies an additional scaling factor in the "u" direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_progressive_v_motion' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Progressive v offset'
+         * Description: 'If multiple levels are used, this parameter specifies an offset for subsequent levels in the "v" direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'translation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'rotation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[19/62] 'mdl::nvidia::core_definitions::checker_texture(color,color,float3,float3,bool,float,float3,int)'
+#########################################################################################################
+   * Label: '3D checker texture'
+   * Description: 'Allows texturing a checkerboard pattern'
+   * SDPropertyCategory = 'Input'
+      * 'color1' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Color 1'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color2' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Color 2'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'scaling' = SDValueFloat3(float3(10,10,10)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'translation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'object_space' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Use object space'
+         * Description: 'If off, UV space will be used. If on, 3D texturing in object space will apply. For applications that do not support object space, world space will be used.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'blur' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Blur'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'rotation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Only applies if "Use object space" is off. Selects a specific UV space.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct) [Varying]
+
+[20/62] 'mdl::nvidia::core_definitions::checker_bump_texture(float,float,bool,float3,float3,float3,int)'
+########################################################################################################
+   * Label: '3D checker texture -- bump mapping'
+   * Description: 'Allows texturing a checkerboard pattern'
+   * SDPropertyCategory = 'Input'
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Bump strength'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'blur' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Blur'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'object_space' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Use object space'
+         * Description: 'If off, UV space will be used. If on, 3D texturing in object space will apply. For applications that do not support object space, world space will be used.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'scaling' = SDValueFloat3(float3(10,10,10)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'translation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'rotation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Only applies if "Use object space" is off. Selects a specific UV space.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[21/62] 'mdl::nvidia::core_definitions::file_bump_texture(texture_2d,::base::mono_mode,float2,float2,float,bool,float,int)'
+###########################################################################################################################
+   * Label: 'Bitmap texture, bump'
+   * Description: 'Allows texturing using image files of various file formats'
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Label: 'Bitmap file'
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'bump_source' = SDValueEnum("mdl::base::mono_mode",1) [CONNECTABLE]
+         * Label: 'Bump mode'
+         * Description: 'Defines how the texture is evaluated to create the bumps'
+         * Types:
+            * 'mdl::base::mono_mode' (SDTypeEnum) [Uniform]
+
+      * 'scaling' = SDValueFloat2(float2(1,1)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'translation' = SDValueFloat2(float2(0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'clip' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Clip'
+         * Description: 'If set to true, texture will not repeat. Outside of the texture the surface will be flat'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Bump strength'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Selects a specific UV space'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[22/62] 'mdl::nvidia::core_definitions::normalmap_texture(texture_2d,float2,float2,float,bool,float,int,bool)'
+##############################################################################################################
+   * Label: 'Normal map texture'
+   * Description: 'Allows the use of tangent space normal maps'
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Label: 'Normalmap file'
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'scaling' = SDValueFloat2(float2(1,1)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Controls the scale of the texture on the object'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'translation' = SDValueFloat2(float2(0,0)) [CONNECTABLE]
+         * Label: 'Offset'
+         * Description: 'Controls position of the texture on the object'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Rotation'
+         * Description: 'Rotation angle of the texture in degrees'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'clip' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Clip'
+         * Description: 'If set to true, texture will not repeat. Outside of the texture the surface will be flat.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Strength'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Label: 'UV space index'
+         * Description: 'Selects a specific UV space'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'flip' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Flip V'
+         * Description: 'Flip handedness of the tangent space'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[23/62] 'mdl::nvidia::core_definitions::blend_normals(float3,float,float3,float)'
+#################################################################################
+   * Label: 'Blend normals'
+   * Description: 'Blend two normals or apply a detail normal map'
+   * SDPropertyCategory = 'Input'
+      * 'base_normal' = SDMDLValueCall(mdl::state::normal()__default_call___207) [CONNECTABLE]
+         * Description: 'The base normal'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'base_normal_weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Specifies the strength of the base normal using a linear blend between state::normal and "base_normal"'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'detail_normal' = SDMDLValueCall(mdl::state::normal()__default_call___208) [CONNECTABLE]
+         * Description: 'The detail normal'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'detail_normal_weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Specifies the strength of the detail normal using a linear blend between state::normal and "detail_normal"'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[24/62] 'mdl::nvidia::core_definitions::diffuse'
+################################################
+   * Label: 'Simple diffuse'
+   * Description: 'A basic diffuse material'
+   * SDPropertyCategory = 'Input'
+      * 'diffuse_color' = SDValueColorRGB(ColorRGB(0.800000012,0.800000012,0.800000012)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Diffuse roughness'
+         * Description: 'Higher roughness values lead a powdery appearance'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___209) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[25/62] 'mdl::nvidia::core_definitions::scratched_metal_v2'
+###########################################################
+   * Label: 'Metal'
+   * Description: 'A metallic material with stretched reflections'
+   * SDPropertyCategory = 'Input'
+      * 'metal_color' = SDValueColorRGB(ColorRGB(0.899999976,0.899999976,0.899999976)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the metal'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0.200000003)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'glossy_weight' = SDValueFloat(float(0.899999976)) [CONNECTABLE]
+         * Label: 'Reflection weight'
+         * Description: 'Intensity of highlights and glossy reflections and highlights'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy'
+         * Description: 'Higher values will stretch the highlight'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy_rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy rotation'
+         * Description: 'Changes the orientation of the anisotropy. A value of 1 will rotate the orientation 360 degrees.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___210) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[26/62] 'mdl::nvidia::core_definitions::scratched_plastic_v2'
+#############################################################
+   * Label: 'Plastic'
+   * Description: 'A basic dielectric, works for everything opaque that is not metallic. Supports stretched highlights.'
+   * SDPropertyCategory = 'Input'
+      * 'diffuse_color' = SDValueColorRGB(ColorRGB(0.5,0.5,0.5)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0.200000003)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy'
+         * Description: 'Higher values will stretch the highlight'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy_rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy rotation'
+         * Description: 'Changes the orientation of the anisotropy. A value of 1 will rotate the orientation 360 degrees.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'reflectivity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Reflection weight'
+         * Description: 'Additional reflectivity control'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___211) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[27/62] 'mdl::nvidia::core_definitions::retroreflective'
+########################################################
+   * Label: 'Retroreflective'
+   * Description: 'A material with a retroreflective component, works well for road signs and retroreflective stickers'
+   * SDPropertyCategory = 'Input'
+      * 'base_color' = SDValueColorRGB(ColorRGB(0.200000003,0.0299999993,0.0299999993)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'reflection_color' = SDValueColorRGB(ColorRGB(0.800000012,0.800000012,0.0299999993)) [CONNECTABLE]
+         * Label: 'Reflection color'
+         * Description: 'The color of the retroreflection'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0.150000006)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal_reflectivity' = SDValueFloat(float(0.0500000007)) [CONNECTABLE]
+         * Label: 'Reflection weight facing'
+         * Description: 'Reflectivity control for geometry facing the viewer'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'grazing_reflectivity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Reflection weight edge'
+         * Description: 'Reflectivity control for the reflectivity at geometry edges'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___212) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[28/62] 'mdl::nvidia::core_definitions::flex_material_v2'
+#########################################################
+   * Label: 'Flexible material model'
+   * Description: 'A complex material that can be configured to a wide variety of looks'
+   * SDPropertyCategory = 'Input'
+      * 'base_color' = SDValueColorRGB(ColorRGB(0.5,0.5,0.5)) [CONNECTABLE]
+         * Label: 'Base color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'diffuse_roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Diffuse roughness'
+         * Description: 'Higher roughness values lead to a more "powdery" look'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'is_metal' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Metallic material'
+         * Description: 'If 1.0, reflection will be colored and independent of view direction. If 0.0, reflection will be white and direction dependent. Directional dependence is in this case based on the IOR (Fresnel effect).'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'reflectivity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Reflection weight'
+         * Description: 'Controls the amount of reflection'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'reflection_roughness' = SDValueFloat(float(0.300000012)) [CONNECTABLE]
+         * Label: 'Reflection roughness'
+         * Description: 'Higher roughness values lead to more blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Reflection anisotropy'
+         * Description: 'Higher values will stretch the highlight'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy_rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy rotation'
+         * Description: 'Changes the orientation of the anisotropy. A value of 1 will rotate the orientation 360 degrees.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'transparency' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Transmission weight'
+         * Description: 'Weights how much light passes through the object compared to its diffuse reflectivity.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'transmission_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Transmission color'
+         * Description: 'Color effect for transmission independent of thickness of the object, similar to stained glass.'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'volume_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Volume color'
+         * Description: 'If the material is not "Thin walled", "Volume color" will be reached at "Volume reference distance" (m).'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'transmission_roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Transmission roughness'
+         * Description: 'higher values lead to objects seen through the material to appear blurry'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'base_thickness' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Volume reference distance'
+         * Description: 'If the material is not "Thin walled", "Volume color" will be reached at this distance (m). Enter a typical thickness of objects made of this material here.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ior' = SDValueFloat(float(1.5)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines refraction in the volume. It also influences the reflectivity for materials that are not metallic.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'thin_walled' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Thin walled'
+         * Description: 'Thin walled materials do not refract and do not have volume effects. Good for soap bubbles or window glass.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___213) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'abbe_number' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Abbe number'
+         * Description: 'Controls dispersion. A value of 0 switches dispersion off. Dispersive materials have Abbe numbers between 25 and 85'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[29/62] 'mdl::nvidia::core_definitions::thin_glass_v2'
+######################################################
+   * Label: 'Thin glass'
+   * Description: 'A basic transmissive dielectric without refraction or volume'
+   * SDPropertyCategory = 'Input'
+      * 'glass_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Transmission color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___214) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[30/62] 'mdl::nvidia::core_definitions::thin_translucent_v2'
+############################################################
+   * Label: 'Thin translucent'
+   * Description: 'A diffuse transmissive dielectric material'
+   * SDPropertyCategory = 'Input'
+      * 'surface_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Diffuse color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'translucent_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Translucence color'
+         * Description: 'The color of the volume of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'translucency' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Translucence weight'
+         * Description: 'Fraction of the incoming light that should be visible on the backside'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___215) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[31/62] 'mdl::nvidia::core_definitions::thick_glass_v2'
+#######################################################
+   * Label: 'Thick glass'
+   * Description: 'A basic transmissive dielectric with refraction and coloring in the volume'
+   * SDPropertyCategory = 'Input'
+      * 'transmission_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Transmission color'
+         * Description: 'Colors the light entering the volume, similar to stained glass'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'glass_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Volume color'
+         * Description: 'The color of the glass body'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity as well as amount of refraction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'base_thickness' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Volume reference distance'
+         * Description: '"Volume color" will be reached at this distance (m). Enter a typical thickness of objects made of this material here.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___216) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'abbe_number' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Abbe number'
+         * Description: 'Controls dispersion. 0 switches dispersion off. Dispersive materials have Abbe numbers between 25 and 85.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[32/62] 'mdl::nvidia::core_definitions::thick_translucent_v2'
+#############################################################
+   * Label: 'Thick translucent'
+   * Description: 'A subsurface scattering material'
+   * SDPropertyCategory = 'Input'
+      * 'transmission_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Transmission color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'volume_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Volume color'
+         * Description: 'The color of the volume at "Volume reference distance"'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'volume_scattering' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Volume scattering'
+         * Description: 'Amount of scattering for objects at "Volume reference distance"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Reflection roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'reflectivity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Reflection weight'
+         * Description: 'Overall reflectivity of the material'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'base_thickness' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Volume reference distance'
+         * Description: '"Volume color" and "Volume scattering" will be reached at this distance (m). Enter a typical thickness of objects made of this material here.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___217) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity as well as amount of refraction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'abbe_number' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Abbe number'
+         * Description: 'Controls dispersion. A value of 0 switches dispersion off, Dispersive materials have Abbe numbers between 25 and 85.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[33/62] 'mdl::nvidia::core_definitions::blend'
+##############################################
+   * Label: 'Surface blender'
+   * Description: 'Blend surface characteristics of 2 materials or mask them using a texture'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_plastic_v2__default_call___219) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material the blend is based on'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'blend' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_metal_v2__default_call___221) [CONNECTABLE]
+         * Label: 'Blend Material'
+         * Description: 'Surface properties to use for the blend'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'weight' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Blend weight'
+         * Description: 'Blend weight or mask texture'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[34/62] 'mdl::nvidia::core_definitions::surface_falloff'
+########################################################
+   * Label: 'Surface falloff'
+   * Description: 'Blend surface characteristics of 2 materials or mask them using a texture'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_plastic_v2__default_call___223) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material the blend is based on'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'blend' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_metal_v2__default_call___225) [CONNECTABLE]
+         * Label: 'Blend Material'
+         * Description: 'Surface properties to use for the blend'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'facing_weight' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Blend weight facing'
+         * Description: 'Blend weight or mask texture'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'edge_weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Blend weight edge'
+         * Description: 'Blend weight or mask texture'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'blend_bias' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Blend bias'
+         * Description: 'Controls how fast the transition should happen. 5.0 results in fresnel like transition.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[35/62] 'mdl::nvidia::core_definitions::apply_clearcoat_v2'
+###########################################################
+   * Label: 'Apply clear coating'
+   * Description: 'Apply clear coat to an existing material'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::diffuse__default_call___227) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a clear coating applied'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'ior' = SDValueFloat(float(1.60000002)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity of the clear coat'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Reflection roughness'
+         * Description: 'Determines roughness of the clear coat'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'visibility' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Coat visibility'
+         * Description: 'Determines visibility of the clear coat'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___228) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'coat_filter_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Coat filter color'
+         * Description: 'For simulating coatings with colored resins that modulate the color of underlying layers'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[36/62] 'mdl::nvidia::core_definitions::apply_thinfilm'
+#######################################################
+   * Label: 'Apply thin film'
+   * Description: 'Apply thin film to an existing material'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_metal_v2__default_call___230) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get shows a thin film effect'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'ior' = SDValueFloat(float(1.60000002)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'The IOR of the thin film interface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'thickness' = SDValueFloat(float(400)) [CONNECTABLE]
+         * Label: 'Thickness'
+         * Description: 'Thickness of the thin film in nm'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[37/62] 'mdl::nvidia::core_definitions::apply_metalcoat_v2'
+###########################################################
+   * Label: 'Apply thin metal coating'
+   * Description: 'Apply metal coat to an existing material'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::diffuse__default_call___232) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a metallic coating applied'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'metal_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Reflection color'
+         * Description: 'The color of the metal'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'visibility' = SDValueFloat(float(0.300000012)) [CONNECTABLE]
+         * Label: 'Reflection weight'
+         * Description: 'The opacity of the coat'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Reflection roughness'
+         * Description: 'Determines roughness of the metal coat'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___233) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[38/62] 'mdl::nvidia::core_definitions::apply_dustcover'
+########################################################
+   * Label: 'Apply a cover of dust'
+   * Description: 'Apply a diffuse cover of dust or dirt'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::diffuse__default_call___235) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a clear coating applied'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'dust_color' = SDValueColorRGB(ColorRGB(0.699999988,0.699999988,0.699999988)) [CONNECTABLE]
+         * Label: 'Dust color'
+         * Description: 'The color of the dust'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'visibility' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Dust density'
+         * Description: 'The opacity of the cover'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'dust_density' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Dust amount'
+         * Description: 'How dusty the material is'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___236) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[39/62] 'mdl::nvidia::core_definitions::apply_colorfalloff_v2'
+##############################################################
+   * Label: 'Apply a color falloff'
+   * Description: 'Makes the color view dependent'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_metal_v2__default_call___238) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a clear coating applied'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'color_0' = SDValueColorRGB(ColorRGB(1,0,0)) [CONNECTABLE]
+         * Label: 'Color 1'
+         * Description: 'Color 1 (facing direction)'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'color_1' = SDValueColorRGB(ColorRGB(0,1,0)) [CONNECTABLE]
+         * Label: 'Color 2'
+         * Description: 'Color 2'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'color_2' = SDValueColorRGB(ColorRGB(0,0,1)) [CONNECTABLE]
+         * Label: 'Color 3'
+         * Description: 'Color 3'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'color_3' = SDValueColorRGB(ColorRGB(1,0,0)) [CONNECTABLE]
+         * Label: 'Color 4'
+         * Description: 'Color 4'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'color_4' = SDValueColorRGB(ColorRGB(0,1,0)) [CONNECTABLE]
+         * Label: 'Color 5'
+         * Description: 'Color 5 (object edges)'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[40/62] 'mdl::nvidia::core_definitions::apply_metallicflakes'
+#############################################################
+   * Label: 'Apply flake coating'
+   * Description: 'Apply layer of metallic flakes to an existing material'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::diffuse__default_call___240) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a flake layer applied'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'flake_color' = SDValueColorRGB(ColorRGB(0.899999976,0.699999988,0.5)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the flakes'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Determines roughness of the metallic flakes'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Flake size'
+         * Description: 'Determines size of the metallic flakes, in mm'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'amount' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Flake amount'
+         * Description: 'Determines amount of visible metallic flakes'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'opacity' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Flake opacity'
+         * Description: 'Determines visibility of the metallic flakes'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'bump' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Flake orientation randomness'
+         * Description: 'Larger numbers will increase the sparkle radius around highlights'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[41/62] 'mdl::nvidia::core_definitions::flake_paint'
+####################################################
+   * Label: 'Flaky paint'
+   * Description: 'A multi layer paint material containing flakes'
+   * SDPropertyCategory = 'Input'
+      * 'base_color' = SDValueColorRGB(ColorRGB(0.300000012,0.00999999978,0.00999999978)) [CONNECTABLE]
+         * Label: 'Base color'
+         * Description: 'The color of the base paint'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'flake_color' = SDValueColorRGB(ColorRGB(0.600000024,1,0.100000001)) [CONNECTABLE]
+         * Label: 'Flake color'
+         * Description: 'The color of the flakes'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0.150000006)) [CONNECTABLE]
+         * Label: 'Flake roughness'
+         * Description: 'Determines roughness of the metallic flakes'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Flake size'
+         * Description: 'Determines size of the metallic flakes, in mm'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'amount' = SDValueFloat(float(0.400000006)) [CONNECTABLE]
+         * Label: 'Flake amount'
+         * Description: 'Determines amount of visible metallic flakes'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'opacity' = SDValueFloat(float(0.800000012)) [CONNECTABLE]
+         * Label: 'Flake weight'
+         * Description: 'Determines visibility of the metallic flakes'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'bump' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Flake orientation randomness'
+         * Description: 'Larger numbers will increase the sparkle radius around highlights'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ior' = SDValueFloat(float(1.60000002)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity of the clear coat'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'coat_roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Coat roughness'
+         * Description: 'Determines roughness of the clear coat'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'coat_bump' = SDMDLValueCall(mdl::state::normal()__default_call___241) [CONNECTABLE]
+         * Label: 'Coat bump'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[42/62] 'mdl::nvidia::core_definitions::add_cutout'
+###################################################
+   * Label: 'Add cut-outs'
+   * Description: 'Adds cut-outs to existing materials. Also forces material to be thin-walled. Good for modeling leaves, grass or fences.'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_plastic_v2__default_call___243) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a cut-out'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'cutout' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Cutout'
+         * Description: 'Determines where the object is visible'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[43/62] 'mdl::nvidia::core_definitions::add_simple_sticker'
+###########################################################
+   * Label: 'Add simple sticker'
+   * Description: 'A quick way for adding simple stickers to a material. The sticker is a simple dielectric and needs a mask to define its extent.'
+   * SDPropertyCategory = 'Input'
+      * 'diffuse_color' = SDValueColorRGB(ColorRGB(0.5,0.5,0.5)) [CONNECTABLE]
+         * Label: 'Sticker color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0.0500000007)) [CONNECTABLE]
+         * Label: 'Sticker roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'Sticker IOR'
+         * Description: 'Determines reflectivity'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'reflectivity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Sticker reflectivity'
+         * Description: 'Additional Reflectivity control'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'sticker_normal' = SDMDLValueCall(mdl::state::normal()__default_call___244) [CONNECTABLE]
+         * Label: 'Sticker bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'sticker_mask' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Sticker mask'
+         * Description: 'Determines extent of the sticker'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_plastic_v2__default_call___246) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a sticker added'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[44/62] 'mdl::nvidia::core_definitions::add_globalbump'
+#######################################################
+   * Label: 'Add global bumpmap'
+   * Description: 'Adds global bumpmap to existing materials. Local bump map of the base material is preserved.'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_plastic_v2__default_call___248) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a bump map'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___249) [CONNECTABLE]
+         * Label: 'Bump'
+         * Description: 'An additional global bump map for the material. Local bump map of the base material is preserved.'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[45/62] 'mdl::nvidia::core_definitions::add_displacement'
+#########################################################
+   * Label: 'Add displacement'
+   * Description: 'Adds displacement to existing materials'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_plastic_v2__default_call___251) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a bump map'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'displacement' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Displacement amount'
+         * Description: 'Attach displacement texture here. Note that the object needs to be set up correctly to have good displacement results.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'displacement_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Displacement scale'
+         * Description: 'A global scale factor for the displacement amount'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[46/62] 'mdl::nvidia::core_definitions::add_emission'
+#####################################################
+   * Label: 'Add emission'
+   * Description: 'Adds emission to a material'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::diffuse__default_call___253) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get emission added'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the light'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'intensity' = SDValueFloat(float(1000)) [CONNECTABLE]
+         * Label: 'Intensity'
+         * Description: 'The brightness of the light source'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'unit_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Unit scale'
+         * Description: 'Modeling unit to meter conversion factor'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'unit' = SDValueEnum("mdl::nvidia::core_definitions::emission_type",0) [CONNECTABLE]
+         * Label: 'Unit for emission'
+         * Description: 'The physical unit of "Intensity"'
+         * Types:
+            * 'mdl::nvidia::core_definitions::emission_type' (SDTypeEnum) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[47/62] 'mdl::nvidia::core_definitions::add_thermal_emission'
+#############################################################
+   * Label: 'Add thermal emission'
+   * Description: 'Adds emission to a material, color is based on a "color temperature"'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::diffuse__default_call___255) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get emission added'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'temperature' = SDValueFloat(float(6500)) [CONNECTABLE]
+         * Label: 'Temperature'
+         * Description: 'The color temperature of the light in Kelvin'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'intensity' = SDValueFloat(float(1000)) [CONNECTABLE]
+         * Label: 'Intensity'
+         * Description: 'The brightness of the light source'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'unit' = SDValueEnum("mdl::nvidia::core_definitions::emission_type",0) [CONNECTABLE]
+         * Label: 'Unit for emission'
+         * Description: 'The physical unit of "Intensity"'
+         * Types:
+            * 'mdl::nvidia::core_definitions::emission_type' (SDTypeEnum) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[48/62] 'mdl::nvidia::core_definitions::light_omni'
+###################################################
+   * Label: 'Diffuse emission'
+   * Description: 'Emissive material emitting in all directions'
+   * SDPropertyCategory = 'Input'
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the light'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'intensity' = SDValueFloat(float(1000)) [CONNECTABLE]
+         * Label: 'Intensity'
+         * Description: 'The brightness of the light source'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'unit_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Unit scale'
+         * Description: 'Modeling unit to meter conversion factor'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'unit' = SDValueEnum("mdl::nvidia::core_definitions::emission_type",0) [CONNECTABLE]
+         * Label: 'Unit for emission'
+         * Description: 'The physical unit of "Intensity"'
+         * Types:
+            * 'mdl::nvidia::core_definitions::emission_type' (SDTypeEnum) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[49/62] 'mdl::nvidia::core_definitions::light_spot'
+###################################################
+   * Label: 'Spotlight emission'
+   * Description: 'Emissive material emitting focused in one direction'
+   * SDPropertyCategory = 'Input'
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the light'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'intensity' = SDValueFloat(float(1000)) [CONNECTABLE]
+         * Label: 'Intensity'
+         * Description: 'The brightness of the light source'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'unit_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Unit scale'
+         * Description: 'Modeling unit to meter conversion factor'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'spot_exponent' = SDValueFloat(float(30)) [CONNECTABLE]
+         * Label: 'Spot focus'
+         * Description: 'larger values lead to more focused spotlights'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'unit' = SDValueEnum("mdl::nvidia::core_definitions::emission_type",0) [CONNECTABLE]
+         * Label: 'Unit for emission'
+         * Description: 'The physical unit of "Intensity"'
+         * Types:
+            * 'mdl::nvidia::core_definitions::emission_type' (SDTypeEnum) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[50/62] 'mdl::nvidia::core_definitions::light_ies'
+##################################################
+   * Label: 'IES file based emission'
+   * Description: 'Emissive material emitting as described in an IES file'
+   * SDPropertyCategory = 'Input'
+      * 'profile' [CONNECTABLE]
+         * Label: 'IES light profile data'
+         * Description: 'Data to describe the distribution of the light'
+         * Types:
+            * 'mdl::light_profile' (SDMDLTypeLightProfileReference) [Uniform]
+
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the light'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'intensity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Intensity'
+         * Description: 'The brightness of the light source'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'unit_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Unit scale'
+         * Description: 'Modeling unit to meter conversion factor'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[51/62] 'mdl::nvidia::core_definitions::metal'
+##############################################
+   * Label: 'Simple metal, deprecated'
+   * Description: 'A basic metallic material'
+   * SDPropertyCategory = 'Input'
+      * 'metal_color' = SDValueColorRGB(ColorRGB(0.899999976,0.899999976,0.899999976)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the metal'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0.0500000007)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'glossy_weight' = SDValueFloat(float(0.899999976)) [CONNECTABLE]
+         * Label: 'Reflectivity'
+         * Description: 'Intensity of highlights and glossy reflections and highlights'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___256) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[52/62] 'mdl::nvidia::core_definitions::plastic'
+################################################
+   * Label: 'Simple plastic, deprecated'
+   * Description: 'A basic dielectric, works for everything opaque that is not metallic'
+   * SDPropertyCategory = 'Input'
+      * 'diffuse_color' = SDValueColorRGB(ColorRGB(0.5,0.5,0.5)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0.25)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___257) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[53/62] 'mdl::nvidia::core_definitions::scratched_metal'
+########################################################
+   * Label: 'Metal , deprecated'
+   * Description: 'A metallic material with stretched reflections'
+   * SDPropertyCategory = 'Input'
+      * 'metal_color' = SDValueColorRGB(ColorRGB(0.899999976,0.899999976,0.899999976)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the metal'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0.0500000007)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'glossy_weight' = SDValueFloat(float(0.899999976)) [CONNECTABLE]
+         * Label: 'Reflection weight'
+         * Description: 'Intensity of highlights and glossy reflections and highlights'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy'
+         * Description: 'Higher values will stretch the highlight'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy_rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy rotation'
+         * Description: 'Changes the orientation of the anisotropy. A value of 1 will rotate the orientation 360 degrees.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___258) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[54/62] 'mdl::nvidia::core_definitions::scratched_plastic'
+##########################################################
+   * Label: 'Plastic, deprecated'
+   * Description: 'A basic dielectric, works for everything opaque that is not metallic. Supports stretched highlights.'
+   * SDPropertyCategory = 'Input'
+      * 'diffuse_color' = SDValueColorRGB(ColorRGB(0.5,0.5,0.5)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0.0500000007)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy'
+         * Description: 'Higher values will stretch the highlight'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy_rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy rotation'
+         * Description: 'Changes the orientation of the anisotropy. A value of 1 will rotate the orientation 360 degrees.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'reflectivity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Reflection weight'
+         * Description: 'Additional Reflectivity control'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___259) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[55/62] 'mdl::nvidia::core_definitions::apply_colorfalloff'
+###########################################################
+   * Label: 'Apply a color falloff, deprecated'
+   * Description: 'Makes the color view dependent'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::scratched_metal__default_call___261) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a clear coating applied'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'color_0' = SDValueColorRGB(ColorRGB(1,0,0)) [CONNECTABLE]
+         * Label: 'Color 1'
+         * Description: 'The color of the dust'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color_1' = SDValueColorRGB(ColorRGB(0,1,0)) [CONNECTABLE]
+         * Label: 'Color 2'
+         * Description: 'The color of the dust'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color_2' = SDValueColorRGB(ColorRGB(0,0,1)) [CONNECTABLE]
+         * Label: 'Color 3'
+         * Description: 'The color of the dust'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color_3' = SDValueColorRGB(ColorRGB(1,0,0)) [CONNECTABLE]
+         * Label: 'Color 4'
+         * Description: 'The color of the dust'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color_4' = SDValueColorRGB(ColorRGB(0,1,0)) [CONNECTABLE]
+         * Label: 'Color 5'
+         * Description: 'The color of the dust'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[56/62] 'mdl::nvidia::core_definitions::flex_material'
+######################################################
+   * Label: 'Flexible material model, deprecated'
+   * Description: 'A complex material that can be configured to a wide variety of looks'
+   * SDPropertyCategory = 'Input'
+      * 'base_color' = SDValueColorRGB(ColorRGB(0.5,0.5,0.5)) [CONNECTABLE]
+         * Label: 'Base color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'diffuse_roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Diffuse roughness'
+         * Description: 'Higher roughness values lead to a more "powdery" look'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'is_metal' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Metallic material'
+         * Description: 'If true, reflection will be colored and independent of view direction. If false, reflection will be white and direction dependent. Directional dependence is in this case based on the IOR (Fresnel effect).'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'reflectivity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Reflection weight'
+         * Description: 'Controls the amount of reflection'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'reflection_roughness' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Reflection roughness'
+         * Description: 'Higher roughness values lead to more blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Reflection anisotropy'
+         * Description: 'Higher values will stretch the highlight'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy_rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy rotation'
+         * Description: 'Changes the orientation of the anisotropy. A value of 1 will rotate the orientation 360 degrees.'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'transparency' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Transmission weight'
+         * Description: 'Weights how much light passes through the object vs. its diffuse reflectivity'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'transmission_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Transmission color'
+         * Description: 'Color effect for transmission independent of thickness of the object, similar to stained glass'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'volume_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Volume color'
+         * Description: 'If the material is not "Thin walled", "Volume color" will be reached at "Volume reference distance"(m)'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'transmission_roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Transmission roughness'
+         * Description: 'higher values lead to objects seen through the material to appear blurry'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'base_thickness' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Volume reference distance'
+         * Description: 'If the material is not "Thin walled", "Volume color" will be reached at this distance (m). Enter a typical thickness of objects made of this material here.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ior' = SDValueFloat(float(1.5)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines refraction in the volume. It also influences the reflectivity for materials that are not metallic.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'thin_walled' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Label: 'Thin walled'
+         * Description: 'Thin walled materials do not refract and do not have volume effects. Good for soap bubbles or window glass.'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___262) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'abbe_number' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Abbe number'
+         * Description: 'Controls dispersion. A value of 0 switches dispersion off, Dispersive materials have Abbe numbers between 25 and 85.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[57/62] 'mdl::nvidia::core_definitions::thin_glass'
+###################################################
+   * Label: 'Thin glass, deprecated'
+   * Description: 'A basic transmissive dielectric without refraction or volume'
+   * SDPropertyCategory = 'Input'
+      * 'glass_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Transmission color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___263) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[58/62] 'mdl::nvidia::core_definitions::thin_translucent'
+#########################################################
+   * Label: 'Thin translucent, deprecated'
+   * Description: 'A diffuse transmissive dielectric material'
+   * SDPropertyCategory = 'Input'
+      * 'surface_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Diffuse color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'translucent_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Translucence color'
+         * Description: 'The color of the volume of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'translucency' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Translucence weight'
+         * Description: 'Fraction of the incoming light that should be visible on the backside'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___264) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[59/62] 'mdl::nvidia::core_definitions::thick_glass'
+####################################################
+   * Label: 'Thick glass, deprecated'
+   * Description: 'A basic transmissive dielectric with refraction and coloring in the volume'
+   * SDPropertyCategory = 'Input'
+      * 'transmission_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Transmission color'
+         * Description: 'Colors the light entering the volume, similar to stained glass'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'glass_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Volume color'
+         * Description: 'The color of the glass body'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity as well as amount of refraction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'base_thickness' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Volume reference distance'
+         * Description: '"Volume color" will be reached at this distance (m). Enter a typical thickness of objects made of this material here.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___265) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'abbe_number' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Abbe number'
+         * Description: 'Controls dispersion. A value of 0 switches dispersion off. Dispersive materials have Abbe numbers between 25 and 85.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[60/62] 'mdl::nvidia::core_definitions::thick_translucent'
+##########################################################
+   * Label: 'Thick translucent, deprecated'
+   * Description: 'A subsurface scattering material'
+   * SDPropertyCategory = 'Input'
+      * 'transmission_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Transmission color'
+         * Description: 'The color of the material'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'volume_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Volume color'
+         * Description: 'The color of the volume at "Volume reference distance"'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'volume_scattering' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Volume scattering'
+         * Description: 'Amount of scattering for objects at "Volume reference distance"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Reflection roughness'
+         * Description: 'Higher roughness values lead to bigger highlights and blurry reflections'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'reflectivity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Reflection weight'
+         * Description: 'Overall reflectivity of the material'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'base_thickness' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Label: 'Volume reference distance'
+         * Description: '"Volume color" and "Volume scattering" will be reached at this distance (m). Enter a typical thickness of objects made of this material here.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___266) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'ior' = SDValueFloat(float(1.39999998)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity as well as amount of refraction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'abbe_number' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Abbe number'
+         * Description: 'Controls dispersion. A value of 0switches dispersion off. Dispersive materials have Abbe numbers between 25 and 85.'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[61/62] 'mdl::nvidia::core_definitions::apply_clearcoat'
+########################################################
+   * Label: 'Apply clear coating, deprecated'
+   * Description: 'Apply clear coat to an existing material'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::diffuse__default_call___268) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a clear coating applied'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'ior' = SDValueFloat(float(1.60000002)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Determines reflectivity of the clear coat'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Reflection roughness'
+         * Description: 'Determines roughness of the clear coat'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'visibility' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Coat visibility'
+         * Description: 'Determines visibility of the clear coat'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___269) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'coat_filter_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Coat filter color'
+         * Description: 'For simulating coatings with colored resins that modulate the color of underlying layers'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+[62/62] 'mdl::nvidia::core_definitions::apply_metalcoat'
+########################################################
+   * Label: 'Apply thin metal coating, deprecated'
+   * Description: 'Apply metal coat to an existing material'
+   * SDPropertyCategory = 'Input'
+      * 'base' = SDMDLValueCall(mdl::nvidia::core_definitions::diffuse__default_call___271) [CONNECTABLE]
+         * Label: 'Base material'
+         * Description: 'The material that will get a metallic coating applied'
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+      * 'metal_color' = SDValueColorRGB(ColorRGB(0.949999988,0.949999988,0.949999988)) [CONNECTABLE]
+         * Label: 'Reflection color'
+         * Description: 'The color of the metal'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'visibility' = SDValueFloat(float(0.300000012)) [CONNECTABLE]
+         * Label: 'Reflection weight'
+         * Description: 'The opacity of the coat'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Reflection roughness'
+         * Description: 'Determines roughness of the metal coat'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___272) [CONNECTABLE]
+         * Label: 'Bumps'
+         * Description: 'Attach bump or normal maps here'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)
+
+Types:
+------
+[1/4] 'mdl::nvidia::core_definitions::emission_type'
+####################################################
+   * 'mdl::nvidia::core_definitions::emission_type' (SDTypeEnum)
+      * int lumen_m2 = SDValueInt(int(0))
+      * int lumen = SDValueInt(int(1))
+      * int candela = SDValueInt(int(2))
+      * int nit = SDValueInt(int(3))
+
+[2/4] 'mdl::nvidia::core_definitions::material_type'
+####################################################
+   * 'mdl::nvidia::core_definitions::material_type' (SDTypeEnum)
+      * int simple_material = SDValueInt(int(0))
+      * int complex_material = SDValueInt(int(1))
+      * int combiner_material = SDValueInt(int(2))
+      * int modifier_material = SDValueInt(int(3))
+
+[3/4] 'mdl::nvidia::core_definitions::cell_type'
+################################################
+   * 'mdl::nvidia::core_definitions::cell_type' (SDTypeEnum)
+      * int simple_cells = SDValueInt(int(0))
+      * int crystal_cells = SDValueInt(int(1))
+      * int bordered_cells = SDValueInt(int(2))
+
+[4/4] 'mdl::nvidia::core_definitions::cell_base'
+################################################
+   * 'mdl::nvidia::core_definitions::cell_base' (SDTypeEnum)
+      * int circular_cells = SDValueInt(int(0))
+      * int diamond_cells = SDValueInt(int(1))

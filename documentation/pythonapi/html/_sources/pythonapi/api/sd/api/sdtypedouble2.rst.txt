@@ -1,0 +1,8 @@
+sdtypedouble2 module
+====================
+
+.. automodule:: sd.api.sdtypedouble2
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

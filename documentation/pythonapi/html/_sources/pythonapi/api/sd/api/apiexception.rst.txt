@@ -1,0 +1,8 @@
+apiexception module
+===================
+
+.. automodule:: sd.api.apiexception
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

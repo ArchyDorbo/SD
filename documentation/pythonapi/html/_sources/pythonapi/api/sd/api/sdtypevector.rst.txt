@@ -1,0 +1,8 @@
+sdtypevector module
+===================
+
+.. automodule:: sd.api.sdtypevector
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

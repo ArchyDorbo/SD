@@ -1,0 +1,90 @@
+mdl::adobe::util
+================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/7] 'mdl::adobe::util::bool_texture(texture_2d)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'bool' (SDTypeBool) [Varying]
+
+[2/7] 'mdl::adobe::util::int_texture(texture_2d)'
+#################################################
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt) [Varying]
+
+[3/7] 'mdl::adobe::util::float_texture(texture_2d)'
+###################################################
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+[4/7] 'mdl::adobe::util::double_texture(texture_2d)'
+####################################################
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'double' (SDTypeDouble) [Varying]
+
+[5/7] 'mdl::adobe::util::color_texture(texture_2d)'
+###################################################
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+[6/7] 'mdl::adobe::util::normal_texture(texture_2d)'
+####################################################
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[7/7] 'mdl::adobe::util::vector_texture(texture_2d)'
+####################################################
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]

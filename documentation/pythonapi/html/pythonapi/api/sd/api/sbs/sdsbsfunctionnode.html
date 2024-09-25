@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>sdsbsfunctionnode module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="sdsbsfxmapgraph module" href="sdsbsfxmapgraph.html" />
+    <link rel="prev" title="sdsbsfunctiongraph module" href="sdsbsfunctiongraph.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdsbsfxmapgraph.html" title="sdsbsfxmapgraph module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sdsbsfunctiongraph.html" title="sdsbsfunctiongraph module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../modules.html" >Python Package ‘api’</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="modules.html" accesskey="U">Python Package ‘sbs’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.api.sbs.sdsbsfunctionnode">
+<span id="sdsbsfunctionnode-module"></span><h1>sdsbsfunctionnode module<a class="headerlink" href="#module-sd.api.sbs.sdsbsfunctionnode" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode">
+<em class="property">class </em><code class="sig-prename descclassname">sd.api.sbs.sdsbsfunctionnode.</code><code class="sig-name descname">SDSBSFunctionNode</code><span class="sig-paren">(</span><em class="sig-param">APIContext</em>, <em class="sig-param">handle</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../sdnode.html#sd.api.sdnode.SDNode" title="sd.api.sdnode.SDNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">sd.api.sdnode.SDNode</span></code></a></p>
+<p>Class managing a Substance function node</p>
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.deleteProperty">
+<code class="sig-name descname">deleteProperty</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.deleteProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The property to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.deletePropertyConnections">
+<code class="sig-name descname">deletePropertyConnections</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.deletePropertyConnections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all connections of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The SDProperty whose connections will be disconnected</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.deletePropertyGraph">
+<code class="sig-name descname">deletePropertyGraph</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.deletePropertyGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the graph that controls the specified property, and restore the previous constant value</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The property from which we want to remove the graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getAnnotationPropertyValueFromId">
+<code class="sig-name descname">getAnnotationPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getAnnotationPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the annotation property that matches the specified identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyId</strong> – The identifier of the annotation property we want to retrieve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getClassName">
+<code class="sig-name descname">getClassName</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getClassName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the most specific name of the class this APIObject is</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getDefinition">
+<code class="sig-name descname">getDefinition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the definition of the node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getIdentifier">
+<code class="sig-name descname">getIdentifier</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getIdentifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node identifier in the context of its graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getInputPropertyValueFromId">
+<code class="sig-name descname">getInputPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getInputPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the input property that matches the specified identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyId</strong> – The identifier of the input property we want to retrieve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPosition">
+<code class="sig-name descname">getPosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; sd.api.sdbasetypes.float2<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node position within its graph</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getProperties">
+<code class="sig-name descname">getProperties</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all node properties for the specified SDPropertyCategory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdPropertyCategory</strong> – The category of the property</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPropertyConnections">
+<code class="sig-name descname">getPropertyConnections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPropertyConnections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all connections of the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The Property we want to retrieve the connections from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPropertyFromId">
+<code class="sig-name descname">getPropertyFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPropertyFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the property that matches the specified identifier in the specified category</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPropertyGraph">
+<code class="sig-name descname">getPropertyGraph</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: SDProperty</em><span class="sig-paren">)</span> &#x2192; Optional[SDGraph]<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPropertyGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the graph that controls the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The property we want to retrieve the value from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPropertyValue">
+<code class="sig-name descname">getPropertyValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPropertyValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the specified node property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sdProperty</strong> – The property we want to retrieve the value from</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPropertyValueFromId">
+<code class="sig-name descname">getPropertyValueFromId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the property that matches the specified identifier in the specified category</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyId</strong> – The identifier of the property we want to retrieve</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getReferencedResource">
+<code class="sig-name descname">getReferencedResource</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.getReferencedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the SDResource referenced by the current node, if any</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.newProperty">
+<code class="sig-name descname">newProperty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.newProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdPropertyIdentifier</strong> – The identifier of the new property</p></li>
+<li><p><strong>sdPropertyType</strong> – The type of the new property</p></li>
+<li><p><strong>sdPropertyCategory</strong> – The category of the property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.newPropertyConnection">
+<code class="sig-name descname">newPropertyConnection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.newPropertyConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new connection between an output property of the current node to an input property of another node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdOutputProperty</strong> – The output property from where to start a new connection</p></li>
+<li><p><strong>sdInputPropertyNode</strong> – The other node</p></li>
+<li><p><strong>sdInputProperty</strong> – The input property of the other node that will be connected</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.newPropertyConnectionFromId">
+<code class="sig-name descname">newPropertyConnectionFromId</code><span class="sig-paren">(</span><em class="sig-param">sdOutputPropertyId: str</em>, <em class="sig-param">sdInputPropertyNode: sd.api.sdnode.SDNode</em>, <em class="sig-param">sdInputPropertyId: str</em><span class="sig-paren">)</span> &#x2192; sd.api.sdconnection.SDConnection<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.newPropertyConnectionFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new connection between an output property of the current node to an input property of a target node based on the properties identifiers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdOutputPropertyId</strong> – The output property identifier from where to start a new connection</p></li>
+<li><p><strong>sdInputPropertyNode</strong> – The other node</p></li>
+<li><p><strong>sdInputPropertyId</strong> – The input property identifier of the other node that will be connected</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.newPropertyGraph">
+<code class="sig-name descname">newPropertyGraph</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: SDProperty</em>, <em class="sig-param">sdGraphTypeId: str</em><span class="sig-paren">)</span> &#x2192; Optional[SDGraph]<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.newPropertyGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the graph that controls the specified property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property we want to retrieve the value from</p></li>
+<li><p><strong>sdGraphTypeId</strong> – The type name of the graph to create on the property. Supported graph name depends on the node and property</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases an APIObject</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.setAnnotationPropertyValueFromId">
+<code class="sig-name descname">setAnnotationPropertyValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdAnnotationPropertyId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.setAnnotationPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified node annotation property retrieved by his identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdAnnotationPropertyId</strong> – The identifier of the annotation property we want to set</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.setInputPropertyValueFromId">
+<code class="sig-name descname">setInputPropertyValueFromId</code><span class="sig-paren">(</span><em class="sig-param">sdInputPropertyId: str</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.setInputPropertyValueFromId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified node input property retrieved by his identifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdInputPropertyId</strong> – The identifier of the input property we want to set</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.setPosition">
+<code class="sig-name descname">setPosition</code><span class="sig-paren">(</span><em class="sig-param">position: sd.api.sdbasetypes.float2</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.setPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the node position within its graph. Note that the X+ is oriented to the right and the Y+ axis is oriented to the bottom.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>position</strong> – The new node position in the graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.setPropertyValue">
+<code class="sig-name descname">setPropertyValue</code><span class="sig-paren">(</span><em class="sig-param">sdProperty: sd.api.sdproperty.SDProperty</em>, <em class="sig-param">sdValue: sd.api.sdvalue.SDValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#sd.api.sbs.sdsbsfunctionnode.SDSBSFunctionNode.setPropertyValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the specified node property. Note that this operation is not allowed for sdProperty that  if the SDProperty.isFunctionOnly() method returns true</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sdProperty</strong> – The property we want to retrieve the value from</p></li>
+<li><p><strong>sdValue</strong> – The value to set</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../../../index.html">
+              <img class="logo" src="../../../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sdsbsfunctiongraph.html"
+                        title="previous chapter">sdsbsfunctiongraph module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sdsbsfxmapgraph.html"
+                        title="next chapter">sdsbsfxmapgraph module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../../_sources/pythonapi/api/sd/api/sbs/sdsbsfunctionnode.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="sdsbsfxmapgraph.html" title="sdsbsfxmapgraph module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sdsbsfunctiongraph.html" title="sdsbsfunctiongraph module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../../modules.html" >Python Package ‘sd’</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="../modules.html" >Python Package ‘api’</a> &#187;</li>
+          <li class="nav-item nav-item-4"><a href="modules.html" >Python Package ‘sbs’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+sdgraphdefinition module
+========================
+
+.. automodule:: sd.api.sdgraphdefinition
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

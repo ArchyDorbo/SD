@@ -1,0 +1,67 @@
+Version 2019.1.0
+----------------
+Introduction
+############
+Here are the main things that have changed in this version.
+
+* Substance Designer now includes Qt for Python. Qt for Python offers a modern, complete solution to build user interfaces
+  and because Designer uses Qt for its own UI, UI elements created from Python can seamless interoperate and
+  integrate with Designer's user interface.
+  We have made many changes to how plugins work to allow extending Designer's UI with UI elements created using Qt for Python.
+    * New classes were introduced in the API to access and create UI elements in Designer's UI.
+
+* Using TkInter to build UIs is still possible but it is now deprecated in favour of Qt for Python.
+  TkInter was limited to creating dialogs and only worked properly on Windows.
+  Using Qt for Python it is possible to also create menus, toolbars and panels.
+    * The selectDirectory function that used TkInter has been removed from the API.
+
+* Plugins can now register callbacks that will be called when certain events happen.
+  Current callbacks include opening and saving files and creation of some UI elements.
+  It is planned to extend the number of callbacks in future releases.
+
+* We added support for Python threads. Plugins can create threads to do background processing
+  or wait for OS events like network connections.
+  Note that Designer's Python API is not thread safe. Modifications to any application data can only
+  be done from the main application thread.
+
+* Input properties that are connectable of SBSCompNode don't have the '.connector' suffix anymore.
+    * This suffix was introduced in the original API version to avoid some input property ids conflict (for sbs::compositing::fxmaps, sbs::compositing::svg and sbs::compositing::text nodes)
+    * This suffix is now no longer needed, it makes the ids of the properties in the API the same as the one used in the .sbs files and in Substance Designer application.
+
+
+Details
+#######
+* [Changed] Class SDAPIObject
+	* [Changed] Enum SDApiError
+		* [Added] DataIsFunctionOnly = 17
+		* [Added] ReadFromDeviceFailed = 18
+		* [Added] PackageNotSaved = 19
+* [Changed] Class SDApplication
+	* [Added] Method SDApplication.getPluginMgr()
+	* [Added] Method SDApplication.getUIMgr()
+	* [Removed] Method SDApplication.getLocationContext()
+	* [Removed] Method SDApplication.setLocationContextUID()
+* [Changed] Class SDConnection
+	* [Added] Method SDConnection.disconnect()
+* [Added] Class SDHistoryUtils
+* [Removed] Class SDLocationContext
+* [Changed] Class SDModuleMgr
+	* [Added] Method SDModuleMgr.addRootPath()
+	* [Added] Method SDModuleMgr.getRootPaths()
+	* [Added] Method SDModuleMgr.removeRootPath()
+* [Changed] Class SDNode
+	* [Added] Method SDNode.deleteProperty()
+	* [Added] Method SDNode.newProperty()
+* [Changed] Class SDPackageMgr
+	* [Added] Method SDPackageMgr.getPackages()
+	* [Changed] Method SDPackageMgr.loadUserPackage()
+		* [Changed] Args changed from '['SDPackageMgr', 'string']' to '['SDPackageMgr', 'string', 'bool', 'bool']'
+* [Added] Class SDPlugin
+* [Added] Class SDPluginMgr
+* [Changed] Class SDProperty
+	* [Added] Method SDProperty.isFunctionOnly()
+* [Added] Class SDSBSARExporter
+* [Changed] Class SDTexture
+	* [Added] Method SDTexture.getPixelBufferAddress()
+	* [Added] Method SDTexture.getRowPitch()
+* [Added] Class SDUIMgr

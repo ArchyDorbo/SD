@@ -1,0 +1,41 @@
+Python Package 'mdl'
+====================
+
+.. toctree::
+   :maxdepth: 5
+
+   sdmdlconstantnode<sdmdlconstantnode.rst>
+   sdmdleexporter<sdmdleexporter.rst>
+   sdmdlexporter<sdmdlexporter.rst>
+   sdmdlgraph<sdmdlgraph.rst>
+   sdmdlgraphdefinition<sdmdlgraphdefinition.rst>
+   sdmdlmodule<sdmdlmodule.rst>
+   sdmdlnode<sdmdlnode.rst>
+   sdmdltype<sdmdltype.rst>
+   sdmdltypealias<sdmdltypealias.rst>
+   sdmdltypebsdf<sdmdltypebsdf.rst>
+   sdmdltypebsdfmeasurementreference<sdmdltypebsdfmeasurementreference.rst>
+   sdmdltypecall<sdmdltypecall.rst>
+   sdmdltypedf<sdmdltypedf.rst>
+   sdmdltypeedf<sdmdltypeedf.rst>
+   sdmdltypehairbsdf<sdmdltypehairbsdf.rst>
+   sdmdltypelightprofilereference<sdmdltypelightprofilereference.rst>
+   sdmdltypeparameterreference<sdmdltypeparameterreference.rst>
+   sdmdltypereference<sdmdltypereference.rst>
+   sdmdltyperesourcereference<sdmdltyperesourcereference.rst>
+   sdmdltypetexturereference<sdmdltypetexturereference.rst>
+   sdmdltypevdf<sdmdltypevdf.rst>
+   sdmdlvalue<sdmdlvalue.rst>
+   sdmdlvaluealias<sdmdlvaluealias.rst>
+   sdmdlvaluebsdf<sdmdlvaluebsdf.rst>
+   sdmdlvaluebsdfmeasurementreference<sdmdlvaluebsdfmeasurementreference.rst>
+   sdmdlvaluecall<sdmdlvaluecall.rst>
+   sdmdlvaluedf<sdmdlvaluedf.rst>
+   sdmdlvalueedf<sdmdlvalueedf.rst>
+   sdmdlvaluehairbsdf<sdmdlvaluehairbsdf.rst>
+   sdmdlvaluelightprofilereference<sdmdlvaluelightprofilereference.rst>
+   sdmdlvalueparameterreference<sdmdlvalueparameterreference.rst>
+   sdmdlvaluereference<sdmdlvaluereference.rst>
+   sdmdlvalueresourcereference<sdmdlvalueresourcereference.rst>
+   sdmdlvaluetexturereference<sdmdlvaluetexturereference.rst>
+   sdmdlvaluevdf<sdmdlvaluevdf.rst>

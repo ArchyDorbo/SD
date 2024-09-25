@@ -1,0 +1,8 @@
+sdmdltypeparameterreference module
+==================================
+
+.. automodule:: sd.api.mdl.sdmdltypeparameterreference
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

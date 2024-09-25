@@ -1,0 +1,124 @@
+mdl::alg::materials::designer::skin
+===================================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/1] 'mdl::alg::materials::designer::skin::physically_metallic_roughness_sss'
+##############################################################################
+   * Label: 'Physically Metallic Roughness - SSS'
+   * Description: 'Mixture of the usual PBR shader with a Subsurface scattering one'
+   * SDPropertyCategory = 'Input'
+      * 'baseColor' = SDValueColorRGB(ColorRGB(0.214040995,0.214040995,0.214040995)) [CONNECTABLE]
+         * Label: 'Base Color/Diffuse'
+         * Description: 'Base Color channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___206) [CONNECTABLE]
+         * Label: 'Normal'
+         * Description: 'Normal channel'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'roughness' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Roughness'
+         * Description: 'Roughness channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'metallic' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Metallic'
+         * Description: 'Metallic channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'height' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Height'
+         * Description: 'Height channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'heightScale' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scale'
+         * Description: 'provides significant physical detail to the surface by manipulating the vertices of the mesh'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'ior' = SDValueFloat(float(1.5)) [CONNECTABLE]
+         * Label: 'IOR'
+         * Description: 'Desrcibes the index of refraction of the material medium'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scattering' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scattering'
+         * Description: 'How much to blend the SSS material to take into account vs. the usual PBR shader'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'scatteringScale' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Scale'
+         * Description: 'Artistict control to tweak the subsurface scattering effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'scatteringColor' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Label: 'Color'
+         * Description: 'Describes at which probability each wavelength scatters within the volume'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'ambientOcclusion' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Ambient Occlusion'
+         * Description: 'Ambient Occlusion channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'anisotropyLevel' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy Level'
+         * Description: 'Anisotropy Level channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'anisotropyAngle' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Label: 'Anisotropy Angle'
+         * Description: 'Anisotropy Angle channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'emissiveColor' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Label: 'Emissive'
+         * Description: 'Emissive channel'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+      * 'emissiveIntensity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Emissive Intensity'
+         * Description: 'Controls how much light is emitted from the surface'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'specularLevel' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Specular Level'
+         * Description: 'Specular Level channel'
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'scalarZeroValue' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Label: 'Scalar Zero Value'
+         * Description: 'Determine the neutral height value'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'tiling' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Label: 'Tiling'
+         * Description: 'Tiling value to keep displacement tiling independent'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)

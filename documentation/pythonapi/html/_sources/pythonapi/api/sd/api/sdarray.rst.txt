@@ -1,0 +1,8 @@
+sdarray module
+==============
+
+.. automodule:: sd.api.sdarray
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

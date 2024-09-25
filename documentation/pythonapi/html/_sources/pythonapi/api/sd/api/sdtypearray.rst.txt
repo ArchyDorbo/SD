@@ -1,0 +1,8 @@
+sdtypearray module
+==================
+
+.. automodule:: sd.api.sdtypearray
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

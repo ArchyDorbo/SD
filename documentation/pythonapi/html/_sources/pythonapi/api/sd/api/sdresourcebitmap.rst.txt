@@ -1,0 +1,8 @@
+sdresourcebitmap module
+=======================
+
+.. automodule:: sd.api.sdresourcebitmap
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

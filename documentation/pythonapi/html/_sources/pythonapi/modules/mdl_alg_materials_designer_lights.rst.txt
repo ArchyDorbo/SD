@@ -1,0 +1,23 @@
+mdl::alg::materials::designer::lights
+=====================================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/1] 'mdl::alg::materials::designer::lights::diffuse_light'
+############################################################
+   * Label: 'Diffuse Light'
+   * SDPropertyCategory = 'Input'
+      * 'tint' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'intensity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::material' (SDTypeStruct)

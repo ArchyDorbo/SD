@@ -1,0 +1,8 @@
+sdtypestruct module
+===================
+
+.. automodule:: sd.api.sdtypestruct
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

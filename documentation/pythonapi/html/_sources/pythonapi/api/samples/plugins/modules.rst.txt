@@ -1,0 +1,7 @@
+Python Package 'plugins'
+========================
+
+.. toctree::
+   :maxdepth: 5
+
+   custom_graph<custom_graph/modules.rst>

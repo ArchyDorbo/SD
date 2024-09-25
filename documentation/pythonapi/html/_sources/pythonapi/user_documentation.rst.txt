@@ -1,0 +1,9 @@
+User Documentation
+==================
+
+See Substance Designer's online documentation for additional information about how to use the API in Substance Designer
+
+	https://www.adobe.com/go/Substance-3D-doc-Designer
+
+(In the section: "Substance Designer/Scripting/Scripting API")
+

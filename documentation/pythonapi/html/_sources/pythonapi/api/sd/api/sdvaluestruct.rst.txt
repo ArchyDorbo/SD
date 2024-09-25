@@ -1,0 +1,8 @@
+sdvaluestruct module
+====================
+
+.. automodule:: sd.api.sdvaluestruct
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

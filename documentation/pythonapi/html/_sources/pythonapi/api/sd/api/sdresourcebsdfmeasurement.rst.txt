@@ -1,0 +1,8 @@
+sdresourcebsdfmeasurement module
+================================
+
+.. automodule:: sd.api.sdresourcebsdfmeasurement
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:

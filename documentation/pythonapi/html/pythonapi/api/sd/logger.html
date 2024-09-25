@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>logger module &#8212; Adobe Substance 3D Designer Python API .. documentation</title>
+    <link rel="stylesheet" href="../../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Python Package ‘tools’" href="tools/modules.html" />
+    <link rel="prev" title="context module" href="context.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tools/modules.html" title="Python Package ‘tools’"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="context.html" title="context module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" accesskey="U">Python Package ‘sd’</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-sd.logger">
+<span id="logger-module"></span><h1>logger module<a class="headerlink" href="#module-sd.logger" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sd.logger.LogLevel">
+<em class="property">class </em><code class="sig-prename descclassname">sd.logger.</code><code class="sig-name descname">LogLevel</code><a class="headerlink" href="#sd.logger.LogLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="sd.logger.LogLevel.Error">
+<code class="sig-name descname">Error</code><em class="property"> = 2</em><a class="headerlink" href="#sd.logger.LogLevel.Error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.logger.LogLevel.Info">
+<code class="sig-name descname">Info</code><em class="property"> = 0</em><a class="headerlink" href="#sd.logger.LogLevel.Info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.logger.LogLevel.Warning">
+<code class="sig-name descname">Warning</code><em class="property"> = 1</em><a class="headerlink" href="#sd.logger.LogLevel.Warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sd.logger.SDRuntimeLogHandler">
+<em class="property">class </em><code class="sig-prename descclassname">sd.logger.</code><code class="sig-name descname">SDRuntimeLogHandler</code><span class="sig-paren">(</span><em class="sig-param">aCAPI</em>, <em class="sig-param">channelName=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.StreamHandler</span></code></p>
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.acquire">
+<code class="sig-name descname">acquire</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.acquire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Acquire the I/O thread lock.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.addFilter">
+<code class="sig-name descname">addFilter</code><span class="sig-paren">(</span><em class="sig-param">filter</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.addFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the specified filter to this handler.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tidy up any resources used by the handler.</p>
+<p>This version removes the handler from an internal map of handlers,
+_handlers, which is used for handler lookup by name. Subclasses
+should ensure that this gets called from overridden close()
+methods.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.createLock">
+<code class="sig-name descname">createLock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.createLock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Acquire a thread lock for serializing access to the underlying I/O.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.emit">
+<code class="sig-name descname">emit</code><span class="sig-paren">(</span><em class="sig-param">record</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.emit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Emit a record.</p>
+<p>If a formatter is specified, it is used to format the record.
+The record is then written to the stream with a trailing newline.  If
+exception information is present, it is formatted using
+traceback.print_exception and appended to the stream.  If the stream
+has an ‘encoding’ attribute, it is used to determine how to do the
+output to the stream.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.filter">
+<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">record</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if a record is loggable by consulting all the filters.</p>
+<p>The default is to allow the record to be logged; any filter can veto
+this and the record is then dropped. Returns a zero value if a record
+is to be dropped, else non-zero.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.2: </span>Allow filters to be just callables.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.flush">
+<code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flushes the stream.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.format">
+<code class="sig-name descname">format</code><span class="sig-paren">(</span><em class="sig-param">record</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format the specified record.</p>
+<p>If a formatter is set, use it. Otherwise, use the default formatter
+for the module.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.get_name">
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.handle">
+<code class="sig-name descname">handle</code><span class="sig-paren">(</span><em class="sig-param">record</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.handle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conditionally emit the specified logging record.</p>
+<p>Emission depends on filters which may have been added to the handler.
+Wrap the actual emission of the record with acquisition/release of
+the I/O thread lock. Returns whether the filter passed the record for
+emission.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.handleError">
+<code class="sig-name descname">handleError</code><span class="sig-paren">(</span><em class="sig-param">record</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.handleError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle errors which occur during an emit() call.</p>
+<p>This method should be called from handlers when an exception is
+encountered during an emit() call. If raiseExceptions is false,
+exceptions get silently ignored. This is what is mostly wanted
+for a logging system - most users will not care about errors in
+the logging system, they are more interested in application errors.
+You could, however, replace this with a custom handler if you wish.
+The record which was being processed is passed in to this method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the I/O thread lock.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.removeFilter">
+<code class="sig-name descname">removeFilter</code><span class="sig-paren">(</span><em class="sig-param">filter</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.removeFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the specified filter from this handler.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.setFormatter">
+<code class="sig-name descname">setFormatter</code><span class="sig-paren">(</span><em class="sig-param">fmt</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.setFormatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the formatter for this handler.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.setLevel">
+<code class="sig-name descname">setLevel</code><span class="sig-paren">(</span><em class="sig-param">level</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.setLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the logging level of this handler.  level must be an int or a str.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.setStream">
+<code class="sig-name descname">setStream</code><span class="sig-paren">(</span><em class="sig-param">stream</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.setStream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the StreamHandler’s stream to the specified value,
+if it is different.</p>
+<p>Returns the old stream, if the stream was changed, or None
+if it wasn’t.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sd.logger.SDRuntimeLogHandler.set_name">
+<code class="sig-name descname">set_name</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.set_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sd.logger.SDRuntimeLogHandler.terminator">
+<code class="sig-name descname">terminator</code><em class="property"> = '\n'</em><a class="headerlink" href="#sd.logger.SDRuntimeLogHandler.terminator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../../index.html">
+              <img class="logo" src="../../../_static/SD_Black_Title.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="context.html"
+                        title="previous chapter">context module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tools/modules.html"
+                        title="next chapter">Python Package ‘tools’</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/pythonapi/api/sd/logger.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tools/modules.html" title="Python Package ‘tools’"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="context.html" title="context module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Adobe Substance 3D Designer Python API .. documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >Python Package ‘sd’</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Adobe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.
+    </div>
+  </body>
+</html>

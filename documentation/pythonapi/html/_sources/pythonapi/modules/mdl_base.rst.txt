@@ -1,0 +1,2329 @@
+mdl::base
+=========
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/71] 'mdl::base::projection_mode(::base::projection_mode)'
+############################################################
+   * Description: 'Methods for texture projection'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::base::projection_mode",1) [CONNECTABLE]
+         * Types:
+            * 'mdl::base::projection_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::projection_mode' (SDTypeEnum)
+
+[2/71] 'mdl::base::int(::base::projection_mode)'
+################################################
+   * Description: 'Methods for texture projection'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::projection_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[3/71] 'mdl::base::color_layer_mode(::base::color_layer_mode)'
+##############################################################
+   * Description: 'Texture combination modes between two layers. The two layers are modified in the manner described by the modes, and the result is blended with the bottom layer based on a weighting factor.'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::base::color_layer_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::base::color_layer_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::color_layer_mode' (SDTypeEnum)
+
+[4/71] 'mdl::base::int(::base::color_layer_mode)'
+#################################################
+   * Description: 'Texture combination modes between two layers. The two layers are modified in the manner described by the modes, and the result is blended with the bottom layer based on a weighting factor.'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::color_layer_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[5/71] 'mdl::base::texture_coordinate_system(::base::texture_coordinate_system)'
+################################################################################
+   * Description: 'Coordinate system selection for textures'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::base::texture_coordinate_system",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_coordinate_system' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_coordinate_system' (SDTypeEnum)
+
+[6/71] 'mdl::base::int(::base::texture_coordinate_system)'
+##########################################################
+   * Description: 'Coordinate system selection for textures'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_coordinate_system' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[7/71] 'mdl::base::mono_mode(::base::mono_mode)'
+################################################
+   * Description: 'Modes for the creation of a gray-scale value from a color'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::base::mono_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::base::mono_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::mono_mode' (SDTypeEnum)
+
+[8/71] 'mdl::base::int(::base::mono_mode)'
+##########################################
+   * Description: 'Modes for the creation of a gray-scale value from a color'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::mono_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[9/71] 'mdl::base::gradient_interpolation_mode(::base::gradient_interpolation_mode)'
+####################################################################################
+   * Description: 'Modes for interpolating between the different colors in a gradient texture'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::base::gradient_interpolation_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::base::gradient_interpolation_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::gradient_interpolation_mode' (SDTypeEnum)
+
+[10/71] 'mdl::base::int(::base::gradient_interpolation_mode)'
+#############################################################
+   * Description: 'Modes for interpolating between the different colors in a gradient texture'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::gradient_interpolation_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[11/71] 'mdl::base::gradient_mode(::base::gradient_mode)'
+#########################################################
+   * Description: 'Modes for generating the gradient position based on input uv coordinates'
+   * SDPropertyCategory = 'Input'
+      * 'v' = SDValueEnum("mdl::base::gradient_mode",0) [CONNECTABLE]
+         * Types:
+            * 'mdl::base::gradient_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::gradient_mode' (SDTypeEnum)
+
+[12/71] 'mdl::base::int(::base::gradient_mode)'
+###############################################
+   * Description: 'Modes for generating the gradient position based on input uv coordinates'
+   * SDPropertyCategory = 'Input'
+      * 'x' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::gradient_mode' (SDTypeEnum)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'int' (SDTypeInt)
+
+[13/71] 'mdl::base::texture_coordinate_info(::base::texture_coordinate_info)'
+#############################################################################
+   * Description: 'The texture coordinate, tangent_u and tangent_v needed by bump mapping and anisotropy'
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+[14/71] 'mdl::base::texture_coordinate_info(float3,float3,float3)'
+##################################################################
+   * Description: 'The texture coordinate, tangent_u and tangent_v needed by bump mapping and anisotropy'
+   * SDPropertyCategory = 'Input'
+      * 'position' = SDMDLValueCall(mdl::state::texture_coordinate(int)__default_call___67) [CONNECTABLE]
+         * Description: 'Texture coordinate'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___68) [CONNECTABLE]
+         * Description: 'Tangent in u direction'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'tangent_v' = SDMDLValueCall(mdl::state::texture_tangent_v(int)__default_call___69) [CONNECTABLE]
+         * Description: 'Tangent in v direction'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+[15/71] 'mdl::base::texture_coordinate_info.position(::base::texture_coordinate_info)'
+######################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[16/71] 'mdl::base::texture_coordinate_info.tangent_u(::base::texture_coordinate_info)'
+#######################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[17/71] 'mdl::base::texture_coordinate_info.tangent_v(::base::texture_coordinate_info)'
+#######################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[18/71] 'mdl::base::color_layer(::base::color_layer)'
+#####################################################
+   * Description: 'Single texture layer for use in blending'
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::color_layer' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::color_layer' (SDTypeStruct)
+
+[19/71] 'mdl::base::color_layer(color,float,::base::color_layer_mode)'
+######################################################################
+   * Description: 'Single texture layer for use in blending'
+   * SDPropertyCategory = 'Input'
+      * 'layer_color' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Description: 'The color to be combined with a layer "below" this layer'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Scale factor for blending this color with the color produced by the mode value (the "lower layer")'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'mode' = SDValueEnum("mdl::base::color_layer_mode",0) [CONNECTABLE]
+         * Description: 'Method for combining this layer and the lower layer'
+         * Types:
+            * 'mdl::base::color_layer_mode' (SDTypeEnum) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::color_layer' (SDTypeStruct)
+
+[20/71] 'mdl::base::color_layer.layer_color(::base::color_layer)'
+#################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::color_layer' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[21/71] 'mdl::base::color_layer.weight(::base::color_layer)'
+############################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::color_layer' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[22/71] 'mdl::base::color_layer.mode(::base::color_layer)'
+##########################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::color_layer' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::color_layer_mode' (SDTypeEnum) [Uniform]
+
+[23/71] 'mdl::base::texture_return(::base::texture_return)'
+###########################################################
+   * Description: 'Type of the return value from texturing functions'
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[24/71] 'mdl::base::texture_return(color,float)'
+################################################
+   * Description: 'Type of the return value from texturing functions'
+   * SDPropertyCategory = 'Input'
+      * 'tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Description: 'Return value suitable to for driving input parameters of type color'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'mono' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Gray-scale return value suitable for driving input parameters of type float'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[25/71] 'mdl::base::texture_return.tint(::base::texture_return)'
+################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[26/71] 'mdl::base::texture_return.mono(::base::texture_return)'
+################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[27/71] 'mdl::base::anisotropy_return(::base::anisotropy_return)'
+#################################################################
+   * Description: 'Type of the return value from functions driving roughness and anisotropy parameters of glossy BSDF'
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::anisotropy_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::anisotropy_return' (SDTypeStruct)
+
+[28/71] 'mdl::base::anisotropy_return(float,float,float3)'
+##########################################################
+   * Description: 'Type of the return value from functions driving roughness and anisotropy parameters of glossy BSDF'
+   * SDPropertyCategory = 'Input'
+      * 'roughness_u' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Roughness in u direction'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'roughness_v' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Roughness in v direction'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___70) [CONNECTABLE]
+         * Description: 'Tangent in u direction'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::anisotropy_return' (SDTypeStruct)
+
+[29/71] 'mdl::base::anisotropy_return.roughness_u(::base::anisotropy_return)'
+#############################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::anisotropy_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[30/71] 'mdl::base::anisotropy_return.roughness_v(::base::anisotropy_return)'
+#############################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::anisotropy_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[31/71] 'mdl::base::anisotropy_return.tangent_u(::base::anisotropy_return)'
+###########################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::anisotropy_return' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[32/71] 'mdl::base::coordinate_projection(::base::texture_coordinate_system,int,::base::projection_mode,float4x4)'
+##################################################################################################################
+   * Description: 'Constructs a texturing coordinate system based on a variety of projection functions.'
+   * SDPropertyCategory = 'Input'
+      * 'coordinate_system' = SDValueEnum("mdl::base::texture_coordinate_system",2) [CONNECTABLE]
+         * Description: 'The projection can be done based on world, object or any uvw space.'
+         * Types:
+            * 'mdl::base::texture_coordinate_system' (SDTypeEnum) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Description: 'if texture_coordinate_uvw, index into the appropriate one'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'projection_type' = SDValueEnum("mdl::base::projection_mode",5) [CONNECTABLE]
+         * Description: 'Projection method to be used to generate the coordinates'
+         * Types:
+            * 'mdl::base::projection_mode' (SDTypeEnum) [Uniform]
+
+      * 'projection_transform' = SDValueMatrix(matrix<float>[4][4](float(1),float(0),float(0),float(0),float(0),float(1),float(0),float(0),float(0),float(0),float(1),float(0),float(0),float(0),float(0),float(1))) [CONNECTABLE]
+         * Description: 'Transformation of the projector in world space'
+         * Types:
+            * 'matrix<float>[4][4]' (SDTypeMatrix) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct) [Varying]
+
+[33/71] 'mdl::base::coordinate_source(::base::texture_coordinate_system,int)'
+#############################################################################
+   * Description: 'Access to world coordinates, object coordinates or specifically defined texture spaces'
+   * SDPropertyCategory = 'Input'
+      * 'coordinate_system' = SDValueEnum("mdl::base::texture_coordinate_system",0) [CONNECTABLE]
+         * Description: 'The function can source coordinates in uvw, world or object space'
+         * Types:
+            * 'mdl::base::texture_coordinate_system' (SDTypeEnum) [Uniform]
+
+      * 'texture_space' = SDValueInt(int(0)) [CONNECTABLE]
+         * Description: 'if texture_coordinate_uvw, index into the appropriate one'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct) [Varying]
+
+[34/71] 'mdl::base::transform_coordinate(float4x4,::base::texture_coordinate_info)'
+###################################################################################
+   * Description: 'Transform a texture coordinate by a matrix'
+   * SDPropertyCategory = 'Input'
+      * 'transform' [CONNECTABLE]
+         * Description: 'A transformation to be applied to the source coordinates. rotation_translation_scale() is a suggested means to compute the transformation matrix'
+         * Types:
+            * 'matrix<float>[4][4]' (SDTypeMatrix) [Uniform]
+
+      * 'coordinate' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___74) [CONNECTABLE]
+         * Description: 'Coordinate, typically sourced from coordinate_source or coordinate_projection'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+[35/71] 'mdl::base::rotation_translation_scale(float3,float3,float3)'
+#####################################################################
+   * Description: 'Construct transformation matrix from Euler rotation, translation and scale'
+   * SDPropertyCategory = 'Input'
+      * 'rotation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Description: 'Rotation applied to every UVW coordinate'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'translation' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Description: 'Offset applied to every UVW coordinate'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'scaling' = SDValueFloat3(float3(1,1,1)) [CONNECTABLE]
+         * Description: 'Scale applied to every UVW coordinate'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'matrix<float>[4][4]' (SDTypeMatrix) [Uniform]
+
+[36/71] 'mdl::base::file_texture(texture_2d,color,color,::base::mono_mode,::base::texture_coordinate_info,float2,float2,::tex::wrap_mode,::tex::wrap_mode,bool,float,int2,::tex::wrap_mode,float)'
+##################################################################################################################################################################################################
+   * Description: 'General texturing function for 2D bitmap texture stored in a file'
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Description: 'The input texture'
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'color_offset' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Description: 'Fixed offset value added to all texture values'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color_scale' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Description: 'Fixed scaling factor applied to all texture values'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'mono_source' = SDValueEnum("mdl::base::mono_mode",0) [CONNECTABLE]
+         * Description: 'Defines how mono_result is computed'
+         * Types:
+            * 'mdl::base::mono_mode' (SDTypeEnum) [Uniform]
+
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___78) [CONNECTABLE]
+         * Description: 'Custom value for texture coordinate'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Description: 'Restricts the texture access to sub-domain of the texture in the u direction'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Description: 'Restricts the texture access to sub-domain of the texture in the v direction'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Wrapping mode in the u direction'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Wrapping mode in the v direction'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'clip' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Deprecated, use wrap_mode=tex::wrap_clip. Defines wrap_clamp behavior. If true, a lookup outside [0,1] results in black/transparent'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'animation_start_time' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'When to start playing first frame of the animation '
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'animation_crop' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Description: 'If the texture is an animation, the range of frames to be played can be specified.'
+         * Types:
+            * 'int2' (SDTypeInt2) [Uniform]
+
+      * 'animation_wrap' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Defines what to do outside of regular animation time'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'animation_fps' = SDValueFloat(float(30)) [CONNECTABLE]
+         * Description: 'Framerate to use for animation playback'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct) [Varying]
+
+[37/71] 'mdl::base::architectural_gloss_to_rough(float)'
+########################################################
+   * Description: 'Convert glossiness parameter to roughness parameter, semantics according to the Iray v2 Arch+Design implementation'
+   * SDPropertyCategory = 'Input'
+      * 'glossiness' [CONNECTABLE]
+         * Description: 'Glossiness according to mia material semantic'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[38/71] 'mdl::base::gloss_to_rough(float)'
+##########################################
+   * Description: 'Convert glossiness parameter to roughness parameter through simple inversion'
+   * SDPropertyCategory = 'Input'
+      * 'glossiness' [CONNECTABLE]
+         * Description: 'Inverse of roughness'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[39/71] 'mdl::base::abbe_number_ior(float,float)'
+#################################################
+   * Description: 'Calculate spectral index of refraction'
+   * SDPropertyCategory = 'Input'
+      * 'ior' = SDValueFloat(float(1.5)) [CONNECTABLE]
+         * Description: 'Index of refraction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'abbe_number' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Dispersion in relation to index of refraction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[40/71] 'mdl::base::sellmeier_coefficients_ior(float3,float3)'
+##############################################################
+   * Description: 'Calculate spectral index of refraction using Sellmeier coefficients'
+   * SDPropertyCategory = 'Input'
+      * 'sellmeier_B' = SDValueFloat3(float3(1.03999996,0.230000004,1.00999999)) [CONNECTABLE]
+         * Description: 'Sellmeier coefficient B'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'sellmeier_C' = SDValueFloat3(float3(0.00600000005,0.200000003,103.559998)) [CONNECTABLE]
+         * Description: 'Sellmeier coefficient C (in um^2)'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[41/71] 'mdl::base::environment_spherical(texture_2d)'
+######################################################
+   * Description: 'Environment function implementing a spherical environment'
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Description: 'Spherical environment'
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct) [Varying]
+
+[42/71] 'mdl::base::sun_and_sky(bool,float,color,float,float,float,float,float,color,color,float3,float,float,float,bool,int,bool)'
+###################################################################################################################################
+   * Description: 'Sun and sky model environment. (For documentation of the parameters, please see the official documentation of the matching mental ray shader.)'
+   * SDPropertyCategory = 'Input'
+      * 'on' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'multiplier' = SDValueFloat(float(0.0250000004)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'rgb_unit_conversion' = SDValueColorRGB(ColorRGB(0.000666667009,0.000666667009,0.000666667009)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'haze' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'redblueshift' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'saturation' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'horizon_height' = SDValueFloat(float(0.00100000005)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'horizon_blur' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'ground_color' = SDValueColorRGB(ColorRGB(0.400000006,0.400000006,0.400000006)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'night_color' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'sun_direction' = SDValueFloat3(float3(0,0.229270995,0.418882012)) [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'sun_disk_intensity' = SDValueFloat(float(0.00999999978)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'sun_disk_scale' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'sun_glow_intensity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'y_is_up' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'flags' = SDValueInt(int(0)) [CONNECTABLE]
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'physically_scaled_sun' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct) [Varying]
+
+[43/71] 'mdl::base::perez_sun_and_sky(float,float,float3,color,float,bool,float,float,float)'
+#############################################################################################
+   * Description: 'Perez all weather sun and sky model.'
+   * SDPropertyCategory = 'Input'
+      * 'direct_normal_irradiance' = SDValueFloat(float(500)) [CONNECTABLE]
+         * Description: 'Direct sun irradiance in W / m^2'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'diffuse_horizontal_irradiance' = SDValueFloat(float(50)) [CONNECTABLE]
+         * Description: 'Diffuse horizontal sky irradiance in W / m^2 (excluding sun)'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'sun_direction' = SDValueFloat3(float3(0,0.229270995,0.418882012)) [CONNECTABLE]
+         * Description: 'Sun direction'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'ground_color' = SDValueColorRGB(ColorRGB(0.200000003,0.200000003,0.200000003)) [CONNECTABLE]
+         * Description: 'Ground reflectivity'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'horizon_blur' = SDValueFloat(float(0.100000001)) [CONNECTABLE]
+         * Description: 'Blur between ground and sky at the horizon'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'y_is_up' = SDValueBool(bool(true)) [CONNECTABLE]
+         * Description: 'Sun direction is y-up coordinates'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'julian_date' = SDValueFloat(float(180)) [CONNECTABLE]
+         * Description: 'Day in year'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'dew_point' = SDValueFloat(float(11)) [CONNECTABLE]
+         * Description: 'Dew point in degree Celsius'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'haze' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Description: 'Haze value to compute chromaticity of the sky (in analogy to base::sun_and_sky)'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Varying]
+
+[44/71] 'mdl::base::file_bump_texture(texture_2d,float,::base::mono_mode,::base::texture_coordinate_info,float2,float2,::tex::wrap_mode,::tex::wrap_mode,float3,bool,bool,float,int2,::tex::wrap_mode,float)'
+#############################################################################################################################################################################################################
+   * Description: 'Computes a normal based on a heightfield-style bump texture'
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Description: 'The input texture'
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Determines the degree of bumpiness'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'bump_source' = SDValueEnum("mdl::base::mono_mode",1) [CONNECTABLE]
+         * Description: 'Defines what value to use for computing the slope of the bump'
+         * Types:
+            * 'mdl::base::mono_mode' (SDTypeEnum) [Uniform]
+
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___82) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Description: 'Restricts the texture access to sub-domain of the texture in the u direction'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Description: 'Restricts the texture access to sub-domain of the texture in the v direction'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Wrapping mode in the u direction'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Wrapping mode in the v direction'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___83) [CONNECTABLE]
+         * Description: 'Base normal for the bump mapping.'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'clip' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'deprecated, usewrap_mode=tex::wrap_clip. Defines wrap_clamp behavior. If true, lookup outside [0,1] results in no bump'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'b_spline' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Use b-Spline interpolation for smooth result'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'animation_start_time' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'When to start playing first frame of the animation '
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'animation_crop' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Description: 'If the texture is an animation, the range of frames to be played can be specified.'
+         * Types:
+            * 'int2' (SDTypeInt2) [Uniform]
+
+      * 'animation_wrap' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Defines what to do outside of regular animation time'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'animation_fps' = SDValueFloat(float(30)) [CONNECTABLE]
+         * Description: 'Framerate to use for animation playback'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[45/71] 'mdl::base::tangent_space_normal_texture(texture_2d,float,bool,bool,::base::texture_coordinate_info,float2,float2,::tex::wrap_mode,::tex::wrap_mode,bool,float,float,float,int2,::tex::wrap_mode,float)'
+################################################################################################################################################################################################################
+   * Description: 'Interprets the color values of a bitmap as a vector in tangent space'
+   * SDPropertyCategory = 'Input'
+      * 'texture' [CONNECTABLE]
+         * Description: 'The input texture'
+         * Types:
+            * 'mdl::texture_2d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Determines the degree of bumpiness'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'flip_tangent_u' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Can be used to fix mismatches between the object's tangent space and the normal map's tangent space'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'flip_tangent_v' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Can be used to fix mismatches between the object's tangent space and the normal map's tangent space'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___87) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'crop_u' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Description: 'Restricts the texture access to sub-domain of the texture in the u direction'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'crop_v' = SDValueFloat2(float2(0,1)) [CONNECTABLE]
+         * Description: 'Restricts the texture access to sub-domain of the texture in the v direction'
+         * Types:
+            * 'float2' (SDTypeFloat2) [Uniform]
+
+      * 'wrap_u' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Wrapping mode in the u direction'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'wrap_v' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Wrapping mode in the v direction'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'clip' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'deprecated, usewrap_mode=tex::wrap_clip. Defines wrap_clamp behavior. If true, lookup outside [0,1] results in no bump'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Scales the value red from the texture file. Can be used to adapt to different normal map formats'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'offset' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Offset applied to the value red from the texture file. Can be used to adapt to different normal map formats'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'animation_start_time' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'When to start playing first frame of the animation '
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'animation_crop' = SDValueInt2(int2(0,0)) [CONNECTABLE]
+         * Description: 'If the texture is an animation, the range of frames to be played can be specified.'
+         * Types:
+            * 'int2' (SDTypeInt2) [Uniform]
+
+      * 'animation_wrap' = SDValueEnum("mdl::tex::wrap_mode",1) [CONNECTABLE]
+         * Description: 'Defines what to do outside of regular animation time'
+         * Types:
+            * 'mdl::tex::wrap_mode' (SDTypeEnum) [Uniform]
+
+      * 'animation_fps' = SDValueFloat(float(30)) [CONNECTABLE]
+         * Description: 'Framerate to use for animation playback'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[46/71] 'mdl::base::blend_color_layers(::base::color_layer[P],color,::base::mono_mode)'
+#######################################################################################
+   * Description: 'Texture layering functionality similar to the functionality known from painting programs '
+   * SDPropertyCategory = 'Input'
+      * 'layers' [CONNECTABLE]
+         * Description: 'Array of structs describing the layers to blend'
+         * Types:
+            * 'SDTypeArray<mdl::base::color_layer>' (SDTypeArray)
+
+      * 'base' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Description: 'Color of initial layer'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'mono_source' = SDValueEnum("mdl::base::mono_mode",1) [CONNECTABLE]
+         * Description: 'Defines how mono_result is computed'
+         * Types:
+            * 'mdl::base::mono_mode' (SDTypeEnum) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[47/71] 'mdl::base::gradient3_texture(::base::gradient_mode,float[3],color[3],::base::gradient_interpolation_mode[3],::base::texture_coordinate_info,float)'
+############################################################################################################################################################
+   * Description: 'Gradient calculated from three colors at three positions'
+   * SDPropertyCategory = 'Input'
+      * 'mode' = SDValueEnum("mdl::base::gradient_mode",0) [CONNECTABLE]
+         * Description: 'Mode of gradient calculation, describes shape of the gradient'
+         * Types:
+            * 'mdl::base::gradient_mode' (SDTypeEnum) [Uniform]
+
+      * 'gradient_positions' = SDValueArray(SDValueFloat(float(0)),SDValueFloat(float(0.5)),SDValueFloat(float(1))) [CONNECTABLE]
+         * Description: 'Position of the gradient colors'
+         * Types:
+            * 'SDTypeArray<float>' (SDTypeArray)
+
+      * 'gradient_colors' = SDValueArray(SDValueColorRGB(ColorRGB(0,0,0)),SDValueColorRGB(ColorRGB(0.5,0.5,0.5)),SDValueColorRGB(ColorRGB(1,1,1))) [CONNECTABLE]
+         * Description: 'Colors at the positions'
+         * Types:
+            * 'SDTypeArray<ColorRGB>' (SDTypeArray)
+
+      * 'interpolation_modes' = SDValueArray(SDValueEnum("mdl::base::gradient_interpolation_mode",0),SDValueEnum("mdl::base::gradient_interpolation_mode",0),SDValueEnum("mdl::base::gradient_interpolation_mode",0)) [CONNECTABLE]
+         * Description: 'Interpolation mode between gradient colors'
+         * Types:
+            * 'SDTypeArray<mdl::base::gradient_interpolation_mode>' (SDTypeArray)
+
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___91) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'distortion' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Distortion value to be added to the position inside the gradient'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[48/71] 'mdl::base::gradient3_bump_texture(::base::gradient_mode,float[3],color[3],::base::gradient_interpolation_mode[3],::base::texture_coordinate_info,float,float,float3)'
+##############################################################################################################################################################################
+   * Description: 'Gradient for bump mapping calculated from three colors at three positions'
+   * SDPropertyCategory = 'Input'
+      * 'mode' = SDValueEnum("mdl::base::gradient_mode",0) [CONNECTABLE]
+         * Description: 'Mode of gradient calculation, describes shape of the gradient'
+         * Types:
+            * 'mdl::base::gradient_mode' (SDTypeEnum) [Uniform]
+
+      * 'gradient_positions' = SDValueArray(SDValueFloat(float(0)),SDValueFloat(float(0.5)),SDValueFloat(float(1))) [CONNECTABLE]
+         * Description: 'Position of the gradient colors'
+         * Types:
+            * 'SDTypeArray<float>' (SDTypeArray)
+
+      * 'gradient_colors' = SDValueArray(SDValueColorRGB(ColorRGB(0,0,0)),SDValueColorRGB(ColorRGB(0.5,0.5,0.5)),SDValueColorRGB(ColorRGB(1,1,1))) [CONNECTABLE]
+         * Description: 'Colors at the positions'
+         * Types:
+            * 'SDTypeArray<ColorRGB>' (SDTypeArray)
+
+      * 'interpolation_modes' = SDValueArray(SDValueEnum("mdl::base::gradient_interpolation_mode",0),SDValueEnum("mdl::base::gradient_interpolation_mode",0),SDValueEnum("mdl::base::gradient_interpolation_mode",0)) [CONNECTABLE]
+         * Description: 'Interpolation mode between gradient colors'
+         * Types:
+            * 'SDTypeArray<mdl::base::gradient_interpolation_mode>' (SDTypeArray)
+
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___95) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'distortion' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Distortion value to be added to the position inside the gradient'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Strength of the bump mapping effect'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___96) [CONNECTABLE]
+         * Description: 'Base normal for the bump mapping.'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[49/71] 'mdl::base::gradient3_recolor(float[3],color[3],::base::gradient_interpolation_mode[3],::base::mono_mode,float,float)'
+##############################################################################################################################
+   * Description: 'Function mapping an arbitrary float value into a gradient. Can be used to re-color textures'
+   * SDPropertyCategory = 'Input'
+      * 'gradient_positions' = SDValueArray(SDValueFloat(float(0)),SDValueFloat(float(0.5)),SDValueFloat(float(1))) [CONNECTABLE]
+         * Description: 'Position of the gradient colors'
+         * Types:
+            * 'SDTypeArray<float>' (SDTypeArray)
+
+      * 'gradient_colors' = SDValueArray(SDValueColorRGB(ColorRGB(0,0,0)),SDValueColorRGB(ColorRGB(0.5,0.5,0.5)),SDValueColorRGB(ColorRGB(1,1,1))) [CONNECTABLE]
+         * Description: 'Colors at the positions'
+         * Types:
+            * 'SDTypeArray<ColorRGB>' (SDTypeArray)
+
+      * 'interpolation_modes' = SDValueArray(SDValueEnum("mdl::base::gradient_interpolation_mode",0),SDValueEnum("mdl::base::gradient_interpolation_mode",0),SDValueEnum("mdl::base::gradient_interpolation_mode",0)) [CONNECTABLE]
+         * Description: 'Mode of gradient calculations'
+         * Types:
+            * 'SDTypeArray<mdl::base::gradient_interpolation_mode>' (SDTypeArray)
+
+      * 'mono_source' = SDValueEnum("mdl::base::mono_mode",0) [CONNECTABLE]
+         * Description: 'deprecated, has no effect in gradient3 recolor'
+         * Types:
+            * 'mdl::base::mono_mode' (SDTypeEnum) [Uniform]
+
+      * 'distortion' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Distortion value to be added to the position inside the gradient'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'position' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Value driving the gradient calculation'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[50/71] 'mdl::base::checker_texture(::base::texture_coordinate_info,color,color,float,float)'
+#############################################################################################
+   * Description: '3D color checker pattern'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___100) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'color1' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Description: 'Color of the even tiles of the checker function'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color2' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Description: 'Color of the odd tiles of the checker function'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'blur' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Softens the border between tiles'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'checker_position' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Description: 'Ratio of division. Values other than .5 produce non square tiles'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[51/71] 'mdl::base::checker_bump_texture(::base::texture_coordinate_info,float,float,float,float3)'
+###################################################################################################
+   * Description: '3D bump mapping checker pattern'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___104) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Strength of the bump mapping effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'blur' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Softens the border between tiles'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'checker_position' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Description: 'Ratio of division. Values other than .5 produce non square tiles'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___105) [CONNECTABLE]
+         * Description: 'Base normal for the bump mapping.'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[52/71] 'mdl::base::perlin_noise_texture(::base::texture_coordinate_info,color,color,float,bool,bool,float,int,bool,bool,float3,float,float,float)'
+###################################################################################################################################################
+   * Description: 'Color Perlin noise'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___109) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'color1' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Description: 'The Perlin noise function will blend between this color and "color2"'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color2' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Description: 'The Perlin noise function will blend between "color1" and this color'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Size of the biggest feature of the pattern'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'apply_marble' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Triggers a modification to make the pattern have a marble like appearance (cosine)'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'apply_dent' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Raises the output of the function to the power of 3'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'noise_phase' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Controls the 4th dimension of the function (can be time in animations)'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_levels' = SDValueInt(int(1)) [CONNECTABLE]
+         * Description: 'Number of octaves to of Perlin to sum up'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'absolute_noise' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'If set to true, the appearance of the pattern will be more "billowing" and "turbulent"'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'ridged_noise' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'If set to true, the appearance of the pattern will be more "electrical"'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'noise_distortion' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Description: 'Weight of additional noise turbulence'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'noise_threshold_high' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Noise values greater then "noise_threshold_high" are mapped to "color1"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_threshold_low' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Noise values greater then "noise_threshold_low" are mapped to "color2"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_bands' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'creates a "tree ring" like banding effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[53/71] 'mdl::base::perlin_noise_bump_texture(::base::texture_coordinate_info,float,float,bool,bool,float,int,bool,bool,float3,float,float,float,float3)'
+#########################################################################################################################################################
+   * Description: 'Bump-mapping Perlin noise'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___113) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Strength of the bump mapping effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Size of the biggest feature of the pattern'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'apply_marble' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Triggers a modification to make the pattern have a marble like appearance (cosine)'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'apply_dent' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Raises the output of the function to the power of 3'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'noise_phase' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Controls the 4th dimension of the function'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_levels' = SDValueInt(int(1)) [CONNECTABLE]
+         * Description: 'Number of octaves to of Perlin to sum up'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'absolute_noise' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'If set to true, the appearance of the pattern will be more "billowing" and "turbulent"'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'ridged_noise' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'If set to true, the appearance of the pattern will be more "electrical"'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'noise_distortion' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Description: 'Weight of additional noise turbulence'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'noise_threshold_high' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Noise values greater then "noise_threshold_high" are mapped to the maximum bump height'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_threshold_low' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Noise values greater then "noise_threshold_low" are mapped to the minimum bump height'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_bands' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'creates a "tree ring" like banding effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___114) [CONNECTABLE]
+         * Description: 'Base normal for the bump mapping.'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[54/71] 'mdl::base::worley_noise_texture(::base::texture_coordinate_info,color,color,float,int,int,bool,bool,float3,float,float,float,float,float)'
+###################################################################################################################################################
+   * Description: 'Color Worley noise'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___118) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'color1' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Description: 'The Worley noise function will blend between this color and "color2"'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color2' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Description: 'The Worley noise function will blend between "color1" and this color'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Size of the biggest feature of the pattern'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'mode' = SDValueInt(int(0)) [CONNECTABLE]
+         * Description: 'Output function used to modify the noise result (0..11)'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'metric' = SDValueInt(int(0)) [CONNECTABLE]
+         * Description: 'Metric used in the noise function (0: Euclidean, 1: Manhattan, 2: Chebyshev)'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'apply_marble' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Triggers a modification to make the pattern have a marble like appearance (cosine)'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'apply_dent' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Raises the output of the function to the power of 3'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'noise_distortion' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Description: 'Weight of additional noise turbulence'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'noise_threshold_high' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Noise values greater then "noise_threshold_high" are mapped to "color1"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_threshold_low' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Noise values greater then "noise_threshold_low" are mapped to "color2"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_bands' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Creates a "tree ring" like banding effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'step_threshold' = SDValueFloat(float(0.200000003)) [CONNECTABLE]
+         * Description: 'Used only in mode 3'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'edge' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Smoothness of noise'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[55/71] 'mdl::base::worley_noise_bump_texture(::base::texture_coordinate_info,float,float,int,int,bool,bool,float3,float,float,float,float,float,float3)'
+#########################################################################################################################################################
+   * Description: 'Bump-mapping Worley noise'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___122) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Strength of the bump mapping effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Size of the biggest feature of the pattern'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'mode' = SDValueInt(int(0)) [CONNECTABLE]
+         * Description: 'Output function used to modify the noise result (0..11)'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'metric' = SDValueInt(int(0)) [CONNECTABLE]
+         * Description: 'Metric used in the noise function (0: Euclidean, 1: Manhattan, 2: Chebyshev)'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'apply_marble' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Triggers a modification to make the pattern have a marble like appearance (cosine)'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'apply_dent' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'Raises the output of the function to the power of 3'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'noise_distortion' = SDValueFloat3(float3(0,0,0)) [CONNECTABLE]
+         * Description: 'Weight of additional noise turbulence'
+         * Types:
+            * 'float3' (SDTypeFloat3) [Uniform]
+
+      * 'noise_threshold_high' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Noise values greater then "noise_threshold_high" are mapped to the maximum bump height'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_threshold_low' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Noise values greater then "noise_threshold_low" are mapped to the minimum bump height'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'noise_bands' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Creates a "tree ring" like banding effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'step_threshold' = SDValueFloat(float(0.200000003)) [CONNECTABLE]
+         * Description: 'Used only in mode 3'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'edge' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Smoothness of noise'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___123) [CONNECTABLE]
+         * Description: 'Base normal for the bump mapping.'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[56/71] 'mdl::base::flow_noise_texture(::base::texture_coordinate_info,color,color,float,float,int,bool,float,float,float,float)'
+#################################################################################################################################
+   * Description: 'Color Perlin flow noise'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___127) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'color1' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Description: 'The Flow noise function will blend between this color and "color2"'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'color2' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Description: 'The Flow noise function will blend between "color1" and this color'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Size of the biggest feature of the pattern'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'phase' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Controls the 3rd dimension of the function'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'levels' = SDValueInt(int(1)) [CONNECTABLE]
+         * Description: 'Number of octaves to of Flow noise to sum up'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'absolute_noise' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'If set to true, the appearance of the pattern will be more "billowing" and "turbulent"'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'level_gain' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Description: 'If multiple levels are used, "level_gain" specifies a weighting factor for subsequent levels'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_scale' = SDValueFloat(float(2)) [CONNECTABLE]
+         * Description: 'If multiple levels are used, "level_scale" specifies a global scaling factor for subsequent levels'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_progressive_u_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'If multiple levels are used, "level_progressive_u_scale" specifies an additional scaling factor in the "u" direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_progressive_v_motion' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'If multiple levels are used, "level_progressive_v_motion" specifies an offset for subsequent levels in the "v" direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[57/71] 'mdl::base::flow_noise_bump_texture(::base::texture_coordinate_info,float,float,float,int,bool,float,float,float,float,float3)'
+#######################################################################################################################################
+   * Description: 'Bump-mapping flow noise'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___131) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Strength of the bump mapping effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Size of the biggest feature of the pattern'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'phase' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Controls the 4th dimension of the function'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'levels' = SDValueInt(int(1)) [CONNECTABLE]
+         * Description: 'Number of octaves to of Perlin to sum up'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'absolute_noise' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'If set to true, the appearance of the pattern will be more "billowing" and "turbulent"'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+      * 'level_gain' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Description: 'If multiple levels are used, "level_gain" specifies a weighting factor for subsequent levels'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_scale' = SDValueFloat(float(2)) [CONNECTABLE]
+         * Description: 'If multiple levels are used, "level_scale" specifies a global scaling factor for subsequent levels'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_progressive_u_scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'If multiple levels are used, "level_progressive_u_scale" specifies an additional scaling factor in the "u" direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'level_progressive_v_motion' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'If multiple levels are used, "level_progressive_v_motion" specifies an offset for subsequent levels in the "v" direction'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___132) [CONNECTABLE]
+         * Description: 'Base normal for the bump mapping.'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[58/71] 'mdl::base::flake_noise_texture(::base::texture_coordinate_info,float,float,float,int,float,int)'
+#########################################################################################################
+   * Description: 'Flake noise'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___136) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'intensity' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Specifies the maximum reflectivity of any flake'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Size of the features of the pattern'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'density' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Controls the amount of flakes in the substrate. The higher the number, the bigger is the space between flakes'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'noise_type' = SDValueInt(int(0)) [CONNECTABLE]
+         * Description: 'Selects the noise type (0: Classic, 1: Worley)'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'maximum_size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Controls the shape of flakes in the secondary noise mode (Worley)'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'metric' = SDValueInt(int(0)) [CONNECTABLE]
+         * Description: 'Metric used in the secondary noise mode (Worley: 0: Euclidean, 1: Manhattan, 2: Chebyshev)'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[59/71] 'mdl::base::flake_noise_bump_texture(::base::texture_coordinate_info,float,float,int,float,int,float3)'
+###############################################################################################################
+   * Description: 'Bump-mapping flake noise'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___140) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'scale' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Size of the features of the pattern'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'strength' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Controls the randomness of the flake orientation'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'noise_type' = SDValueInt(int(0)) [CONNECTABLE]
+         * Description: 'Selects the noise type (0: Classic, 1: Worley)'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'maximum_size' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Controls the shape of flakes in the secondary noise mode (Worley)'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'metric' = SDValueInt(int(0)) [CONNECTABLE]
+         * Description: 'Metric used in the secondary noise mode (Worley: 0: Euclidean, 1: Manhattan, 2: Chebyshev)'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___141) [CONNECTABLE]
+         * Description: 'Base normal for the bump mapping.'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[60/71] 'mdl::base::tile_texture(::base::texture_coordinate_info,color,color,float,float,float,float,float,float,float,float,int,float,int,float,float,float)'
+##############################################################################################################################################################
+   * Description: 'Color tiling generator'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___145) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'tile_color' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Description: 'Color of "bricks" in the function'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'grout_color' = SDValueColorRGB(ColorRGB(1,1,1)) [CONNECTABLE]
+         * Description: 'Color of "grout" between the "bricks" in the function'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'number_of_rows' = SDValueFloat(float(4)) [CONNECTABLE]
+         * Description: 'Number of tile rows in the 0-1 texturing domain'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'number_of_columns' = SDValueFloat(float(4)) [CONNECTABLE]
+         * Description: 'Number of tile columns in the 0-1 texturing domain'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'grout_width' = SDValueFloat(float(0.0199999996)) [CONNECTABLE]
+         * Description: 'Absolute width of vertical grout lines'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'grout_height' = SDValueFloat(float(0.0199999996)) [CONNECTABLE]
+         * Description: 'Absolute height of horizontal grout lines'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'grout_roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Amount of noise added to grout size'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'missing_tile_amount' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Number of tiles that will end up as grout, rather than as a tile ("holes"). Values are [0,1].'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'tile_brightness_variation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Randomization factor to the brightness of the tile color'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'seed' = SDValueFloat(float(2.28399992)) [CONNECTABLE]
+         * Description: 'Seeding number for random number generator controlling tile randomization effects'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'special_row_index' = SDValueInt(int(1)) [CONNECTABLE]
+         * Description: 'Every nth row, width of tiles is modified. Set nth all to 1 to disable. Never set the nth row or column to 0.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'special_row_width_factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Change of width for tiles identified through "special_row_index"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'special_column_index' = SDValueInt(int(1)) [CONNECTABLE]
+         * Description: 'Every nth column, height of tiles is modified. Set nth all to 1 to disable. Never set the nth row or column to 0.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'special_column_height_factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Change of height for tiles identified through "special_column_index"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'odd_row_offset' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Description: 'Controls bonding pattern. 0 will result in a "stack bond", .5 a "running bond"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'random_row_offset' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Randomization factor for "odd_row_offset"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::texture_return' (SDTypeStruct)
+
+[61/71] 'mdl::base::tile_bump_texture(::base::texture_coordinate_info,float,float,float,float,float,float,float,float,float,int,float,int,float,float,float,float3)'
+####################################################################################################################################################################
+   * Description: 'Bump-mapping tiling generator'
+   * SDPropertyCategory = 'Input'
+      * 'uvw' = SDMDLValueCall(mdl::base::texture_coordinate_info(float3,float3,float3)__default_call___149) [CONNECTABLE]
+         * Description: 'Parameterization to be used for texture mapping. Defaults to texture channel 0.'
+         * Types:
+            * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+
+      * 'factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Strength of the bump mapping effect'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'number_of_rows' = SDValueFloat(float(4)) [CONNECTABLE]
+         * Description: 'Number of tile rows in the 0-1 texturing domain'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'number_of_columns' = SDValueFloat(float(4)) [CONNECTABLE]
+         * Description: 'Number of tile columns in the 0-1 texturing domain'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'grout_width' = SDValueFloat(float(0.0199999996)) [CONNECTABLE]
+         * Description: 'Absolute width of vertical grout lines'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'grout_height' = SDValueFloat(float(0.0199999996)) [CONNECTABLE]
+         * Description: 'Absolute height of horizontal grout lines'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'grout_roughness' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Amount of noise added to grout size'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'missing_tile_amount' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Number of tiles that will end up as grout, rather than as a tile ("holes"). Values are [0,1].'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'tile_brightness_variation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Randomization factor to the brightness of the tile color, will affect the bumpiness for that tile'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'seed' = SDValueFloat(float(2.28399992)) [CONNECTABLE]
+         * Description: 'Seeding number for random number generator controlling tile randomization effects'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'special_row_index' = SDValueInt(int(1)) [CONNECTABLE]
+         * Description: 'Every nth row, width of tiles is modified. Set nth all to 1 to disable. Never set the nth row or column to 0.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'special_row_width_factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Change of width for tiles identified through "special_row_index"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'special_column_index' = SDValueInt(int(1)) [CONNECTABLE]
+         * Description: 'Every nth column, height of tiles is modified. Set nth all to 1 to disable. Never set the nth row or column to 0.'
+         * Types:
+            * 'int' (SDTypeInt) [Uniform]
+
+      * 'special_column_height_factor' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Change of height for tiles identified through "special_column_index"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'odd_row_offset' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Description: 'Controls bonding pattern. 0 will result in a "stack bond", .5 a "running bond"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'random_row_offset' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Randomization factor for "odd_row_offset"'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'normal' = SDMDLValueCall(mdl::state::normal()__default_call___150) [CONNECTABLE]
+         * Description: 'Base normal for the bump mapping.'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+[62/71] 'mdl::base::anisotropy_conversion(float,float,float,float3,bool)'
+#########################################################################
+   * Description: 'Convert old anisotropy controls into new ones'
+   * SDPropertyCategory = 'Input'
+      * 'roughness' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Description: 'The base roughness value'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'The anisotropy of the roughness'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'anisotropy_rotation' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Rotation of direction of anisotropy, where 1 equals 360 degrees'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'tangent_u' = SDMDLValueCall(mdl::state::texture_tangent_u(int)__default_call___151) [CONNECTABLE]
+         * Description: 'Tangent to align the anisotropy with. "coordinate_source" or "coordinate_projection" are possible sources'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'mia_anisotropy_semantic' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Description: 'allows backwards compatibility with mia material'
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::anisotropy_return' (SDTypeStruct) [Varying]
+
+[63/71] 'mdl::base::volume_coefficient(color,float)'
+####################################################
+   * Description: 'Compute a volume coefficient based on distance and value'
+   * SDPropertyCategory = 'Input'
+      * 'tint' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Description: 'The basic color of the absorption'
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'distance' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'The thickness of the material at which all but "tint" is absorbed'
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[64/71] 'mdl::base::blend_normals(float3,float,float3,float)'
+#############################################################
+   * Description: 'Blend two normals for sticker-like situations where a detail normal map is applied to a base normal map'
+   * SDPropertyCategory = 'Input'
+      * 'base_normal' = SDMDLValueCall(mdl::state::normal()__default_call___152) [CONNECTABLE]
+         * Description: 'The base normal'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'base_normal_weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Specifies the strength of the base normal using a linear blend between state::normal and "base_normal"'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'detail_normal' = SDMDLValueCall(mdl::state::normal()__default_call___153) [CONNECTABLE]
+         * Description: 'The detail normal'
+         * Types:
+            * 'float3' (SDTypeFloat3)
+
+      * 'detail_normal_weight' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Description: 'Specifies the strength of the detail normal using a linear blend between state::normal and "detail_normal"'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+[65/71] 'mdl::base::volume_coefficients(::base::volume_coefficients)'
+#####################################################################
+   * SDPropertyCategory = 'Input'
+      * 'other' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::volume_coefficients' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::volume_coefficients' (SDTypeStruct)
+
+[66/71] 'mdl::base::volume_coefficients()'
+##########################################
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::volume_coefficients' (SDTypeStruct)
+
+[67/71] 'mdl::base::volume_coefficients(color,color)'
+#####################################################
+   * SDPropertyCategory = 'Input'
+      * 'scattering_coefficient' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+      * 'absorption_coefficient' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::volume_coefficients' (SDTypeStruct)
+
+[68/71] 'mdl::base::volume_coefficients.scattering_coefficient(::base::volume_coefficients)'
+############################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::volume_coefficients' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[69/71] 'mdl::base::volume_coefficients.absorption_coefficient(::base::volume_coefficients)'
+############################################################################################
+   * SDPropertyCategory = 'Input'
+      * 's' [CONNECTABLE]
+         * Types:
+            * 'mdl::base::volume_coefficients' (SDTypeStruct)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[70/71] 'mdl::base::lookup_volume_coefficients(texture_3d,color,color,color,color,float4x4,float,bool)'
+#######################################################################################################
+   * SDPropertyCategory = 'Input'
+      * 'density' [CONNECTABLE]
+         * Types:
+            * 'mdl::texture_3d' (SDMDLTypeTextureReference) [Uniform]
+
+      * 'scattering_multiplier' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'absorption_multiplier' [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'scattering_offset' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'absorption_offset' = SDValueColorRGB(ColorRGB(0,0,0)) [CONNECTABLE]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB) [Uniform]
+
+      * 'transform' = SDValueMatrix(matrix<float>[4][4](float(1),float(0),float(0),float(0),float(0),float(1),float(0),float(0),float(0),float(0),float(1),float(0),float(0),float(0),float(0),float(1))) [CONNECTABLE]
+         * Types:
+            * 'matrix<float>[4][4]' (SDTypeMatrix) [Uniform]
+
+      * 'density_multiplier' = SDValueFloat(float(1)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'density_relative_to_size' = SDValueBool(bool(false)) [CONNECTABLE]
+         * Types:
+            * 'bool' (SDTypeBool) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'mdl::base::volume_coefficients' (SDTypeStruct) [Varying]
+
+[71/71] 'mdl::base::blackbody_emission(float,float,float)'
+##########################################################
+   * Description: 'Color of a black body emitter'
+   * SDPropertyCategory = 'Input'
+      * 'temperature1' = SDValueFloat(float(6500)) [CONNECTABLE]
+         * Description: 'First correlated color temperature'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'temperature2' = SDMDLValueParameterReference(0) [CONNECTABLE]
+         * Description: 'Second correlated color temperature'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+      * 'blend_value' = SDValueFloat(float(0)) [CONNECTABLE]
+         * Description: 'Blend value between first and second color temperature'
+         * Types:
+            * 'float' (SDTypeFloat)
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+Types:
+------
+[1/21] 'mdl::base::projection_mode'
+###################################
+   * 'mdl::base::projection_mode' (SDTypeEnum)
+      * int projection_cubic = SDValueInt(int(1))
+      * int projection_spherical = SDValueInt(int(2))
+      * int projection_cylindrical = SDValueInt(int(3))
+      * int projection_infinite_cylindrical = SDValueInt(int(4))
+      * int projection_planar = SDValueInt(int(5))
+      * int projection_spherical_normalized = SDValueInt(int(6))
+      * int projection_cylindrical_normalized = SDValueInt(int(7))
+      * int projection_infinite_cylindrical_normalized = SDValueInt(int(8))
+      * int projection_tri_planar = SDValueInt(int(9))
+
+[2/21] 'mdl::base::color_layer_mode'
+####################################
+   * 'mdl::base::color_layer_mode' (SDTypeEnum)
+      * int color_layer_blend = SDValueInt(int(0))
+      * int color_layer_add = SDValueInt(int(1))
+      * int color_layer_multiply = SDValueInt(int(2))
+      * int color_layer_screen = SDValueInt(int(3))
+      * int color_layer_overlay = SDValueInt(int(4))
+      * int color_layer_brightness = SDValueInt(int(5))
+      * int color_layer_color = SDValueInt(int(6))
+      * int color_layer_exclusion = SDValueInt(int(7))
+      * int color_layer_average = SDValueInt(int(8))
+      * int color_layer_lighten = SDValueInt(int(9))
+      * int color_layer_darken = SDValueInt(int(10))
+      * int color_layer_sub = SDValueInt(int(11))
+      * int color_layer_negation = SDValueInt(int(12))
+      * int color_layer_difference = SDValueInt(int(13))
+      * int color_layer_softlight = SDValueInt(int(14))
+      * int color_layer_colordodge = SDValueInt(int(15))
+      * int color_layer_reflect = SDValueInt(int(16))
+      * int color_layer_colorburn = SDValueInt(int(17))
+      * int color_layer_phoenix = SDValueInt(int(18))
+      * int color_layer_hardlight = SDValueInt(int(19))
+      * int color_layer_pinlight = SDValueInt(int(20))
+      * int color_layer_hardmix = SDValueInt(int(21))
+      * int color_layer_lineardodge = SDValueInt(int(22))
+      * int color_layer_linearburn = SDValueInt(int(23))
+      * int color_layer_spotlight = SDValueInt(int(24))
+      * int color_layer_spotlightblend = SDValueInt(int(25))
+      * int color_layer_hue = SDValueInt(int(26))
+      * int color_layer_saturation = SDValueInt(int(27))
+
+[3/21] 'mdl::base::texture_coordinate_system'
+#############################################
+   * 'mdl::base::texture_coordinate_system' (SDTypeEnum)
+      * int texture_coordinate_uvw = SDValueInt(int(0))
+      * int texture_coordinate_world = SDValueInt(int(1))
+      * int texture_coordinate_object = SDValueInt(int(2))
+
+[4/21] 'mdl::base::mono_mode'
+#############################
+   * 'mdl::base::mono_mode' (SDTypeEnum)
+      * int mono_alpha = SDValueInt(int(0))
+      * int mono_average = SDValueInt(int(1))
+      * int mono_luminance = SDValueInt(int(2))
+      * int mono_maximum = SDValueInt(int(3))
+
+[5/21] 'mdl::base::gradient_interpolation_mode'
+###############################################
+   * 'mdl::base::gradient_interpolation_mode' (SDTypeEnum)
+      * int gradient_interpolation_linear = SDValueInt(int(0))
+      * int gradient_interpolation_off = SDValueInt(int(1))
+      * int gradient_interpolation_ease_in = SDValueInt(int(2))
+      * int gradient_interpolation_ease_out = SDValueInt(int(3))
+      * int gradient_interpolation_ease_in_out = SDValueInt(int(4))
+
+[6/21] 'mdl::base::gradient_mode'
+#################################
+   * 'mdl::base::gradient_mode' (SDTypeEnum)
+      * int gradient_linear = SDValueInt(int(0))
+      * int gradient_squared = SDValueInt(int(1))
+      * int gradient_box = SDValueInt(int(2))
+      * int gradient_diagonal = SDValueInt(int(3))
+      * int gradient_90_degree = SDValueInt(int(4))
+      * int gradient_symmetric_90_degree = SDValueInt(int(5))
+      * int gradient_radial = SDValueInt(int(6))
+      * int gradient_360_degree = SDValueInt(int(7))
+
+[7/21] 'mdl::base::texture_coordinate_info'
+###########################################
+   * 'mdl::base::texture_coordinate_info' (SDTypeStruct)
+      * float3 position
+      * float3 tangent_u
+      * float3 tangent_v
+
+[8/21] 'mdl::base::color_layer'
+###############################
+   * 'mdl::base::color_layer' (SDTypeStruct)
+      * ColorRGB layer_color
+      * float weight
+      * mdl::base::color_layer_mode mode
+
+[9/21] 'mdl::base::texture_return'
+##################################
+   * 'mdl::base::texture_return' (SDTypeStruct)
+      * ColorRGB tint
+      * float mono
+
+[10/21] 'mdl::base::anisotropy_return'
+######################################
+   * 'mdl::base::anisotropy_return' (SDTypeStruct)
+      * float roughness_u
+      * float roughness_v
+      * float3 tangent_u
+
+[11/21] 'mdl::base::perez_coefficients'
+#######################################
+   * 'mdl::base::perez_coefficients' (SDTypeStruct)
+      * SDTypeArray<float> c
+
+[12/21] 'mdl::base::perez_data'
+###############################
+   * 'mdl::base::perez_data' (SDTypeStruct)
+      * mdl::base::perez_coefficients abcde
+      * float perez_lum_scale
+      * float sun_illuminance
+      * float3 sky_illuminance_rgb
+
+[13/21] 'mdl::base::perez_data_preetham'
+########################################
+   * 'mdl::base::perez_data_preetham' (SDTypeStruct)
+      * SDTypeArray<float> x
+      * SDTypeArray<float> y
+      * float perez_x_scale
+      * float perez_y_scale
+
+[14/21] 'mdl::base::perez_sun_and_sky_data'
+###########################################
+   * 'mdl::base::perez_sun_and_sky_data' (SDTypeStruct)
+      * float3 clamped_sun_dir
+      * float turbidity
+      * mdl::base::perez_data perez_data_lum
+      * mdl::base::perez_data_preetham perez_data_xy
+      * float3 sun_color
+      * float sun_disk_intensity_scale
+      * float3 ground_luminance
+      * float factor
+
+[15/21] 'mdl::base::value_deriv'
+################################
+   * 'mdl::base::value_deriv' (SDTypeStruct)
+      * float4 value
+      * float4 deriv
+
+[16/21] 'SDTypeArray<mdl::base::color_layer>'
+#############################################
+   * 'SDTypeArray<mdl::base::color_layer>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::base::color_layer' (SDTypeStruct)
+            * ColorRGB layer_color
+            * float weight
+            * mdl::base::color_layer_mode mode
+
+[17/21] 'SDTypeArray<mdl::base::gradient_interpolation_mode>'
+#############################################################
+   * 'SDTypeArray<mdl::base::gradient_interpolation_mode>' (SDTypeArray)
+      * Item Type:
+         * 'mdl::base::gradient_interpolation_mode' (SDTypeEnum)
+            * int gradient_interpolation_linear = SDValueInt(int(0))
+            * int gradient_interpolation_off = SDValueInt(int(1))
+            * int gradient_interpolation_ease_in = SDValueInt(int(2))
+            * int gradient_interpolation_ease_out = SDValueInt(int(3))
+            * int gradient_interpolation_ease_in_out = SDValueInt(int(4))
+
+[18/21] 'mdl::base::worley_return'
+##################################
+   * 'mdl::base::worley_return' (SDTypeStruct)
+      * float3 nearest_pos_0
+      * float3 nearest_pos_1
+      * float2 val
+
+[19/21] 'mdl::base::noise_return'
+#################################
+   * 'mdl::base::noise_return' (SDTypeStruct)
+      * float3 grad
+      * float val
+
+[20/21] 'mdl::base::Tiledata'
+#############################
+   * 'mdl::base::Tiledata' (SDTypeStruct)
+      * bool is_in_tile
+      * ColorRGB color_result
+
+[21/21] 'mdl::base::volume_coefficients'
+########################################
+   * 'mdl::base::volume_coefficients' (SDTypeStruct)
+      * ColorRGB scattering_coefficient
+      * ColorRGB absorption_coefficient

@@ -1,0 +1,56 @@
+SDSBSFunctionGraph
+==================
+
+.. contents:: :local:
+
+Category = Annotation
+#####################
+   * 'identifier' = 'SDValueString(string(Substance_Function_graph))'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'category' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'label' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'author' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'author_url' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'tags' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'description' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'userdata' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'icon' = 'SDValueTexture(SDTexture(SDTexture))'
+      * Property Type: 'SDTypeTexture' (SDTypeTexture)
+      * Value Type: 'SDTexture' (SDTypeCustom)
+      * Has label
+
+   * 'show_in_library' = 'SDValueBool(bool(true))'
+      * Property Type: 'bool' (SDTypeBool)
+      * Value Type: 'bool' (SDTypeBool)
+      * Has label

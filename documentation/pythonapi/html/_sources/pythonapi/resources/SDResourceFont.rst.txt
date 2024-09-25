@@ -1,0 +1,56 @@
+SDResourceFont
+==============
+
+.. contents:: :local:
+
+Category = Annotation
+#####################
+   * 'file_path' (ReadOnly) = 'SDValueString(string(tests/assets/AdobeClean-Regular.ttf))'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'identifier' = 'SDValueString(string(AdobeClean-Regular))'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'category' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'label' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'author' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'author_url' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'tags' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'description' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'userdata' = 'SDValueString(string())'
+      * Property Type: 'string' (SDTypeString)
+      * Value Type: 'string' (SDTypeString)
+      * Has label
+
+   * 'show_in_library' = 'SDValueBool(bool(true))'
+      * Property Type: 'bool' (SDTypeBool)
+      * Value Type: 'bool' (SDTypeBool)
+      * Has label

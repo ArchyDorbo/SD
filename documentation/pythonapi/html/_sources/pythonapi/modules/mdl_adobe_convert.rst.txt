@@ -1,0 +1,108 @@
+mdl::adobe::convert
+===================
+
+.. contents:: :local:
+
+Definitions:
+------------
+[1/6] 'mdl::adobe::convert::linear_to_srgb(float)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[2/6] 'mdl::adobe::convert::linear_to_srgb(float,float,float)'
+##############################################################
+   * SDPropertyCategory = 'Input'
+      * 'r' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'g' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'b' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[3/6] 'mdl::adobe::convert::srgb_to_linear(float)'
+##################################################
+   * SDPropertyCategory = 'Input'
+      * 'v' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat)
+
+[4/6] 'mdl::adobe::convert::srgb_to_linear(float,float,float)'
+##############################################################
+   * SDPropertyCategory = 'Input'
+      * 'r' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'g' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'b' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'ColorRGB' (SDTypeColorRGB)
+
+[5/6] 'mdl::adobe::convert::adjust_ior_with_specular_level(float,float,float)'
+##############################################################################
+   * Description: 'Scales reflectance linearly between IOR 1.0 and max_ior according to specular_level (works above and below 1.0 max)'
+   * SDPropertyCategory = 'Input'
+      * 'max_ior' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+      * 'specular_level' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+      * 'level_offset' = SDValueFloat(float(0.5)) [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float' (SDTypeFloat) [Varying]
+
+[6/6] 'mdl::adobe::convert::scale_normal(float3,float)'
+#######################################################
+   * Description: 'Scales normal while preserving detail'
+   * SDPropertyCategory = 'Input'
+      * 'base_normal' [CONNECTABLE]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
+
+      * 'scale' [CONNECTABLE]
+         * Types:
+            * 'float' (SDTypeFloat) [Uniform]
+
+   * SDPropertyCategory = 'Output'
+      * 'output' [CONNECTABLE, READ_ONLY]
+         * Types:
+            * 'float3' (SDTypeFloat3) [Varying]
