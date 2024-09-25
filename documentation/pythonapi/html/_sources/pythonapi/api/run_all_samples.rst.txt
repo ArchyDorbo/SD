@@ -1,0 +1,8 @@
+run_all_samples module
+======================
+
+.. automodule:: run_all_samples
+   :members:
+   :undoc-members:
+   :inherited-members:
+   :show-inheritance:
